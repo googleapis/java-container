@@ -150,12 +150,13 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840).
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string project_id = 1 [deprecated = true];</code>
+   * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public java.lang.String getProjectId() {
@@ -173,12 +174,13 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840).
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string project_id = 1 [deprecated = true];</code>
+   * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public com.google.protobuf.ByteString getProjectIdBytes() {
@@ -199,13 +201,13 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Deprecated. The name of the Google Compute Engine
+   * Required. Deprecated. The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster
    * resides.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string zone = 2 [deprecated = true];</code>
+   * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Deprecated
   public java.lang.String getZone() {
@@ -223,13 +225,13 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Deprecated. The name of the Google Compute Engine
+   * Required. Deprecated. The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster
    * resides.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string zone = 2 [deprecated = true];</code>
+   * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Deprecated
   public com.google.protobuf.ByteString getZoneBytes() {
@@ -250,11 +252,12 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Deprecated. The name of the cluster to update.
+   * Required. Deprecated. The name of the cluster to update.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string cluster_id = 3 [deprecated = true];</code>
+   * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public java.lang.String getClusterId() {
@@ -272,11 +275,12 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Deprecated. The name of the cluster to update.
+   * Required. Deprecated. The name of the cluster to update.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string cluster_id = 3 [deprecated = true];</code>
+   * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public com.google.protobuf.ByteString getClusterIdBytes() {
@@ -297,11 +301,12 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Deprecated. The name of the node pool to update.
+   * Required. Deprecated. The name of the node pool to update.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string node_pool_id = 4 [deprecated = true];</code>
+   * <code>string node_pool_id = 4 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public java.lang.String getNodePoolId() {
@@ -319,11 +324,12 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Deprecated. The name of the node pool to update.
+   * Required. Deprecated. The name of the node pool to update.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string node_pool_id = 4 [deprecated = true];</code>
+   * <code>string node_pool_id = 4 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public com.google.protobuf.ByteString getNodePoolIdBytes() {
@@ -344,10 +350,10 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * The desired node count for the pool.
+   * Required. The desired node count for the pool.
    * </pre>
    *
-   * <code>int32 node_count = 5;</code>
+   * <code>int32 node_count = 5 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   public int getNodeCount() {
     return nodeCount_;
@@ -801,12 +807,13 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public java.lang.String getProjectId() {
@@ -824,12 +831,13 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public com.google.protobuf.ByteString getProjectIdBytes() {
@@ -847,12 +855,13 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setProjectId(java.lang.String value) {
@@ -868,12 +877,13 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder clearProjectId() {
@@ -886,12 +896,13 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setProjectIdBytes(com.google.protobuf.ByteString value) {
@@ -910,13 +921,13 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public java.lang.String getZone() {
@@ -934,13 +945,13 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public com.google.protobuf.ByteString getZoneBytes() {
@@ -958,13 +969,13 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public Builder setZone(java.lang.String value) {
@@ -980,13 +991,13 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public Builder clearZone() {
@@ -999,13 +1010,13 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public Builder setZoneBytes(com.google.protobuf.ByteString value) {
@@ -1024,11 +1035,12 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to update.
+     * Required. Deprecated. The name of the cluster to update.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public java.lang.String getClusterId() {
@@ -1046,11 +1058,12 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to update.
+     * Required. Deprecated. The name of the cluster to update.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public com.google.protobuf.ByteString getClusterIdBytes() {
@@ -1068,11 +1081,12 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to update.
+     * Required. Deprecated. The name of the cluster to update.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setClusterId(java.lang.String value) {
@@ -1088,11 +1102,12 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to update.
+     * Required. Deprecated. The name of the cluster to update.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder clearClusterId() {
@@ -1105,11 +1120,12 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to update.
+     * Required. Deprecated. The name of the cluster to update.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setClusterIdBytes(com.google.protobuf.ByteString value) {
@@ -1128,11 +1144,12 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the node pool to update.
+     * Required. Deprecated. The name of the node pool to update.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string node_pool_id = 4 [deprecated = true];</code>
+     * <code>string node_pool_id = 4 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public java.lang.String getNodePoolId() {
@@ -1150,11 +1167,12 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the node pool to update.
+     * Required. Deprecated. The name of the node pool to update.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string node_pool_id = 4 [deprecated = true];</code>
+     * <code>string node_pool_id = 4 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public com.google.protobuf.ByteString getNodePoolIdBytes() {
@@ -1172,11 +1190,12 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the node pool to update.
+     * Required. Deprecated. The name of the node pool to update.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string node_pool_id = 4 [deprecated = true];</code>
+     * <code>string node_pool_id = 4 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setNodePoolId(java.lang.String value) {
@@ -1192,11 +1211,12 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the node pool to update.
+     * Required. Deprecated. The name of the node pool to update.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string node_pool_id = 4 [deprecated = true];</code>
+     * <code>string node_pool_id = 4 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder clearNodePoolId() {
@@ -1209,11 +1229,12 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the node pool to update.
+     * Required. Deprecated. The name of the node pool to update.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string node_pool_id = 4 [deprecated = true];</code>
+     * <code>string node_pool_id = 4 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setNodePoolIdBytes(com.google.protobuf.ByteString value) {
@@ -1232,10 +1253,10 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * The desired node count for the pool.
+     * Required. The desired node count for the pool.
      * </pre>
      *
-     * <code>int32 node_count = 5;</code>
+     * <code>int32 node_count = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public int getNodeCount() {
       return nodeCount_;
@@ -1244,10 +1265,10 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * The desired node count for the pool.
+     * Required. The desired node count for the pool.
      * </pre>
      *
-     * <code>int32 node_count = 5;</code>
+     * <code>int32 node_count = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setNodeCount(int value) {
 
@@ -1259,10 +1280,10 @@ public final class SetNodePoolSizeRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * The desired node count for the pool.
+     * Required. The desired node count for the pool.
      * </pre>
      *
-     * <code>int32 node_count = 5;</code>
+     * <code>int32 node_count = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearNodeCount() {
 

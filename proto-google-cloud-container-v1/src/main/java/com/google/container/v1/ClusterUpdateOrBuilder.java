@@ -66,6 +66,8 @@ public interface ClusterUpdateOrBuilder
    * <pre>
    * The monitoring service the cluster should use to write metrics.
    * Currently available options:
+   * * "monitoring.googleapis.com/kubernetes" - the Google Cloud Monitoring
+   * service with Kubernetes-native resource model
    * * "monitoring.googleapis.com" - the Google Cloud Monitoring service
    * * "none" - no metrics will be exported from the cluster
    * </pre>
@@ -79,6 +81,8 @@ public interface ClusterUpdateOrBuilder
    * <pre>
    * The monitoring service the cluster should use to write metrics.
    * Currently available options:
+   * * "monitoring.googleapis.com/kubernetes" - the Google Cloud Monitoring
+   * service with Kubernetes-native resource model
    * * "monitoring.googleapis.com" - the Google Cloud Monitoring service
    * * "none" - no metrics will be exported from the cluster
    * </pre>
@@ -172,6 +176,37 @@ public interface ClusterUpdateOrBuilder
    *
    *
    * <pre>
+   * Configuration of etcd encryption.
+   * </pre>
+   *
+   * <code>.google.container.v1.DatabaseEncryption desired_database_encryption = 46;</code>
+   */
+  boolean hasDesiredDatabaseEncryption();
+  /**
+   *
+   *
+   * <pre>
+   * Configuration of etcd encryption.
+   * </pre>
+   *
+   * <code>.google.container.v1.DatabaseEncryption desired_database_encryption = 46;</code>
+   */
+  com.google.container.v1.DatabaseEncryption getDesiredDatabaseEncryption();
+  /**
+   *
+   *
+   * <pre>
+   * Configuration of etcd encryption.
+   * </pre>
+   *
+   * <code>.google.container.v1.DatabaseEncryption desired_database_encryption = 46;</code>
+   */
+  com.google.container.v1.DatabaseEncryptionOrBuilder getDesiredDatabaseEncryptionOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
    * Autoscaler configuration for the node pool specified in
    * desired_node_pool_id. If there is only one pool in the
    * cluster and desired_node_pool_id is not provided then
@@ -213,7 +248,7 @@ public interface ClusterUpdateOrBuilder
    *
    * <pre>
    * The desired list of Google Compute Engine
-   * [locations](/compute/docs/zones#available) in which the cluster's nodes
+   * [zones](/compute/docs/zones#available) in which the cluster's nodes
    * should be located. Changing the locations a cluster is in will result
    * in nodes being either created or removed from the cluster, depending on
    * whether locations are being added or removed.
@@ -228,7 +263,7 @@ public interface ClusterUpdateOrBuilder
    *
    * <pre>
    * The desired list of Google Compute Engine
-   * [locations](/compute/docs/zones#available) in which the cluster's nodes
+   * [zones](/compute/docs/zones#available) in which the cluster's nodes
    * should be located. Changing the locations a cluster is in will result
    * in nodes being either created or removed from the cluster, depending on
    * whether locations are being added or removed.
@@ -243,7 +278,7 @@ public interface ClusterUpdateOrBuilder
    *
    * <pre>
    * The desired list of Google Compute Engine
-   * [locations](/compute/docs/zones#available) in which the cluster's nodes
+   * [zones](/compute/docs/zones#available) in which the cluster's nodes
    * should be located. Changing the locations a cluster is in will result
    * in nodes being either created or removed from the cluster, depending on
    * whether locations are being added or removed.
@@ -258,7 +293,7 @@ public interface ClusterUpdateOrBuilder
    *
    * <pre>
    * The desired list of Google Compute Engine
-   * [locations](/compute/docs/zones#available) in which the cluster's nodes
+   * [zones](/compute/docs/zones#available) in which the cluster's nodes
    * should be located. Changing the locations a cluster is in will result
    * in nodes being either created or removed from the cluster, depending on
    * whether locations are being added or removed.
@@ -306,6 +341,201 @@ public interface ClusterUpdateOrBuilder
    */
   com.google.container.v1.MasterAuthorizedNetworksConfigOrBuilder
       getDesiredMasterAuthorizedNetworksConfigOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
+   * Cluster-level autoscaling configuration.
+   * </pre>
+   *
+   * <code>.google.container.v1.ClusterAutoscaling desired_cluster_autoscaling = 15;</code>
+   */
+  boolean hasDesiredClusterAutoscaling();
+  /**
+   *
+   *
+   * <pre>
+   * Cluster-level autoscaling configuration.
+   * </pre>
+   *
+   * <code>.google.container.v1.ClusterAutoscaling desired_cluster_autoscaling = 15;</code>
+   */
+  com.google.container.v1.ClusterAutoscaling getDesiredClusterAutoscaling();
+  /**
+   *
+   *
+   * <pre>
+   * Cluster-level autoscaling configuration.
+   * </pre>
+   *
+   * <code>.google.container.v1.ClusterAutoscaling desired_cluster_autoscaling = 15;</code>
+   */
+  com.google.container.v1.ClusterAutoscalingOrBuilder getDesiredClusterAutoscalingOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
+   * The desired configuration options for the Binary Authorization feature.
+   * </pre>
+   *
+   * <code>.google.container.v1.BinaryAuthorization desired_binary_authorization = 16;</code>
+   */
+  boolean hasDesiredBinaryAuthorization();
+  /**
+   *
+   *
+   * <pre>
+   * The desired configuration options for the Binary Authorization feature.
+   * </pre>
+   *
+   * <code>.google.container.v1.BinaryAuthorization desired_binary_authorization = 16;</code>
+   */
+  com.google.container.v1.BinaryAuthorization getDesiredBinaryAuthorization();
+  /**
+   *
+   *
+   * <pre>
+   * The desired configuration options for the Binary Authorization feature.
+   * </pre>
+   *
+   * <code>.google.container.v1.BinaryAuthorization desired_binary_authorization = 16;</code>
+   */
+  com.google.container.v1.BinaryAuthorizationOrBuilder getDesiredBinaryAuthorizationOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
+   * The logging service the cluster should use to write logs.
+   * Currently available options:
+   * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging
+   * service with Kubernetes-native resource model
+   * * "logging.googleapis.com" - the Google Cloud Logging service
+   * * "none" - no logs will be exported from the cluster
+   * </pre>
+   *
+   * <code>string desired_logging_service = 19;</code>
+   */
+  java.lang.String getDesiredLoggingService();
+  /**
+   *
+   *
+   * <pre>
+   * The logging service the cluster should use to write logs.
+   * Currently available options:
+   * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging
+   * service with Kubernetes-native resource model
+   * * "logging.googleapis.com" - the Google Cloud Logging service
+   * * "none" - no logs will be exported from the cluster
+   * </pre>
+   *
+   * <code>string desired_logging_service = 19;</code>
+   */
+  com.google.protobuf.ByteString getDesiredLoggingServiceBytes();
+
+  /**
+   *
+   *
+   * <pre>
+   * The desired configuration for exporting resource usage.
+   * </pre>
+   *
+   * <code>.google.container.v1.ResourceUsageExportConfig desired_resource_usage_export_config = 21;
+   * </code>
+   */
+  boolean hasDesiredResourceUsageExportConfig();
+  /**
+   *
+   *
+   * <pre>
+   * The desired configuration for exporting resource usage.
+   * </pre>
+   *
+   * <code>.google.container.v1.ResourceUsageExportConfig desired_resource_usage_export_config = 21;
+   * </code>
+   */
+  com.google.container.v1.ResourceUsageExportConfig getDesiredResourceUsageExportConfig();
+  /**
+   *
+   *
+   * <pre>
+   * The desired configuration for exporting resource usage.
+   * </pre>
+   *
+   * <code>.google.container.v1.ResourceUsageExportConfig desired_resource_usage_export_config = 21;
+   * </code>
+   */
+  com.google.container.v1.ResourceUsageExportConfigOrBuilder
+      getDesiredResourceUsageExportConfigOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
+   * Cluster-level Vertical Pod Autoscaling configuration.
+   * </pre>
+   *
+   * <code>.google.container.v1.VerticalPodAutoscaling desired_vertical_pod_autoscaling = 22;</code>
+   */
+  boolean hasDesiredVerticalPodAutoscaling();
+  /**
+   *
+   *
+   * <pre>
+   * Cluster-level Vertical Pod Autoscaling configuration.
+   * </pre>
+   *
+   * <code>.google.container.v1.VerticalPodAutoscaling desired_vertical_pod_autoscaling = 22;</code>
+   */
+  com.google.container.v1.VerticalPodAutoscaling getDesiredVerticalPodAutoscaling();
+  /**
+   *
+   *
+   * <pre>
+   * Cluster-level Vertical Pod Autoscaling configuration.
+   * </pre>
+   *
+   * <code>.google.container.v1.VerticalPodAutoscaling desired_vertical_pod_autoscaling = 22;</code>
+   */
+  com.google.container.v1.VerticalPodAutoscalingOrBuilder
+      getDesiredVerticalPodAutoscalingOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
+   * The desired config of Intra-node visibility.
+   * </pre>
+   *
+   * <code>.google.container.v1.IntraNodeVisibilityConfig desired_intra_node_visibility_config = 26;
+   * </code>
+   */
+  boolean hasDesiredIntraNodeVisibilityConfig();
+  /**
+   *
+   *
+   * <pre>
+   * The desired config of Intra-node visibility.
+   * </pre>
+   *
+   * <code>.google.container.v1.IntraNodeVisibilityConfig desired_intra_node_visibility_config = 26;
+   * </code>
+   */
+  com.google.container.v1.IntraNodeVisibilityConfig getDesiredIntraNodeVisibilityConfig();
+  /**
+   *
+   *
+   * <pre>
+   * The desired config of Intra-node visibility.
+   * </pre>
+   *
+   * <code>.google.container.v1.IntraNodeVisibilityConfig desired_intra_node_visibility_config = 26;
+   * </code>
+   */
+  com.google.container.v1.IntraNodeVisibilityConfigOrBuilder
+      getDesiredIntraNodeVisibilityConfigOrBuilder();
 
   /**
    *

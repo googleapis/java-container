@@ -61,6 +61,8 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
     instanceGroupUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     expireTime_ = "";
     location_ = "";
+    tpuIpv4CidrBlock_ = "";
+    conditions_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -317,6 +319,38 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
 
               break;
             }
+          case 194:
+            {
+              com.google.container.v1.BinaryAuthorization.Builder subBuilder = null;
+              if (binaryAuthorization_ != null) {
+                subBuilder = binaryAuthorization_.toBuilder();
+              }
+              binaryAuthorization_ =
+                  input.readMessage(
+                      com.google.container.v1.BinaryAuthorization.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(binaryAuthorization_);
+                binaryAuthorization_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          case 210:
+            {
+              com.google.container.v1.ClusterAutoscaling.Builder subBuilder = null;
+              if (autoscaling_ != null) {
+                subBuilder = autoscaling_.toBuilder();
+              }
+              autoscaling_ =
+                  input.readMessage(
+                      com.google.container.v1.ClusterAutoscaling.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(autoscaling_);
+                autoscaling_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
           case 218:
             {
               com.google.container.v1.NetworkConfig.Builder subBuilder = null;
@@ -333,6 +367,56 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
 
               break;
             }
+          case 242:
+            {
+              com.google.container.v1.MaxPodsConstraint.Builder subBuilder = null;
+              if (defaultMaxPodsConstraint_ != null) {
+                subBuilder = defaultMaxPodsConstraint_.toBuilder();
+              }
+              defaultMaxPodsConstraint_ =
+                  input.readMessage(
+                      com.google.container.v1.MaxPodsConstraint.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(defaultMaxPodsConstraint_);
+                defaultMaxPodsConstraint_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          case 266:
+            {
+              com.google.container.v1.ResourceUsageExportConfig.Builder subBuilder = null;
+              if (resourceUsageExportConfig_ != null) {
+                subBuilder = resourceUsageExportConfig_.toBuilder();
+              }
+              resourceUsageExportConfig_ =
+                  input.readMessage(
+                      com.google.container.v1.ResourceUsageExportConfig.parser(),
+                      extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(resourceUsageExportConfig_);
+                resourceUsageExportConfig_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          case 274:
+            {
+              com.google.container.v1.AuthenticatorGroupsConfig.Builder subBuilder = null;
+              if (authenticatorGroupsConfig_ != null) {
+                subBuilder = authenticatorGroupsConfig_.toBuilder();
+              }
+              authenticatorGroupsConfig_ =
+                  input.readMessage(
+                      com.google.container.v1.AuthenticatorGroupsConfig.parser(),
+                      extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(authenticatorGroupsConfig_);
+                authenticatorGroupsConfig_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
           case 298:
             {
               com.google.container.v1.PrivateClusterConfig.Builder subBuilder = null;
@@ -345,6 +429,38 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
               if (subBuilder != null) {
                 subBuilder.mergeFrom(privateClusterConfig_);
                 privateClusterConfig_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          case 306:
+            {
+              com.google.container.v1.DatabaseEncryption.Builder subBuilder = null;
+              if (databaseEncryption_ != null) {
+                subBuilder = databaseEncryption_.toBuilder();
+              }
+              databaseEncryption_ =
+                  input.readMessage(
+                      com.google.container.v1.DatabaseEncryption.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(databaseEncryption_);
+                databaseEncryption_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+          case 314:
+            {
+              com.google.container.v1.VerticalPodAutoscaling.Builder subBuilder = null;
+              if (verticalPodAutoscaling_ != null) {
+                subBuilder = verticalPodAutoscaling_.toBuilder();
+              }
+              verticalPodAutoscaling_ =
+                  input.readMessage(
+                      com.google.container.v1.VerticalPodAutoscaling.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(verticalPodAutoscaling_);
+                verticalPodAutoscaling_ = subBuilder.buildPartial();
               }
 
               break;
@@ -427,9 +543,9 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
           case 890:
             {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField1_ & 0x00000004) != 0)) {
+              if (!((mutable_bitField1_ & 0x00000200) != 0)) {
                 instanceGroupUrls_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField1_ |= 0x00000004;
+                mutable_bitField1_ |= 0x00000200;
               }
               instanceGroupUrls_.add(s);
               break;
@@ -453,6 +569,29 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
               location_ = s;
               break;
             }
+          case 920:
+            {
+              enableTpu_ = input.readBool();
+              break;
+            }
+          case 930:
+            {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              tpuIpv4CidrBlock_ = s;
+              break;
+            }
+          case 946:
+            {
+              if (!((mutable_bitField1_ & 0x00008000) != 0)) {
+                conditions_ = new java.util.ArrayList<com.google.container.v1.StatusCondition>();
+                mutable_bitField1_ |= 0x00008000;
+              }
+              conditions_.add(
+                  input.readMessage(
+                      com.google.container.v1.StatusCondition.parser(), extensionRegistry));
+              break;
+            }
           default:
             {
               if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
@@ -473,8 +612,11 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
       if (((mutable_bitField0_ & 0x00001000) != 0)) {
         locations_ = locations_.getUnmodifiableView();
       }
-      if (((mutable_bitField1_ & 0x00000004) != 0)) {
+      if (((mutable_bitField1_ & 0x00000200) != 0)) {
         instanceGroupUrls_ = instanceGroupUrls_.getUnmodifiableView();
+      }
+      if (((mutable_bitField1_ & 0x00008000) != 0)) {
+        conditions_ = java.util.Collections.unmodifiableList(conditions_);
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -758,7 +900,8 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The name of this cluster. The name must be unique within this project
-   * and zone, and can be up to 40 characters with the following restrictions:
+   * and location (e.g. zone or region), and can be up to 40 characters with
+   * the following restrictions:
    * * Lowercase letters, numbers, and hyphens only.
    * * Must start with a letter.
    * * Must end with a number or a letter.
@@ -782,7 +925,8 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The name of this cluster. The name must be unique within this project
-   * and zone, and can be up to 40 characters with the following restrictions:
+   * and location (e.g. zone or region), and can be up to 40 characters with
+   * the following restrictions:
    * * Lowercase letters, numbers, and hyphens only.
    * * Must start with a letter.
    * * Must end with a number or a letter.
@@ -859,10 +1003,12 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    * "node_pool" object, since this configuration (along with the
    * "node_config") will be used to create a "NodePool" object with an
    * auto-generated name. Do not use this and a node_pool at the same time.
+   * This field is deprecated, use node_pool.initial_node_count instead.
    * </pre>
    *
-   * <code>int32 initial_node_count = 3;</code>
+   * <code>int32 initial_node_count = 3 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   public int getInitialNodeCount() {
     return initialNodeCount_;
   }
@@ -874,18 +1020,20 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Parameters used in creating the cluster's nodes.
-   * See `nodeConfig` for the description of its properties.
    * For requests, this field should only be used in lieu of a
    * "node_pool" object, since this configuration (along with the
    * "initial_node_count") will be used to create a "NodePool" object with an
    * auto-generated name. Do not use this and a node_pool at the same time.
    * For responses, this field will be populated with the node configuration of
-   * the first node pool.
+   * the first node pool. (For configuration of each node pool, see
+   * `node_pool.config`)
    * If unspecified, the defaults are used.
+   * This field is deprecated, use node_pool.config instead.
    * </pre>
    *
-   * <code>.google.container.v1.NodeConfig node_config = 4;</code>
+   * <code>.google.container.v1.NodeConfig node_config = 4 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   public boolean hasNodeConfig() {
     return nodeConfig_ != null;
   }
@@ -894,18 +1042,20 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Parameters used in creating the cluster's nodes.
-   * See `nodeConfig` for the description of its properties.
    * For requests, this field should only be used in lieu of a
    * "node_pool" object, since this configuration (along with the
    * "initial_node_count") will be used to create a "NodePool" object with an
    * auto-generated name. Do not use this and a node_pool at the same time.
    * For responses, this field will be populated with the node configuration of
-   * the first node pool.
+   * the first node pool. (For configuration of each node pool, see
+   * `node_pool.config`)
    * If unspecified, the defaults are used.
+   * This field is deprecated, use node_pool.config instead.
    * </pre>
    *
-   * <code>.google.container.v1.NodeConfig node_config = 4;</code>
+   * <code>.google.container.v1.NodeConfig node_config = 4 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   public com.google.container.v1.NodeConfig getNodeConfig() {
     return nodeConfig_ == null
         ? com.google.container.v1.NodeConfig.getDefaultInstance()
@@ -916,18 +1066,20 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Parameters used in creating the cluster's nodes.
-   * See `nodeConfig` for the description of its properties.
    * For requests, this field should only be used in lieu of a
    * "node_pool" object, since this configuration (along with the
    * "initial_node_count") will be used to create a "NodePool" object with an
    * auto-generated name. Do not use this and a node_pool at the same time.
    * For responses, this field will be populated with the node configuration of
-   * the first node pool.
+   * the first node pool. (For configuration of each node pool, see
+   * `node_pool.config`)
    * If unspecified, the defaults are used.
+   * This field is deprecated, use node_pool.config instead.
    * </pre>
    *
-   * <code>.google.container.v1.NodeConfig node_config = 4;</code>
+   * <code>.google.container.v1.NodeConfig node_config = 4 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   public com.google.container.v1.NodeConfigOrBuilder getNodeConfigOrBuilder() {
     return getNodeConfig();
   }
@@ -939,6 +1091,10 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The authentication information for accessing the master endpoint.
+   * If unspecified, the defaults are used:
+   * For clusters before v1.12, if master_auth is unspecified, `username` will
+   * be set to "admin", a random password will be generated, and a client
+   * certificate will be issued.
    * </pre>
    *
    * <code>.google.container.v1.MasterAuth master_auth = 5;</code>
@@ -951,6 +1107,10 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The authentication information for accessing the master endpoint.
+   * If unspecified, the defaults are used:
+   * For clusters before v1.12, if master_auth is unspecified, `username` will
+   * be set to "admin", a random password will be generated, and a client
+   * certificate will be issued.
    * </pre>
    *
    * <code>.google.container.v1.MasterAuth master_auth = 5;</code>
@@ -965,6 +1125,10 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The authentication information for accessing the master endpoint.
+   * If unspecified, the defaults are used:
+   * For clusters before v1.12, if master_auth is unspecified, `username` will
+   * be set to "admin", a random password will be generated, and a client
+   * certificate will be issued.
    * </pre>
    *
    * <code>.google.container.v1.MasterAuth master_auth = 5;</code>
@@ -981,6 +1145,8 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * The logging service the cluster should use to write logs.
    * Currently available options:
+   * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging
+   * service with Kubernetes-native resource model
    * * `logging.googleapis.com` - the Google Cloud Logging service.
    * * `none` - no logs will be exported from the cluster.
    * * if left as an empty string,`logging.googleapis.com` will be used.
@@ -1005,6 +1171,8 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * The logging service the cluster should use to write logs.
    * Currently available options:
+   * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging
+   * service with Kubernetes-native resource model
    * * `logging.googleapis.com` - the Google Cloud Logging service.
    * * `none` - no logs will be exported from the cluster.
    * * if left as an empty string,`logging.googleapis.com` will be used.
@@ -1342,7 +1510,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The list of Google Compute Engine
-   * [locations](/compute/docs/zones#available) in which the cluster's nodes
+   * [zones](/compute/docs/zones#available) in which the cluster's nodes
    * should be located.
    * </pre>
    *
@@ -1356,7 +1524,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The list of Google Compute Engine
-   * [locations](/compute/docs/zones#available) in which the cluster's nodes
+   * [zones](/compute/docs/zones#available) in which the cluster's nodes
    * should be located.
    * </pre>
    *
@@ -1370,7 +1538,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The list of Google Compute Engine
-   * [locations](/compute/docs/zones#available) in which the cluster's nodes
+   * [zones](/compute/docs/zones#available) in which the cluster's nodes
    * should be located.
    * </pre>
    *
@@ -1384,7 +1552,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The list of Google Compute Engine
-   * [locations](/compute/docs/zones#available) in which the cluster's nodes
+   * [zones](/compute/docs/zones#available) in which the cluster's nodes
    * should be located.
    * </pre>
    *
@@ -1770,6 +1938,88 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
     return getMaintenancePolicy();
   }
 
+  public static final int BINARY_AUTHORIZATION_FIELD_NUMBER = 24;
+  private com.google.container.v1.BinaryAuthorization binaryAuthorization_;
+  /**
+   *
+   *
+   * <pre>
+   * Configuration for Binary Authorization.
+   * </pre>
+   *
+   * <code>.google.container.v1.BinaryAuthorization binary_authorization = 24;</code>
+   */
+  public boolean hasBinaryAuthorization() {
+    return binaryAuthorization_ != null;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Configuration for Binary Authorization.
+   * </pre>
+   *
+   * <code>.google.container.v1.BinaryAuthorization binary_authorization = 24;</code>
+   */
+  public com.google.container.v1.BinaryAuthorization getBinaryAuthorization() {
+    return binaryAuthorization_ == null
+        ? com.google.container.v1.BinaryAuthorization.getDefaultInstance()
+        : binaryAuthorization_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Configuration for Binary Authorization.
+   * </pre>
+   *
+   * <code>.google.container.v1.BinaryAuthorization binary_authorization = 24;</code>
+   */
+  public com.google.container.v1.BinaryAuthorizationOrBuilder getBinaryAuthorizationOrBuilder() {
+    return getBinaryAuthorization();
+  }
+
+  public static final int AUTOSCALING_FIELD_NUMBER = 26;
+  private com.google.container.v1.ClusterAutoscaling autoscaling_;
+  /**
+   *
+   *
+   * <pre>
+   * Cluster-level autoscaling configuration.
+   * </pre>
+   *
+   * <code>.google.container.v1.ClusterAutoscaling autoscaling = 26;</code>
+   */
+  public boolean hasAutoscaling() {
+    return autoscaling_ != null;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Cluster-level autoscaling configuration.
+   * </pre>
+   *
+   * <code>.google.container.v1.ClusterAutoscaling autoscaling = 26;</code>
+   */
+  public com.google.container.v1.ClusterAutoscaling getAutoscaling() {
+    return autoscaling_ == null
+        ? com.google.container.v1.ClusterAutoscaling.getDefaultInstance()
+        : autoscaling_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Cluster-level autoscaling configuration.
+   * </pre>
+   *
+   * <code>.google.container.v1.ClusterAutoscaling autoscaling = 26;</code>
+   */
+  public com.google.container.v1.ClusterAutoscalingOrBuilder getAutoscalingOrBuilder() {
+    return getAutoscaling();
+  }
+
   public static final int NETWORK_CONFIG_FIELD_NUMBER = 27;
   private com.google.container.v1.NetworkConfig networkConfig_;
   /**
@@ -1811,6 +2061,140 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
     return getNetworkConfig();
   }
 
+  public static final int DEFAULT_MAX_PODS_CONSTRAINT_FIELD_NUMBER = 30;
+  private com.google.container.v1.MaxPodsConstraint defaultMaxPodsConstraint_;
+  /**
+   *
+   *
+   * <pre>
+   * The default constraint on the maximum number of pods that can be run
+   * simultaneously on a node in the node pool of this cluster. Only honored
+   * if cluster created with IP Alias support.
+   * </pre>
+   *
+   * <code>.google.container.v1.MaxPodsConstraint default_max_pods_constraint = 30;</code>
+   */
+  public boolean hasDefaultMaxPodsConstraint() {
+    return defaultMaxPodsConstraint_ != null;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * The default constraint on the maximum number of pods that can be run
+   * simultaneously on a node in the node pool of this cluster. Only honored
+   * if cluster created with IP Alias support.
+   * </pre>
+   *
+   * <code>.google.container.v1.MaxPodsConstraint default_max_pods_constraint = 30;</code>
+   */
+  public com.google.container.v1.MaxPodsConstraint getDefaultMaxPodsConstraint() {
+    return defaultMaxPodsConstraint_ == null
+        ? com.google.container.v1.MaxPodsConstraint.getDefaultInstance()
+        : defaultMaxPodsConstraint_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * The default constraint on the maximum number of pods that can be run
+   * simultaneously on a node in the node pool of this cluster. Only honored
+   * if cluster created with IP Alias support.
+   * </pre>
+   *
+   * <code>.google.container.v1.MaxPodsConstraint default_max_pods_constraint = 30;</code>
+   */
+  public com.google.container.v1.MaxPodsConstraintOrBuilder getDefaultMaxPodsConstraintOrBuilder() {
+    return getDefaultMaxPodsConstraint();
+  }
+
+  public static final int RESOURCE_USAGE_EXPORT_CONFIG_FIELD_NUMBER = 33;
+  private com.google.container.v1.ResourceUsageExportConfig resourceUsageExportConfig_;
+  /**
+   *
+   *
+   * <pre>
+   * Configuration for exporting resource usages. Resource usage export is
+   * disabled when this config is unspecified.
+   * </pre>
+   *
+   * <code>.google.container.v1.ResourceUsageExportConfig resource_usage_export_config = 33;</code>
+   */
+  public boolean hasResourceUsageExportConfig() {
+    return resourceUsageExportConfig_ != null;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Configuration for exporting resource usages. Resource usage export is
+   * disabled when this config is unspecified.
+   * </pre>
+   *
+   * <code>.google.container.v1.ResourceUsageExportConfig resource_usage_export_config = 33;</code>
+   */
+  public com.google.container.v1.ResourceUsageExportConfig getResourceUsageExportConfig() {
+    return resourceUsageExportConfig_ == null
+        ? com.google.container.v1.ResourceUsageExportConfig.getDefaultInstance()
+        : resourceUsageExportConfig_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Configuration for exporting resource usages. Resource usage export is
+   * disabled when this config is unspecified.
+   * </pre>
+   *
+   * <code>.google.container.v1.ResourceUsageExportConfig resource_usage_export_config = 33;</code>
+   */
+  public com.google.container.v1.ResourceUsageExportConfigOrBuilder
+      getResourceUsageExportConfigOrBuilder() {
+    return getResourceUsageExportConfig();
+  }
+
+  public static final int AUTHENTICATOR_GROUPS_CONFIG_FIELD_NUMBER = 34;
+  private com.google.container.v1.AuthenticatorGroupsConfig authenticatorGroupsConfig_;
+  /**
+   *
+   *
+   * <pre>
+   * Configuration controlling RBAC group membership information.
+   * </pre>
+   *
+   * <code>.google.container.v1.AuthenticatorGroupsConfig authenticator_groups_config = 34;</code>
+   */
+  public boolean hasAuthenticatorGroupsConfig() {
+    return authenticatorGroupsConfig_ != null;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Configuration controlling RBAC group membership information.
+   * </pre>
+   *
+   * <code>.google.container.v1.AuthenticatorGroupsConfig authenticator_groups_config = 34;</code>
+   */
+  public com.google.container.v1.AuthenticatorGroupsConfig getAuthenticatorGroupsConfig() {
+    return authenticatorGroupsConfig_ == null
+        ? com.google.container.v1.AuthenticatorGroupsConfig.getDefaultInstance()
+        : authenticatorGroupsConfig_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Configuration controlling RBAC group membership information.
+   * </pre>
+   *
+   * <code>.google.container.v1.AuthenticatorGroupsConfig authenticator_groups_config = 34;</code>
+   */
+  public com.google.container.v1.AuthenticatorGroupsConfigOrBuilder
+      getAuthenticatorGroupsConfigOrBuilder() {
+    return getAuthenticatorGroupsConfig();
+  }
+
   public static final int PRIVATE_CLUSTER_CONFIG_FIELD_NUMBER = 37;
   private com.google.container.v1.PrivateClusterConfig privateClusterConfig_;
   /**
@@ -1850,6 +2234,89 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    */
   public com.google.container.v1.PrivateClusterConfigOrBuilder getPrivateClusterConfigOrBuilder() {
     return getPrivateClusterConfig();
+  }
+
+  public static final int DATABASE_ENCRYPTION_FIELD_NUMBER = 38;
+  private com.google.container.v1.DatabaseEncryption databaseEncryption_;
+  /**
+   *
+   *
+   * <pre>
+   * Configuration of etcd encryption.
+   * </pre>
+   *
+   * <code>.google.container.v1.DatabaseEncryption database_encryption = 38;</code>
+   */
+  public boolean hasDatabaseEncryption() {
+    return databaseEncryption_ != null;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Configuration of etcd encryption.
+   * </pre>
+   *
+   * <code>.google.container.v1.DatabaseEncryption database_encryption = 38;</code>
+   */
+  public com.google.container.v1.DatabaseEncryption getDatabaseEncryption() {
+    return databaseEncryption_ == null
+        ? com.google.container.v1.DatabaseEncryption.getDefaultInstance()
+        : databaseEncryption_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Configuration of etcd encryption.
+   * </pre>
+   *
+   * <code>.google.container.v1.DatabaseEncryption database_encryption = 38;</code>
+   */
+  public com.google.container.v1.DatabaseEncryptionOrBuilder getDatabaseEncryptionOrBuilder() {
+    return getDatabaseEncryption();
+  }
+
+  public static final int VERTICAL_POD_AUTOSCALING_FIELD_NUMBER = 39;
+  private com.google.container.v1.VerticalPodAutoscaling verticalPodAutoscaling_;
+  /**
+   *
+   *
+   * <pre>
+   * Cluster-level Vertical Pod Autoscaling configuration.
+   * </pre>
+   *
+   * <code>.google.container.v1.VerticalPodAutoscaling vertical_pod_autoscaling = 39;</code>
+   */
+  public boolean hasVerticalPodAutoscaling() {
+    return verticalPodAutoscaling_ != null;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Cluster-level Vertical Pod Autoscaling configuration.
+   * </pre>
+   *
+   * <code>.google.container.v1.VerticalPodAutoscaling vertical_pod_autoscaling = 39;</code>
+   */
+  public com.google.container.v1.VerticalPodAutoscaling getVerticalPodAutoscaling() {
+    return verticalPodAutoscaling_ == null
+        ? com.google.container.v1.VerticalPodAutoscaling.getDefaultInstance()
+        : verticalPodAutoscaling_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Cluster-level Vertical Pod Autoscaling configuration.
+   * </pre>
+   *
+   * <code>.google.container.v1.VerticalPodAutoscaling vertical_pod_autoscaling = 39;</code>
+   */
+  public com.google.container.v1.VerticalPodAutoscalingOrBuilder
+      getVerticalPodAutoscalingOrBuilder() {
+    return getVerticalPodAutoscaling();
   }
 
   public static final int SELF_LINK_FIELD_NUMBER = 100;
@@ -2110,7 +2577,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * [Output only] Deprecated, use
-   * [NodePool.version](/kubernetes-engine/docs/reference/rest/v1/projects.zones.clusters.nodePool)
+   * [NodePools.version](/kubernetes-engine/docs/reference/rest/v1/projects.zones.clusters.nodePools)
    * instead. The current version of the node software components. If they are
    * currently at multiple versions because they're in the process of being
    * upgraded, this reflects the minimum version of all nodes.
@@ -2135,7 +2602,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * [Output only] Deprecated, use
-   * [NodePool.version](/kubernetes-engine/docs/reference/rest/v1/projects.zones.clusters.nodePool)
+   * [NodePools.version](/kubernetes-engine/docs/reference/rest/v1/projects.zones.clusters.nodePools)
    * instead. The current version of the node software components. If they are
    * currently at multiple versions because they're in the process of being
    * upgraded, this reflects the minimum version of all nodes.
@@ -2284,7 +2751,8 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * [Output only] The size of the address space on each node for hosting
    * containers. This is provisioned from within the `container_ipv4_cidr`
-   * range.
+   * range. This field will only be set when cluster is in route-based network
+   * mode.
    * </pre>
    *
    * <code>int32 node_ipv4_cidr_size = 109;</code>
@@ -2405,11 +2873,13 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    *
    *
    * <pre>
-   * [Output only] The number of nodes currently in the cluster.
+   * [Output only]  The number of nodes currently in the cluster. Deprecated.
+   * Call Kubernetes API directly to retrieve node information.
    * </pre>
    *
-   * <code>int32 current_node_count = 112;</code>
+   * <code>int32 current_node_count = 112 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   public int getCurrentNodeCount() {
     return currentNodeCount_;
   }
@@ -2508,6 +2978,132 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
     }
   }
 
+  public static final int ENABLE_TPU_FIELD_NUMBER = 115;
+  private boolean enableTpu_;
+  /**
+   *
+   *
+   * <pre>
+   * Enable the ability to use Cloud TPUs in this cluster.
+   * </pre>
+   *
+   * <code>bool enable_tpu = 115;</code>
+   */
+  public boolean getEnableTpu() {
+    return enableTpu_;
+  }
+
+  public static final int TPU_IPV4_CIDR_BLOCK_FIELD_NUMBER = 116;
+  private volatile java.lang.Object tpuIpv4CidrBlock_;
+  /**
+   *
+   *
+   * <pre>
+   * [Output only] The IP address range of the Cloud TPUs in this cluster, in
+   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+   * notation (e.g. `1.2.3.4/29`).
+   * </pre>
+   *
+   * <code>string tpu_ipv4_cidr_block = 116;</code>
+   */
+  public java.lang.String getTpuIpv4CidrBlock() {
+    java.lang.Object ref = tpuIpv4CidrBlock_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      tpuIpv4CidrBlock_ = s;
+      return s;
+    }
+  }
+  /**
+   *
+   *
+   * <pre>
+   * [Output only] The IP address range of the Cloud TPUs in this cluster, in
+   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+   * notation (e.g. `1.2.3.4/29`).
+   * </pre>
+   *
+   * <code>string tpu_ipv4_cidr_block = 116;</code>
+   */
+  public com.google.protobuf.ByteString getTpuIpv4CidrBlockBytes() {
+    java.lang.Object ref = tpuIpv4CidrBlock_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b =
+          com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+      tpuIpv4CidrBlock_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CONDITIONS_FIELD_NUMBER = 118;
+  private java.util.List<com.google.container.v1.StatusCondition> conditions_;
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current cluster state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+   */
+  public java.util.List<com.google.container.v1.StatusCondition> getConditionsList() {
+    return conditions_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current cluster state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+   */
+  public java.util.List<? extends com.google.container.v1.StatusConditionOrBuilder>
+      getConditionsOrBuilderList() {
+    return conditions_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current cluster state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+   */
+  public int getConditionsCount() {
+    return conditions_.size();
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current cluster state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+   */
+  public com.google.container.v1.StatusCondition getConditions(int index) {
+    return conditions_.get(index);
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current cluster state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+   */
+  public com.google.container.v1.StatusConditionOrBuilder getConditionsOrBuilder(int index) {
+    return conditions_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
@@ -2584,11 +3180,32 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
     if (maintenancePolicy_ != null) {
       output.writeMessage(23, getMaintenancePolicy());
     }
+    if (binaryAuthorization_ != null) {
+      output.writeMessage(24, getBinaryAuthorization());
+    }
+    if (autoscaling_ != null) {
+      output.writeMessage(26, getAutoscaling());
+    }
     if (networkConfig_ != null) {
       output.writeMessage(27, getNetworkConfig());
     }
+    if (defaultMaxPodsConstraint_ != null) {
+      output.writeMessage(30, getDefaultMaxPodsConstraint());
+    }
+    if (resourceUsageExportConfig_ != null) {
+      output.writeMessage(33, getResourceUsageExportConfig());
+    }
+    if (authenticatorGroupsConfig_ != null) {
+      output.writeMessage(34, getAuthenticatorGroupsConfig());
+    }
     if (privateClusterConfig_ != null) {
       output.writeMessage(37, getPrivateClusterConfig());
+    }
+    if (databaseEncryption_ != null) {
+      output.writeMessage(38, getDatabaseEncryption());
+    }
+    if (verticalPodAutoscaling_ != null) {
+      output.writeMessage(39, getVerticalPodAutoscaling());
     }
     if (!getSelfLinkBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 100, selfLink_);
@@ -2634,6 +3251,15 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
     }
     if (!getLocationBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 114, location_);
+    }
+    if (enableTpu_ != false) {
+      output.writeBool(115, enableTpu_);
+    }
+    if (!getTpuIpv4CidrBlockBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 116, tpuIpv4CidrBlock_);
+    }
+    for (int i = 0; i < conditions_.size(); i++) {
+      output.writeMessage(118, conditions_.get(i));
     }
     unknownFields.writeTo(output);
   }
@@ -2721,12 +3347,41 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
     if (maintenancePolicy_ != null) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(23, getMaintenancePolicy());
     }
+    if (binaryAuthorization_ != null) {
+      size +=
+          com.google.protobuf.CodedOutputStream.computeMessageSize(24, getBinaryAuthorization());
+    }
+    if (autoscaling_ != null) {
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(26, getAutoscaling());
+    }
     if (networkConfig_ != null) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(27, getNetworkConfig());
+    }
+    if (defaultMaxPodsConstraint_ != null) {
+      size +=
+          com.google.protobuf.CodedOutputStream.computeMessageSize(
+              30, getDefaultMaxPodsConstraint());
+    }
+    if (resourceUsageExportConfig_ != null) {
+      size +=
+          com.google.protobuf.CodedOutputStream.computeMessageSize(
+              33, getResourceUsageExportConfig());
+    }
+    if (authenticatorGroupsConfig_ != null) {
+      size +=
+          com.google.protobuf.CodedOutputStream.computeMessageSize(
+              34, getAuthenticatorGroupsConfig());
     }
     if (privateClusterConfig_ != null) {
       size +=
           com.google.protobuf.CodedOutputStream.computeMessageSize(37, getPrivateClusterConfig());
+    }
+    if (databaseEncryption_ != null) {
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(38, getDatabaseEncryption());
+    }
+    if (verticalPodAutoscaling_ != null) {
+      size +=
+          com.google.protobuf.CodedOutputStream.computeMessageSize(39, getVerticalPodAutoscaling());
     }
     if (!getSelfLinkBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(100, selfLink_);
@@ -2777,6 +3432,15 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
     }
     if (!getLocationBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(114, location_);
+    }
+    if (enableTpu_ != false) {
+      size += com.google.protobuf.CodedOutputStream.computeBoolSize(115, enableTpu_);
+    }
+    if (!getTpuIpv4CidrBlockBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(116, tpuIpv4CidrBlock_);
+    }
+    for (int i = 0; i < conditions_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(118, conditions_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -2840,13 +3504,43 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
     if (hasMaintenancePolicy()) {
       if (!getMaintenancePolicy().equals(other.getMaintenancePolicy())) return false;
     }
+    if (hasBinaryAuthorization() != other.hasBinaryAuthorization()) return false;
+    if (hasBinaryAuthorization()) {
+      if (!getBinaryAuthorization().equals(other.getBinaryAuthorization())) return false;
+    }
+    if (hasAutoscaling() != other.hasAutoscaling()) return false;
+    if (hasAutoscaling()) {
+      if (!getAutoscaling().equals(other.getAutoscaling())) return false;
+    }
     if (hasNetworkConfig() != other.hasNetworkConfig()) return false;
     if (hasNetworkConfig()) {
       if (!getNetworkConfig().equals(other.getNetworkConfig())) return false;
     }
+    if (hasDefaultMaxPodsConstraint() != other.hasDefaultMaxPodsConstraint()) return false;
+    if (hasDefaultMaxPodsConstraint()) {
+      if (!getDefaultMaxPodsConstraint().equals(other.getDefaultMaxPodsConstraint())) return false;
+    }
+    if (hasResourceUsageExportConfig() != other.hasResourceUsageExportConfig()) return false;
+    if (hasResourceUsageExportConfig()) {
+      if (!getResourceUsageExportConfig().equals(other.getResourceUsageExportConfig()))
+        return false;
+    }
+    if (hasAuthenticatorGroupsConfig() != other.hasAuthenticatorGroupsConfig()) return false;
+    if (hasAuthenticatorGroupsConfig()) {
+      if (!getAuthenticatorGroupsConfig().equals(other.getAuthenticatorGroupsConfig()))
+        return false;
+    }
     if (hasPrivateClusterConfig() != other.hasPrivateClusterConfig()) return false;
     if (hasPrivateClusterConfig()) {
       if (!getPrivateClusterConfig().equals(other.getPrivateClusterConfig())) return false;
+    }
+    if (hasDatabaseEncryption() != other.hasDatabaseEncryption()) return false;
+    if (hasDatabaseEncryption()) {
+      if (!getDatabaseEncryption().equals(other.getDatabaseEncryption())) return false;
+    }
+    if (hasVerticalPodAutoscaling() != other.hasVerticalPodAutoscaling()) return false;
+    if (hasVerticalPodAutoscaling()) {
+      if (!getVerticalPodAutoscaling().equals(other.getVerticalPodAutoscaling())) return false;
     }
     if (!getSelfLink().equals(other.getSelfLink())) return false;
     if (!getZone().equals(other.getZone())) return false;
@@ -2863,6 +3557,9 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
     if (getCurrentNodeCount() != other.getCurrentNodeCount()) return false;
     if (!getExpireTime().equals(other.getExpireTime())) return false;
     if (!getLocation().equals(other.getLocation())) return false;
+    if (getEnableTpu() != other.getEnableTpu()) return false;
+    if (!getTpuIpv4CidrBlock().equals(other.getTpuIpv4CidrBlock())) return false;
+    if (!getConditionsList().equals(other.getConditionsList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -2938,13 +3635,41 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
       hash = (37 * hash) + MAINTENANCE_POLICY_FIELD_NUMBER;
       hash = (53 * hash) + getMaintenancePolicy().hashCode();
     }
+    if (hasBinaryAuthorization()) {
+      hash = (37 * hash) + BINARY_AUTHORIZATION_FIELD_NUMBER;
+      hash = (53 * hash) + getBinaryAuthorization().hashCode();
+    }
+    if (hasAutoscaling()) {
+      hash = (37 * hash) + AUTOSCALING_FIELD_NUMBER;
+      hash = (53 * hash) + getAutoscaling().hashCode();
+    }
     if (hasNetworkConfig()) {
       hash = (37 * hash) + NETWORK_CONFIG_FIELD_NUMBER;
       hash = (53 * hash) + getNetworkConfig().hashCode();
     }
+    if (hasDefaultMaxPodsConstraint()) {
+      hash = (37 * hash) + DEFAULT_MAX_PODS_CONSTRAINT_FIELD_NUMBER;
+      hash = (53 * hash) + getDefaultMaxPodsConstraint().hashCode();
+    }
+    if (hasResourceUsageExportConfig()) {
+      hash = (37 * hash) + RESOURCE_USAGE_EXPORT_CONFIG_FIELD_NUMBER;
+      hash = (53 * hash) + getResourceUsageExportConfig().hashCode();
+    }
+    if (hasAuthenticatorGroupsConfig()) {
+      hash = (37 * hash) + AUTHENTICATOR_GROUPS_CONFIG_FIELD_NUMBER;
+      hash = (53 * hash) + getAuthenticatorGroupsConfig().hashCode();
+    }
     if (hasPrivateClusterConfig()) {
       hash = (37 * hash) + PRIVATE_CLUSTER_CONFIG_FIELD_NUMBER;
       hash = (53 * hash) + getPrivateClusterConfig().hashCode();
+    }
+    if (hasDatabaseEncryption()) {
+      hash = (37 * hash) + DATABASE_ENCRYPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDatabaseEncryption().hashCode();
+    }
+    if (hasVerticalPodAutoscaling()) {
+      hash = (37 * hash) + VERTICAL_POD_AUTOSCALING_FIELD_NUMBER;
+      hash = (53 * hash) + getVerticalPodAutoscaling().hashCode();
     }
     hash = (37 * hash) + SELF_LINK_FIELD_NUMBER;
     hash = (53 * hash) + getSelfLink().hashCode();
@@ -2978,6 +3703,14 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
     hash = (53 * hash) + getExpireTime().hashCode();
     hash = (37 * hash) + LOCATION_FIELD_NUMBER;
     hash = (53 * hash) + getLocation().hashCode();
+    hash = (37 * hash) + ENABLE_TPU_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getEnableTpu());
+    hash = (37 * hash) + TPU_IPV4_CIDR_BLOCK_FIELD_NUMBER;
+    hash = (53 * hash) + getTpuIpv4CidrBlock().hashCode();
+    if (getConditionsCount() > 0) {
+      hash = (37 * hash) + CONDITIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getConditionsList().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -3137,6 +3870,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
         getNodePoolsFieldBuilder();
+        getConditionsFieldBuilder();
       }
     }
 
@@ -3220,17 +3954,59 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
         maintenancePolicy_ = null;
         maintenancePolicyBuilder_ = null;
       }
+      if (binaryAuthorizationBuilder_ == null) {
+        binaryAuthorization_ = null;
+      } else {
+        binaryAuthorization_ = null;
+        binaryAuthorizationBuilder_ = null;
+      }
+      if (autoscalingBuilder_ == null) {
+        autoscaling_ = null;
+      } else {
+        autoscaling_ = null;
+        autoscalingBuilder_ = null;
+      }
       if (networkConfigBuilder_ == null) {
         networkConfig_ = null;
       } else {
         networkConfig_ = null;
         networkConfigBuilder_ = null;
       }
+      if (defaultMaxPodsConstraintBuilder_ == null) {
+        defaultMaxPodsConstraint_ = null;
+      } else {
+        defaultMaxPodsConstraint_ = null;
+        defaultMaxPodsConstraintBuilder_ = null;
+      }
+      if (resourceUsageExportConfigBuilder_ == null) {
+        resourceUsageExportConfig_ = null;
+      } else {
+        resourceUsageExportConfig_ = null;
+        resourceUsageExportConfigBuilder_ = null;
+      }
+      if (authenticatorGroupsConfigBuilder_ == null) {
+        authenticatorGroupsConfig_ = null;
+      } else {
+        authenticatorGroupsConfig_ = null;
+        authenticatorGroupsConfigBuilder_ = null;
+      }
       if (privateClusterConfigBuilder_ == null) {
         privateClusterConfig_ = null;
       } else {
         privateClusterConfig_ = null;
         privateClusterConfigBuilder_ = null;
+      }
+      if (databaseEncryptionBuilder_ == null) {
+        databaseEncryption_ = null;
+      } else {
+        databaseEncryption_ = null;
+        databaseEncryptionBuilder_ = null;
+      }
+      if (verticalPodAutoscalingBuilder_ == null) {
+        verticalPodAutoscaling_ = null;
+      } else {
+        verticalPodAutoscaling_ = null;
+        verticalPodAutoscalingBuilder_ = null;
       }
       selfLink_ = "";
 
@@ -3255,13 +4031,23 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
       servicesIpv4Cidr_ = "";
 
       instanceGroupUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField1_ = (bitField1_ & ~0x00000004);
+      bitField1_ = (bitField1_ & ~0x00000200);
       currentNodeCount_ = 0;
 
       expireTime_ = "";
 
       location_ = "";
 
+      enableTpu_ = false;
+
+      tpuIpv4CidrBlock_ = "";
+
+      if (conditionsBuilder_ == null) {
+        conditions_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00008000);
+      } else {
+        conditionsBuilder_.clear();
+      }
       return this;
     }
 
@@ -3358,15 +4144,50 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
       } else {
         result.maintenancePolicy_ = maintenancePolicyBuilder_.build();
       }
+      if (binaryAuthorizationBuilder_ == null) {
+        result.binaryAuthorization_ = binaryAuthorization_;
+      } else {
+        result.binaryAuthorization_ = binaryAuthorizationBuilder_.build();
+      }
+      if (autoscalingBuilder_ == null) {
+        result.autoscaling_ = autoscaling_;
+      } else {
+        result.autoscaling_ = autoscalingBuilder_.build();
+      }
       if (networkConfigBuilder_ == null) {
         result.networkConfig_ = networkConfig_;
       } else {
         result.networkConfig_ = networkConfigBuilder_.build();
       }
+      if (defaultMaxPodsConstraintBuilder_ == null) {
+        result.defaultMaxPodsConstraint_ = defaultMaxPodsConstraint_;
+      } else {
+        result.defaultMaxPodsConstraint_ = defaultMaxPodsConstraintBuilder_.build();
+      }
+      if (resourceUsageExportConfigBuilder_ == null) {
+        result.resourceUsageExportConfig_ = resourceUsageExportConfig_;
+      } else {
+        result.resourceUsageExportConfig_ = resourceUsageExportConfigBuilder_.build();
+      }
+      if (authenticatorGroupsConfigBuilder_ == null) {
+        result.authenticatorGroupsConfig_ = authenticatorGroupsConfig_;
+      } else {
+        result.authenticatorGroupsConfig_ = authenticatorGroupsConfigBuilder_.build();
+      }
       if (privateClusterConfigBuilder_ == null) {
         result.privateClusterConfig_ = privateClusterConfig_;
       } else {
         result.privateClusterConfig_ = privateClusterConfigBuilder_.build();
+      }
+      if (databaseEncryptionBuilder_ == null) {
+        result.databaseEncryption_ = databaseEncryption_;
+      } else {
+        result.databaseEncryption_ = databaseEncryptionBuilder_.build();
+      }
+      if (verticalPodAutoscalingBuilder_ == null) {
+        result.verticalPodAutoscaling_ = verticalPodAutoscaling_;
+      } else {
+        result.verticalPodAutoscaling_ = verticalPodAutoscalingBuilder_.build();
       }
       result.selfLink_ = selfLink_;
       result.zone_ = zone_;
@@ -3379,14 +4200,25 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
       result.statusMessage_ = statusMessage_;
       result.nodeIpv4CidrSize_ = nodeIpv4CidrSize_;
       result.servicesIpv4Cidr_ = servicesIpv4Cidr_;
-      if (((bitField1_ & 0x00000004) != 0)) {
+      if (((bitField1_ & 0x00000200) != 0)) {
         instanceGroupUrls_ = instanceGroupUrls_.getUnmodifiableView();
-        bitField1_ = (bitField1_ & ~0x00000004);
+        bitField1_ = (bitField1_ & ~0x00000200);
       }
       result.instanceGroupUrls_ = instanceGroupUrls_;
       result.currentNodeCount_ = currentNodeCount_;
       result.expireTime_ = expireTime_;
       result.location_ = location_;
+      result.enableTpu_ = enableTpu_;
+      result.tpuIpv4CidrBlock_ = tpuIpv4CidrBlock_;
+      if (conditionsBuilder_ == null) {
+        if (((bitField1_ & 0x00008000) != 0)) {
+          conditions_ = java.util.Collections.unmodifiableList(conditions_);
+          bitField1_ = (bitField1_ & ~0x00008000);
+        }
+        result.conditions_ = conditions_;
+      } else {
+        result.conditions_ = conditionsBuilder_.build();
+      }
       result.bitField0_ = to_bitField0_;
       result.bitField1_ = to_bitField1_;
       onBuilt();
@@ -3538,11 +4370,32 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
       if (other.hasMaintenancePolicy()) {
         mergeMaintenancePolicy(other.getMaintenancePolicy());
       }
+      if (other.hasBinaryAuthorization()) {
+        mergeBinaryAuthorization(other.getBinaryAuthorization());
+      }
+      if (other.hasAutoscaling()) {
+        mergeAutoscaling(other.getAutoscaling());
+      }
       if (other.hasNetworkConfig()) {
         mergeNetworkConfig(other.getNetworkConfig());
       }
+      if (other.hasDefaultMaxPodsConstraint()) {
+        mergeDefaultMaxPodsConstraint(other.getDefaultMaxPodsConstraint());
+      }
+      if (other.hasResourceUsageExportConfig()) {
+        mergeResourceUsageExportConfig(other.getResourceUsageExportConfig());
+      }
+      if (other.hasAuthenticatorGroupsConfig()) {
+        mergeAuthenticatorGroupsConfig(other.getAuthenticatorGroupsConfig());
+      }
       if (other.hasPrivateClusterConfig()) {
         mergePrivateClusterConfig(other.getPrivateClusterConfig());
+      }
+      if (other.hasDatabaseEncryption()) {
+        mergeDatabaseEncryption(other.getDatabaseEncryption());
+      }
+      if (other.hasVerticalPodAutoscaling()) {
+        mergeVerticalPodAutoscaling(other.getVerticalPodAutoscaling());
       }
       if (!other.getSelfLink().isEmpty()) {
         selfLink_ = other.selfLink_;
@@ -3589,7 +4442,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
       if (!other.instanceGroupUrls_.isEmpty()) {
         if (instanceGroupUrls_.isEmpty()) {
           instanceGroupUrls_ = other.instanceGroupUrls_;
-          bitField1_ = (bitField1_ & ~0x00000004);
+          bitField1_ = (bitField1_ & ~0x00000200);
         } else {
           ensureInstanceGroupUrlsIsMutable();
           instanceGroupUrls_.addAll(other.instanceGroupUrls_);
@@ -3606,6 +4459,40 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
       if (!other.getLocation().isEmpty()) {
         location_ = other.location_;
         onChanged();
+      }
+      if (other.getEnableTpu() != false) {
+        setEnableTpu(other.getEnableTpu());
+      }
+      if (!other.getTpuIpv4CidrBlock().isEmpty()) {
+        tpuIpv4CidrBlock_ = other.tpuIpv4CidrBlock_;
+        onChanged();
+      }
+      if (conditionsBuilder_ == null) {
+        if (!other.conditions_.isEmpty()) {
+          if (conditions_.isEmpty()) {
+            conditions_ = other.conditions_;
+            bitField1_ = (bitField1_ & ~0x00008000);
+          } else {
+            ensureConditionsIsMutable();
+            conditions_.addAll(other.conditions_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.conditions_.isEmpty()) {
+          if (conditionsBuilder_.isEmpty()) {
+            conditionsBuilder_.dispose();
+            conditionsBuilder_ = null;
+            conditions_ = other.conditions_;
+            bitField1_ = (bitField1_ & ~0x00008000);
+            conditionsBuilder_ =
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                    ? getConditionsFieldBuilder()
+                    : null;
+          } else {
+            conditionsBuilder_.addAllMessages(other.conditions_);
+          }
+        }
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -3645,7 +4532,8 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The name of this cluster. The name must be unique within this project
-     * and zone, and can be up to 40 characters with the following restrictions:
+     * and location (e.g. zone or region), and can be up to 40 characters with
+     * the following restrictions:
      * * Lowercase letters, numbers, and hyphens only.
      * * Must start with a letter.
      * * Must end with a number or a letter.
@@ -3669,7 +4557,8 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The name of this cluster. The name must be unique within this project
-     * and zone, and can be up to 40 characters with the following restrictions:
+     * and location (e.g. zone or region), and can be up to 40 characters with
+     * the following restrictions:
      * * Lowercase letters, numbers, and hyphens only.
      * * Must start with a letter.
      * * Must end with a number or a letter.
@@ -3693,7 +4582,8 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The name of this cluster. The name must be unique within this project
-     * and zone, and can be up to 40 characters with the following restrictions:
+     * and location (e.g. zone or region), and can be up to 40 characters with
+     * the following restrictions:
      * * Lowercase letters, numbers, and hyphens only.
      * * Must start with a letter.
      * * Must end with a number or a letter.
@@ -3715,7 +4605,8 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The name of this cluster. The name must be unique within this project
-     * and zone, and can be up to 40 characters with the following restrictions:
+     * and location (e.g. zone or region), and can be up to 40 characters with
+     * the following restrictions:
      * * Lowercase letters, numbers, and hyphens only.
      * * Must start with a letter.
      * * Must end with a number or a letter.
@@ -3734,7 +4625,8 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The name of this cluster. The name must be unique within this project
-     * and zone, and can be up to 40 characters with the following restrictions:
+     * and location (e.g. zone or region), and can be up to 40 characters with
+     * the following restrictions:
      * * Lowercase letters, numbers, and hyphens only.
      * * Must start with a letter.
      * * Must end with a number or a letter.
@@ -3860,10 +4752,12 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * "node_pool" object, since this configuration (along with the
      * "node_config") will be used to create a "NodePool" object with an
      * auto-generated name. Do not use this and a node_pool at the same time.
+     * This field is deprecated, use node_pool.initial_node_count instead.
      * </pre>
      *
-     * <code>int32 initial_node_count = 3;</code>
+     * <code>int32 initial_node_count = 3 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     public int getInitialNodeCount() {
       return initialNodeCount_;
     }
@@ -3879,10 +4773,12 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * "node_pool" object, since this configuration (along with the
      * "node_config") will be used to create a "NodePool" object with an
      * auto-generated name. Do not use this and a node_pool at the same time.
+     * This field is deprecated, use node_pool.initial_node_count instead.
      * </pre>
      *
-     * <code>int32 initial_node_count = 3;</code>
+     * <code>int32 initial_node_count = 3 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     public Builder setInitialNodeCount(int value) {
 
       initialNodeCount_ = value;
@@ -3901,10 +4797,12 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * "node_pool" object, since this configuration (along with the
      * "node_config") will be used to create a "NodePool" object with an
      * auto-generated name. Do not use this and a node_pool at the same time.
+     * This field is deprecated, use node_pool.initial_node_count instead.
      * </pre>
      *
-     * <code>int32 initial_node_count = 3;</code>
+     * <code>int32 initial_node_count = 3 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     public Builder clearInitialNodeCount() {
 
       initialNodeCount_ = 0;
@@ -3923,18 +4821,20 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Parameters used in creating the cluster's nodes.
-     * See `nodeConfig` for the description of its properties.
      * For requests, this field should only be used in lieu of a
      * "node_pool" object, since this configuration (along with the
      * "initial_node_count") will be used to create a "NodePool" object with an
      * auto-generated name. Do not use this and a node_pool at the same time.
      * For responses, this field will be populated with the node configuration of
-     * the first node pool.
+     * the first node pool. (For configuration of each node pool, see
+     * `node_pool.config`)
      * If unspecified, the defaults are used.
+     * This field is deprecated, use node_pool.config instead.
      * </pre>
      *
-     * <code>.google.container.v1.NodeConfig node_config = 4;</code>
+     * <code>.google.container.v1.NodeConfig node_config = 4 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     public boolean hasNodeConfig() {
       return nodeConfigBuilder_ != null || nodeConfig_ != null;
     }
@@ -3943,18 +4843,20 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Parameters used in creating the cluster's nodes.
-     * See `nodeConfig` for the description of its properties.
      * For requests, this field should only be used in lieu of a
      * "node_pool" object, since this configuration (along with the
      * "initial_node_count") will be used to create a "NodePool" object with an
      * auto-generated name. Do not use this and a node_pool at the same time.
      * For responses, this field will be populated with the node configuration of
-     * the first node pool.
+     * the first node pool. (For configuration of each node pool, see
+     * `node_pool.config`)
      * If unspecified, the defaults are used.
+     * This field is deprecated, use node_pool.config instead.
      * </pre>
      *
-     * <code>.google.container.v1.NodeConfig node_config = 4;</code>
+     * <code>.google.container.v1.NodeConfig node_config = 4 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     public com.google.container.v1.NodeConfig getNodeConfig() {
       if (nodeConfigBuilder_ == null) {
         return nodeConfig_ == null
@@ -3969,18 +4871,20 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Parameters used in creating the cluster's nodes.
-     * See `nodeConfig` for the description of its properties.
      * For requests, this field should only be used in lieu of a
      * "node_pool" object, since this configuration (along with the
      * "initial_node_count") will be used to create a "NodePool" object with an
      * auto-generated name. Do not use this and a node_pool at the same time.
      * For responses, this field will be populated with the node configuration of
-     * the first node pool.
+     * the first node pool. (For configuration of each node pool, see
+     * `node_pool.config`)
      * If unspecified, the defaults are used.
+     * This field is deprecated, use node_pool.config instead.
      * </pre>
      *
-     * <code>.google.container.v1.NodeConfig node_config = 4;</code>
+     * <code>.google.container.v1.NodeConfig node_config = 4 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     public Builder setNodeConfig(com.google.container.v1.NodeConfig value) {
       if (nodeConfigBuilder_ == null) {
         if (value == null) {
@@ -3999,18 +4903,20 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Parameters used in creating the cluster's nodes.
-     * See `nodeConfig` for the description of its properties.
      * For requests, this field should only be used in lieu of a
      * "node_pool" object, since this configuration (along with the
      * "initial_node_count") will be used to create a "NodePool" object with an
      * auto-generated name. Do not use this and a node_pool at the same time.
      * For responses, this field will be populated with the node configuration of
-     * the first node pool.
+     * the first node pool. (For configuration of each node pool, see
+     * `node_pool.config`)
      * If unspecified, the defaults are used.
+     * This field is deprecated, use node_pool.config instead.
      * </pre>
      *
-     * <code>.google.container.v1.NodeConfig node_config = 4;</code>
+     * <code>.google.container.v1.NodeConfig node_config = 4 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     public Builder setNodeConfig(com.google.container.v1.NodeConfig.Builder builderForValue) {
       if (nodeConfigBuilder_ == null) {
         nodeConfig_ = builderForValue.build();
@@ -4026,18 +4932,20 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Parameters used in creating the cluster's nodes.
-     * See `nodeConfig` for the description of its properties.
      * For requests, this field should only be used in lieu of a
      * "node_pool" object, since this configuration (along with the
      * "initial_node_count") will be used to create a "NodePool" object with an
      * auto-generated name. Do not use this and a node_pool at the same time.
      * For responses, this field will be populated with the node configuration of
-     * the first node pool.
+     * the first node pool. (For configuration of each node pool, see
+     * `node_pool.config`)
      * If unspecified, the defaults are used.
+     * This field is deprecated, use node_pool.config instead.
      * </pre>
      *
-     * <code>.google.container.v1.NodeConfig node_config = 4;</code>
+     * <code>.google.container.v1.NodeConfig node_config = 4 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     public Builder mergeNodeConfig(com.google.container.v1.NodeConfig value) {
       if (nodeConfigBuilder_ == null) {
         if (nodeConfig_ != null) {
@@ -4060,18 +4968,20 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Parameters used in creating the cluster's nodes.
-     * See `nodeConfig` for the description of its properties.
      * For requests, this field should only be used in lieu of a
      * "node_pool" object, since this configuration (along with the
      * "initial_node_count") will be used to create a "NodePool" object with an
      * auto-generated name. Do not use this and a node_pool at the same time.
      * For responses, this field will be populated with the node configuration of
-     * the first node pool.
+     * the first node pool. (For configuration of each node pool, see
+     * `node_pool.config`)
      * If unspecified, the defaults are used.
+     * This field is deprecated, use node_pool.config instead.
      * </pre>
      *
-     * <code>.google.container.v1.NodeConfig node_config = 4;</code>
+     * <code>.google.container.v1.NodeConfig node_config = 4 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     public Builder clearNodeConfig() {
       if (nodeConfigBuilder_ == null) {
         nodeConfig_ = null;
@@ -4088,18 +4998,20 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Parameters used in creating the cluster's nodes.
-     * See `nodeConfig` for the description of its properties.
      * For requests, this field should only be used in lieu of a
      * "node_pool" object, since this configuration (along with the
      * "initial_node_count") will be used to create a "NodePool" object with an
      * auto-generated name. Do not use this and a node_pool at the same time.
      * For responses, this field will be populated with the node configuration of
-     * the first node pool.
+     * the first node pool. (For configuration of each node pool, see
+     * `node_pool.config`)
      * If unspecified, the defaults are used.
+     * This field is deprecated, use node_pool.config instead.
      * </pre>
      *
-     * <code>.google.container.v1.NodeConfig node_config = 4;</code>
+     * <code>.google.container.v1.NodeConfig node_config = 4 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     public com.google.container.v1.NodeConfig.Builder getNodeConfigBuilder() {
 
       onChanged();
@@ -4110,18 +5022,20 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Parameters used in creating the cluster's nodes.
-     * See `nodeConfig` for the description of its properties.
      * For requests, this field should only be used in lieu of a
      * "node_pool" object, since this configuration (along with the
      * "initial_node_count") will be used to create a "NodePool" object with an
      * auto-generated name. Do not use this and a node_pool at the same time.
      * For responses, this field will be populated with the node configuration of
-     * the first node pool.
+     * the first node pool. (For configuration of each node pool, see
+     * `node_pool.config`)
      * If unspecified, the defaults are used.
+     * This field is deprecated, use node_pool.config instead.
      * </pre>
      *
-     * <code>.google.container.v1.NodeConfig node_config = 4;</code>
+     * <code>.google.container.v1.NodeConfig node_config = 4 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     public com.google.container.v1.NodeConfigOrBuilder getNodeConfigOrBuilder() {
       if (nodeConfigBuilder_ != null) {
         return nodeConfigBuilder_.getMessageOrBuilder();
@@ -4136,17 +5050,18 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Parameters used in creating the cluster's nodes.
-     * See `nodeConfig` for the description of its properties.
      * For requests, this field should only be used in lieu of a
      * "node_pool" object, since this configuration (along with the
      * "initial_node_count") will be used to create a "NodePool" object with an
      * auto-generated name. Do not use this and a node_pool at the same time.
      * For responses, this field will be populated with the node configuration of
-     * the first node pool.
+     * the first node pool. (For configuration of each node pool, see
+     * `node_pool.config`)
      * If unspecified, the defaults are used.
+     * This field is deprecated, use node_pool.config instead.
      * </pre>
      *
-     * <code>.google.container.v1.NodeConfig node_config = 4;</code>
+     * <code>.google.container.v1.NodeConfig node_config = 4 [deprecated = true];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
             com.google.container.v1.NodeConfig,
@@ -4176,6 +5091,10 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The authentication information for accessing the master endpoint.
+     * If unspecified, the defaults are used:
+     * For clusters before v1.12, if master_auth is unspecified, `username` will
+     * be set to "admin", a random password will be generated, and a client
+     * certificate will be issued.
      * </pre>
      *
      * <code>.google.container.v1.MasterAuth master_auth = 5;</code>
@@ -4188,6 +5107,10 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The authentication information for accessing the master endpoint.
+     * If unspecified, the defaults are used:
+     * For clusters before v1.12, if master_auth is unspecified, `username` will
+     * be set to "admin", a random password will be generated, and a client
+     * certificate will be issued.
      * </pre>
      *
      * <code>.google.container.v1.MasterAuth master_auth = 5;</code>
@@ -4206,6 +5129,10 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The authentication information for accessing the master endpoint.
+     * If unspecified, the defaults are used:
+     * For clusters before v1.12, if master_auth is unspecified, `username` will
+     * be set to "admin", a random password will be generated, and a client
+     * certificate will be issued.
      * </pre>
      *
      * <code>.google.container.v1.MasterAuth master_auth = 5;</code>
@@ -4228,6 +5155,10 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The authentication information for accessing the master endpoint.
+     * If unspecified, the defaults are used:
+     * For clusters before v1.12, if master_auth is unspecified, `username` will
+     * be set to "admin", a random password will be generated, and a client
+     * certificate will be issued.
      * </pre>
      *
      * <code>.google.container.v1.MasterAuth master_auth = 5;</code>
@@ -4247,6 +5178,10 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The authentication information for accessing the master endpoint.
+     * If unspecified, the defaults are used:
+     * For clusters before v1.12, if master_auth is unspecified, `username` will
+     * be set to "admin", a random password will be generated, and a client
+     * certificate will be issued.
      * </pre>
      *
      * <code>.google.container.v1.MasterAuth master_auth = 5;</code>
@@ -4273,6 +5208,10 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The authentication information for accessing the master endpoint.
+     * If unspecified, the defaults are used:
+     * For clusters before v1.12, if master_auth is unspecified, `username` will
+     * be set to "admin", a random password will be generated, and a client
+     * certificate will be issued.
      * </pre>
      *
      * <code>.google.container.v1.MasterAuth master_auth = 5;</code>
@@ -4293,6 +5232,10 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The authentication information for accessing the master endpoint.
+     * If unspecified, the defaults are used:
+     * For clusters before v1.12, if master_auth is unspecified, `username` will
+     * be set to "admin", a random password will be generated, and a client
+     * certificate will be issued.
      * </pre>
      *
      * <code>.google.container.v1.MasterAuth master_auth = 5;</code>
@@ -4307,6 +5250,10 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The authentication information for accessing the master endpoint.
+     * If unspecified, the defaults are used:
+     * For clusters before v1.12, if master_auth is unspecified, `username` will
+     * be set to "admin", a random password will be generated, and a client
+     * certificate will be issued.
      * </pre>
      *
      * <code>.google.container.v1.MasterAuth master_auth = 5;</code>
@@ -4325,6 +5272,10 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The authentication information for accessing the master endpoint.
+     * If unspecified, the defaults are used:
+     * For clusters before v1.12, if master_auth is unspecified, `username` will
+     * be set to "admin", a random password will be generated, and a client
+     * certificate will be issued.
      * </pre>
      *
      * <code>.google.container.v1.MasterAuth master_auth = 5;</code>
@@ -4353,6 +5304,8 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The logging service the cluster should use to write logs.
      * Currently available options:
+     * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging
+     * service with Kubernetes-native resource model
      * * `logging.googleapis.com` - the Google Cloud Logging service.
      * * `none` - no logs will be exported from the cluster.
      * * if left as an empty string,`logging.googleapis.com` will be used.
@@ -4377,6 +5330,8 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The logging service the cluster should use to write logs.
      * Currently available options:
+     * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging
+     * service with Kubernetes-native resource model
      * * `logging.googleapis.com` - the Google Cloud Logging service.
      * * `none` - no logs will be exported from the cluster.
      * * if left as an empty string,`logging.googleapis.com` will be used.
@@ -4401,6 +5356,8 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The logging service the cluster should use to write logs.
      * Currently available options:
+     * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging
+     * service with Kubernetes-native resource model
      * * `logging.googleapis.com` - the Google Cloud Logging service.
      * * `none` - no logs will be exported from the cluster.
      * * if left as an empty string,`logging.googleapis.com` will be used.
@@ -4423,6 +5380,8 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The logging service the cluster should use to write logs.
      * Currently available options:
+     * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging
+     * service with Kubernetes-native resource model
      * * `logging.googleapis.com` - the Google Cloud Logging service.
      * * `none` - no logs will be exported from the cluster.
      * * if left as an empty string,`logging.googleapis.com` will be used.
@@ -4442,6 +5401,8 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * The logging service the cluster should use to write logs.
      * Currently available options:
+     * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging
+     * service with Kubernetes-native resource model
      * * `logging.googleapis.com` - the Google Cloud Logging service.
      * * `none` - no logs will be exported from the cluster.
      * * if left as an empty string,`logging.googleapis.com` will be used.
@@ -5475,7 +6436,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The list of Google Compute Engine
-     * [locations](/compute/docs/zones#available) in which the cluster's nodes
+     * [zones](/compute/docs/zones#available) in which the cluster's nodes
      * should be located.
      * </pre>
      *
@@ -5489,7 +6450,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The list of Google Compute Engine
-     * [locations](/compute/docs/zones#available) in which the cluster's nodes
+     * [zones](/compute/docs/zones#available) in which the cluster's nodes
      * should be located.
      * </pre>
      *
@@ -5503,7 +6464,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The list of Google Compute Engine
-     * [locations](/compute/docs/zones#available) in which the cluster's nodes
+     * [zones](/compute/docs/zones#available) in which the cluster's nodes
      * should be located.
      * </pre>
      *
@@ -5517,7 +6478,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The list of Google Compute Engine
-     * [locations](/compute/docs/zones#available) in which the cluster's nodes
+     * [zones](/compute/docs/zones#available) in which the cluster's nodes
      * should be located.
      * </pre>
      *
@@ -5531,7 +6492,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The list of Google Compute Engine
-     * [locations](/compute/docs/zones#available) in which the cluster's nodes
+     * [zones](/compute/docs/zones#available) in which the cluster's nodes
      * should be located.
      * </pre>
      *
@@ -5551,7 +6512,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The list of Google Compute Engine
-     * [locations](/compute/docs/zones#available) in which the cluster's nodes
+     * [zones](/compute/docs/zones#available) in which the cluster's nodes
      * should be located.
      * </pre>
      *
@@ -5571,7 +6532,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The list of Google Compute Engine
-     * [locations](/compute/docs/zones#available) in which the cluster's nodes
+     * [zones](/compute/docs/zones#available) in which the cluster's nodes
      * should be located.
      * </pre>
      *
@@ -5588,7 +6549,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The list of Google Compute Engine
-     * [locations](/compute/docs/zones#available) in which the cluster's nodes
+     * [zones](/compute/docs/zones#available) in which the cluster's nodes
      * should be located.
      * </pre>
      *
@@ -5605,7 +6566,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The list of Google Compute Engine
-     * [locations](/compute/docs/zones#available) in which the cluster's nodes
+     * [zones](/compute/docs/zones#available) in which the cluster's nodes
      * should be located.
      * </pre>
      *
@@ -6870,6 +7831,370 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
       return maintenancePolicyBuilder_;
     }
 
+    private com.google.container.v1.BinaryAuthorization binaryAuthorization_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.container.v1.BinaryAuthorization,
+            com.google.container.v1.BinaryAuthorization.Builder,
+            com.google.container.v1.BinaryAuthorizationOrBuilder>
+        binaryAuthorizationBuilder_;
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for Binary Authorization.
+     * </pre>
+     *
+     * <code>.google.container.v1.BinaryAuthorization binary_authorization = 24;</code>
+     */
+    public boolean hasBinaryAuthorization() {
+      return binaryAuthorizationBuilder_ != null || binaryAuthorization_ != null;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for Binary Authorization.
+     * </pre>
+     *
+     * <code>.google.container.v1.BinaryAuthorization binary_authorization = 24;</code>
+     */
+    public com.google.container.v1.BinaryAuthorization getBinaryAuthorization() {
+      if (binaryAuthorizationBuilder_ == null) {
+        return binaryAuthorization_ == null
+            ? com.google.container.v1.BinaryAuthorization.getDefaultInstance()
+            : binaryAuthorization_;
+      } else {
+        return binaryAuthorizationBuilder_.getMessage();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for Binary Authorization.
+     * </pre>
+     *
+     * <code>.google.container.v1.BinaryAuthorization binary_authorization = 24;</code>
+     */
+    public Builder setBinaryAuthorization(com.google.container.v1.BinaryAuthorization value) {
+      if (binaryAuthorizationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        binaryAuthorization_ = value;
+        onChanged();
+      } else {
+        binaryAuthorizationBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for Binary Authorization.
+     * </pre>
+     *
+     * <code>.google.container.v1.BinaryAuthorization binary_authorization = 24;</code>
+     */
+    public Builder setBinaryAuthorization(
+        com.google.container.v1.BinaryAuthorization.Builder builderForValue) {
+      if (binaryAuthorizationBuilder_ == null) {
+        binaryAuthorization_ = builderForValue.build();
+        onChanged();
+      } else {
+        binaryAuthorizationBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for Binary Authorization.
+     * </pre>
+     *
+     * <code>.google.container.v1.BinaryAuthorization binary_authorization = 24;</code>
+     */
+    public Builder mergeBinaryAuthorization(com.google.container.v1.BinaryAuthorization value) {
+      if (binaryAuthorizationBuilder_ == null) {
+        if (binaryAuthorization_ != null) {
+          binaryAuthorization_ =
+              com.google.container.v1.BinaryAuthorization.newBuilder(binaryAuthorization_)
+                  .mergeFrom(value)
+                  .buildPartial();
+        } else {
+          binaryAuthorization_ = value;
+        }
+        onChanged();
+      } else {
+        binaryAuthorizationBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for Binary Authorization.
+     * </pre>
+     *
+     * <code>.google.container.v1.BinaryAuthorization binary_authorization = 24;</code>
+     */
+    public Builder clearBinaryAuthorization() {
+      if (binaryAuthorizationBuilder_ == null) {
+        binaryAuthorization_ = null;
+        onChanged();
+      } else {
+        binaryAuthorization_ = null;
+        binaryAuthorizationBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for Binary Authorization.
+     * </pre>
+     *
+     * <code>.google.container.v1.BinaryAuthorization binary_authorization = 24;</code>
+     */
+    public com.google.container.v1.BinaryAuthorization.Builder getBinaryAuthorizationBuilder() {
+
+      onChanged();
+      return getBinaryAuthorizationFieldBuilder().getBuilder();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for Binary Authorization.
+     * </pre>
+     *
+     * <code>.google.container.v1.BinaryAuthorization binary_authorization = 24;</code>
+     */
+    public com.google.container.v1.BinaryAuthorizationOrBuilder getBinaryAuthorizationOrBuilder() {
+      if (binaryAuthorizationBuilder_ != null) {
+        return binaryAuthorizationBuilder_.getMessageOrBuilder();
+      } else {
+        return binaryAuthorization_ == null
+            ? com.google.container.v1.BinaryAuthorization.getDefaultInstance()
+            : binaryAuthorization_;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for Binary Authorization.
+     * </pre>
+     *
+     * <code>.google.container.v1.BinaryAuthorization binary_authorization = 24;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.container.v1.BinaryAuthorization,
+            com.google.container.v1.BinaryAuthorization.Builder,
+            com.google.container.v1.BinaryAuthorizationOrBuilder>
+        getBinaryAuthorizationFieldBuilder() {
+      if (binaryAuthorizationBuilder_ == null) {
+        binaryAuthorizationBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.container.v1.BinaryAuthorization,
+                com.google.container.v1.BinaryAuthorization.Builder,
+                com.google.container.v1.BinaryAuthorizationOrBuilder>(
+                getBinaryAuthorization(), getParentForChildren(), isClean());
+        binaryAuthorization_ = null;
+      }
+      return binaryAuthorizationBuilder_;
+    }
+
+    private com.google.container.v1.ClusterAutoscaling autoscaling_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.container.v1.ClusterAutoscaling,
+            com.google.container.v1.ClusterAutoscaling.Builder,
+            com.google.container.v1.ClusterAutoscalingOrBuilder>
+        autoscalingBuilder_;
+    /**
+     *
+     *
+     * <pre>
+     * Cluster-level autoscaling configuration.
+     * </pre>
+     *
+     * <code>.google.container.v1.ClusterAutoscaling autoscaling = 26;</code>
+     */
+    public boolean hasAutoscaling() {
+      return autoscalingBuilder_ != null || autoscaling_ != null;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Cluster-level autoscaling configuration.
+     * </pre>
+     *
+     * <code>.google.container.v1.ClusterAutoscaling autoscaling = 26;</code>
+     */
+    public com.google.container.v1.ClusterAutoscaling getAutoscaling() {
+      if (autoscalingBuilder_ == null) {
+        return autoscaling_ == null
+            ? com.google.container.v1.ClusterAutoscaling.getDefaultInstance()
+            : autoscaling_;
+      } else {
+        return autoscalingBuilder_.getMessage();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Cluster-level autoscaling configuration.
+     * </pre>
+     *
+     * <code>.google.container.v1.ClusterAutoscaling autoscaling = 26;</code>
+     */
+    public Builder setAutoscaling(com.google.container.v1.ClusterAutoscaling value) {
+      if (autoscalingBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        autoscaling_ = value;
+        onChanged();
+      } else {
+        autoscalingBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Cluster-level autoscaling configuration.
+     * </pre>
+     *
+     * <code>.google.container.v1.ClusterAutoscaling autoscaling = 26;</code>
+     */
+    public Builder setAutoscaling(
+        com.google.container.v1.ClusterAutoscaling.Builder builderForValue) {
+      if (autoscalingBuilder_ == null) {
+        autoscaling_ = builderForValue.build();
+        onChanged();
+      } else {
+        autoscalingBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Cluster-level autoscaling configuration.
+     * </pre>
+     *
+     * <code>.google.container.v1.ClusterAutoscaling autoscaling = 26;</code>
+     */
+    public Builder mergeAutoscaling(com.google.container.v1.ClusterAutoscaling value) {
+      if (autoscalingBuilder_ == null) {
+        if (autoscaling_ != null) {
+          autoscaling_ =
+              com.google.container.v1.ClusterAutoscaling.newBuilder(autoscaling_)
+                  .mergeFrom(value)
+                  .buildPartial();
+        } else {
+          autoscaling_ = value;
+        }
+        onChanged();
+      } else {
+        autoscalingBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Cluster-level autoscaling configuration.
+     * </pre>
+     *
+     * <code>.google.container.v1.ClusterAutoscaling autoscaling = 26;</code>
+     */
+    public Builder clearAutoscaling() {
+      if (autoscalingBuilder_ == null) {
+        autoscaling_ = null;
+        onChanged();
+      } else {
+        autoscaling_ = null;
+        autoscalingBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Cluster-level autoscaling configuration.
+     * </pre>
+     *
+     * <code>.google.container.v1.ClusterAutoscaling autoscaling = 26;</code>
+     */
+    public com.google.container.v1.ClusterAutoscaling.Builder getAutoscalingBuilder() {
+
+      onChanged();
+      return getAutoscalingFieldBuilder().getBuilder();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Cluster-level autoscaling configuration.
+     * </pre>
+     *
+     * <code>.google.container.v1.ClusterAutoscaling autoscaling = 26;</code>
+     */
+    public com.google.container.v1.ClusterAutoscalingOrBuilder getAutoscalingOrBuilder() {
+      if (autoscalingBuilder_ != null) {
+        return autoscalingBuilder_.getMessageOrBuilder();
+      } else {
+        return autoscaling_ == null
+            ? com.google.container.v1.ClusterAutoscaling.getDefaultInstance()
+            : autoscaling_;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Cluster-level autoscaling configuration.
+     * </pre>
+     *
+     * <code>.google.container.v1.ClusterAutoscaling autoscaling = 26;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.container.v1.ClusterAutoscaling,
+            com.google.container.v1.ClusterAutoscaling.Builder,
+            com.google.container.v1.ClusterAutoscalingOrBuilder>
+        getAutoscalingFieldBuilder() {
+      if (autoscalingBuilder_ == null) {
+        autoscalingBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.container.v1.ClusterAutoscaling,
+                com.google.container.v1.ClusterAutoscaling.Builder,
+                com.google.container.v1.ClusterAutoscalingOrBuilder>(
+                getAutoscaling(), getParentForChildren(), isClean());
+        autoscaling_ = null;
+      }
+      return autoscalingBuilder_;
+    }
+
     private com.google.container.v1.NetworkConfig networkConfig_;
     private com.google.protobuf.SingleFieldBuilderV3<
             com.google.container.v1.NetworkConfig,
@@ -7049,6 +8374,599 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
         networkConfig_ = null;
       }
       return networkConfigBuilder_;
+    }
+
+    private com.google.container.v1.MaxPodsConstraint defaultMaxPodsConstraint_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.container.v1.MaxPodsConstraint,
+            com.google.container.v1.MaxPodsConstraint.Builder,
+            com.google.container.v1.MaxPodsConstraintOrBuilder>
+        defaultMaxPodsConstraintBuilder_;
+    /**
+     *
+     *
+     * <pre>
+     * The default constraint on the maximum number of pods that can be run
+     * simultaneously on a node in the node pool of this cluster. Only honored
+     * if cluster created with IP Alias support.
+     * </pre>
+     *
+     * <code>.google.container.v1.MaxPodsConstraint default_max_pods_constraint = 30;</code>
+     */
+    public boolean hasDefaultMaxPodsConstraint() {
+      return defaultMaxPodsConstraintBuilder_ != null || defaultMaxPodsConstraint_ != null;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The default constraint on the maximum number of pods that can be run
+     * simultaneously on a node in the node pool of this cluster. Only honored
+     * if cluster created with IP Alias support.
+     * </pre>
+     *
+     * <code>.google.container.v1.MaxPodsConstraint default_max_pods_constraint = 30;</code>
+     */
+    public com.google.container.v1.MaxPodsConstraint getDefaultMaxPodsConstraint() {
+      if (defaultMaxPodsConstraintBuilder_ == null) {
+        return defaultMaxPodsConstraint_ == null
+            ? com.google.container.v1.MaxPodsConstraint.getDefaultInstance()
+            : defaultMaxPodsConstraint_;
+      } else {
+        return defaultMaxPodsConstraintBuilder_.getMessage();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The default constraint on the maximum number of pods that can be run
+     * simultaneously on a node in the node pool of this cluster. Only honored
+     * if cluster created with IP Alias support.
+     * </pre>
+     *
+     * <code>.google.container.v1.MaxPodsConstraint default_max_pods_constraint = 30;</code>
+     */
+    public Builder setDefaultMaxPodsConstraint(com.google.container.v1.MaxPodsConstraint value) {
+      if (defaultMaxPodsConstraintBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        defaultMaxPodsConstraint_ = value;
+        onChanged();
+      } else {
+        defaultMaxPodsConstraintBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The default constraint on the maximum number of pods that can be run
+     * simultaneously on a node in the node pool of this cluster. Only honored
+     * if cluster created with IP Alias support.
+     * </pre>
+     *
+     * <code>.google.container.v1.MaxPodsConstraint default_max_pods_constraint = 30;</code>
+     */
+    public Builder setDefaultMaxPodsConstraint(
+        com.google.container.v1.MaxPodsConstraint.Builder builderForValue) {
+      if (defaultMaxPodsConstraintBuilder_ == null) {
+        defaultMaxPodsConstraint_ = builderForValue.build();
+        onChanged();
+      } else {
+        defaultMaxPodsConstraintBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The default constraint on the maximum number of pods that can be run
+     * simultaneously on a node in the node pool of this cluster. Only honored
+     * if cluster created with IP Alias support.
+     * </pre>
+     *
+     * <code>.google.container.v1.MaxPodsConstraint default_max_pods_constraint = 30;</code>
+     */
+    public Builder mergeDefaultMaxPodsConstraint(com.google.container.v1.MaxPodsConstraint value) {
+      if (defaultMaxPodsConstraintBuilder_ == null) {
+        if (defaultMaxPodsConstraint_ != null) {
+          defaultMaxPodsConstraint_ =
+              com.google.container.v1.MaxPodsConstraint.newBuilder(defaultMaxPodsConstraint_)
+                  .mergeFrom(value)
+                  .buildPartial();
+        } else {
+          defaultMaxPodsConstraint_ = value;
+        }
+        onChanged();
+      } else {
+        defaultMaxPodsConstraintBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The default constraint on the maximum number of pods that can be run
+     * simultaneously on a node in the node pool of this cluster. Only honored
+     * if cluster created with IP Alias support.
+     * </pre>
+     *
+     * <code>.google.container.v1.MaxPodsConstraint default_max_pods_constraint = 30;</code>
+     */
+    public Builder clearDefaultMaxPodsConstraint() {
+      if (defaultMaxPodsConstraintBuilder_ == null) {
+        defaultMaxPodsConstraint_ = null;
+        onChanged();
+      } else {
+        defaultMaxPodsConstraint_ = null;
+        defaultMaxPodsConstraintBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The default constraint on the maximum number of pods that can be run
+     * simultaneously on a node in the node pool of this cluster. Only honored
+     * if cluster created with IP Alias support.
+     * </pre>
+     *
+     * <code>.google.container.v1.MaxPodsConstraint default_max_pods_constraint = 30;</code>
+     */
+    public com.google.container.v1.MaxPodsConstraint.Builder getDefaultMaxPodsConstraintBuilder() {
+
+      onChanged();
+      return getDefaultMaxPodsConstraintFieldBuilder().getBuilder();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The default constraint on the maximum number of pods that can be run
+     * simultaneously on a node in the node pool of this cluster. Only honored
+     * if cluster created with IP Alias support.
+     * </pre>
+     *
+     * <code>.google.container.v1.MaxPodsConstraint default_max_pods_constraint = 30;</code>
+     */
+    public com.google.container.v1.MaxPodsConstraintOrBuilder
+        getDefaultMaxPodsConstraintOrBuilder() {
+      if (defaultMaxPodsConstraintBuilder_ != null) {
+        return defaultMaxPodsConstraintBuilder_.getMessageOrBuilder();
+      } else {
+        return defaultMaxPodsConstraint_ == null
+            ? com.google.container.v1.MaxPodsConstraint.getDefaultInstance()
+            : defaultMaxPodsConstraint_;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * The default constraint on the maximum number of pods that can be run
+     * simultaneously on a node in the node pool of this cluster. Only honored
+     * if cluster created with IP Alias support.
+     * </pre>
+     *
+     * <code>.google.container.v1.MaxPodsConstraint default_max_pods_constraint = 30;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.container.v1.MaxPodsConstraint,
+            com.google.container.v1.MaxPodsConstraint.Builder,
+            com.google.container.v1.MaxPodsConstraintOrBuilder>
+        getDefaultMaxPodsConstraintFieldBuilder() {
+      if (defaultMaxPodsConstraintBuilder_ == null) {
+        defaultMaxPodsConstraintBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.container.v1.MaxPodsConstraint,
+                com.google.container.v1.MaxPodsConstraint.Builder,
+                com.google.container.v1.MaxPodsConstraintOrBuilder>(
+                getDefaultMaxPodsConstraint(), getParentForChildren(), isClean());
+        defaultMaxPodsConstraint_ = null;
+      }
+      return defaultMaxPodsConstraintBuilder_;
+    }
+
+    private com.google.container.v1.ResourceUsageExportConfig resourceUsageExportConfig_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.container.v1.ResourceUsageExportConfig,
+            com.google.container.v1.ResourceUsageExportConfig.Builder,
+            com.google.container.v1.ResourceUsageExportConfigOrBuilder>
+        resourceUsageExportConfigBuilder_;
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for exporting resource usages. Resource usage export is
+     * disabled when this config is unspecified.
+     * </pre>
+     *
+     * <code>.google.container.v1.ResourceUsageExportConfig resource_usage_export_config = 33;
+     * </code>
+     */
+    public boolean hasResourceUsageExportConfig() {
+      return resourceUsageExportConfigBuilder_ != null || resourceUsageExportConfig_ != null;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for exporting resource usages. Resource usage export is
+     * disabled when this config is unspecified.
+     * </pre>
+     *
+     * <code>.google.container.v1.ResourceUsageExportConfig resource_usage_export_config = 33;
+     * </code>
+     */
+    public com.google.container.v1.ResourceUsageExportConfig getResourceUsageExportConfig() {
+      if (resourceUsageExportConfigBuilder_ == null) {
+        return resourceUsageExportConfig_ == null
+            ? com.google.container.v1.ResourceUsageExportConfig.getDefaultInstance()
+            : resourceUsageExportConfig_;
+      } else {
+        return resourceUsageExportConfigBuilder_.getMessage();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for exporting resource usages. Resource usage export is
+     * disabled when this config is unspecified.
+     * </pre>
+     *
+     * <code>.google.container.v1.ResourceUsageExportConfig resource_usage_export_config = 33;
+     * </code>
+     */
+    public Builder setResourceUsageExportConfig(
+        com.google.container.v1.ResourceUsageExportConfig value) {
+      if (resourceUsageExportConfigBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        resourceUsageExportConfig_ = value;
+        onChanged();
+      } else {
+        resourceUsageExportConfigBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for exporting resource usages. Resource usage export is
+     * disabled when this config is unspecified.
+     * </pre>
+     *
+     * <code>.google.container.v1.ResourceUsageExportConfig resource_usage_export_config = 33;
+     * </code>
+     */
+    public Builder setResourceUsageExportConfig(
+        com.google.container.v1.ResourceUsageExportConfig.Builder builderForValue) {
+      if (resourceUsageExportConfigBuilder_ == null) {
+        resourceUsageExportConfig_ = builderForValue.build();
+        onChanged();
+      } else {
+        resourceUsageExportConfigBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for exporting resource usages. Resource usage export is
+     * disabled when this config is unspecified.
+     * </pre>
+     *
+     * <code>.google.container.v1.ResourceUsageExportConfig resource_usage_export_config = 33;
+     * </code>
+     */
+    public Builder mergeResourceUsageExportConfig(
+        com.google.container.v1.ResourceUsageExportConfig value) {
+      if (resourceUsageExportConfigBuilder_ == null) {
+        if (resourceUsageExportConfig_ != null) {
+          resourceUsageExportConfig_ =
+              com.google.container.v1.ResourceUsageExportConfig.newBuilder(
+                      resourceUsageExportConfig_)
+                  .mergeFrom(value)
+                  .buildPartial();
+        } else {
+          resourceUsageExportConfig_ = value;
+        }
+        onChanged();
+      } else {
+        resourceUsageExportConfigBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for exporting resource usages. Resource usage export is
+     * disabled when this config is unspecified.
+     * </pre>
+     *
+     * <code>.google.container.v1.ResourceUsageExportConfig resource_usage_export_config = 33;
+     * </code>
+     */
+    public Builder clearResourceUsageExportConfig() {
+      if (resourceUsageExportConfigBuilder_ == null) {
+        resourceUsageExportConfig_ = null;
+        onChanged();
+      } else {
+        resourceUsageExportConfig_ = null;
+        resourceUsageExportConfigBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for exporting resource usages. Resource usage export is
+     * disabled when this config is unspecified.
+     * </pre>
+     *
+     * <code>.google.container.v1.ResourceUsageExportConfig resource_usage_export_config = 33;
+     * </code>
+     */
+    public com.google.container.v1.ResourceUsageExportConfig.Builder
+        getResourceUsageExportConfigBuilder() {
+
+      onChanged();
+      return getResourceUsageExportConfigFieldBuilder().getBuilder();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for exporting resource usages. Resource usage export is
+     * disabled when this config is unspecified.
+     * </pre>
+     *
+     * <code>.google.container.v1.ResourceUsageExportConfig resource_usage_export_config = 33;
+     * </code>
+     */
+    public com.google.container.v1.ResourceUsageExportConfigOrBuilder
+        getResourceUsageExportConfigOrBuilder() {
+      if (resourceUsageExportConfigBuilder_ != null) {
+        return resourceUsageExportConfigBuilder_.getMessageOrBuilder();
+      } else {
+        return resourceUsageExportConfig_ == null
+            ? com.google.container.v1.ResourceUsageExportConfig.getDefaultInstance()
+            : resourceUsageExportConfig_;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for exporting resource usages. Resource usage export is
+     * disabled when this config is unspecified.
+     * </pre>
+     *
+     * <code>.google.container.v1.ResourceUsageExportConfig resource_usage_export_config = 33;
+     * </code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.container.v1.ResourceUsageExportConfig,
+            com.google.container.v1.ResourceUsageExportConfig.Builder,
+            com.google.container.v1.ResourceUsageExportConfigOrBuilder>
+        getResourceUsageExportConfigFieldBuilder() {
+      if (resourceUsageExportConfigBuilder_ == null) {
+        resourceUsageExportConfigBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.container.v1.ResourceUsageExportConfig,
+                com.google.container.v1.ResourceUsageExportConfig.Builder,
+                com.google.container.v1.ResourceUsageExportConfigOrBuilder>(
+                getResourceUsageExportConfig(), getParentForChildren(), isClean());
+        resourceUsageExportConfig_ = null;
+      }
+      return resourceUsageExportConfigBuilder_;
+    }
+
+    private com.google.container.v1.AuthenticatorGroupsConfig authenticatorGroupsConfig_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.container.v1.AuthenticatorGroupsConfig,
+            com.google.container.v1.AuthenticatorGroupsConfig.Builder,
+            com.google.container.v1.AuthenticatorGroupsConfigOrBuilder>
+        authenticatorGroupsConfigBuilder_;
+    /**
+     *
+     *
+     * <pre>
+     * Configuration controlling RBAC group membership information.
+     * </pre>
+     *
+     * <code>.google.container.v1.AuthenticatorGroupsConfig authenticator_groups_config = 34;</code>
+     */
+    public boolean hasAuthenticatorGroupsConfig() {
+      return authenticatorGroupsConfigBuilder_ != null || authenticatorGroupsConfig_ != null;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration controlling RBAC group membership information.
+     * </pre>
+     *
+     * <code>.google.container.v1.AuthenticatorGroupsConfig authenticator_groups_config = 34;</code>
+     */
+    public com.google.container.v1.AuthenticatorGroupsConfig getAuthenticatorGroupsConfig() {
+      if (authenticatorGroupsConfigBuilder_ == null) {
+        return authenticatorGroupsConfig_ == null
+            ? com.google.container.v1.AuthenticatorGroupsConfig.getDefaultInstance()
+            : authenticatorGroupsConfig_;
+      } else {
+        return authenticatorGroupsConfigBuilder_.getMessage();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration controlling RBAC group membership information.
+     * </pre>
+     *
+     * <code>.google.container.v1.AuthenticatorGroupsConfig authenticator_groups_config = 34;</code>
+     */
+    public Builder setAuthenticatorGroupsConfig(
+        com.google.container.v1.AuthenticatorGroupsConfig value) {
+      if (authenticatorGroupsConfigBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        authenticatorGroupsConfig_ = value;
+        onChanged();
+      } else {
+        authenticatorGroupsConfigBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration controlling RBAC group membership information.
+     * </pre>
+     *
+     * <code>.google.container.v1.AuthenticatorGroupsConfig authenticator_groups_config = 34;</code>
+     */
+    public Builder setAuthenticatorGroupsConfig(
+        com.google.container.v1.AuthenticatorGroupsConfig.Builder builderForValue) {
+      if (authenticatorGroupsConfigBuilder_ == null) {
+        authenticatorGroupsConfig_ = builderForValue.build();
+        onChanged();
+      } else {
+        authenticatorGroupsConfigBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration controlling RBAC group membership information.
+     * </pre>
+     *
+     * <code>.google.container.v1.AuthenticatorGroupsConfig authenticator_groups_config = 34;</code>
+     */
+    public Builder mergeAuthenticatorGroupsConfig(
+        com.google.container.v1.AuthenticatorGroupsConfig value) {
+      if (authenticatorGroupsConfigBuilder_ == null) {
+        if (authenticatorGroupsConfig_ != null) {
+          authenticatorGroupsConfig_ =
+              com.google.container.v1.AuthenticatorGroupsConfig.newBuilder(
+                      authenticatorGroupsConfig_)
+                  .mergeFrom(value)
+                  .buildPartial();
+        } else {
+          authenticatorGroupsConfig_ = value;
+        }
+        onChanged();
+      } else {
+        authenticatorGroupsConfigBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration controlling RBAC group membership information.
+     * </pre>
+     *
+     * <code>.google.container.v1.AuthenticatorGroupsConfig authenticator_groups_config = 34;</code>
+     */
+    public Builder clearAuthenticatorGroupsConfig() {
+      if (authenticatorGroupsConfigBuilder_ == null) {
+        authenticatorGroupsConfig_ = null;
+        onChanged();
+      } else {
+        authenticatorGroupsConfig_ = null;
+        authenticatorGroupsConfigBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration controlling RBAC group membership information.
+     * </pre>
+     *
+     * <code>.google.container.v1.AuthenticatorGroupsConfig authenticator_groups_config = 34;</code>
+     */
+    public com.google.container.v1.AuthenticatorGroupsConfig.Builder
+        getAuthenticatorGroupsConfigBuilder() {
+
+      onChanged();
+      return getAuthenticatorGroupsConfigFieldBuilder().getBuilder();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration controlling RBAC group membership information.
+     * </pre>
+     *
+     * <code>.google.container.v1.AuthenticatorGroupsConfig authenticator_groups_config = 34;</code>
+     */
+    public com.google.container.v1.AuthenticatorGroupsConfigOrBuilder
+        getAuthenticatorGroupsConfigOrBuilder() {
+      if (authenticatorGroupsConfigBuilder_ != null) {
+        return authenticatorGroupsConfigBuilder_.getMessageOrBuilder();
+      } else {
+        return authenticatorGroupsConfig_ == null
+            ? com.google.container.v1.AuthenticatorGroupsConfig.getDefaultInstance()
+            : authenticatorGroupsConfig_;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration controlling RBAC group membership information.
+     * </pre>
+     *
+     * <code>.google.container.v1.AuthenticatorGroupsConfig authenticator_groups_config = 34;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.container.v1.AuthenticatorGroupsConfig,
+            com.google.container.v1.AuthenticatorGroupsConfig.Builder,
+            com.google.container.v1.AuthenticatorGroupsConfigOrBuilder>
+        getAuthenticatorGroupsConfigFieldBuilder() {
+      if (authenticatorGroupsConfigBuilder_ == null) {
+        authenticatorGroupsConfigBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.container.v1.AuthenticatorGroupsConfig,
+                com.google.container.v1.AuthenticatorGroupsConfig.Builder,
+                com.google.container.v1.AuthenticatorGroupsConfigOrBuilder>(
+                getAuthenticatorGroupsConfig(), getParentForChildren(), isClean());
+        authenticatorGroupsConfig_ = null;
+      }
+      return authenticatorGroupsConfigBuilder_;
     }
 
     private com.google.container.v1.PrivateClusterConfig privateClusterConfig_;
@@ -7232,6 +9150,373 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
         privateClusterConfig_ = null;
       }
       return privateClusterConfigBuilder_;
+    }
+
+    private com.google.container.v1.DatabaseEncryption databaseEncryption_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.container.v1.DatabaseEncryption,
+            com.google.container.v1.DatabaseEncryption.Builder,
+            com.google.container.v1.DatabaseEncryptionOrBuilder>
+        databaseEncryptionBuilder_;
+    /**
+     *
+     *
+     * <pre>
+     * Configuration of etcd encryption.
+     * </pre>
+     *
+     * <code>.google.container.v1.DatabaseEncryption database_encryption = 38;</code>
+     */
+    public boolean hasDatabaseEncryption() {
+      return databaseEncryptionBuilder_ != null || databaseEncryption_ != null;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration of etcd encryption.
+     * </pre>
+     *
+     * <code>.google.container.v1.DatabaseEncryption database_encryption = 38;</code>
+     */
+    public com.google.container.v1.DatabaseEncryption getDatabaseEncryption() {
+      if (databaseEncryptionBuilder_ == null) {
+        return databaseEncryption_ == null
+            ? com.google.container.v1.DatabaseEncryption.getDefaultInstance()
+            : databaseEncryption_;
+      } else {
+        return databaseEncryptionBuilder_.getMessage();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration of etcd encryption.
+     * </pre>
+     *
+     * <code>.google.container.v1.DatabaseEncryption database_encryption = 38;</code>
+     */
+    public Builder setDatabaseEncryption(com.google.container.v1.DatabaseEncryption value) {
+      if (databaseEncryptionBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        databaseEncryption_ = value;
+        onChanged();
+      } else {
+        databaseEncryptionBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration of etcd encryption.
+     * </pre>
+     *
+     * <code>.google.container.v1.DatabaseEncryption database_encryption = 38;</code>
+     */
+    public Builder setDatabaseEncryption(
+        com.google.container.v1.DatabaseEncryption.Builder builderForValue) {
+      if (databaseEncryptionBuilder_ == null) {
+        databaseEncryption_ = builderForValue.build();
+        onChanged();
+      } else {
+        databaseEncryptionBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration of etcd encryption.
+     * </pre>
+     *
+     * <code>.google.container.v1.DatabaseEncryption database_encryption = 38;</code>
+     */
+    public Builder mergeDatabaseEncryption(com.google.container.v1.DatabaseEncryption value) {
+      if (databaseEncryptionBuilder_ == null) {
+        if (databaseEncryption_ != null) {
+          databaseEncryption_ =
+              com.google.container.v1.DatabaseEncryption.newBuilder(databaseEncryption_)
+                  .mergeFrom(value)
+                  .buildPartial();
+        } else {
+          databaseEncryption_ = value;
+        }
+        onChanged();
+      } else {
+        databaseEncryptionBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration of etcd encryption.
+     * </pre>
+     *
+     * <code>.google.container.v1.DatabaseEncryption database_encryption = 38;</code>
+     */
+    public Builder clearDatabaseEncryption() {
+      if (databaseEncryptionBuilder_ == null) {
+        databaseEncryption_ = null;
+        onChanged();
+      } else {
+        databaseEncryption_ = null;
+        databaseEncryptionBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration of etcd encryption.
+     * </pre>
+     *
+     * <code>.google.container.v1.DatabaseEncryption database_encryption = 38;</code>
+     */
+    public com.google.container.v1.DatabaseEncryption.Builder getDatabaseEncryptionBuilder() {
+
+      onChanged();
+      return getDatabaseEncryptionFieldBuilder().getBuilder();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration of etcd encryption.
+     * </pre>
+     *
+     * <code>.google.container.v1.DatabaseEncryption database_encryption = 38;</code>
+     */
+    public com.google.container.v1.DatabaseEncryptionOrBuilder getDatabaseEncryptionOrBuilder() {
+      if (databaseEncryptionBuilder_ != null) {
+        return databaseEncryptionBuilder_.getMessageOrBuilder();
+      } else {
+        return databaseEncryption_ == null
+            ? com.google.container.v1.DatabaseEncryption.getDefaultInstance()
+            : databaseEncryption_;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration of etcd encryption.
+     * </pre>
+     *
+     * <code>.google.container.v1.DatabaseEncryption database_encryption = 38;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.container.v1.DatabaseEncryption,
+            com.google.container.v1.DatabaseEncryption.Builder,
+            com.google.container.v1.DatabaseEncryptionOrBuilder>
+        getDatabaseEncryptionFieldBuilder() {
+      if (databaseEncryptionBuilder_ == null) {
+        databaseEncryptionBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.container.v1.DatabaseEncryption,
+                com.google.container.v1.DatabaseEncryption.Builder,
+                com.google.container.v1.DatabaseEncryptionOrBuilder>(
+                getDatabaseEncryption(), getParentForChildren(), isClean());
+        databaseEncryption_ = null;
+      }
+      return databaseEncryptionBuilder_;
+    }
+
+    private com.google.container.v1.VerticalPodAutoscaling verticalPodAutoscaling_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.container.v1.VerticalPodAutoscaling,
+            com.google.container.v1.VerticalPodAutoscaling.Builder,
+            com.google.container.v1.VerticalPodAutoscalingOrBuilder>
+        verticalPodAutoscalingBuilder_;
+    /**
+     *
+     *
+     * <pre>
+     * Cluster-level Vertical Pod Autoscaling configuration.
+     * </pre>
+     *
+     * <code>.google.container.v1.VerticalPodAutoscaling vertical_pod_autoscaling = 39;</code>
+     */
+    public boolean hasVerticalPodAutoscaling() {
+      return verticalPodAutoscalingBuilder_ != null || verticalPodAutoscaling_ != null;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Cluster-level Vertical Pod Autoscaling configuration.
+     * </pre>
+     *
+     * <code>.google.container.v1.VerticalPodAutoscaling vertical_pod_autoscaling = 39;</code>
+     */
+    public com.google.container.v1.VerticalPodAutoscaling getVerticalPodAutoscaling() {
+      if (verticalPodAutoscalingBuilder_ == null) {
+        return verticalPodAutoscaling_ == null
+            ? com.google.container.v1.VerticalPodAutoscaling.getDefaultInstance()
+            : verticalPodAutoscaling_;
+      } else {
+        return verticalPodAutoscalingBuilder_.getMessage();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Cluster-level Vertical Pod Autoscaling configuration.
+     * </pre>
+     *
+     * <code>.google.container.v1.VerticalPodAutoscaling vertical_pod_autoscaling = 39;</code>
+     */
+    public Builder setVerticalPodAutoscaling(com.google.container.v1.VerticalPodAutoscaling value) {
+      if (verticalPodAutoscalingBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        verticalPodAutoscaling_ = value;
+        onChanged();
+      } else {
+        verticalPodAutoscalingBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Cluster-level Vertical Pod Autoscaling configuration.
+     * </pre>
+     *
+     * <code>.google.container.v1.VerticalPodAutoscaling vertical_pod_autoscaling = 39;</code>
+     */
+    public Builder setVerticalPodAutoscaling(
+        com.google.container.v1.VerticalPodAutoscaling.Builder builderForValue) {
+      if (verticalPodAutoscalingBuilder_ == null) {
+        verticalPodAutoscaling_ = builderForValue.build();
+        onChanged();
+      } else {
+        verticalPodAutoscalingBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Cluster-level Vertical Pod Autoscaling configuration.
+     * </pre>
+     *
+     * <code>.google.container.v1.VerticalPodAutoscaling vertical_pod_autoscaling = 39;</code>
+     */
+    public Builder mergeVerticalPodAutoscaling(
+        com.google.container.v1.VerticalPodAutoscaling value) {
+      if (verticalPodAutoscalingBuilder_ == null) {
+        if (verticalPodAutoscaling_ != null) {
+          verticalPodAutoscaling_ =
+              com.google.container.v1.VerticalPodAutoscaling.newBuilder(verticalPodAutoscaling_)
+                  .mergeFrom(value)
+                  .buildPartial();
+        } else {
+          verticalPodAutoscaling_ = value;
+        }
+        onChanged();
+      } else {
+        verticalPodAutoscalingBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Cluster-level Vertical Pod Autoscaling configuration.
+     * </pre>
+     *
+     * <code>.google.container.v1.VerticalPodAutoscaling vertical_pod_autoscaling = 39;</code>
+     */
+    public Builder clearVerticalPodAutoscaling() {
+      if (verticalPodAutoscalingBuilder_ == null) {
+        verticalPodAutoscaling_ = null;
+        onChanged();
+      } else {
+        verticalPodAutoscaling_ = null;
+        verticalPodAutoscalingBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Cluster-level Vertical Pod Autoscaling configuration.
+     * </pre>
+     *
+     * <code>.google.container.v1.VerticalPodAutoscaling vertical_pod_autoscaling = 39;</code>
+     */
+    public com.google.container.v1.VerticalPodAutoscaling.Builder
+        getVerticalPodAutoscalingBuilder() {
+
+      onChanged();
+      return getVerticalPodAutoscalingFieldBuilder().getBuilder();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Cluster-level Vertical Pod Autoscaling configuration.
+     * </pre>
+     *
+     * <code>.google.container.v1.VerticalPodAutoscaling vertical_pod_autoscaling = 39;</code>
+     */
+    public com.google.container.v1.VerticalPodAutoscalingOrBuilder
+        getVerticalPodAutoscalingOrBuilder() {
+      if (verticalPodAutoscalingBuilder_ != null) {
+        return verticalPodAutoscalingBuilder_.getMessageOrBuilder();
+      } else {
+        return verticalPodAutoscaling_ == null
+            ? com.google.container.v1.VerticalPodAutoscaling.getDefaultInstance()
+            : verticalPodAutoscaling_;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Cluster-level Vertical Pod Autoscaling configuration.
+     * </pre>
+     *
+     * <code>.google.container.v1.VerticalPodAutoscaling vertical_pod_autoscaling = 39;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.container.v1.VerticalPodAutoscaling,
+            com.google.container.v1.VerticalPodAutoscaling.Builder,
+            com.google.container.v1.VerticalPodAutoscalingOrBuilder>
+        getVerticalPodAutoscalingFieldBuilder() {
+      if (verticalPodAutoscalingBuilder_ == null) {
+        verticalPodAutoscalingBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.container.v1.VerticalPodAutoscaling,
+                com.google.container.v1.VerticalPodAutoscaling.Builder,
+                com.google.container.v1.VerticalPodAutoscalingOrBuilder>(
+                getVerticalPodAutoscaling(), getParentForChildren(), isClean());
+        verticalPodAutoscaling_ = null;
+      }
+      return verticalPodAutoscalingBuilder_;
     }
 
     private java.lang.Object selfLink_ = "";
@@ -7800,7 +10085,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * [Output only] Deprecated, use
-     * [NodePool.version](/kubernetes-engine/docs/reference/rest/v1/projects.zones.clusters.nodePool)
+     * [NodePools.version](/kubernetes-engine/docs/reference/rest/v1/projects.zones.clusters.nodePools)
      * instead. The current version of the node software components. If they are
      * currently at multiple versions because they're in the process of being
      * upgraded, this reflects the minimum version of all nodes.
@@ -7825,7 +10110,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * [Output only] Deprecated, use
-     * [NodePool.version](/kubernetes-engine/docs/reference/rest/v1/projects.zones.clusters.nodePool)
+     * [NodePools.version](/kubernetes-engine/docs/reference/rest/v1/projects.zones.clusters.nodePools)
      * instead. The current version of the node software components. If they are
      * currently at multiple versions because they're in the process of being
      * upgraded, this reflects the minimum version of all nodes.
@@ -7850,7 +10135,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * [Output only] Deprecated, use
-     * [NodePool.version](/kubernetes-engine/docs/reference/rest/v1/projects.zones.clusters.nodePool)
+     * [NodePools.version](/kubernetes-engine/docs/reference/rest/v1/projects.zones.clusters.nodePools)
      * instead. The current version of the node software components. If they are
      * currently at multiple versions because they're in the process of being
      * upgraded, this reflects the minimum version of all nodes.
@@ -7873,7 +10158,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * [Output only] Deprecated, use
-     * [NodePool.version](/kubernetes-engine/docs/reference/rest/v1/projects.zones.clusters.nodePool)
+     * [NodePools.version](/kubernetes-engine/docs/reference/rest/v1/projects.zones.clusters.nodePools)
      * instead. The current version of the node software components. If they are
      * currently at multiple versions because they're in the process of being
      * upgraded, this reflects the minimum version of all nodes.
@@ -7893,7 +10178,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * [Output only] Deprecated, use
-     * [NodePool.version](/kubernetes-engine/docs/reference/rest/v1/projects.zones.clusters.nodePool)
+     * [NodePools.version](/kubernetes-engine/docs/reference/rest/v1/projects.zones.clusters.nodePools)
      * instead. The current version of the node software components. If they are
      * currently at multiple versions because they're in the process of being
      * upgraded, this reflects the minimum version of all nodes.
@@ -8194,7 +10479,8 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * [Output only] The size of the address space on each node for hosting
      * containers. This is provisioned from within the `container_ipv4_cidr`
-     * range.
+     * range. This field will only be set when cluster is in route-based network
+     * mode.
      * </pre>
      *
      * <code>int32 node_ipv4_cidr_size = 109;</code>
@@ -8208,7 +10494,8 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * [Output only] The size of the address space on each node for hosting
      * containers. This is provisioned from within the `container_ipv4_cidr`
-     * range.
+     * range. This field will only be set when cluster is in route-based network
+     * mode.
      * </pre>
      *
      * <code>int32 node_ipv4_cidr_size = 109;</code>
@@ -8225,7 +10512,8 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * [Output only] The size of the address space on each node for hosting
      * containers. This is provisioned from within the `container_ipv4_cidr`
-     * range.
+     * range. This field will only be set when cluster is in route-based network
+     * mode.
      * </pre>
      *
      * <code>int32 node_ipv4_cidr_size = 109;</code>
@@ -8355,9 +10643,9 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
         com.google.protobuf.LazyStringArrayList.EMPTY;
 
     private void ensureInstanceGroupUrlsIsMutable() {
-      if (!((bitField1_ & 0x00000004) != 0)) {
+      if (!((bitField1_ & 0x00000200) != 0)) {
         instanceGroupUrls_ = new com.google.protobuf.LazyStringArrayList(instanceGroupUrls_);
-        bitField1_ |= 0x00000004;
+        bitField1_ |= 0x00000200;
       }
     }
     /**
@@ -8478,7 +10766,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
     @java.lang.Deprecated
     public Builder clearInstanceGroupUrls() {
       instanceGroupUrls_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField1_ = (bitField1_ & ~0x00000004);
+      bitField1_ = (bitField1_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -8508,11 +10796,13 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * [Output only] The number of nodes currently in the cluster.
+     * [Output only]  The number of nodes currently in the cluster. Deprecated.
+     * Call Kubernetes API directly to retrieve node information.
      * </pre>
      *
-     * <code>int32 current_node_count = 112;</code>
+     * <code>int32 current_node_count = 112 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     public int getCurrentNodeCount() {
       return currentNodeCount_;
     }
@@ -8520,11 +10810,13 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * [Output only] The number of nodes currently in the cluster.
+     * [Output only]  The number of nodes currently in the cluster. Deprecated.
+     * Call Kubernetes API directly to retrieve node information.
      * </pre>
      *
-     * <code>int32 current_node_count = 112;</code>
+     * <code>int32 current_node_count = 112 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     public Builder setCurrentNodeCount(int value) {
 
       currentNodeCount_ = value;
@@ -8535,11 +10827,13 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      *
      *
      * <pre>
-     * [Output only] The number of nodes currently in the cluster.
+     * [Output only]  The number of nodes currently in the cluster. Deprecated.
+     * Call Kubernetes API directly to retrieve node information.
      * </pre>
      *
-     * <code>int32 current_node_count = 112;</code>
+     * <code>int32 current_node_count = 112 [deprecated = true];</code>
      */
+    @java.lang.Deprecated
     public Builder clearCurrentNodeCount() {
 
       currentNodeCount_ = 0;
@@ -8753,6 +11047,503 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
       location_ = value;
       onChanged();
       return this;
+    }
+
+    private boolean enableTpu_;
+    /**
+     *
+     *
+     * <pre>
+     * Enable the ability to use Cloud TPUs in this cluster.
+     * </pre>
+     *
+     * <code>bool enable_tpu = 115;</code>
+     */
+    public boolean getEnableTpu() {
+      return enableTpu_;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Enable the ability to use Cloud TPUs in this cluster.
+     * </pre>
+     *
+     * <code>bool enable_tpu = 115;</code>
+     */
+    public Builder setEnableTpu(boolean value) {
+
+      enableTpu_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Enable the ability to use Cloud TPUs in this cluster.
+     * </pre>
+     *
+     * <code>bool enable_tpu = 115;</code>
+     */
+    public Builder clearEnableTpu() {
+
+      enableTpu_ = false;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object tpuIpv4CidrBlock_ = "";
+    /**
+     *
+     *
+     * <pre>
+     * [Output only] The IP address range of the Cloud TPUs in this cluster, in
+     * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+     * notation (e.g. `1.2.3.4/29`).
+     * </pre>
+     *
+     * <code>string tpu_ipv4_cidr_block = 116;</code>
+     */
+    public java.lang.String getTpuIpv4CidrBlock() {
+      java.lang.Object ref = tpuIpv4CidrBlock_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tpuIpv4CidrBlock_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * [Output only] The IP address range of the Cloud TPUs in this cluster, in
+     * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+     * notation (e.g. `1.2.3.4/29`).
+     * </pre>
+     *
+     * <code>string tpu_ipv4_cidr_block = 116;</code>
+     */
+    public com.google.protobuf.ByteString getTpuIpv4CidrBlockBytes() {
+      java.lang.Object ref = tpuIpv4CidrBlock_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b =
+            com.google.protobuf.ByteString.copyFromUtf8((java.lang.String) ref);
+        tpuIpv4CidrBlock_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * [Output only] The IP address range of the Cloud TPUs in this cluster, in
+     * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+     * notation (e.g. `1.2.3.4/29`).
+     * </pre>
+     *
+     * <code>string tpu_ipv4_cidr_block = 116;</code>
+     */
+    public Builder setTpuIpv4CidrBlock(java.lang.String value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+
+      tpuIpv4CidrBlock_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * [Output only] The IP address range of the Cloud TPUs in this cluster, in
+     * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+     * notation (e.g. `1.2.3.4/29`).
+     * </pre>
+     *
+     * <code>string tpu_ipv4_cidr_block = 116;</code>
+     */
+    public Builder clearTpuIpv4CidrBlock() {
+
+      tpuIpv4CidrBlock_ = getDefaultInstance().getTpuIpv4CidrBlock();
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * [Output only] The IP address range of the Cloud TPUs in this cluster, in
+     * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+     * notation (e.g. `1.2.3.4/29`).
+     * </pre>
+     *
+     * <code>string tpu_ipv4_cidr_block = 116;</code>
+     */
+    public Builder setTpuIpv4CidrBlockBytes(com.google.protobuf.ByteString value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      checkByteStringIsUtf8(value);
+
+      tpuIpv4CidrBlock_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<com.google.container.v1.StatusCondition> conditions_ =
+        java.util.Collections.emptyList();
+
+    private void ensureConditionsIsMutable() {
+      if (!((bitField1_ & 0x00008000) != 0)) {
+        conditions_ = new java.util.ArrayList<com.google.container.v1.StatusCondition>(conditions_);
+        bitField1_ |= 0x00008000;
+      }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.container.v1.StatusCondition,
+            com.google.container.v1.StatusCondition.Builder,
+            com.google.container.v1.StatusConditionOrBuilder>
+        conditionsBuilder_;
+
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+     */
+    public java.util.List<com.google.container.v1.StatusCondition> getConditionsList() {
+      if (conditionsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(conditions_);
+      } else {
+        return conditionsBuilder_.getMessageList();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+     */
+    public int getConditionsCount() {
+      if (conditionsBuilder_ == null) {
+        return conditions_.size();
+      } else {
+        return conditionsBuilder_.getCount();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+     */
+    public com.google.container.v1.StatusCondition getConditions(int index) {
+      if (conditionsBuilder_ == null) {
+        return conditions_.get(index);
+      } else {
+        return conditionsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+     */
+    public Builder setConditions(int index, com.google.container.v1.StatusCondition value) {
+      if (conditionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureConditionsIsMutable();
+        conditions_.set(index, value);
+        onChanged();
+      } else {
+        conditionsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+     */
+    public Builder setConditions(
+        int index, com.google.container.v1.StatusCondition.Builder builderForValue) {
+      if (conditionsBuilder_ == null) {
+        ensureConditionsIsMutable();
+        conditions_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        conditionsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+     */
+    public Builder addConditions(com.google.container.v1.StatusCondition value) {
+      if (conditionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureConditionsIsMutable();
+        conditions_.add(value);
+        onChanged();
+      } else {
+        conditionsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+     */
+    public Builder addConditions(int index, com.google.container.v1.StatusCondition value) {
+      if (conditionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureConditionsIsMutable();
+        conditions_.add(index, value);
+        onChanged();
+      } else {
+        conditionsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+     */
+    public Builder addConditions(com.google.container.v1.StatusCondition.Builder builderForValue) {
+      if (conditionsBuilder_ == null) {
+        ensureConditionsIsMutable();
+        conditions_.add(builderForValue.build());
+        onChanged();
+      } else {
+        conditionsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+     */
+    public Builder addConditions(
+        int index, com.google.container.v1.StatusCondition.Builder builderForValue) {
+      if (conditionsBuilder_ == null) {
+        ensureConditionsIsMutable();
+        conditions_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        conditionsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+     */
+    public Builder addAllConditions(
+        java.lang.Iterable<? extends com.google.container.v1.StatusCondition> values) {
+      if (conditionsBuilder_ == null) {
+        ensureConditionsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, conditions_);
+        onChanged();
+      } else {
+        conditionsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+     */
+    public Builder clearConditions() {
+      if (conditionsBuilder_ == null) {
+        conditions_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00008000);
+        onChanged();
+      } else {
+        conditionsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+     */
+    public Builder removeConditions(int index) {
+      if (conditionsBuilder_ == null) {
+        ensureConditionsIsMutable();
+        conditions_.remove(index);
+        onChanged();
+      } else {
+        conditionsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+     */
+    public com.google.container.v1.StatusCondition.Builder getConditionsBuilder(int index) {
+      return getConditionsFieldBuilder().getBuilder(index);
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+     */
+    public com.google.container.v1.StatusConditionOrBuilder getConditionsOrBuilder(int index) {
+      if (conditionsBuilder_ == null) {
+        return conditions_.get(index);
+      } else {
+        return conditionsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+     */
+    public java.util.List<? extends com.google.container.v1.StatusConditionOrBuilder>
+        getConditionsOrBuilderList() {
+      if (conditionsBuilder_ != null) {
+        return conditionsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(conditions_);
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+     */
+    public com.google.container.v1.StatusCondition.Builder addConditionsBuilder() {
+      return getConditionsFieldBuilder()
+          .addBuilder(com.google.container.v1.StatusCondition.getDefaultInstance());
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+     */
+    public com.google.container.v1.StatusCondition.Builder addConditionsBuilder(int index) {
+      return getConditionsFieldBuilder()
+          .addBuilder(index, com.google.container.v1.StatusCondition.getDefaultInstance());
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+     */
+    public java.util.List<com.google.container.v1.StatusCondition.Builder>
+        getConditionsBuilderList() {
+      return getConditionsFieldBuilder().getBuilderList();
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.container.v1.StatusCondition,
+            com.google.container.v1.StatusCondition.Builder,
+            com.google.container.v1.StatusConditionOrBuilder>
+        getConditionsFieldBuilder() {
+      if (conditionsBuilder_ == null) {
+        conditionsBuilder_ =
+            new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.google.container.v1.StatusCondition,
+                com.google.container.v1.StatusCondition.Builder,
+                com.google.container.v1.StatusConditionOrBuilder>(
+                conditions_, ((bitField1_ & 0x00008000) != 0), getParentForChildren(), isClean());
+        conditions_ = null;
+      }
+      return conditionsBuilder_;
     }
 
     @java.lang.Override

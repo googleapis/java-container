@@ -28,7 +28,8 @@ public interface ClusterOrBuilder
    *
    * <pre>
    * The name of this cluster. The name must be unique within this project
-   * and zone, and can be up to 40 characters with the following restrictions:
+   * and location (e.g. zone or region), and can be up to 40 characters with
+   * the following restrictions:
    * * Lowercase letters, numbers, and hyphens only.
    * * Must start with a letter.
    * * Must end with a number or a letter.
@@ -42,7 +43,8 @@ public interface ClusterOrBuilder
    *
    * <pre>
    * The name of this cluster. The name must be unique within this project
-   * and zone, and can be up to 40 characters with the following restrictions:
+   * and location (e.g. zone or region), and can be up to 40 characters with
+   * the following restrictions:
    * * Lowercase letters, numbers, and hyphens only.
    * * Must start with a letter.
    * * Must end with a number or a letter.
@@ -85,10 +87,12 @@ public interface ClusterOrBuilder
    * "node_pool" object, since this configuration (along with the
    * "node_config") will be used to create a "NodePool" object with an
    * auto-generated name. Do not use this and a node_pool at the same time.
+   * This field is deprecated, use node_pool.initial_node_count instead.
    * </pre>
    *
-   * <code>int32 initial_node_count = 3;</code>
+   * <code>int32 initial_node_count = 3 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   int getInitialNodeCount();
 
   /**
@@ -96,54 +100,60 @@ public interface ClusterOrBuilder
    *
    * <pre>
    * Parameters used in creating the cluster's nodes.
-   * See `nodeConfig` for the description of its properties.
    * For requests, this field should only be used in lieu of a
    * "node_pool" object, since this configuration (along with the
    * "initial_node_count") will be used to create a "NodePool" object with an
    * auto-generated name. Do not use this and a node_pool at the same time.
    * For responses, this field will be populated with the node configuration of
-   * the first node pool.
+   * the first node pool. (For configuration of each node pool, see
+   * `node_pool.config`)
    * If unspecified, the defaults are used.
+   * This field is deprecated, use node_pool.config instead.
    * </pre>
    *
-   * <code>.google.container.v1.NodeConfig node_config = 4;</code>
+   * <code>.google.container.v1.NodeConfig node_config = 4 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   boolean hasNodeConfig();
   /**
    *
    *
    * <pre>
    * Parameters used in creating the cluster's nodes.
-   * See `nodeConfig` for the description of its properties.
    * For requests, this field should only be used in lieu of a
    * "node_pool" object, since this configuration (along with the
    * "initial_node_count") will be used to create a "NodePool" object with an
    * auto-generated name. Do not use this and a node_pool at the same time.
    * For responses, this field will be populated with the node configuration of
-   * the first node pool.
+   * the first node pool. (For configuration of each node pool, see
+   * `node_pool.config`)
    * If unspecified, the defaults are used.
+   * This field is deprecated, use node_pool.config instead.
    * </pre>
    *
-   * <code>.google.container.v1.NodeConfig node_config = 4;</code>
+   * <code>.google.container.v1.NodeConfig node_config = 4 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   com.google.container.v1.NodeConfig getNodeConfig();
   /**
    *
    *
    * <pre>
    * Parameters used in creating the cluster's nodes.
-   * See `nodeConfig` for the description of its properties.
    * For requests, this field should only be used in lieu of a
    * "node_pool" object, since this configuration (along with the
    * "initial_node_count") will be used to create a "NodePool" object with an
    * auto-generated name. Do not use this and a node_pool at the same time.
    * For responses, this field will be populated with the node configuration of
-   * the first node pool.
+   * the first node pool. (For configuration of each node pool, see
+   * `node_pool.config`)
    * If unspecified, the defaults are used.
+   * This field is deprecated, use node_pool.config instead.
    * </pre>
    *
-   * <code>.google.container.v1.NodeConfig node_config = 4;</code>
+   * <code>.google.container.v1.NodeConfig node_config = 4 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   com.google.container.v1.NodeConfigOrBuilder getNodeConfigOrBuilder();
 
   /**
@@ -151,6 +161,10 @@ public interface ClusterOrBuilder
    *
    * <pre>
    * The authentication information for accessing the master endpoint.
+   * If unspecified, the defaults are used:
+   * For clusters before v1.12, if master_auth is unspecified, `username` will
+   * be set to "admin", a random password will be generated, and a client
+   * certificate will be issued.
    * </pre>
    *
    * <code>.google.container.v1.MasterAuth master_auth = 5;</code>
@@ -161,6 +175,10 @@ public interface ClusterOrBuilder
    *
    * <pre>
    * The authentication information for accessing the master endpoint.
+   * If unspecified, the defaults are used:
+   * For clusters before v1.12, if master_auth is unspecified, `username` will
+   * be set to "admin", a random password will be generated, and a client
+   * certificate will be issued.
    * </pre>
    *
    * <code>.google.container.v1.MasterAuth master_auth = 5;</code>
@@ -171,6 +189,10 @@ public interface ClusterOrBuilder
    *
    * <pre>
    * The authentication information for accessing the master endpoint.
+   * If unspecified, the defaults are used:
+   * For clusters before v1.12, if master_auth is unspecified, `username` will
+   * be set to "admin", a random password will be generated, and a client
+   * certificate will be issued.
    * </pre>
    *
    * <code>.google.container.v1.MasterAuth master_auth = 5;</code>
@@ -183,6 +205,8 @@ public interface ClusterOrBuilder
    * <pre>
    * The logging service the cluster should use to write logs.
    * Currently available options:
+   * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging
+   * service with Kubernetes-native resource model
    * * `logging.googleapis.com` - the Google Cloud Logging service.
    * * `none` - no logs will be exported from the cluster.
    * * if left as an empty string,`logging.googleapis.com` will be used.
@@ -197,6 +221,8 @@ public interface ClusterOrBuilder
    * <pre>
    * The logging service the cluster should use to write logs.
    * Currently available options:
+   * * "logging.googleapis.com/kubernetes" - the Google Cloud Logging
+   * service with Kubernetes-native resource model
    * * `logging.googleapis.com` - the Google Cloud Logging service.
    * * `none` - no logs will be exported from the cluster.
    * * if left as an empty string,`logging.googleapis.com` will be used.
@@ -411,7 +437,7 @@ public interface ClusterOrBuilder
    *
    * <pre>
    * The list of Google Compute Engine
-   * [locations](/compute/docs/zones#available) in which the cluster's nodes
+   * [zones](/compute/docs/zones#available) in which the cluster's nodes
    * should be located.
    * </pre>
    *
@@ -423,7 +449,7 @@ public interface ClusterOrBuilder
    *
    * <pre>
    * The list of Google Compute Engine
-   * [locations](/compute/docs/zones#available) in which the cluster's nodes
+   * [zones](/compute/docs/zones#available) in which the cluster's nodes
    * should be located.
    * </pre>
    *
@@ -435,7 +461,7 @@ public interface ClusterOrBuilder
    *
    * <pre>
    * The list of Google Compute Engine
-   * [locations](/compute/docs/zones#available) in which the cluster's nodes
+   * [zones](/compute/docs/zones#available) in which the cluster's nodes
    * should be located.
    * </pre>
    *
@@ -447,7 +473,7 @@ public interface ClusterOrBuilder
    *
    * <pre>
    * The list of Google Compute Engine
-   * [locations](/compute/docs/zones#available) in which the cluster's nodes
+   * [zones](/compute/docs/zones#available) in which the cluster's nodes
    * should be located.
    * </pre>
    *
@@ -717,6 +743,68 @@ public interface ClusterOrBuilder
    *
    *
    * <pre>
+   * Configuration for Binary Authorization.
+   * </pre>
+   *
+   * <code>.google.container.v1.BinaryAuthorization binary_authorization = 24;</code>
+   */
+  boolean hasBinaryAuthorization();
+  /**
+   *
+   *
+   * <pre>
+   * Configuration for Binary Authorization.
+   * </pre>
+   *
+   * <code>.google.container.v1.BinaryAuthorization binary_authorization = 24;</code>
+   */
+  com.google.container.v1.BinaryAuthorization getBinaryAuthorization();
+  /**
+   *
+   *
+   * <pre>
+   * Configuration for Binary Authorization.
+   * </pre>
+   *
+   * <code>.google.container.v1.BinaryAuthorization binary_authorization = 24;</code>
+   */
+  com.google.container.v1.BinaryAuthorizationOrBuilder getBinaryAuthorizationOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
+   * Cluster-level autoscaling configuration.
+   * </pre>
+   *
+   * <code>.google.container.v1.ClusterAutoscaling autoscaling = 26;</code>
+   */
+  boolean hasAutoscaling();
+  /**
+   *
+   *
+   * <pre>
+   * Cluster-level autoscaling configuration.
+   * </pre>
+   *
+   * <code>.google.container.v1.ClusterAutoscaling autoscaling = 26;</code>
+   */
+  com.google.container.v1.ClusterAutoscaling getAutoscaling();
+  /**
+   *
+   *
+   * <pre>
+   * Cluster-level autoscaling configuration.
+   * </pre>
+   *
+   * <code>.google.container.v1.ClusterAutoscaling autoscaling = 26;</code>
+   */
+  com.google.container.v1.ClusterAutoscalingOrBuilder getAutoscalingOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
    * Configuration for cluster networking.
    * </pre>
    *
@@ -748,6 +836,110 @@ public interface ClusterOrBuilder
    *
    *
    * <pre>
+   * The default constraint on the maximum number of pods that can be run
+   * simultaneously on a node in the node pool of this cluster. Only honored
+   * if cluster created with IP Alias support.
+   * </pre>
+   *
+   * <code>.google.container.v1.MaxPodsConstraint default_max_pods_constraint = 30;</code>
+   */
+  boolean hasDefaultMaxPodsConstraint();
+  /**
+   *
+   *
+   * <pre>
+   * The default constraint on the maximum number of pods that can be run
+   * simultaneously on a node in the node pool of this cluster. Only honored
+   * if cluster created with IP Alias support.
+   * </pre>
+   *
+   * <code>.google.container.v1.MaxPodsConstraint default_max_pods_constraint = 30;</code>
+   */
+  com.google.container.v1.MaxPodsConstraint getDefaultMaxPodsConstraint();
+  /**
+   *
+   *
+   * <pre>
+   * The default constraint on the maximum number of pods that can be run
+   * simultaneously on a node in the node pool of this cluster. Only honored
+   * if cluster created with IP Alias support.
+   * </pre>
+   *
+   * <code>.google.container.v1.MaxPodsConstraint default_max_pods_constraint = 30;</code>
+   */
+  com.google.container.v1.MaxPodsConstraintOrBuilder getDefaultMaxPodsConstraintOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
+   * Configuration for exporting resource usages. Resource usage export is
+   * disabled when this config is unspecified.
+   * </pre>
+   *
+   * <code>.google.container.v1.ResourceUsageExportConfig resource_usage_export_config = 33;</code>
+   */
+  boolean hasResourceUsageExportConfig();
+  /**
+   *
+   *
+   * <pre>
+   * Configuration for exporting resource usages. Resource usage export is
+   * disabled when this config is unspecified.
+   * </pre>
+   *
+   * <code>.google.container.v1.ResourceUsageExportConfig resource_usage_export_config = 33;</code>
+   */
+  com.google.container.v1.ResourceUsageExportConfig getResourceUsageExportConfig();
+  /**
+   *
+   *
+   * <pre>
+   * Configuration for exporting resource usages. Resource usage export is
+   * disabled when this config is unspecified.
+   * </pre>
+   *
+   * <code>.google.container.v1.ResourceUsageExportConfig resource_usage_export_config = 33;</code>
+   */
+  com.google.container.v1.ResourceUsageExportConfigOrBuilder
+      getResourceUsageExportConfigOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
+   * Configuration controlling RBAC group membership information.
+   * </pre>
+   *
+   * <code>.google.container.v1.AuthenticatorGroupsConfig authenticator_groups_config = 34;</code>
+   */
+  boolean hasAuthenticatorGroupsConfig();
+  /**
+   *
+   *
+   * <pre>
+   * Configuration controlling RBAC group membership information.
+   * </pre>
+   *
+   * <code>.google.container.v1.AuthenticatorGroupsConfig authenticator_groups_config = 34;</code>
+   */
+  com.google.container.v1.AuthenticatorGroupsConfig getAuthenticatorGroupsConfig();
+  /**
+   *
+   *
+   * <pre>
+   * Configuration controlling RBAC group membership information.
+   * </pre>
+   *
+   * <code>.google.container.v1.AuthenticatorGroupsConfig authenticator_groups_config = 34;</code>
+   */
+  com.google.container.v1.AuthenticatorGroupsConfigOrBuilder
+      getAuthenticatorGroupsConfigOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
    * Configuration for private cluster.
    * </pre>
    *
@@ -774,6 +966,68 @@ public interface ClusterOrBuilder
    * <code>.google.container.v1.PrivateClusterConfig private_cluster_config = 37;</code>
    */
   com.google.container.v1.PrivateClusterConfigOrBuilder getPrivateClusterConfigOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
+   * Configuration of etcd encryption.
+   * </pre>
+   *
+   * <code>.google.container.v1.DatabaseEncryption database_encryption = 38;</code>
+   */
+  boolean hasDatabaseEncryption();
+  /**
+   *
+   *
+   * <pre>
+   * Configuration of etcd encryption.
+   * </pre>
+   *
+   * <code>.google.container.v1.DatabaseEncryption database_encryption = 38;</code>
+   */
+  com.google.container.v1.DatabaseEncryption getDatabaseEncryption();
+  /**
+   *
+   *
+   * <pre>
+   * Configuration of etcd encryption.
+   * </pre>
+   *
+   * <code>.google.container.v1.DatabaseEncryption database_encryption = 38;</code>
+   */
+  com.google.container.v1.DatabaseEncryptionOrBuilder getDatabaseEncryptionOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
+   * Cluster-level Vertical Pod Autoscaling configuration.
+   * </pre>
+   *
+   * <code>.google.container.v1.VerticalPodAutoscaling vertical_pod_autoscaling = 39;</code>
+   */
+  boolean hasVerticalPodAutoscaling();
+  /**
+   *
+   *
+   * <pre>
+   * Cluster-level Vertical Pod Autoscaling configuration.
+   * </pre>
+   *
+   * <code>.google.container.v1.VerticalPodAutoscaling vertical_pod_autoscaling = 39;</code>
+   */
+  com.google.container.v1.VerticalPodAutoscaling getVerticalPodAutoscaling();
+  /**
+   *
+   *
+   * <pre>
+   * Cluster-level Vertical Pod Autoscaling configuration.
+   * </pre>
+   *
+   * <code>.google.container.v1.VerticalPodAutoscaling vertical_pod_autoscaling = 39;</code>
+   */
+  com.google.container.v1.VerticalPodAutoscalingOrBuilder getVerticalPodAutoscalingOrBuilder();
 
   /**
    *
@@ -921,7 +1175,7 @@ public interface ClusterOrBuilder
    *
    * <pre>
    * [Output only] Deprecated, use
-   * [NodePool.version](/kubernetes-engine/docs/reference/rest/v1/projects.zones.clusters.nodePool)
+   * [NodePools.version](/kubernetes-engine/docs/reference/rest/v1/projects.zones.clusters.nodePools)
    * instead. The current version of the node software components. If they are
    * currently at multiple versions because they're in the process of being
    * upgraded, this reflects the minimum version of all nodes.
@@ -936,7 +1190,7 @@ public interface ClusterOrBuilder
    *
    * <pre>
    * [Output only] Deprecated, use
-   * [NodePool.version](/kubernetes-engine/docs/reference/rest/v1/projects.zones.clusters.nodePool)
+   * [NodePools.version](/kubernetes-engine/docs/reference/rest/v1/projects.zones.clusters.nodePools)
    * instead. The current version of the node software components. If they are
    * currently at multiple versions because they're in the process of being
    * upgraded, this reflects the minimum version of all nodes.
@@ -1020,7 +1274,8 @@ public interface ClusterOrBuilder
    * <pre>
    * [Output only] The size of the address space on each node for hosting
    * containers. This is provisioned from within the `container_ipv4_cidr`
-   * range.
+   * range. This field will only be set when cluster is in route-based network
+   * mode.
    * </pre>
    *
    * <code>int32 node_ipv4_cidr_size = 109;</code>
@@ -1105,11 +1360,13 @@ public interface ClusterOrBuilder
    *
    *
    * <pre>
-   * [Output only] The number of nodes currently in the cluster.
+   * [Output only]  The number of nodes currently in the cluster. Deprecated.
+   * Call Kubernetes API directly to retrieve node information.
    * </pre>
    *
-   * <code>int32 current_node_count = 112;</code>
+   * <code>int32 current_node_count = 112 [deprecated = true];</code>
    */
+  @java.lang.Deprecated
   int getCurrentNodeCount();
 
   /**
@@ -1161,4 +1418,92 @@ public interface ClusterOrBuilder
    * <code>string location = 114;</code>
    */
   com.google.protobuf.ByteString getLocationBytes();
+
+  /**
+   *
+   *
+   * <pre>
+   * Enable the ability to use Cloud TPUs in this cluster.
+   * </pre>
+   *
+   * <code>bool enable_tpu = 115;</code>
+   */
+  boolean getEnableTpu();
+
+  /**
+   *
+   *
+   * <pre>
+   * [Output only] The IP address range of the Cloud TPUs in this cluster, in
+   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+   * notation (e.g. `1.2.3.4/29`).
+   * </pre>
+   *
+   * <code>string tpu_ipv4_cidr_block = 116;</code>
+   */
+  java.lang.String getTpuIpv4CidrBlock();
+  /**
+   *
+   *
+   * <pre>
+   * [Output only] The IP address range of the Cloud TPUs in this cluster, in
+   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+   * notation (e.g. `1.2.3.4/29`).
+   * </pre>
+   *
+   * <code>string tpu_ipv4_cidr_block = 116;</code>
+   */
+  com.google.protobuf.ByteString getTpuIpv4CidrBlockBytes();
+
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current cluster state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+   */
+  java.util.List<com.google.container.v1.StatusCondition> getConditionsList();
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current cluster state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+   */
+  com.google.container.v1.StatusCondition getConditions(int index);
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current cluster state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+   */
+  int getConditionsCount();
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current cluster state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+   */
+  java.util.List<? extends com.google.container.v1.StatusConditionOrBuilder>
+      getConditionsOrBuilderList();
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current cluster state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition conditions = 118;</code>
+   */
+  com.google.container.v1.StatusConditionOrBuilder getConditionsOrBuilder(int index);
 }

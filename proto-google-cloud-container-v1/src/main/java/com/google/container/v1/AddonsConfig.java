@@ -128,6 +128,22 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
 
               break;
             }
+          case 58:
+            {
+              com.google.container.v1.CloudRunConfig.Builder subBuilder = null;
+              if (cloudRunConfig_ != null) {
+                subBuilder = cloudRunConfig_.toBuilder();
+              }
+              cloudRunConfig_ =
+                  input.readMessage(
+                      com.google.container.v1.CloudRunConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(cloudRunConfig_);
+                cloudRunConfig_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
           default:
             {
               if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
@@ -261,10 +277,16 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Configuration for the Kubernetes Dashboard.
+   * This addon is deprecated, and will be disabled in 1.15. It is recommended
+   * to use the Cloud Console to manage and monitor your Kubernetes clusters,
+   * workloads and applications. For more information, see:
+   * https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
    * </pre>
    *
-   * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3;</code>
+   * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3 [deprecated = true];
+   * </code>
    */
+  @java.lang.Deprecated
   public boolean hasKubernetesDashboard() {
     return kubernetesDashboard_ != null;
   }
@@ -273,10 +295,16 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Configuration for the Kubernetes Dashboard.
+   * This addon is deprecated, and will be disabled in 1.15. It is recommended
+   * to use the Cloud Console to manage and monitor your Kubernetes clusters,
+   * workloads and applications. For more information, see:
+   * https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
    * </pre>
    *
-   * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3;</code>
+   * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3 [deprecated = true];
+   * </code>
    */
+  @java.lang.Deprecated
   public com.google.container.v1.KubernetesDashboard getKubernetesDashboard() {
     return kubernetesDashboard_ == null
         ? com.google.container.v1.KubernetesDashboard.getDefaultInstance()
@@ -287,10 +315,16 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * Configuration for the Kubernetes Dashboard.
+   * This addon is deprecated, and will be disabled in 1.15. It is recommended
+   * to use the Cloud Console to manage and monitor your Kubernetes clusters,
+   * workloads and applications. For more information, see:
+   * https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
    * </pre>
    *
-   * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3;</code>
+   * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3 [deprecated = true];
+   * </code>
    */
+  @java.lang.Deprecated
   public com.google.container.v1.KubernetesDashboardOrBuilder getKubernetesDashboardOrBuilder() {
     return getKubernetesDashboard();
   }
@@ -342,6 +376,50 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
     return getNetworkPolicyConfig();
   }
 
+  public static final int CLOUD_RUN_CONFIG_FIELD_NUMBER = 7;
+  private com.google.container.v1.CloudRunConfig cloudRunConfig_;
+  /**
+   *
+   *
+   * <pre>
+   * Configuration for the Cloud Run addon, which allows the user to use a
+   * managed Knative service.
+   * </pre>
+   *
+   * <code>.google.container.v1.CloudRunConfig cloud_run_config = 7;</code>
+   */
+  public boolean hasCloudRunConfig() {
+    return cloudRunConfig_ != null;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Configuration for the Cloud Run addon, which allows the user to use a
+   * managed Knative service.
+   * </pre>
+   *
+   * <code>.google.container.v1.CloudRunConfig cloud_run_config = 7;</code>
+   */
+  public com.google.container.v1.CloudRunConfig getCloudRunConfig() {
+    return cloudRunConfig_ == null
+        ? com.google.container.v1.CloudRunConfig.getDefaultInstance()
+        : cloudRunConfig_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Configuration for the Cloud Run addon, which allows the user to use a
+   * managed Knative service.
+   * </pre>
+   *
+   * <code>.google.container.v1.CloudRunConfig cloud_run_config = 7;</code>
+   */
+  public com.google.container.v1.CloudRunConfigOrBuilder getCloudRunConfigOrBuilder() {
+    return getCloudRunConfig();
+  }
+
   private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
@@ -368,6 +446,9 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
     if (networkPolicyConfig_ != null) {
       output.writeMessage(4, getNetworkPolicyConfig());
     }
+    if (cloudRunConfig_ != null) {
+      output.writeMessage(7, getCloudRunConfig());
+    }
     unknownFields.writeTo(output);
   }
 
@@ -390,6 +471,9 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
     }
     if (networkPolicyConfig_ != null) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(4, getNetworkPolicyConfig());
+    }
+    if (cloudRunConfig_ != null) {
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(7, getCloudRunConfig());
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -422,6 +506,10 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
     if (hasNetworkPolicyConfig()) {
       if (!getNetworkPolicyConfig().equals(other.getNetworkPolicyConfig())) return false;
     }
+    if (hasCloudRunConfig() != other.hasCloudRunConfig()) return false;
+    if (hasCloudRunConfig()) {
+      if (!getCloudRunConfig().equals(other.getCloudRunConfig())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -448,6 +536,10 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
     if (hasNetworkPolicyConfig()) {
       hash = (37 * hash) + NETWORK_POLICY_CONFIG_FIELD_NUMBER;
       hash = (53 * hash) + getNetworkPolicyConfig().hashCode();
+    }
+    if (hasCloudRunConfig()) {
+      hash = (37 * hash) + CLOUD_RUN_CONFIG_FIELD_NUMBER;
+      hash = (53 * hash) + getCloudRunConfig().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -618,6 +710,12 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
         networkPolicyConfig_ = null;
         networkPolicyConfigBuilder_ = null;
       }
+      if (cloudRunConfigBuilder_ == null) {
+        cloudRunConfig_ = null;
+      } else {
+        cloudRunConfig_ = null;
+        cloudRunConfigBuilder_ = null;
+      }
       return this;
     }
 
@@ -663,6 +761,11 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
         result.networkPolicyConfig_ = networkPolicyConfig_;
       } else {
         result.networkPolicyConfig_ = networkPolicyConfigBuilder_.build();
+      }
+      if (cloudRunConfigBuilder_ == null) {
+        result.cloudRunConfig_ = cloudRunConfig_;
+      } else {
+        result.cloudRunConfig_ = cloudRunConfigBuilder_.build();
       }
       onBuilt();
       return result;
@@ -724,6 +827,9 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
       }
       if (other.hasNetworkPolicyConfig()) {
         mergeNetworkPolicyConfig(other.getNetworkPolicyConfig());
+      }
+      if (other.hasCloudRunConfig()) {
+        mergeCloudRunConfig(other.getCloudRunConfig());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1160,10 +1266,16 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Configuration for the Kubernetes Dashboard.
+     * This addon is deprecated, and will be disabled in 1.15. It is recommended
+     * to use the Cloud Console to manage and monitor your Kubernetes clusters,
+     * workloads and applications. For more information, see:
+     * https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
      * </pre>
      *
-     * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3;</code>
+     * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3 [deprecated = true];
+     * </code>
      */
+    @java.lang.Deprecated
     public boolean hasKubernetesDashboard() {
       return kubernetesDashboardBuilder_ != null || kubernetesDashboard_ != null;
     }
@@ -1172,10 +1284,16 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Configuration for the Kubernetes Dashboard.
+     * This addon is deprecated, and will be disabled in 1.15. It is recommended
+     * to use the Cloud Console to manage and monitor your Kubernetes clusters,
+     * workloads and applications. For more information, see:
+     * https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
      * </pre>
      *
-     * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3;</code>
+     * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3 [deprecated = true];
+     * </code>
      */
+    @java.lang.Deprecated
     public com.google.container.v1.KubernetesDashboard getKubernetesDashboard() {
       if (kubernetesDashboardBuilder_ == null) {
         return kubernetesDashboard_ == null
@@ -1190,10 +1308,16 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Configuration for the Kubernetes Dashboard.
+     * This addon is deprecated, and will be disabled in 1.15. It is recommended
+     * to use the Cloud Console to manage and monitor your Kubernetes clusters,
+     * workloads and applications. For more information, see:
+     * https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
      * </pre>
      *
-     * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3;</code>
+     * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3 [deprecated = true];
+     * </code>
      */
+    @java.lang.Deprecated
     public Builder setKubernetesDashboard(com.google.container.v1.KubernetesDashboard value) {
       if (kubernetesDashboardBuilder_ == null) {
         if (value == null) {
@@ -1212,10 +1336,16 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Configuration for the Kubernetes Dashboard.
+     * This addon is deprecated, and will be disabled in 1.15. It is recommended
+     * to use the Cloud Console to manage and monitor your Kubernetes clusters,
+     * workloads and applications. For more information, see:
+     * https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
      * </pre>
      *
-     * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3;</code>
+     * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3 [deprecated = true];
+     * </code>
      */
+    @java.lang.Deprecated
     public Builder setKubernetesDashboard(
         com.google.container.v1.KubernetesDashboard.Builder builderForValue) {
       if (kubernetesDashboardBuilder_ == null) {
@@ -1232,10 +1362,16 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Configuration for the Kubernetes Dashboard.
+     * This addon is deprecated, and will be disabled in 1.15. It is recommended
+     * to use the Cloud Console to manage and monitor your Kubernetes clusters,
+     * workloads and applications. For more information, see:
+     * https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
      * </pre>
      *
-     * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3;</code>
+     * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3 [deprecated = true];
+     * </code>
      */
+    @java.lang.Deprecated
     public Builder mergeKubernetesDashboard(com.google.container.v1.KubernetesDashboard value) {
       if (kubernetesDashboardBuilder_ == null) {
         if (kubernetesDashboard_ != null) {
@@ -1258,10 +1394,16 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Configuration for the Kubernetes Dashboard.
+     * This addon is deprecated, and will be disabled in 1.15. It is recommended
+     * to use the Cloud Console to manage and monitor your Kubernetes clusters,
+     * workloads and applications. For more information, see:
+     * https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
      * </pre>
      *
-     * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3;</code>
+     * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3 [deprecated = true];
+     * </code>
      */
+    @java.lang.Deprecated
     public Builder clearKubernetesDashboard() {
       if (kubernetesDashboardBuilder_ == null) {
         kubernetesDashboard_ = null;
@@ -1278,10 +1420,16 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Configuration for the Kubernetes Dashboard.
+     * This addon is deprecated, and will be disabled in 1.15. It is recommended
+     * to use the Cloud Console to manage and monitor your Kubernetes clusters,
+     * workloads and applications. For more information, see:
+     * https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
      * </pre>
      *
-     * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3;</code>
+     * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3 [deprecated = true];
+     * </code>
      */
+    @java.lang.Deprecated
     public com.google.container.v1.KubernetesDashboard.Builder getKubernetesDashboardBuilder() {
 
       onChanged();
@@ -1292,10 +1440,16 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Configuration for the Kubernetes Dashboard.
+     * This addon is deprecated, and will be disabled in 1.15. It is recommended
+     * to use the Cloud Console to manage and monitor your Kubernetes clusters,
+     * workloads and applications. For more information, see:
+     * https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
      * </pre>
      *
-     * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3;</code>
+     * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3 [deprecated = true];
+     * </code>
      */
+    @java.lang.Deprecated
     public com.google.container.v1.KubernetesDashboardOrBuilder getKubernetesDashboardOrBuilder() {
       if (kubernetesDashboardBuilder_ != null) {
         return kubernetesDashboardBuilder_.getMessageOrBuilder();
@@ -1310,9 +1464,14 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * Configuration for the Kubernetes Dashboard.
+     * This addon is deprecated, and will be disabled in 1.15. It is recommended
+     * to use the Cloud Console to manage and monitor your Kubernetes clusters,
+     * workloads and applications. For more information, see:
+     * https://cloud.google.com/kubernetes-engine/docs/concepts/dashboards
      * </pre>
      *
-     * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3;</code>
+     * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3 [deprecated = true];
+     * </code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
             com.google.container.v1.KubernetesDashboard,
@@ -1529,6 +1688,197 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
         networkPolicyConfig_ = null;
       }
       return networkPolicyConfigBuilder_;
+    }
+
+    private com.google.container.v1.CloudRunConfig cloudRunConfig_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.container.v1.CloudRunConfig,
+            com.google.container.v1.CloudRunConfig.Builder,
+            com.google.container.v1.CloudRunConfigOrBuilder>
+        cloudRunConfigBuilder_;
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for the Cloud Run addon, which allows the user to use a
+     * managed Knative service.
+     * </pre>
+     *
+     * <code>.google.container.v1.CloudRunConfig cloud_run_config = 7;</code>
+     */
+    public boolean hasCloudRunConfig() {
+      return cloudRunConfigBuilder_ != null || cloudRunConfig_ != null;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for the Cloud Run addon, which allows the user to use a
+     * managed Knative service.
+     * </pre>
+     *
+     * <code>.google.container.v1.CloudRunConfig cloud_run_config = 7;</code>
+     */
+    public com.google.container.v1.CloudRunConfig getCloudRunConfig() {
+      if (cloudRunConfigBuilder_ == null) {
+        return cloudRunConfig_ == null
+            ? com.google.container.v1.CloudRunConfig.getDefaultInstance()
+            : cloudRunConfig_;
+      } else {
+        return cloudRunConfigBuilder_.getMessage();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for the Cloud Run addon, which allows the user to use a
+     * managed Knative service.
+     * </pre>
+     *
+     * <code>.google.container.v1.CloudRunConfig cloud_run_config = 7;</code>
+     */
+    public Builder setCloudRunConfig(com.google.container.v1.CloudRunConfig value) {
+      if (cloudRunConfigBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        cloudRunConfig_ = value;
+        onChanged();
+      } else {
+        cloudRunConfigBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for the Cloud Run addon, which allows the user to use a
+     * managed Knative service.
+     * </pre>
+     *
+     * <code>.google.container.v1.CloudRunConfig cloud_run_config = 7;</code>
+     */
+    public Builder setCloudRunConfig(
+        com.google.container.v1.CloudRunConfig.Builder builderForValue) {
+      if (cloudRunConfigBuilder_ == null) {
+        cloudRunConfig_ = builderForValue.build();
+        onChanged();
+      } else {
+        cloudRunConfigBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for the Cloud Run addon, which allows the user to use a
+     * managed Knative service.
+     * </pre>
+     *
+     * <code>.google.container.v1.CloudRunConfig cloud_run_config = 7;</code>
+     */
+    public Builder mergeCloudRunConfig(com.google.container.v1.CloudRunConfig value) {
+      if (cloudRunConfigBuilder_ == null) {
+        if (cloudRunConfig_ != null) {
+          cloudRunConfig_ =
+              com.google.container.v1.CloudRunConfig.newBuilder(cloudRunConfig_)
+                  .mergeFrom(value)
+                  .buildPartial();
+        } else {
+          cloudRunConfig_ = value;
+        }
+        onChanged();
+      } else {
+        cloudRunConfigBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for the Cloud Run addon, which allows the user to use a
+     * managed Knative service.
+     * </pre>
+     *
+     * <code>.google.container.v1.CloudRunConfig cloud_run_config = 7;</code>
+     */
+    public Builder clearCloudRunConfig() {
+      if (cloudRunConfigBuilder_ == null) {
+        cloudRunConfig_ = null;
+        onChanged();
+      } else {
+        cloudRunConfig_ = null;
+        cloudRunConfigBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for the Cloud Run addon, which allows the user to use a
+     * managed Knative service.
+     * </pre>
+     *
+     * <code>.google.container.v1.CloudRunConfig cloud_run_config = 7;</code>
+     */
+    public com.google.container.v1.CloudRunConfig.Builder getCloudRunConfigBuilder() {
+
+      onChanged();
+      return getCloudRunConfigFieldBuilder().getBuilder();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for the Cloud Run addon, which allows the user to use a
+     * managed Knative service.
+     * </pre>
+     *
+     * <code>.google.container.v1.CloudRunConfig cloud_run_config = 7;</code>
+     */
+    public com.google.container.v1.CloudRunConfigOrBuilder getCloudRunConfigOrBuilder() {
+      if (cloudRunConfigBuilder_ != null) {
+        return cloudRunConfigBuilder_.getMessageOrBuilder();
+      } else {
+        return cloudRunConfig_ == null
+            ? com.google.container.v1.CloudRunConfig.getDefaultInstance()
+            : cloudRunConfig_;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Configuration for the Cloud Run addon, which allows the user to use a
+     * managed Knative service.
+     * </pre>
+     *
+     * <code>.google.container.v1.CloudRunConfig cloud_run_config = 7;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.container.v1.CloudRunConfig,
+            com.google.container.v1.CloudRunConfig.Builder,
+            com.google.container.v1.CloudRunConfigOrBuilder>
+        getCloudRunConfigFieldBuilder() {
+      if (cloudRunConfigBuilder_ == null) {
+        cloudRunConfigBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.container.v1.CloudRunConfig,
+                com.google.container.v1.CloudRunConfig.Builder,
+                com.google.container.v1.CloudRunConfigOrBuilder>(
+                getCloudRunConfig(), getParentForChildren(), isClean());
+        cloudRunConfig_ = null;
+      }
+      return cloudRunConfigBuilder_;
     }
 
     @java.lang.Override

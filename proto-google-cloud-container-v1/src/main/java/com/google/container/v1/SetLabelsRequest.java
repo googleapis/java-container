@@ -175,12 +175,13 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
    *
    *
    * <pre>
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://developers.google.com/console/help/new/#projectnumber).
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string project_id = 1 [deprecated = true];</code>
+   * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public java.lang.String getProjectId() {
@@ -198,12 +199,13 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
    *
    *
    * <pre>
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://developers.google.com/console/help/new/#projectnumber).
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string project_id = 1 [deprecated = true];</code>
+   * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public com.google.protobuf.ByteString getProjectIdBytes() {
@@ -224,13 +226,13 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
    *
    *
    * <pre>
-   * Deprecated. The name of the Google Compute Engine
+   * Required. Deprecated. The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster
    * resides.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string zone = 2 [deprecated = true];</code>
+   * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Deprecated
   public java.lang.String getZone() {
@@ -248,13 +250,13 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
    *
    *
    * <pre>
-   * Deprecated. The name of the Google Compute Engine
+   * Required. Deprecated. The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster
    * resides.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string zone = 2 [deprecated = true];</code>
+   * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Deprecated
   public com.google.protobuf.ByteString getZoneBytes() {
@@ -275,11 +277,12 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
    *
    *
    * <pre>
-   * Deprecated. The name of the cluster.
+   * Required. Deprecated. The name of the cluster.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string cluster_id = 3 [deprecated = true];</code>
+   * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public java.lang.String getClusterId() {
@@ -297,11 +300,12 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
    *
    *
    * <pre>
-   * Deprecated. The name of the cluster.
+   * Required. Deprecated. The name of the cluster.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string cluster_id = 3 [deprecated = true];</code>
+   * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public com.google.protobuf.ByteString getClusterIdBytes() {
@@ -347,10 +351,11 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
    *
    *
    * <pre>
-   * The labels to set for that cluster.
+   * Required. The labels to set for that cluster.
    * </pre>
    *
-   * <code>map&lt;string, string&gt; resource_labels = 4;</code>
+   * <code>map&lt;string, string&gt; resource_labels = 4 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   public boolean containsResourceLabels(java.lang.String key) {
     if (key == null) {
@@ -367,10 +372,11 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
    *
    *
    * <pre>
-   * The labels to set for that cluster.
+   * Required. The labels to set for that cluster.
    * </pre>
    *
-   * <code>map&lt;string, string&gt; resource_labels = 4;</code>
+   * <code>map&lt;string, string&gt; resource_labels = 4 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   public java.util.Map<java.lang.String, java.lang.String> getResourceLabelsMap() {
     return internalGetResourceLabels().getMap();
@@ -379,10 +385,11 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
    *
    *
    * <pre>
-   * The labels to set for that cluster.
+   * Required. The labels to set for that cluster.
    * </pre>
    *
-   * <code>map&lt;string, string&gt; resource_labels = 4;</code>
+   * <code>map&lt;string, string&gt; resource_labels = 4 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   public java.lang.String getResourceLabelsOrDefault(
       java.lang.String key, java.lang.String defaultValue) {
@@ -396,10 +403,11 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
    *
    *
    * <pre>
-   * The labels to set for that cluster.
+   * Required. The labels to set for that cluster.
    * </pre>
    *
-   * <code>map&lt;string, string&gt; resource_labels = 4;</code>
+   * <code>map&lt;string, string&gt; resource_labels = 4 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   public java.lang.String getResourceLabelsOrThrow(java.lang.String key) {
     if (key == null) {
@@ -418,7 +426,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
    *
    *
    * <pre>
-   * The fingerprint of the previous set of labels for this resource,
+   * Required. The fingerprint of the previous set of labels for this resource,
    * used to detect conflicts. The fingerprint is initially generated by
    * Kubernetes Engine and changes after every request to modify or update
    * labels. You must always provide an up-to-date fingerprint hash when
@@ -426,7 +434,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
    * resource to get the latest fingerprint.
    * </pre>
    *
-   * <code>string label_fingerprint = 5;</code>
+   * <code>string label_fingerprint = 5 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   public java.lang.String getLabelFingerprint() {
     java.lang.Object ref = labelFingerprint_;
@@ -443,7 +451,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
    *
    *
    * <pre>
-   * The fingerprint of the previous set of labels for this resource,
+   * Required. The fingerprint of the previous set of labels for this resource,
    * used to detect conflicts. The fingerprint is initially generated by
    * Kubernetes Engine and changes after every request to modify or update
    * labels. You must always provide an up-to-date fingerprint hash when
@@ -451,7 +459,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
    * resource to get the latest fingerprint.
    * </pre>
    *
-   * <code>string label_fingerprint = 5;</code>
+   * <code>string label_fingerprint = 5 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   public com.google.protobuf.ByteString getLabelFingerprintBytes() {
     java.lang.Object ref = labelFingerprint_;
@@ -942,12 +950,13 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://developers.google.com/console/help/new/#projectnumber).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public java.lang.String getProjectId() {
@@ -965,12 +974,13 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://developers.google.com/console/help/new/#projectnumber).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public com.google.protobuf.ByteString getProjectIdBytes() {
@@ -988,12 +998,13 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://developers.google.com/console/help/new/#projectnumber).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setProjectId(java.lang.String value) {
@@ -1009,12 +1020,13 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://developers.google.com/console/help/new/#projectnumber).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder clearProjectId() {
@@ -1027,12 +1039,13 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://developers.google.com/console/help/new/#projectnumber).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setProjectIdBytes(com.google.protobuf.ByteString value) {
@@ -1051,13 +1064,13 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public java.lang.String getZone() {
@@ -1075,13 +1088,13 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public com.google.protobuf.ByteString getZoneBytes() {
@@ -1099,13 +1112,13 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public Builder setZone(java.lang.String value) {
@@ -1121,13 +1134,13 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public Builder clearZone() {
@@ -1140,13 +1153,13 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public Builder setZoneBytes(com.google.protobuf.ByteString value) {
@@ -1165,11 +1178,12 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster.
+     * Required. Deprecated. The name of the cluster.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public java.lang.String getClusterId() {
@@ -1187,11 +1201,12 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster.
+     * Required. Deprecated. The name of the cluster.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public com.google.protobuf.ByteString getClusterIdBytes() {
@@ -1209,11 +1224,12 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster.
+     * Required. Deprecated. The name of the cluster.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setClusterId(java.lang.String value) {
@@ -1229,11 +1245,12 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster.
+     * Required. Deprecated. The name of the cluster.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder clearClusterId() {
@@ -1246,11 +1263,12 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster.
+     * Required. Deprecated. The name of the cluster.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setClusterIdBytes(com.google.protobuf.ByteString value) {
@@ -1296,10 +1314,12 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * The labels to set for that cluster.
+     * Required. The labels to set for that cluster.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; resource_labels = 4;</code>
+     * <code>
+     * map&lt;string, string&gt; resource_labels = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public boolean containsResourceLabels(java.lang.String key) {
       if (key == null) {
@@ -1316,10 +1336,12 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * The labels to set for that cluster.
+     * Required. The labels to set for that cluster.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; resource_labels = 4;</code>
+     * <code>
+     * map&lt;string, string&gt; resource_labels = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public java.util.Map<java.lang.String, java.lang.String> getResourceLabelsMap() {
       return internalGetResourceLabels().getMap();
@@ -1328,10 +1350,12 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * The labels to set for that cluster.
+     * Required. The labels to set for that cluster.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; resource_labels = 4;</code>
+     * <code>
+     * map&lt;string, string&gt; resource_labels = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public java.lang.String getResourceLabelsOrDefault(
         java.lang.String key, java.lang.String defaultValue) {
@@ -1345,10 +1369,12 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * The labels to set for that cluster.
+     * Required. The labels to set for that cluster.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; resource_labels = 4;</code>
+     * <code>
+     * map&lt;string, string&gt; resource_labels = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public java.lang.String getResourceLabelsOrThrow(java.lang.String key) {
       if (key == null) {
@@ -1369,10 +1395,12 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * The labels to set for that cluster.
+     * Required. The labels to set for that cluster.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; resource_labels = 4;</code>
+     * <code>
+     * map&lt;string, string&gt; resource_labels = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public Builder removeResourceLabels(java.lang.String key) {
       if (key == null) {
@@ -1390,10 +1418,12 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * The labels to set for that cluster.
+     * Required. The labels to set for that cluster.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; resource_labels = 4;</code>
+     * <code>
+     * map&lt;string, string&gt; resource_labels = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public Builder putResourceLabels(java.lang.String key, java.lang.String value) {
       if (key == null) {
@@ -1409,10 +1439,12 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * The labels to set for that cluster.
+     * Required. The labels to set for that cluster.
      * </pre>
      *
-     * <code>map&lt;string, string&gt; resource_labels = 4;</code>
+     * <code>
+     * map&lt;string, string&gt; resource_labels = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public Builder putAllResourceLabels(java.util.Map<java.lang.String, java.lang.String> values) {
       internalGetMutableResourceLabels().getMutableMap().putAll(values);
@@ -1424,7 +1456,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * The fingerprint of the previous set of labels for this resource,
+     * Required. The fingerprint of the previous set of labels for this resource,
      * used to detect conflicts. The fingerprint is initially generated by
      * Kubernetes Engine and changes after every request to modify or update
      * labels. You must always provide an up-to-date fingerprint hash when
@@ -1432,7 +1464,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      * resource to get the latest fingerprint.
      * </pre>
      *
-     * <code>string label_fingerprint = 5;</code>
+     * <code>string label_fingerprint = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public java.lang.String getLabelFingerprint() {
       java.lang.Object ref = labelFingerprint_;
@@ -1449,7 +1481,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * The fingerprint of the previous set of labels for this resource,
+     * Required. The fingerprint of the previous set of labels for this resource,
      * used to detect conflicts. The fingerprint is initially generated by
      * Kubernetes Engine and changes after every request to modify or update
      * labels. You must always provide an up-to-date fingerprint hash when
@@ -1457,7 +1489,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      * resource to get the latest fingerprint.
      * </pre>
      *
-     * <code>string label_fingerprint = 5;</code>
+     * <code>string label_fingerprint = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.protobuf.ByteString getLabelFingerprintBytes() {
       java.lang.Object ref = labelFingerprint_;
@@ -1474,7 +1506,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * The fingerprint of the previous set of labels for this resource,
+     * Required. The fingerprint of the previous set of labels for this resource,
      * used to detect conflicts. The fingerprint is initially generated by
      * Kubernetes Engine and changes after every request to modify or update
      * labels. You must always provide an up-to-date fingerprint hash when
@@ -1482,7 +1514,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      * resource to get the latest fingerprint.
      * </pre>
      *
-     * <code>string label_fingerprint = 5;</code>
+     * <code>string label_fingerprint = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setLabelFingerprint(java.lang.String value) {
       if (value == null) {
@@ -1497,7 +1529,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * The fingerprint of the previous set of labels for this resource,
+     * Required. The fingerprint of the previous set of labels for this resource,
      * used to detect conflicts. The fingerprint is initially generated by
      * Kubernetes Engine and changes after every request to modify or update
      * labels. You must always provide an up-to-date fingerprint hash when
@@ -1505,7 +1537,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      * resource to get the latest fingerprint.
      * </pre>
      *
-     * <code>string label_fingerprint = 5;</code>
+     * <code>string label_fingerprint = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearLabelFingerprint() {
 
@@ -1517,7 +1549,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      *
      * <pre>
-     * The fingerprint of the previous set of labels for this resource,
+     * Required. The fingerprint of the previous set of labels for this resource,
      * used to detect conflicts. The fingerprint is initially generated by
      * Kubernetes Engine and changes after every request to modify or update
      * labels. You must always provide an up-to-date fingerprint hash when
@@ -1525,7 +1557,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      * resource to get the latest fingerprint.
      * </pre>
      *
-     * <code>string label_fingerprint = 5;</code>
+     * <code>string label_fingerprint = 5 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setLabelFingerprintBytes(com.google.protobuf.ByteString value) {
       if (value == null) {

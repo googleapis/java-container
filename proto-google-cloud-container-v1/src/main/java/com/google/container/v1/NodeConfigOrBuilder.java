@@ -182,6 +182,7 @@ public interface NodeConfigOrBuilder
    *  "cluster-name"
    *  "cluster-uid"
    *  "configure-sh"
+   *  "containerd-configure-sh"
    *  "enable-os-login"
    *  "gci-update-strategy"
    *  "gci-ensure-gke-docker"
@@ -189,6 +190,13 @@ public interface NodeConfigOrBuilder
    *  "kube-env"
    *  "startup-script"
    *  "user-data"
+   *  "disable-address-manager"
+   *  "windows-startup-script-ps1"
+   *  "common-psm1"
+   *  "k8s-node-setup-psm1"
+   *  "install-ssh-psm1"
+   *  "user-profile-psm1"
+   *  "serial-port-logging-enable"
    * Values are free-form strings, and only have meaning as interpreted by
    * the image running in the instance. The only restriction placed on them is
    * that each value's size must be less than or equal to 32 KB.
@@ -211,6 +219,7 @@ public interface NodeConfigOrBuilder
    *  "cluster-name"
    *  "cluster-uid"
    *  "configure-sh"
+   *  "containerd-configure-sh"
    *  "enable-os-login"
    *  "gci-update-strategy"
    *  "gci-ensure-gke-docker"
@@ -218,6 +227,13 @@ public interface NodeConfigOrBuilder
    *  "kube-env"
    *  "startup-script"
    *  "user-data"
+   *  "disable-address-manager"
+   *  "windows-startup-script-ps1"
+   *  "common-psm1"
+   *  "k8s-node-setup-psm1"
+   *  "install-ssh-psm1"
+   *  "user-profile-psm1"
+   *  "serial-port-logging-enable"
    * Values are free-form strings, and only have meaning as interpreted by
    * the image running in the instance. The only restriction placed on them is
    * that each value's size must be less than or equal to 32 KB.
@@ -243,6 +259,7 @@ public interface NodeConfigOrBuilder
    *  "cluster-name"
    *  "cluster-uid"
    *  "configure-sh"
+   *  "containerd-configure-sh"
    *  "enable-os-login"
    *  "gci-update-strategy"
    *  "gci-ensure-gke-docker"
@@ -250,6 +267,13 @@ public interface NodeConfigOrBuilder
    *  "kube-env"
    *  "startup-script"
    *  "user-data"
+   *  "disable-address-manager"
+   *  "windows-startup-script-ps1"
+   *  "common-psm1"
+   *  "k8s-node-setup-psm1"
+   *  "install-ssh-psm1"
+   *  "user-profile-psm1"
+   *  "serial-port-logging-enable"
    * Values are free-form strings, and only have meaning as interpreted by
    * the image running in the instance. The only restriction placed on them is
    * that each value's size must be less than or equal to 32 KB.
@@ -272,6 +296,7 @@ public interface NodeConfigOrBuilder
    *  "cluster-name"
    *  "cluster-uid"
    *  "configure-sh"
+   *  "containerd-configure-sh"
    *  "enable-os-login"
    *  "gci-update-strategy"
    *  "gci-ensure-gke-docker"
@@ -279,6 +304,13 @@ public interface NodeConfigOrBuilder
    *  "kube-env"
    *  "startup-script"
    *  "user-data"
+   *  "disable-address-manager"
+   *  "windows-startup-script-ps1"
+   *  "common-psm1"
+   *  "k8s-node-setup-psm1"
+   *  "install-ssh-psm1"
+   *  "user-profile-psm1"
+   *  "serial-port-logging-enable"
    * Values are free-form strings, and only have meaning as interpreted by
    * the image running in the instance. The only restriction placed on them is
    * that each value's size must be less than or equal to 32 KB.
@@ -301,6 +333,7 @@ public interface NodeConfigOrBuilder
    *  "cluster-name"
    *  "cluster-uid"
    *  "configure-sh"
+   *  "containerd-configure-sh"
    *  "enable-os-login"
    *  "gci-update-strategy"
    *  "gci-ensure-gke-docker"
@@ -308,6 +341,13 @@ public interface NodeConfigOrBuilder
    *  "kube-env"
    *  "startup-script"
    *  "user-data"
+   *  "disable-address-manager"
+   *  "windows-startup-script-ps1"
+   *  "common-psm1"
+   *  "k8s-node-setup-psm1"
+   *  "install-ssh-psm1"
+   *  "user-profile-psm1"
+   *  "serial-port-logging-enable"
    * Values are free-form strings, and only have meaning as interpreted by
    * the image running in the instance. The only restriction placed on them is
    * that each value's size must be less than or equal to 32 KB.
@@ -435,9 +475,9 @@ public interface NodeConfigOrBuilder
    *
    * <pre>
    * The number of local SSD disks to be attached to the node.
-   * The limit for this value is dependant upon the maximum number of
+   * The limit for this value is dependent upon the maximum number of
    * disks available on a machine per zone. See:
-   * https://cloud.google.com/compute/docs/disks/local-ssd#local_ssd_limits
+   * https://cloud.google.com/compute/docs/disks/local-ssd
    * for more information.
    * </pre>
    *
@@ -628,4 +668,96 @@ public interface NodeConfigOrBuilder
    * <code>string min_cpu_platform = 13;</code>
    */
   com.google.protobuf.ByteString getMinCpuPlatformBytes();
+
+  /**
+   *
+   *
+   * <pre>
+   * List of kubernetes taints to be applied to each node.
+   * For more information, including usage and the valid values, see:
+   * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+   */
+  java.util.List<com.google.container.v1.NodeTaint> getTaintsList();
+  /**
+   *
+   *
+   * <pre>
+   * List of kubernetes taints to be applied to each node.
+   * For more information, including usage and the valid values, see:
+   * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+   */
+  com.google.container.v1.NodeTaint getTaints(int index);
+  /**
+   *
+   *
+   * <pre>
+   * List of kubernetes taints to be applied to each node.
+   * For more information, including usage and the valid values, see:
+   * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+   */
+  int getTaintsCount();
+  /**
+   *
+   *
+   * <pre>
+   * List of kubernetes taints to be applied to each node.
+   * For more information, including usage and the valid values, see:
+   * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+   */
+  java.util.List<? extends com.google.container.v1.NodeTaintOrBuilder> getTaintsOrBuilderList();
+  /**
+   *
+   *
+   * <pre>
+   * List of kubernetes taints to be applied to each node.
+   * For more information, including usage and the valid values, see:
+   * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+   */
+  com.google.container.v1.NodeTaintOrBuilder getTaintsOrBuilder(int index);
+
+  /**
+   *
+   *
+   * <pre>
+   * Shielded Instance options.
+   * </pre>
+   *
+   * <code>.google.container.v1.ShieldedInstanceConfig shielded_instance_config = 20;</code>
+   */
+  boolean hasShieldedInstanceConfig();
+  /**
+   *
+   *
+   * <pre>
+   * Shielded Instance options.
+   * </pre>
+   *
+   * <code>.google.container.v1.ShieldedInstanceConfig shielded_instance_config = 20;</code>
+   */
+  com.google.container.v1.ShieldedInstanceConfig getShieldedInstanceConfig();
+  /**
+   *
+   *
+   * <pre>
+   * Shielded Instance options.
+   * </pre>
+   *
+   * <code>.google.container.v1.ShieldedInstanceConfig shielded_instance_config = 20;</code>
+   */
+  com.google.container.v1.ShieldedInstanceConfigOrBuilder getShieldedInstanceConfigOrBuilder();
 }

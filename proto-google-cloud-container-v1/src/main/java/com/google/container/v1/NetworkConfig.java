@@ -80,6 +80,11 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
               subnetwork_ = s;
               break;
             }
+          case 40:
+            {
+              enableIntraNodeVisibility_ = input.readBool();
+              break;
+            }
           default:
             {
               if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
@@ -210,6 +215,22 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
     }
   }
 
+  public static final int ENABLE_INTRA_NODE_VISIBILITY_FIELD_NUMBER = 5;
+  private boolean enableIntraNodeVisibility_;
+  /**
+   *
+   *
+   * <pre>
+   * Whether Intra-node visibility is enabled for this cluster.
+   * This makes same node pod to pod traffic visible for VPC network.
+   * </pre>
+   *
+   * <code>bool enable_intra_node_visibility = 5;</code>
+   */
+  public boolean getEnableIntraNodeVisibility() {
+    return enableIntraNodeVisibility_;
+  }
+
   private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
@@ -230,6 +251,9 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
     if (!getSubnetworkBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, subnetwork_);
     }
+    if (enableIntraNodeVisibility_ != false) {
+      output.writeBool(5, enableIntraNodeVisibility_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -244,6 +268,9 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
     }
     if (!getSubnetworkBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, subnetwork_);
+    }
+    if (enableIntraNodeVisibility_ != false) {
+      size += com.google.protobuf.CodedOutputStream.computeBoolSize(5, enableIntraNodeVisibility_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -262,6 +289,7 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
 
     if (!getNetwork().equals(other.getNetwork())) return false;
     if (!getSubnetwork().equals(other.getSubnetwork())) return false;
+    if (getEnableIntraNodeVisibility() != other.getEnableIntraNodeVisibility()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -277,6 +305,8 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
     hash = (53 * hash) + getNetwork().hashCode();
     hash = (37 * hash) + SUBNETWORK_FIELD_NUMBER;
     hash = (53 * hash) + getSubnetwork().hashCode();
+    hash = (37 * hash) + ENABLE_INTRA_NODE_VISIBILITY_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getEnableIntraNodeVisibility());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -425,6 +455,8 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
 
       subnetwork_ = "";
 
+      enableIntraNodeVisibility_ = false;
+
       return this;
     }
 
@@ -454,6 +486,7 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
           new com.google.container.v1.NetworkConfig(this);
       result.network_ = network_;
       result.subnetwork_ = subnetwork_;
+      result.enableIntraNodeVisibility_ = enableIntraNodeVisibility_;
       onBuilt();
       return result;
     }
@@ -510,6 +543,9 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
       if (!other.getSubnetwork().isEmpty()) {
         subnetwork_ = other.subnetwork_;
         onChanged();
+      }
+      if (other.getEnableIntraNodeVisibility() != false) {
+        setEnableIntraNodeVisibility(other.getEnableIntraNodeVisibility());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -749,6 +785,53 @@ public final class NetworkConfig extends com.google.protobuf.GeneratedMessageV3
       checkByteStringIsUtf8(value);
 
       subnetwork_ = value;
+      onChanged();
+      return this;
+    }
+
+    private boolean enableIntraNodeVisibility_;
+    /**
+     *
+     *
+     * <pre>
+     * Whether Intra-node visibility is enabled for this cluster.
+     * This makes same node pod to pod traffic visible for VPC network.
+     * </pre>
+     *
+     * <code>bool enable_intra_node_visibility = 5;</code>
+     */
+    public boolean getEnableIntraNodeVisibility() {
+      return enableIntraNodeVisibility_;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Whether Intra-node visibility is enabled for this cluster.
+     * This makes same node pod to pod traffic visible for VPC network.
+     * </pre>
+     *
+     * <code>bool enable_intra_node_visibility = 5;</code>
+     */
+    public Builder setEnableIntraNodeVisibility(boolean value) {
+
+      enableIntraNodeVisibility_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Whether Intra-node visibility is enabled for this cluster.
+     * This makes same node pod to pod traffic visible for VPC network.
+     * </pre>
+     *
+     * <code>bool enable_intra_node_visibility = 5;</code>
+     */
+    public Builder clearEnableIntraNodeVisibility() {
+
+      enableIntraNodeVisibility_ = false;
       onChanged();
       return this;
     }

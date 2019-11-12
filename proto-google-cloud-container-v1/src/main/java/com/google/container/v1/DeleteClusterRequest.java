@@ -136,12 +136,13 @@ public final class DeleteClusterRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840).
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string project_id = 1 [deprecated = true];</code>
+   * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public java.lang.String getProjectId() {
@@ -159,12 +160,13 @@ public final class DeleteClusterRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840).
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string project_id = 1 [deprecated = true];</code>
+   * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public com.google.protobuf.ByteString getProjectIdBytes() {
@@ -185,13 +187,13 @@ public final class DeleteClusterRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Deprecated. The name of the Google Compute Engine
+   * Required. Deprecated. The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster
    * resides.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string zone = 2 [deprecated = true];</code>
+   * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Deprecated
   public java.lang.String getZone() {
@@ -209,13 +211,13 @@ public final class DeleteClusterRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Deprecated. The name of the Google Compute Engine
+   * Required. Deprecated. The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster
    * resides.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string zone = 2 [deprecated = true];</code>
+   * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Deprecated
   public com.google.protobuf.ByteString getZoneBytes() {
@@ -236,11 +238,12 @@ public final class DeleteClusterRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Deprecated. The name of the cluster to delete.
+   * Required. Deprecated. The name of the cluster to delete.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string cluster_id = 3 [deprecated = true];</code>
+   * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public java.lang.String getClusterId() {
@@ -258,11 +261,12 @@ public final class DeleteClusterRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Deprecated. The name of the cluster to delete.
+   * Required. Deprecated. The name of the cluster to delete.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string cluster_id = 3 [deprecated = true];</code>
+   * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public com.google.protobuf.ByteString getClusterIdBytes() {
@@ -691,12 +695,13 @@ public final class DeleteClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public java.lang.String getProjectId() {
@@ -714,12 +719,13 @@ public final class DeleteClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public com.google.protobuf.ByteString getProjectIdBytes() {
@@ -737,12 +743,13 @@ public final class DeleteClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setProjectId(java.lang.String value) {
@@ -758,12 +765,13 @@ public final class DeleteClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder clearProjectId() {
@@ -776,12 +784,13 @@ public final class DeleteClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setProjectIdBytes(com.google.protobuf.ByteString value) {
@@ -800,13 +809,13 @@ public final class DeleteClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public java.lang.String getZone() {
@@ -824,13 +833,13 @@ public final class DeleteClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public com.google.protobuf.ByteString getZoneBytes() {
@@ -848,13 +857,13 @@ public final class DeleteClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public Builder setZone(java.lang.String value) {
@@ -870,13 +879,13 @@ public final class DeleteClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public Builder clearZone() {
@@ -889,13 +898,13 @@ public final class DeleteClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public Builder setZoneBytes(com.google.protobuf.ByteString value) {
@@ -914,11 +923,12 @@ public final class DeleteClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to delete.
+     * Required. Deprecated. The name of the cluster to delete.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public java.lang.String getClusterId() {
@@ -936,11 +946,12 @@ public final class DeleteClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to delete.
+     * Required. Deprecated. The name of the cluster to delete.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public com.google.protobuf.ByteString getClusterIdBytes() {
@@ -958,11 +969,12 @@ public final class DeleteClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to delete.
+     * Required. Deprecated. The name of the cluster to delete.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setClusterId(java.lang.String value) {
@@ -978,11 +990,12 @@ public final class DeleteClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to delete.
+     * Required. Deprecated. The name of the cluster to delete.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder clearClusterId() {
@@ -995,11 +1008,12 @@ public final class DeleteClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to delete.
+     * Required. Deprecated. The name of the cluster to delete.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setClusterIdBytes(com.google.protobuf.ByteString value) {

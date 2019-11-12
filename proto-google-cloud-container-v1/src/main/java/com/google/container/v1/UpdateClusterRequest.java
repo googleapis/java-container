@@ -152,12 +152,13 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840).
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string project_id = 1 [deprecated = true];</code>
+   * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public java.lang.String getProjectId() {
@@ -175,12 +176,13 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840).
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string project_id = 1 [deprecated = true];</code>
+   * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public com.google.protobuf.ByteString getProjectIdBytes() {
@@ -201,13 +203,13 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Deprecated. The name of the Google Compute Engine
+   * Required. Deprecated. The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster
    * resides.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string zone = 2 [deprecated = true];</code>
+   * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Deprecated
   public java.lang.String getZone() {
@@ -225,13 +227,13 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Deprecated. The name of the Google Compute Engine
+   * Required. Deprecated. The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster
    * resides.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string zone = 2 [deprecated = true];</code>
+   * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Deprecated
   public com.google.protobuf.ByteString getZoneBytes() {
@@ -252,11 +254,12 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Deprecated. The name of the cluster to upgrade.
+   * Required. Deprecated. The name of the cluster to upgrade.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string cluster_id = 3 [deprecated = true];</code>
+   * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public java.lang.String getClusterId() {
@@ -274,11 +277,12 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Deprecated. The name of the cluster to upgrade.
+   * Required. Deprecated. The name of the cluster to upgrade.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string cluster_id = 3 [deprecated = true];</code>
+   * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public com.google.protobuf.ByteString getClusterIdBytes() {
@@ -299,10 +303,11 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * A description of the update.
+   * Required. A description of the update.
    * </pre>
    *
-   * <code>.google.container.v1.ClusterUpdate update = 4;</code>
+   * <code>.google.container.v1.ClusterUpdate update = 4 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   public boolean hasUpdate() {
     return update_ != null;
@@ -311,10 +316,11 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * A description of the update.
+   * Required. A description of the update.
    * </pre>
    *
-   * <code>.google.container.v1.ClusterUpdate update = 4;</code>
+   * <code>.google.container.v1.ClusterUpdate update = 4 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   public com.google.container.v1.ClusterUpdate getUpdate() {
     return update_ == null ? com.google.container.v1.ClusterUpdate.getDefaultInstance() : update_;
@@ -323,10 +329,11 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * A description of the update.
+   * Required. A description of the update.
    * </pre>
    *
-   * <code>.google.container.v1.ClusterUpdate update = 4;</code>
+   * <code>.google.container.v1.ClusterUpdate update = 4 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   public com.google.container.v1.ClusterUpdateOrBuilder getUpdateOrBuilder() {
     return getUpdate();
@@ -774,12 +781,13 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public java.lang.String getProjectId() {
@@ -797,12 +805,13 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public com.google.protobuf.ByteString getProjectIdBytes() {
@@ -820,12 +829,13 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setProjectId(java.lang.String value) {
@@ -841,12 +851,13 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder clearProjectId() {
@@ -859,12 +870,13 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setProjectIdBytes(com.google.protobuf.ByteString value) {
@@ -883,13 +895,13 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public java.lang.String getZone() {
@@ -907,13 +919,13 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public com.google.protobuf.ByteString getZoneBytes() {
@@ -931,13 +943,13 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public Builder setZone(java.lang.String value) {
@@ -953,13 +965,13 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public Builder clearZone() {
@@ -972,13 +984,13 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public Builder setZoneBytes(com.google.protobuf.ByteString value) {
@@ -997,11 +1009,12 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to upgrade.
+     * Required. Deprecated. The name of the cluster to upgrade.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public java.lang.String getClusterId() {
@@ -1019,11 +1032,12 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to upgrade.
+     * Required. Deprecated. The name of the cluster to upgrade.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public com.google.protobuf.ByteString getClusterIdBytes() {
@@ -1041,11 +1055,12 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to upgrade.
+     * Required. Deprecated. The name of the cluster to upgrade.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setClusterId(java.lang.String value) {
@@ -1061,11 +1076,12 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to upgrade.
+     * Required. Deprecated. The name of the cluster to upgrade.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder clearClusterId() {
@@ -1078,11 +1094,12 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to upgrade.
+     * Required. Deprecated. The name of the cluster to upgrade.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setClusterIdBytes(com.google.protobuf.ByteString value) {
@@ -1106,10 +1123,12 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * A description of the update.
+     * Required. A description of the update.
      * </pre>
      *
-     * <code>.google.container.v1.ClusterUpdate update = 4;</code>
+     * <code>
+     * .google.container.v1.ClusterUpdate update = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public boolean hasUpdate() {
       return updateBuilder_ != null || update_ != null;
@@ -1118,10 +1137,12 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * A description of the update.
+     * Required. A description of the update.
      * </pre>
      *
-     * <code>.google.container.v1.ClusterUpdate update = 4;</code>
+     * <code>
+     * .google.container.v1.ClusterUpdate update = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public com.google.container.v1.ClusterUpdate getUpdate() {
       if (updateBuilder_ == null) {
@@ -1136,10 +1157,12 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * A description of the update.
+     * Required. A description of the update.
      * </pre>
      *
-     * <code>.google.container.v1.ClusterUpdate update = 4;</code>
+     * <code>
+     * .google.container.v1.ClusterUpdate update = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public Builder setUpdate(com.google.container.v1.ClusterUpdate value) {
       if (updateBuilder_ == null) {
@@ -1158,10 +1181,12 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * A description of the update.
+     * Required. A description of the update.
      * </pre>
      *
-     * <code>.google.container.v1.ClusterUpdate update = 4;</code>
+     * <code>
+     * .google.container.v1.ClusterUpdate update = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public Builder setUpdate(com.google.container.v1.ClusterUpdate.Builder builderForValue) {
       if (updateBuilder_ == null) {
@@ -1177,10 +1202,12 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * A description of the update.
+     * Required. A description of the update.
      * </pre>
      *
-     * <code>.google.container.v1.ClusterUpdate update = 4;</code>
+     * <code>
+     * .google.container.v1.ClusterUpdate update = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public Builder mergeUpdate(com.google.container.v1.ClusterUpdate value) {
       if (updateBuilder_ == null) {
@@ -1203,10 +1230,12 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * A description of the update.
+     * Required. A description of the update.
      * </pre>
      *
-     * <code>.google.container.v1.ClusterUpdate update = 4;</code>
+     * <code>
+     * .google.container.v1.ClusterUpdate update = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public Builder clearUpdate() {
       if (updateBuilder_ == null) {
@@ -1223,10 +1252,12 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * A description of the update.
+     * Required. A description of the update.
      * </pre>
      *
-     * <code>.google.container.v1.ClusterUpdate update = 4;</code>
+     * <code>
+     * .google.container.v1.ClusterUpdate update = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public com.google.container.v1.ClusterUpdate.Builder getUpdateBuilder() {
 
@@ -1237,10 +1268,12 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * A description of the update.
+     * Required. A description of the update.
      * </pre>
      *
-     * <code>.google.container.v1.ClusterUpdate update = 4;</code>
+     * <code>
+     * .google.container.v1.ClusterUpdate update = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public com.google.container.v1.ClusterUpdateOrBuilder getUpdateOrBuilder() {
       if (updateBuilder_ != null) {
@@ -1255,10 +1288,12 @@ public final class UpdateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * A description of the update.
+     * Required. A description of the update.
      * </pre>
      *
-     * <code>.google.container.v1.ClusterUpdate update = 4;</code>
+     * <code>
+     * .google.container.v1.ClusterUpdate update = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
             com.google.container.v1.ClusterUpdate,

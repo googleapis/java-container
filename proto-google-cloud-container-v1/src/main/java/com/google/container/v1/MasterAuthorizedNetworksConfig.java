@@ -967,7 +967,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.protobuf.Ge
    *
    *
    * <pre>
-   * cidr_blocks define up to 10 external networks that could access
+   * cidr_blocks define up to 50 external networks that could access
    * Kubernetes master through HTTPS.
    * </pre>
    *
@@ -982,7 +982,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.protobuf.Ge
    *
    *
    * <pre>
-   * cidr_blocks define up to 10 external networks that could access
+   * cidr_blocks define up to 50 external networks that could access
    * Kubernetes master through HTTPS.
    * </pre>
    *
@@ -998,7 +998,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.protobuf.Ge
    *
    *
    * <pre>
-   * cidr_blocks define up to 10 external networks that could access
+   * cidr_blocks define up to 50 external networks that could access
    * Kubernetes master through HTTPS.
    * </pre>
    *
@@ -1012,7 +1012,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.protobuf.Ge
    *
    *
    * <pre>
-   * cidr_blocks define up to 10 external networks that could access
+   * cidr_blocks define up to 50 external networks that could access
    * Kubernetes master through HTTPS.
    * </pre>
    *
@@ -1026,7 +1026,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.protobuf.Ge
    *
    *
    * <pre>
-   * cidr_blocks define up to 10 external networks that could access
+   * cidr_blocks define up to 50 external networks that could access
    * Kubernetes master through HTTPS.
    * </pre>
    *
@@ -1485,7 +1485,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.protobuf.Ge
      *
      *
      * <pre>
-     * cidr_blocks define up to 10 external networks that could access
+     * cidr_blocks define up to 50 external networks that could access
      * Kubernetes master through HTTPS.
      * </pre>
      *
@@ -1504,7 +1504,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.protobuf.Ge
      *
      *
      * <pre>
-     * cidr_blocks define up to 10 external networks that could access
+     * cidr_blocks define up to 50 external networks that could access
      * Kubernetes master through HTTPS.
      * </pre>
      *
@@ -1522,7 +1522,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.protobuf.Ge
      *
      *
      * <pre>
-     * cidr_blocks define up to 10 external networks that could access
+     * cidr_blocks define up to 50 external networks that could access
      * Kubernetes master through HTTPS.
      * </pre>
      *
@@ -1541,7 +1541,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.protobuf.Ge
      *
      *
      * <pre>
-     * cidr_blocks define up to 10 external networks that could access
+     * cidr_blocks define up to 50 external networks that could access
      * Kubernetes master through HTTPS.
      * </pre>
      *
@@ -1566,7 +1566,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.protobuf.Ge
      *
      *
      * <pre>
-     * cidr_blocks define up to 10 external networks that could access
+     * cidr_blocks define up to 50 external networks that could access
      * Kubernetes master through HTTPS.
      * </pre>
      *
@@ -1589,7 +1589,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.protobuf.Ge
      *
      *
      * <pre>
-     * cidr_blocks define up to 10 external networks that could access
+     * cidr_blocks define up to 50 external networks that could access
      * Kubernetes master through HTTPS.
      * </pre>
      *
@@ -1614,7 +1614,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.protobuf.Ge
      *
      *
      * <pre>
-     * cidr_blocks define up to 10 external networks that could access
+     * cidr_blocks define up to 50 external networks that could access
      * Kubernetes master through HTTPS.
      * </pre>
      *
@@ -1639,7 +1639,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.protobuf.Ge
      *
      *
      * <pre>
-     * cidr_blocks define up to 10 external networks that could access
+     * cidr_blocks define up to 50 external networks that could access
      * Kubernetes master through HTTPS.
      * </pre>
      *
@@ -1661,7 +1661,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.protobuf.Ge
      *
      *
      * <pre>
-     * cidr_blocks define up to 10 external networks that could access
+     * cidr_blocks define up to 50 external networks that could access
      * Kubernetes master through HTTPS.
      * </pre>
      *
@@ -1684,7 +1684,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.protobuf.Ge
      *
      *
      * <pre>
-     * cidr_blocks define up to 10 external networks that could access
+     * cidr_blocks define up to 50 external networks that could access
      * Kubernetes master through HTTPS.
      * </pre>
      *
@@ -1708,7 +1708,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.protobuf.Ge
      *
      *
      * <pre>
-     * cidr_blocks define up to 10 external networks that could access
+     * cidr_blocks define up to 50 external networks that could access
      * Kubernetes master through HTTPS.
      * </pre>
      *
@@ -1729,7 +1729,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.protobuf.Ge
      *
      *
      * <pre>
-     * cidr_blocks define up to 10 external networks that could access
+     * cidr_blocks define up to 50 external networks that could access
      * Kubernetes master through HTTPS.
      * </pre>
      *
@@ -1750,7 +1750,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.protobuf.Ge
      *
      *
      * <pre>
-     * cidr_blocks define up to 10 external networks that could access
+     * cidr_blocks define up to 50 external networks that could access
      * Kubernetes master through HTTPS.
      * </pre>
      *
@@ -1765,7 +1765,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.protobuf.Ge
      *
      *
      * <pre>
-     * cidr_blocks define up to 10 external networks that could access
+     * cidr_blocks define up to 50 external networks that could access
      * Kubernetes master through HTTPS.
      * </pre>
      *
@@ -1784,7 +1784,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.protobuf.Ge
      *
      *
      * <pre>
-     * cidr_blocks define up to 10 external networks that could access
+     * cidr_blocks define up to 50 external networks that could access
      * Kubernetes master through HTTPS.
      * </pre>
      *
@@ -1804,7 +1804,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.protobuf.Ge
      *
      *
      * <pre>
-     * cidr_blocks define up to 10 external networks that could access
+     * cidr_blocks define up to 50 external networks that could access
      * Kubernetes master through HTTPS.
      * </pre>
      *
@@ -1822,7 +1822,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.protobuf.Ge
      *
      *
      * <pre>
-     * cidr_blocks define up to 10 external networks that could access
+     * cidr_blocks define up to 50 external networks that could access
      * Kubernetes master through HTTPS.
      * </pre>
      *
@@ -1841,7 +1841,7 @@ public final class MasterAuthorizedNetworksConfig extends com.google.protobuf.Ge
      *
      *
      * <pre>
-     * cidr_blocks define up to 10 external networks that could access
+     * cidr_blocks define up to 50 external networks that could access
      * Kubernetes master through HTTPS.
      * </pre>
      *

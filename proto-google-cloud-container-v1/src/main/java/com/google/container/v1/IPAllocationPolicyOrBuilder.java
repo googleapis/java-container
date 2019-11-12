@@ -322,4 +322,45 @@ public interface IPAllocationPolicyOrBuilder
    * <code>string services_ipv4_cidr_block = 11;</code>
    */
   com.google.protobuf.ByteString getServicesIpv4CidrBlockBytes();
+
+  /**
+   *
+   *
+   * <pre>
+   * The IP address range of the Cloud TPUs in this cluster. If unspecified, a
+   * range will be automatically chosen with the default size.
+   * This field is only applicable when `use_ip_aliases` is true.
+   * If unspecified, the range will use the default size.
+   * Set to /netmask (e.g. `/14`) to have a range chosen with a specific
+   * netmask.
+   * Set to a
+   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+   * notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g.
+   * `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range
+   * to use.
+   * </pre>
+   *
+   * <code>string tpu_ipv4_cidr_block = 13;</code>
+   */
+  java.lang.String getTpuIpv4CidrBlock();
+  /**
+   *
+   *
+   * <pre>
+   * The IP address range of the Cloud TPUs in this cluster. If unspecified, a
+   * range will be automatically chosen with the default size.
+   * This field is only applicable when `use_ip_aliases` is true.
+   * If unspecified, the range will use the default size.
+   * Set to /netmask (e.g. `/14`) to have a range chosen with a specific
+   * netmask.
+   * Set to a
+   * [CIDR](http://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing)
+   * notation (e.g. `10.96.0.0/14`) from the RFC-1918 private networks (e.g.
+   * `10.0.0.0/8`, `172.16.0.0/12`, `192.168.0.0/16`) to pick a specific range
+   * to use.
+   * </pre>
+   *
+   * <code>string tpu_ipv4_cidr_block = 13;</code>
+   */
+  com.google.protobuf.ByteString getTpuIpv4CidrBlockBytes();
 }

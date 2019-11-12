@@ -143,12 +143,13 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840).
    * This field has been deprecated and replaced by the parent field.
    * </pre>
    *
-   * <code>string project_id = 1 [deprecated = true];</code>
+   * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public java.lang.String getProjectId() {
@@ -166,12 +167,13 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840).
    * This field has been deprecated and replaced by the parent field.
    * </pre>
    *
-   * <code>string project_id = 1 [deprecated = true];</code>
+   * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public com.google.protobuf.ByteString getProjectIdBytes() {
@@ -192,13 +194,13 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Deprecated. The name of the Google Compute Engine
+   * Required. Deprecated. The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster
    * resides.
    * This field has been deprecated and replaced by the parent field.
    * </pre>
    *
-   * <code>string zone = 2 [deprecated = true];</code>
+   * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Deprecated
   public java.lang.String getZone() {
@@ -216,13 +218,13 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * Deprecated. The name of the Google Compute Engine
+   * Required. Deprecated. The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster
    * resides.
    * This field has been deprecated and replaced by the parent field.
    * </pre>
    *
-   * <code>string zone = 2 [deprecated = true];</code>
+   * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Deprecated
   public com.google.protobuf.ByteString getZoneBytes() {
@@ -243,11 +245,12 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * A [cluster
+   * Required. A [cluster
    * resource](/container-engine/reference/rest/v1/projects.zones.clusters)
    * </pre>
    *
-   * <code>.google.container.v1.Cluster cluster = 3;</code>
+   * <code>.google.container.v1.Cluster cluster = 3 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   public boolean hasCluster() {
     return cluster_ != null;
@@ -256,11 +259,12 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * A [cluster
+   * Required. A [cluster
    * resource](/container-engine/reference/rest/v1/projects.zones.clusters)
    * </pre>
    *
-   * <code>.google.container.v1.Cluster cluster = 3;</code>
+   * <code>.google.container.v1.Cluster cluster = 3 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   public com.google.container.v1.Cluster getCluster() {
     return cluster_ == null ? com.google.container.v1.Cluster.getDefaultInstance() : cluster_;
@@ -269,11 +273,12 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * A [cluster
+   * Required. A [cluster
    * resource](/container-engine/reference/rest/v1/projects.zones.clusters)
    * </pre>
    *
-   * <code>.google.container.v1.Cluster cluster = 3;</code>
+   * <code>.google.container.v1.Cluster cluster = 3 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   public com.google.container.v1.ClusterOrBuilder getClusterOrBuilder() {
     return getCluster();
@@ -705,12 +710,13 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the parent field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public java.lang.String getProjectId() {
@@ -728,12 +734,13 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the parent field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public com.google.protobuf.ByteString getProjectIdBytes() {
@@ -751,12 +758,13 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the parent field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setProjectId(java.lang.String value) {
@@ -772,12 +780,13 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the parent field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder clearProjectId() {
@@ -790,12 +799,13 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the parent field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setProjectIdBytes(com.google.protobuf.ByteString value) {
@@ -814,13 +824,13 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the parent field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public java.lang.String getZone() {
@@ -838,13 +848,13 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the parent field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public com.google.protobuf.ByteString getZoneBytes() {
@@ -862,13 +872,13 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the parent field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public Builder setZone(java.lang.String value) {
@@ -884,13 +894,13 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the parent field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public Builder clearZone() {
@@ -903,13 +913,13 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the parent field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public Builder setZoneBytes(com.google.protobuf.ByteString value) {
@@ -933,11 +943,12 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * A [cluster
+     * Required. A [cluster
      * resource](/container-engine/reference/rest/v1/projects.zones.clusters)
      * </pre>
      *
-     * <code>.google.container.v1.Cluster cluster = 3;</code>
+     * <code>.google.container.v1.Cluster cluster = 3 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public boolean hasCluster() {
       return clusterBuilder_ != null || cluster_ != null;
@@ -946,11 +957,12 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * A [cluster
+     * Required. A [cluster
      * resource](/container-engine/reference/rest/v1/projects.zones.clusters)
      * </pre>
      *
-     * <code>.google.container.v1.Cluster cluster = 3;</code>
+     * <code>.google.container.v1.Cluster cluster = 3 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public com.google.container.v1.Cluster getCluster() {
       if (clusterBuilder_ == null) {
@@ -963,11 +975,12 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * A [cluster
+     * Required. A [cluster
      * resource](/container-engine/reference/rest/v1/projects.zones.clusters)
      * </pre>
      *
-     * <code>.google.container.v1.Cluster cluster = 3;</code>
+     * <code>.google.container.v1.Cluster cluster = 3 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public Builder setCluster(com.google.container.v1.Cluster value) {
       if (clusterBuilder_ == null) {
@@ -986,11 +999,12 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * A [cluster
+     * Required. A [cluster
      * resource](/container-engine/reference/rest/v1/projects.zones.clusters)
      * </pre>
      *
-     * <code>.google.container.v1.Cluster cluster = 3;</code>
+     * <code>.google.container.v1.Cluster cluster = 3 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public Builder setCluster(com.google.container.v1.Cluster.Builder builderForValue) {
       if (clusterBuilder_ == null) {
@@ -1006,11 +1020,12 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * A [cluster
+     * Required. A [cluster
      * resource](/container-engine/reference/rest/v1/projects.zones.clusters)
      * </pre>
      *
-     * <code>.google.container.v1.Cluster cluster = 3;</code>
+     * <code>.google.container.v1.Cluster cluster = 3 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public Builder mergeCluster(com.google.container.v1.Cluster value) {
       if (clusterBuilder_ == null) {
@@ -1031,11 +1046,12 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * A [cluster
+     * Required. A [cluster
      * resource](/container-engine/reference/rest/v1/projects.zones.clusters)
      * </pre>
      *
-     * <code>.google.container.v1.Cluster cluster = 3;</code>
+     * <code>.google.container.v1.Cluster cluster = 3 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public Builder clearCluster() {
       if (clusterBuilder_ == null) {
@@ -1052,11 +1068,12 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * A [cluster
+     * Required. A [cluster
      * resource](/container-engine/reference/rest/v1/projects.zones.clusters)
      * </pre>
      *
-     * <code>.google.container.v1.Cluster cluster = 3;</code>
+     * <code>.google.container.v1.Cluster cluster = 3 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public com.google.container.v1.Cluster.Builder getClusterBuilder() {
 
@@ -1067,11 +1084,12 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * A [cluster
+     * Required. A [cluster
      * resource](/container-engine/reference/rest/v1/projects.zones.clusters)
      * </pre>
      *
-     * <code>.google.container.v1.Cluster cluster = 3;</code>
+     * <code>.google.container.v1.Cluster cluster = 3 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public com.google.container.v1.ClusterOrBuilder getClusterOrBuilder() {
       if (clusterBuilder_ != null) {
@@ -1084,11 +1102,12 @@ public final class CreateClusterRequest extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * A [cluster
+     * Required. A [cluster
      * resource](/container-engine/reference/rest/v1/projects.zones.clusters)
      * </pre>
      *
-     * <code>.google.container.v1.Cluster cluster = 3;</code>
+     * <code>.google.container.v1.Cluster cluster = 3 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
             com.google.container.v1.Cluster,

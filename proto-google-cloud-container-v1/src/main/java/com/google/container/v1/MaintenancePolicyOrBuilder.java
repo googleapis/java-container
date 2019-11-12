@@ -53,4 +53,33 @@ public interface MaintenancePolicyOrBuilder
    * <code>.google.container.v1.MaintenanceWindow window = 1;</code>
    */
   com.google.container.v1.MaintenanceWindowOrBuilder getWindowOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
+   * A hash identifying the version of this policy, so that updates to fields of
+   * the policy won't accidentally undo intermediate changes (and so that users
+   * of the API unaware of some fields won't accidentally remove other fields).
+   * Make a &lt;code&gt;get()&lt;/code&gt; request to the cluster to get the current
+   * resource version and include it with requests to set the policy.
+   * </pre>
+   *
+   * <code>string resource_version = 3;</code>
+   */
+  java.lang.String getResourceVersion();
+  /**
+   *
+   *
+   * <pre>
+   * A hash identifying the version of this policy, so that updates to fields of
+   * the policy won't accidentally undo intermediate changes (and so that users
+   * of the API unaware of some fields won't accidentally remove other fields).
+   * Make a &lt;code&gt;get()&lt;/code&gt; request to the cluster to get the current
+   * resource version and include it with requests to set the policy.
+   * </pre>
+   *
+   * <code>string resource_version = 3;</code>
+   */
+  com.google.protobuf.ByteString getResourceVersionBytes();
 }

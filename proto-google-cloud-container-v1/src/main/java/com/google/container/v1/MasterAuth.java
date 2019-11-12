@@ -163,8 +163,8 @@ public final class MasterAuth extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The username to use for HTTP basic authentication to the master endpoint.
-   * For clusters v1.6.0 and later, you can disable basic authentication by
-   * providing an empty username.
+   * For clusters v1.6.0 and later, basic authentication can be disabled by
+   * leaving username unspecified (or setting it to the empty string).
    * </pre>
    *
    * <code>string username = 1;</code>
@@ -185,8 +185,8 @@ public final class MasterAuth extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The username to use for HTTP basic authentication to the master endpoint.
-   * For clusters v1.6.0 and later, you can disable basic authentication by
-   * providing an empty username.
+   * For clusters v1.6.0 and later, basic authentication can be disabled by
+   * leaving username unspecified (or setting it to the empty string).
    * </pre>
    *
    * <code>string username = 1;</code>
@@ -849,8 +849,8 @@ public final class MasterAuth extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The username to use for HTTP basic authentication to the master endpoint.
-     * For clusters v1.6.0 and later, you can disable basic authentication by
-     * providing an empty username.
+     * For clusters v1.6.0 and later, basic authentication can be disabled by
+     * leaving username unspecified (or setting it to the empty string).
      * </pre>
      *
      * <code>string username = 1;</code>
@@ -871,8 +871,8 @@ public final class MasterAuth extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The username to use for HTTP basic authentication to the master endpoint.
-     * For clusters v1.6.0 and later, you can disable basic authentication by
-     * providing an empty username.
+     * For clusters v1.6.0 and later, basic authentication can be disabled by
+     * leaving username unspecified (or setting it to the empty string).
      * </pre>
      *
      * <code>string username = 1;</code>
@@ -893,8 +893,8 @@ public final class MasterAuth extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The username to use for HTTP basic authentication to the master endpoint.
-     * For clusters v1.6.0 and later, you can disable basic authentication by
-     * providing an empty username.
+     * For clusters v1.6.0 and later, basic authentication can be disabled by
+     * leaving username unspecified (or setting it to the empty string).
      * </pre>
      *
      * <code>string username = 1;</code>
@@ -913,8 +913,8 @@ public final class MasterAuth extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The username to use for HTTP basic authentication to the master endpoint.
-     * For clusters v1.6.0 and later, you can disable basic authentication by
-     * providing an empty username.
+     * For clusters v1.6.0 and later, basic authentication can be disabled by
+     * leaving username unspecified (or setting it to the empty string).
      * </pre>
      *
      * <code>string username = 1;</code>
@@ -930,8 +930,8 @@ public final class MasterAuth extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The username to use for HTTP basic authentication to the master endpoint.
-     * For clusters v1.6.0 and later, you can disable basic authentication by
-     * providing an empty username.
+     * For clusters v1.6.0 and later, basic authentication can be disabled by
+     * leaving username unspecified (or setting it to the empty string).
      * </pre>
      *
      * <code>string username = 1;</code>

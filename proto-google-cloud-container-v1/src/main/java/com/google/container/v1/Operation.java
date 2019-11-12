@@ -50,6 +50,8 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
     location_ = "";
     startTime_ = "";
     endTime_ = "";
+    clusterConditions_ = java.util.Collections.emptyList();
+    nodepoolConditions_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -153,6 +155,30 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
               endTime_ = s;
               break;
             }
+          case 106:
+            {
+              if (!((mutable_bitField0_ & 0x00000800) != 0)) {
+                clusterConditions_ =
+                    new java.util.ArrayList<com.google.container.v1.StatusCondition>();
+                mutable_bitField0_ |= 0x00000800;
+              }
+              clusterConditions_.add(
+                  input.readMessage(
+                      com.google.container.v1.StatusCondition.parser(), extensionRegistry));
+              break;
+            }
+          case 114:
+            {
+              if (!((mutable_bitField0_ & 0x00001000) != 0)) {
+                nodepoolConditions_ =
+                    new java.util.ArrayList<com.google.container.v1.StatusCondition>();
+                mutable_bitField0_ |= 0x00001000;
+              }
+              nodepoolConditions_.add(
+                  input.readMessage(
+                      com.google.container.v1.StatusCondition.parser(), extensionRegistry));
+              break;
+            }
           default:
             {
               if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
@@ -167,6 +193,12 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
+      if (((mutable_bitField0_ & 0x00000800) != 0)) {
+        clusterConditions_ = java.util.Collections.unmodifiableList(clusterConditions_);
+      }
+      if (((mutable_bitField0_ & 0x00001000) != 0)) {
+        nodepoolConditions_ = java.util.Collections.unmodifiableList(nodepoolConditions_);
+      }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
@@ -829,6 +861,7 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
     // @@protoc_insertion_point(enum_scope:google.container.v1.Operation.Type)
   }
 
+  private int bitField0_;
   public static final int NAME_FIELD_NUMBER = 1;
   private volatile java.lang.Object name_;
   /**
@@ -1294,6 +1327,135 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
     }
   }
 
+  public static final int CLUSTER_CONDITIONS_FIELD_NUMBER = 13;
+  private java.util.List<com.google.container.v1.StatusCondition> clusterConditions_;
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current cluster state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+   */
+  public java.util.List<com.google.container.v1.StatusCondition> getClusterConditionsList() {
+    return clusterConditions_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current cluster state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+   */
+  public java.util.List<? extends com.google.container.v1.StatusConditionOrBuilder>
+      getClusterConditionsOrBuilderList() {
+    return clusterConditions_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current cluster state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+   */
+  public int getClusterConditionsCount() {
+    return clusterConditions_.size();
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current cluster state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+   */
+  public com.google.container.v1.StatusCondition getClusterConditions(int index) {
+    return clusterConditions_.get(index);
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current cluster state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+   */
+  public com.google.container.v1.StatusConditionOrBuilder getClusterConditionsOrBuilder(int index) {
+    return clusterConditions_.get(index);
+  }
+
+  public static final int NODEPOOL_CONDITIONS_FIELD_NUMBER = 14;
+  private java.util.List<com.google.container.v1.StatusCondition> nodepoolConditions_;
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current node pool state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+   */
+  public java.util.List<com.google.container.v1.StatusCondition> getNodepoolConditionsList() {
+    return nodepoolConditions_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current node pool state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+   */
+  public java.util.List<? extends com.google.container.v1.StatusConditionOrBuilder>
+      getNodepoolConditionsOrBuilderList() {
+    return nodepoolConditions_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current node pool state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+   */
+  public int getNodepoolConditionsCount() {
+    return nodepoolConditions_.size();
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current node pool state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+   */
+  public com.google.container.v1.StatusCondition getNodepoolConditions(int index) {
+    return nodepoolConditions_.get(index);
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current node pool state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+   */
+  public com.google.container.v1.StatusConditionOrBuilder getNodepoolConditionsOrBuilder(
+      int index) {
+    return nodepoolConditions_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
@@ -1341,6 +1503,12 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
     if (!getEndTimeBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, endTime_);
     }
+    for (int i = 0; i < clusterConditions_.size(); i++) {
+      output.writeMessage(13, clusterConditions_.get(i));
+    }
+    for (int i = 0; i < nodepoolConditions_.size(); i++) {
+      output.writeMessage(14, nodepoolConditions_.get(i));
+    }
     unknownFields.writeTo(output);
   }
 
@@ -1383,6 +1551,14 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
     if (!getEndTimeBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, endTime_);
     }
+    for (int i = 0; i < clusterConditions_.size(); i++) {
+      size +=
+          com.google.protobuf.CodedOutputStream.computeMessageSize(13, clusterConditions_.get(i));
+    }
+    for (int i = 0; i < nodepoolConditions_.size(); i++) {
+      size +=
+          com.google.protobuf.CodedOutputStream.computeMessageSize(14, nodepoolConditions_.get(i));
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1409,6 +1585,8 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
     if (!getLocation().equals(other.getLocation())) return false;
     if (!getStartTime().equals(other.getStartTime())) return false;
     if (!getEndTime().equals(other.getEndTime())) return false;
+    if (!getClusterConditionsList().equals(other.getClusterConditionsList())) return false;
+    if (!getNodepoolConditionsList().equals(other.getNodepoolConditionsList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -1442,6 +1620,14 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
     hash = (53 * hash) + getStartTime().hashCode();
     hash = (37 * hash) + END_TIME_FIELD_NUMBER;
     hash = (53 * hash) + getEndTime().hashCode();
+    if (getClusterConditionsCount() > 0) {
+      hash = (37 * hash) + CLUSTER_CONDITIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getClusterConditionsList().hashCode();
+    }
+    if (getNodepoolConditionsCount() > 0) {
+      hash = (37 * hash) + NODEPOOL_CONDITIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getNodepoolConditionsList().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1581,7 +1767,10 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
     }
 
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
+        getClusterConditionsFieldBuilder();
+        getNodepoolConditionsFieldBuilder();
+      }
     }
 
     @java.lang.Override
@@ -1609,6 +1798,18 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
 
       endTime_ = "";
 
+      if (clusterConditionsBuilder_ == null) {
+        clusterConditions_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000800);
+      } else {
+        clusterConditionsBuilder_.clear();
+      }
+      if (nodepoolConditionsBuilder_ == null) {
+        nodepoolConditions_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00001000);
+      } else {
+        nodepoolConditionsBuilder_.clear();
+      }
       return this;
     }
 
@@ -1635,6 +1836,8 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
     @java.lang.Override
     public com.google.container.v1.Operation buildPartial() {
       com.google.container.v1.Operation result = new com.google.container.v1.Operation(this);
+      int from_bitField0_ = bitField0_;
+      int to_bitField0_ = 0;
       result.name_ = name_;
       result.zone_ = zone_;
       result.operationType_ = operationType_;
@@ -1646,6 +1849,25 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       result.location_ = location_;
       result.startTime_ = startTime_;
       result.endTime_ = endTime_;
+      if (clusterConditionsBuilder_ == null) {
+        if (((bitField0_ & 0x00000800) != 0)) {
+          clusterConditions_ = java.util.Collections.unmodifiableList(clusterConditions_);
+          bitField0_ = (bitField0_ & ~0x00000800);
+        }
+        result.clusterConditions_ = clusterConditions_;
+      } else {
+        result.clusterConditions_ = clusterConditionsBuilder_.build();
+      }
+      if (nodepoolConditionsBuilder_ == null) {
+        if (((bitField0_ & 0x00001000) != 0)) {
+          nodepoolConditions_ = java.util.Collections.unmodifiableList(nodepoolConditions_);
+          bitField0_ = (bitField0_ & ~0x00001000);
+        }
+        result.nodepoolConditions_ = nodepoolConditions_;
+      } else {
+        result.nodepoolConditions_ = nodepoolConditionsBuilder_.build();
+      }
+      result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
     }
@@ -1737,6 +1959,60 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
         endTime_ = other.endTime_;
         onChanged();
       }
+      if (clusterConditionsBuilder_ == null) {
+        if (!other.clusterConditions_.isEmpty()) {
+          if (clusterConditions_.isEmpty()) {
+            clusterConditions_ = other.clusterConditions_;
+            bitField0_ = (bitField0_ & ~0x00000800);
+          } else {
+            ensureClusterConditionsIsMutable();
+            clusterConditions_.addAll(other.clusterConditions_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.clusterConditions_.isEmpty()) {
+          if (clusterConditionsBuilder_.isEmpty()) {
+            clusterConditionsBuilder_.dispose();
+            clusterConditionsBuilder_ = null;
+            clusterConditions_ = other.clusterConditions_;
+            bitField0_ = (bitField0_ & ~0x00000800);
+            clusterConditionsBuilder_ =
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                    ? getClusterConditionsFieldBuilder()
+                    : null;
+          } else {
+            clusterConditionsBuilder_.addAllMessages(other.clusterConditions_);
+          }
+        }
+      }
+      if (nodepoolConditionsBuilder_ == null) {
+        if (!other.nodepoolConditions_.isEmpty()) {
+          if (nodepoolConditions_.isEmpty()) {
+            nodepoolConditions_ = other.nodepoolConditions_;
+            bitField0_ = (bitField0_ & ~0x00001000);
+          } else {
+            ensureNodepoolConditionsIsMutable();
+            nodepoolConditions_.addAll(other.nodepoolConditions_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.nodepoolConditions_.isEmpty()) {
+          if (nodepoolConditionsBuilder_.isEmpty()) {
+            nodepoolConditionsBuilder_.dispose();
+            nodepoolConditionsBuilder_ = null;
+            nodepoolConditions_ = other.nodepoolConditions_;
+            bitField0_ = (bitField0_ & ~0x00001000);
+            nodepoolConditionsBuilder_ =
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                    ? getNodepoolConditionsFieldBuilder()
+                    : null;
+          } else {
+            nodepoolConditionsBuilder_.addAllMessages(other.nodepoolConditions_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -1765,6 +2041,8 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       }
       return this;
     }
+
+    private int bitField0_;
 
     private java.lang.Object name_ = "";
     /**
@@ -2807,6 +3085,716 @@ public final class Operation extends com.google.protobuf.GeneratedMessageV3
       endTime_ = value;
       onChanged();
       return this;
+    }
+
+    private java.util.List<com.google.container.v1.StatusCondition> clusterConditions_ =
+        java.util.Collections.emptyList();
+
+    private void ensureClusterConditionsIsMutable() {
+      if (!((bitField0_ & 0x00000800) != 0)) {
+        clusterConditions_ =
+            new java.util.ArrayList<com.google.container.v1.StatusCondition>(clusterConditions_);
+        bitField0_ |= 0x00000800;
+      }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.container.v1.StatusCondition,
+            com.google.container.v1.StatusCondition.Builder,
+            com.google.container.v1.StatusConditionOrBuilder>
+        clusterConditionsBuilder_;
+
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+     */
+    public java.util.List<com.google.container.v1.StatusCondition> getClusterConditionsList() {
+      if (clusterConditionsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(clusterConditions_);
+      } else {
+        return clusterConditionsBuilder_.getMessageList();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+     */
+    public int getClusterConditionsCount() {
+      if (clusterConditionsBuilder_ == null) {
+        return clusterConditions_.size();
+      } else {
+        return clusterConditionsBuilder_.getCount();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+     */
+    public com.google.container.v1.StatusCondition getClusterConditions(int index) {
+      if (clusterConditionsBuilder_ == null) {
+        return clusterConditions_.get(index);
+      } else {
+        return clusterConditionsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+     */
+    public Builder setClusterConditions(int index, com.google.container.v1.StatusCondition value) {
+      if (clusterConditionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureClusterConditionsIsMutable();
+        clusterConditions_.set(index, value);
+        onChanged();
+      } else {
+        clusterConditionsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+     */
+    public Builder setClusterConditions(
+        int index, com.google.container.v1.StatusCondition.Builder builderForValue) {
+      if (clusterConditionsBuilder_ == null) {
+        ensureClusterConditionsIsMutable();
+        clusterConditions_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        clusterConditionsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+     */
+    public Builder addClusterConditions(com.google.container.v1.StatusCondition value) {
+      if (clusterConditionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureClusterConditionsIsMutable();
+        clusterConditions_.add(value);
+        onChanged();
+      } else {
+        clusterConditionsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+     */
+    public Builder addClusterConditions(int index, com.google.container.v1.StatusCondition value) {
+      if (clusterConditionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureClusterConditionsIsMutable();
+        clusterConditions_.add(index, value);
+        onChanged();
+      } else {
+        clusterConditionsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+     */
+    public Builder addClusterConditions(
+        com.google.container.v1.StatusCondition.Builder builderForValue) {
+      if (clusterConditionsBuilder_ == null) {
+        ensureClusterConditionsIsMutable();
+        clusterConditions_.add(builderForValue.build());
+        onChanged();
+      } else {
+        clusterConditionsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+     */
+    public Builder addClusterConditions(
+        int index, com.google.container.v1.StatusCondition.Builder builderForValue) {
+      if (clusterConditionsBuilder_ == null) {
+        ensureClusterConditionsIsMutable();
+        clusterConditions_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        clusterConditionsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+     */
+    public Builder addAllClusterConditions(
+        java.lang.Iterable<? extends com.google.container.v1.StatusCondition> values) {
+      if (clusterConditionsBuilder_ == null) {
+        ensureClusterConditionsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, clusterConditions_);
+        onChanged();
+      } else {
+        clusterConditionsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+     */
+    public Builder clearClusterConditions() {
+      if (clusterConditionsBuilder_ == null) {
+        clusterConditions_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000800);
+        onChanged();
+      } else {
+        clusterConditionsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+     */
+    public Builder removeClusterConditions(int index) {
+      if (clusterConditionsBuilder_ == null) {
+        ensureClusterConditionsIsMutable();
+        clusterConditions_.remove(index);
+        onChanged();
+      } else {
+        clusterConditionsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+     */
+    public com.google.container.v1.StatusCondition.Builder getClusterConditionsBuilder(int index) {
+      return getClusterConditionsFieldBuilder().getBuilder(index);
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+     */
+    public com.google.container.v1.StatusConditionOrBuilder getClusterConditionsOrBuilder(
+        int index) {
+      if (clusterConditionsBuilder_ == null) {
+        return clusterConditions_.get(index);
+      } else {
+        return clusterConditionsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+     */
+    public java.util.List<? extends com.google.container.v1.StatusConditionOrBuilder>
+        getClusterConditionsOrBuilderList() {
+      if (clusterConditionsBuilder_ != null) {
+        return clusterConditionsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(clusterConditions_);
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+     */
+    public com.google.container.v1.StatusCondition.Builder addClusterConditionsBuilder() {
+      return getClusterConditionsFieldBuilder()
+          .addBuilder(com.google.container.v1.StatusCondition.getDefaultInstance());
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+     */
+    public com.google.container.v1.StatusCondition.Builder addClusterConditionsBuilder(int index) {
+      return getClusterConditionsFieldBuilder()
+          .addBuilder(index, com.google.container.v1.StatusCondition.getDefaultInstance());
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current cluster state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+     */
+    public java.util.List<com.google.container.v1.StatusCondition.Builder>
+        getClusterConditionsBuilderList() {
+      return getClusterConditionsFieldBuilder().getBuilderList();
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.container.v1.StatusCondition,
+            com.google.container.v1.StatusCondition.Builder,
+            com.google.container.v1.StatusConditionOrBuilder>
+        getClusterConditionsFieldBuilder() {
+      if (clusterConditionsBuilder_ == null) {
+        clusterConditionsBuilder_ =
+            new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.google.container.v1.StatusCondition,
+                com.google.container.v1.StatusCondition.Builder,
+                com.google.container.v1.StatusConditionOrBuilder>(
+                clusterConditions_,
+                ((bitField0_ & 0x00000800) != 0),
+                getParentForChildren(),
+                isClean());
+        clusterConditions_ = null;
+      }
+      return clusterConditionsBuilder_;
+    }
+
+    private java.util.List<com.google.container.v1.StatusCondition> nodepoolConditions_ =
+        java.util.Collections.emptyList();
+
+    private void ensureNodepoolConditionsIsMutable() {
+      if (!((bitField0_ & 0x00001000) != 0)) {
+        nodepoolConditions_ =
+            new java.util.ArrayList<com.google.container.v1.StatusCondition>(nodepoolConditions_);
+        bitField0_ |= 0x00001000;
+      }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.container.v1.StatusCondition,
+            com.google.container.v1.StatusCondition.Builder,
+            com.google.container.v1.StatusConditionOrBuilder>
+        nodepoolConditionsBuilder_;
+
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current node pool state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+     */
+    public java.util.List<com.google.container.v1.StatusCondition> getNodepoolConditionsList() {
+      if (nodepoolConditionsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(nodepoolConditions_);
+      } else {
+        return nodepoolConditionsBuilder_.getMessageList();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current node pool state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+     */
+    public int getNodepoolConditionsCount() {
+      if (nodepoolConditionsBuilder_ == null) {
+        return nodepoolConditions_.size();
+      } else {
+        return nodepoolConditionsBuilder_.getCount();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current node pool state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+     */
+    public com.google.container.v1.StatusCondition getNodepoolConditions(int index) {
+      if (nodepoolConditionsBuilder_ == null) {
+        return nodepoolConditions_.get(index);
+      } else {
+        return nodepoolConditionsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current node pool state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+     */
+    public Builder setNodepoolConditions(int index, com.google.container.v1.StatusCondition value) {
+      if (nodepoolConditionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureNodepoolConditionsIsMutable();
+        nodepoolConditions_.set(index, value);
+        onChanged();
+      } else {
+        nodepoolConditionsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current node pool state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+     */
+    public Builder setNodepoolConditions(
+        int index, com.google.container.v1.StatusCondition.Builder builderForValue) {
+      if (nodepoolConditionsBuilder_ == null) {
+        ensureNodepoolConditionsIsMutable();
+        nodepoolConditions_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        nodepoolConditionsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current node pool state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+     */
+    public Builder addNodepoolConditions(com.google.container.v1.StatusCondition value) {
+      if (nodepoolConditionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureNodepoolConditionsIsMutable();
+        nodepoolConditions_.add(value);
+        onChanged();
+      } else {
+        nodepoolConditionsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current node pool state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+     */
+    public Builder addNodepoolConditions(int index, com.google.container.v1.StatusCondition value) {
+      if (nodepoolConditionsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureNodepoolConditionsIsMutable();
+        nodepoolConditions_.add(index, value);
+        onChanged();
+      } else {
+        nodepoolConditionsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current node pool state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+     */
+    public Builder addNodepoolConditions(
+        com.google.container.v1.StatusCondition.Builder builderForValue) {
+      if (nodepoolConditionsBuilder_ == null) {
+        ensureNodepoolConditionsIsMutable();
+        nodepoolConditions_.add(builderForValue.build());
+        onChanged();
+      } else {
+        nodepoolConditionsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current node pool state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+     */
+    public Builder addNodepoolConditions(
+        int index, com.google.container.v1.StatusCondition.Builder builderForValue) {
+      if (nodepoolConditionsBuilder_ == null) {
+        ensureNodepoolConditionsIsMutable();
+        nodepoolConditions_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        nodepoolConditionsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current node pool state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+     */
+    public Builder addAllNodepoolConditions(
+        java.lang.Iterable<? extends com.google.container.v1.StatusCondition> values) {
+      if (nodepoolConditionsBuilder_ == null) {
+        ensureNodepoolConditionsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, nodepoolConditions_);
+        onChanged();
+      } else {
+        nodepoolConditionsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current node pool state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+     */
+    public Builder clearNodepoolConditions() {
+      if (nodepoolConditionsBuilder_ == null) {
+        nodepoolConditions_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00001000);
+        onChanged();
+      } else {
+        nodepoolConditionsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current node pool state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+     */
+    public Builder removeNodepoolConditions(int index) {
+      if (nodepoolConditionsBuilder_ == null) {
+        ensureNodepoolConditionsIsMutable();
+        nodepoolConditions_.remove(index);
+        onChanged();
+      } else {
+        nodepoolConditionsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current node pool state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+     */
+    public com.google.container.v1.StatusCondition.Builder getNodepoolConditionsBuilder(int index) {
+      return getNodepoolConditionsFieldBuilder().getBuilder(index);
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current node pool state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+     */
+    public com.google.container.v1.StatusConditionOrBuilder getNodepoolConditionsOrBuilder(
+        int index) {
+      if (nodepoolConditionsBuilder_ == null) {
+        return nodepoolConditions_.get(index);
+      } else {
+        return nodepoolConditionsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current node pool state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+     */
+    public java.util.List<? extends com.google.container.v1.StatusConditionOrBuilder>
+        getNodepoolConditionsOrBuilderList() {
+      if (nodepoolConditionsBuilder_ != null) {
+        return nodepoolConditionsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(nodepoolConditions_);
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current node pool state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+     */
+    public com.google.container.v1.StatusCondition.Builder addNodepoolConditionsBuilder() {
+      return getNodepoolConditionsFieldBuilder()
+          .addBuilder(com.google.container.v1.StatusCondition.getDefaultInstance());
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current node pool state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+     */
+    public com.google.container.v1.StatusCondition.Builder addNodepoolConditionsBuilder(int index) {
+      return getNodepoolConditionsFieldBuilder()
+          .addBuilder(index, com.google.container.v1.StatusCondition.getDefaultInstance());
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Which conditions caused the current node pool state.
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+     */
+    public java.util.List<com.google.container.v1.StatusCondition.Builder>
+        getNodepoolConditionsBuilderList() {
+      return getNodepoolConditionsFieldBuilder().getBuilderList();
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.container.v1.StatusCondition,
+            com.google.container.v1.StatusCondition.Builder,
+            com.google.container.v1.StatusConditionOrBuilder>
+        getNodepoolConditionsFieldBuilder() {
+      if (nodepoolConditionsBuilder_ == null) {
+        nodepoolConditionsBuilder_ =
+            new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.google.container.v1.StatusCondition,
+                com.google.container.v1.StatusCondition.Builder,
+                com.google.container.v1.StatusConditionOrBuilder>(
+                nodepoolConditions_,
+                ((bitField0_ & 0x00001000) != 0),
+                getParentForChildren(),
+                isClean());
+        nodepoolConditions_ = null;
+      }
+      return nodepoolConditionsBuilder_;
     }
 
     @java.lang.Override

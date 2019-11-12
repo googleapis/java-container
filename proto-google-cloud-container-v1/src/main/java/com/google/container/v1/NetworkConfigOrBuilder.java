@@ -74,4 +74,16 @@ public interface NetworkConfigOrBuilder
    * <code>string subnetwork = 2;</code>
    */
   com.google.protobuf.ByteString getSubnetworkBytes();
+
+  /**
+   *
+   *
+   * <pre>
+   * Whether Intra-node visibility is enabled for this cluster.
+   * This makes same node pod to pod traffic visible for VPC network.
+   * </pre>
+   *
+   * <code>bool enable_intra_node_visibility = 5;</code>
+   */
+  boolean getEnableIntraNodeVisibility();
 }

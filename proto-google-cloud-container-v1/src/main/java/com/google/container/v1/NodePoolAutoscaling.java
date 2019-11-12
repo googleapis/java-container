@@ -79,6 +79,11 @@ public final class NodePoolAutoscaling extends com.google.protobuf.GeneratedMess
               maxNodeCount_ = input.readInt32();
               break;
             }
+          case 32:
+            {
+              autoprovisioned_ = input.readBool();
+              break;
+            }
           default:
             {
               if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
@@ -160,6 +165,21 @@ public final class NodePoolAutoscaling extends com.google.protobuf.GeneratedMess
     return maxNodeCount_;
   }
 
+  public static final int AUTOPROVISIONED_FIELD_NUMBER = 4;
+  private boolean autoprovisioned_;
+  /**
+   *
+   *
+   * <pre>
+   * Can this node pool be deleted automatically.
+   * </pre>
+   *
+   * <code>bool autoprovisioned = 4;</code>
+   */
+  public boolean getAutoprovisioned() {
+    return autoprovisioned_;
+  }
+
   private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
@@ -183,6 +203,9 @@ public final class NodePoolAutoscaling extends com.google.protobuf.GeneratedMess
     if (maxNodeCount_ != 0) {
       output.writeInt32(3, maxNodeCount_);
     }
+    if (autoprovisioned_ != false) {
+      output.writeBool(4, autoprovisioned_);
+    }
     unknownFields.writeTo(output);
   }
 
@@ -200,6 +223,9 @@ public final class NodePoolAutoscaling extends com.google.protobuf.GeneratedMess
     }
     if (maxNodeCount_ != 0) {
       size += com.google.protobuf.CodedOutputStream.computeInt32Size(3, maxNodeCount_);
+    }
+    if (autoprovisioned_ != false) {
+      size += com.google.protobuf.CodedOutputStream.computeBoolSize(4, autoprovisioned_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -220,6 +246,7 @@ public final class NodePoolAutoscaling extends com.google.protobuf.GeneratedMess
     if (getEnabled() != other.getEnabled()) return false;
     if (getMinNodeCount() != other.getMinNodeCount()) return false;
     if (getMaxNodeCount() != other.getMaxNodeCount()) return false;
+    if (getAutoprovisioned() != other.getAutoprovisioned()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -237,6 +264,8 @@ public final class NodePoolAutoscaling extends com.google.protobuf.GeneratedMess
     hash = (53 * hash) + getMinNodeCount();
     hash = (37 * hash) + MAX_NODE_COUNT_FIELD_NUMBER;
     hash = (53 * hash) + getMaxNodeCount();
+    hash = (37 * hash) + AUTOPROVISIONED_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getAutoprovisioned());
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -389,6 +418,8 @@ public final class NodePoolAutoscaling extends com.google.protobuf.GeneratedMess
 
       maxNodeCount_ = 0;
 
+      autoprovisioned_ = false;
+
       return this;
     }
 
@@ -419,6 +450,7 @@ public final class NodePoolAutoscaling extends com.google.protobuf.GeneratedMess
       result.enabled_ = enabled_;
       result.minNodeCount_ = minNodeCount_;
       result.maxNodeCount_ = maxNodeCount_;
+      result.autoprovisioned_ = autoprovisioned_;
       onBuilt();
       return result;
     }
@@ -476,6 +508,9 @@ public final class NodePoolAutoscaling extends com.google.protobuf.GeneratedMess
       }
       if (other.getMaxNodeCount() != 0) {
         setMaxNodeCount(other.getMaxNodeCount());
+      }
+      if (other.getAutoprovisioned() != false) {
+        setAutoprovisioned(other.getAutoprovisioned());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -640,6 +675,50 @@ public final class NodePoolAutoscaling extends com.google.protobuf.GeneratedMess
     public Builder clearMaxNodeCount() {
 
       maxNodeCount_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private boolean autoprovisioned_;
+    /**
+     *
+     *
+     * <pre>
+     * Can this node pool be deleted automatically.
+     * </pre>
+     *
+     * <code>bool autoprovisioned = 4;</code>
+     */
+    public boolean getAutoprovisioned() {
+      return autoprovisioned_;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Can this node pool be deleted automatically.
+     * </pre>
+     *
+     * <code>bool autoprovisioned = 4;</code>
+     */
+    public Builder setAutoprovisioned(boolean value) {
+
+      autoprovisioned_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Can this node pool be deleted automatically.
+     * </pre>
+     *
+     * <code>bool autoprovisioned = 4;</code>
+     */
+    public Builder clearAutoprovisioned() {
+
+      autoprovisioned_ = false;
       onChanged();
       return this;
     }

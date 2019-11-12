@@ -271,4 +271,108 @@ public interface OperationOrBuilder
    * <code>string end_time = 11;</code>
    */
   com.google.protobuf.ByteString getEndTimeBytes();
+
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current cluster state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+   */
+  java.util.List<com.google.container.v1.StatusCondition> getClusterConditionsList();
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current cluster state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+   */
+  com.google.container.v1.StatusCondition getClusterConditions(int index);
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current cluster state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+   */
+  int getClusterConditionsCount();
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current cluster state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+   */
+  java.util.List<? extends com.google.container.v1.StatusConditionOrBuilder>
+      getClusterConditionsOrBuilderList();
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current cluster state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition cluster_conditions = 13;</code>
+   */
+  com.google.container.v1.StatusConditionOrBuilder getClusterConditionsOrBuilder(int index);
+
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current node pool state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+   */
+  java.util.List<com.google.container.v1.StatusCondition> getNodepoolConditionsList();
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current node pool state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+   */
+  com.google.container.v1.StatusCondition getNodepoolConditions(int index);
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current node pool state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+   */
+  int getNodepoolConditionsCount();
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current node pool state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+   */
+  java.util.List<? extends com.google.container.v1.StatusConditionOrBuilder>
+      getNodepoolConditionsOrBuilderList();
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current node pool state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition nodepool_conditions = 14;</code>
+   */
+  com.google.container.v1.StatusConditionOrBuilder getNodepoolConditionsOrBuilder(int index);
 }

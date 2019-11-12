@@ -46,6 +46,7 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
     accelerators_ = java.util.Collections.emptyList();
     diskType_ = "";
     minCpuPlatform_ = "";
+    taints_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -182,6 +183,32 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
               minCpuPlatform_ = s;
               break;
             }
+          case 122:
+            {
+              if (!((mutable_bitField0_ & 0x00002000) != 0)) {
+                taints_ = new java.util.ArrayList<com.google.container.v1.NodeTaint>();
+                mutable_bitField0_ |= 0x00002000;
+              }
+              taints_.add(
+                  input.readMessage(com.google.container.v1.NodeTaint.parser(), extensionRegistry));
+              break;
+            }
+          case 162:
+            {
+              com.google.container.v1.ShieldedInstanceConfig.Builder subBuilder = null;
+              if (shieldedInstanceConfig_ != null) {
+                subBuilder = shieldedInstanceConfig_.toBuilder();
+              }
+              shieldedInstanceConfig_ =
+                  input.readMessage(
+                      com.google.container.v1.ShieldedInstanceConfig.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(shieldedInstanceConfig_);
+                shieldedInstanceConfig_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
           default:
             {
               if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
@@ -204,6 +231,9 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
       }
       if (((mutable_bitField0_ & 0x00000400) != 0)) {
         accelerators_ = java.util.Collections.unmodifiableList(accelerators_);
+      }
+      if (((mutable_bitField0_ & 0x00002000) != 0)) {
+        taints_ = java.util.Collections.unmodifiableList(taints_);
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -481,6 +511,7 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
    *  "cluster-name"
    *  "cluster-uid"
    *  "configure-sh"
+   *  "containerd-configure-sh"
    *  "enable-os-login"
    *  "gci-update-strategy"
    *  "gci-ensure-gke-docker"
@@ -488,6 +519,13 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
    *  "kube-env"
    *  "startup-script"
    *  "user-data"
+   *  "disable-address-manager"
+   *  "windows-startup-script-ps1"
+   *  "common-psm1"
+   *  "k8s-node-setup-psm1"
+   *  "install-ssh-psm1"
+   *  "user-profile-psm1"
+   *  "serial-port-logging-enable"
    * Values are free-form strings, and only have meaning as interpreted by
    * the image running in the instance. The only restriction placed on them is
    * that each value's size must be less than or equal to 32 KB.
@@ -520,6 +558,7 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
    *  "cluster-name"
    *  "cluster-uid"
    *  "configure-sh"
+   *  "containerd-configure-sh"
    *  "enable-os-login"
    *  "gci-update-strategy"
    *  "gci-ensure-gke-docker"
@@ -527,6 +566,13 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
    *  "kube-env"
    *  "startup-script"
    *  "user-data"
+   *  "disable-address-manager"
+   *  "windows-startup-script-ps1"
+   *  "common-psm1"
+   *  "k8s-node-setup-psm1"
+   *  "install-ssh-psm1"
+   *  "user-profile-psm1"
+   *  "serial-port-logging-enable"
    * Values are free-form strings, and only have meaning as interpreted by
    * the image running in the instance. The only restriction placed on them is
    * that each value's size must be less than or equal to 32 KB.
@@ -551,6 +597,7 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
    *  "cluster-name"
    *  "cluster-uid"
    *  "configure-sh"
+   *  "containerd-configure-sh"
    *  "enable-os-login"
    *  "gci-update-strategy"
    *  "gci-ensure-gke-docker"
@@ -558,6 +605,13 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
    *  "kube-env"
    *  "startup-script"
    *  "user-data"
+   *  "disable-address-manager"
+   *  "windows-startup-script-ps1"
+   *  "common-psm1"
+   *  "k8s-node-setup-psm1"
+   *  "install-ssh-psm1"
+   *  "user-profile-psm1"
+   *  "serial-port-logging-enable"
    * Values are free-form strings, and only have meaning as interpreted by
    * the image running in the instance. The only restriction placed on them is
    * that each value's size must be less than or equal to 32 KB.
@@ -587,6 +641,7 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
    *  "cluster-name"
    *  "cluster-uid"
    *  "configure-sh"
+   *  "containerd-configure-sh"
    *  "enable-os-login"
    *  "gci-update-strategy"
    *  "gci-ensure-gke-docker"
@@ -594,6 +649,13 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
    *  "kube-env"
    *  "startup-script"
    *  "user-data"
+   *  "disable-address-manager"
+   *  "windows-startup-script-ps1"
+   *  "common-psm1"
+   *  "k8s-node-setup-psm1"
+   *  "install-ssh-psm1"
+   *  "user-profile-psm1"
+   *  "serial-port-logging-enable"
    * Values are free-form strings, and only have meaning as interpreted by
    * the image running in the instance. The only restriction placed on them is
    * that each value's size must be less than or equal to 32 KB.
@@ -786,9 +848,9 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
    *
    * <pre>
    * The number of local SSD disks to be attached to the node.
-   * The limit for this value is dependant upon the maximum number of
+   * The limit for this value is dependent upon the maximum number of
    * disks available on a machine per zone. See:
-   * https://cloud.google.com/compute/docs/disks/local-ssd#local_ssd_limits
+   * https://cloud.google.com/compute/docs/disks/local-ssd
    * for more information.
    * </pre>
    *
@@ -1052,6 +1114,122 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
     }
   }
 
+  public static final int TAINTS_FIELD_NUMBER = 15;
+  private java.util.List<com.google.container.v1.NodeTaint> taints_;
+  /**
+   *
+   *
+   * <pre>
+   * List of kubernetes taints to be applied to each node.
+   * For more information, including usage and the valid values, see:
+   * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+   */
+  public java.util.List<com.google.container.v1.NodeTaint> getTaintsList() {
+    return taints_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * List of kubernetes taints to be applied to each node.
+   * For more information, including usage and the valid values, see:
+   * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+   */
+  public java.util.List<? extends com.google.container.v1.NodeTaintOrBuilder>
+      getTaintsOrBuilderList() {
+    return taints_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * List of kubernetes taints to be applied to each node.
+   * For more information, including usage and the valid values, see:
+   * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+   */
+  public int getTaintsCount() {
+    return taints_.size();
+  }
+  /**
+   *
+   *
+   * <pre>
+   * List of kubernetes taints to be applied to each node.
+   * For more information, including usage and the valid values, see:
+   * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+   */
+  public com.google.container.v1.NodeTaint getTaints(int index) {
+    return taints_.get(index);
+  }
+  /**
+   *
+   *
+   * <pre>
+   * List of kubernetes taints to be applied to each node.
+   * For more information, including usage and the valid values, see:
+   * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+   */
+  public com.google.container.v1.NodeTaintOrBuilder getTaintsOrBuilder(int index) {
+    return taints_.get(index);
+  }
+
+  public static final int SHIELDED_INSTANCE_CONFIG_FIELD_NUMBER = 20;
+  private com.google.container.v1.ShieldedInstanceConfig shieldedInstanceConfig_;
+  /**
+   *
+   *
+   * <pre>
+   * Shielded Instance options.
+   * </pre>
+   *
+   * <code>.google.container.v1.ShieldedInstanceConfig shielded_instance_config = 20;</code>
+   */
+  public boolean hasShieldedInstanceConfig() {
+    return shieldedInstanceConfig_ != null;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Shielded Instance options.
+   * </pre>
+   *
+   * <code>.google.container.v1.ShieldedInstanceConfig shielded_instance_config = 20;</code>
+   */
+  public com.google.container.v1.ShieldedInstanceConfig getShieldedInstanceConfig() {
+    return shieldedInstanceConfig_ == null
+        ? com.google.container.v1.ShieldedInstanceConfig.getDefaultInstance()
+        : shieldedInstanceConfig_;
+  }
+  /**
+   *
+   *
+   * <pre>
+   * Shielded Instance options.
+   * </pre>
+   *
+   * <code>.google.container.v1.ShieldedInstanceConfig shielded_instance_config = 20;</code>
+   */
+  public com.google.container.v1.ShieldedInstanceConfigOrBuilder
+      getShieldedInstanceConfigOrBuilder() {
+    return getShieldedInstanceConfig();
+  }
+
   private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
@@ -1102,6 +1280,12 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
     }
     if (!getMinCpuPlatformBytes().isEmpty()) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 13, minCpuPlatform_);
+    }
+    for (int i = 0; i < taints_.size(); i++) {
+      output.writeMessage(15, taints_.get(i));
+    }
+    if (shieldedInstanceConfig_ != null) {
+      output.writeMessage(20, getShieldedInstanceConfig());
     }
     unknownFields.writeTo(output);
   }
@@ -1175,6 +1359,13 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
     if (!getMinCpuPlatformBytes().isEmpty()) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, minCpuPlatform_);
     }
+    for (int i = 0; i < taints_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream.computeMessageSize(15, taints_.get(i));
+    }
+    if (shieldedInstanceConfig_ != null) {
+      size +=
+          com.google.protobuf.CodedOutputStream.computeMessageSize(20, getShieldedInstanceConfig());
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1203,6 +1394,11 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
     if (!getAcceleratorsList().equals(other.getAcceleratorsList())) return false;
     if (!getDiskType().equals(other.getDiskType())) return false;
     if (!getMinCpuPlatform().equals(other.getMinCpuPlatform())) return false;
+    if (!getTaintsList().equals(other.getTaintsList())) return false;
+    if (hasShieldedInstanceConfig() != other.hasShieldedInstanceConfig()) return false;
+    if (hasShieldedInstanceConfig()) {
+      if (!getShieldedInstanceConfig().equals(other.getShieldedInstanceConfig())) return false;
+    }
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -1250,6 +1446,14 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
     hash = (53 * hash) + getDiskType().hashCode();
     hash = (37 * hash) + MIN_CPU_PLATFORM_FIELD_NUMBER;
     hash = (53 * hash) + getMinCpuPlatform().hashCode();
+    if (getTaintsCount() > 0) {
+      hash = (37 * hash) + TAINTS_FIELD_NUMBER;
+      hash = (53 * hash) + getTaintsList().hashCode();
+    }
+    if (hasShieldedInstanceConfig()) {
+      hash = (37 * hash) + SHIELDED_INSTANCE_CONFIG_FIELD_NUMBER;
+      hash = (53 * hash) + getShieldedInstanceConfig().hashCode();
+    }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1414,6 +1618,7 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
     private void maybeForceBuilderInitialization() {
       if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
         getAcceleratorsFieldBuilder();
+        getTaintsFieldBuilder();
       }
     }
 
@@ -1448,6 +1653,18 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
 
       minCpuPlatform_ = "";
 
+      if (taintsBuilder_ == null) {
+        taints_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00002000);
+      } else {
+        taintsBuilder_.clear();
+      }
+      if (shieldedInstanceConfigBuilder_ == null) {
+        shieldedInstanceConfig_ = null;
+      } else {
+        shieldedInstanceConfig_ = null;
+        shieldedInstanceConfigBuilder_ = null;
+      }
       return this;
     }
 
@@ -1507,6 +1724,20 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
       }
       result.diskType_ = diskType_;
       result.minCpuPlatform_ = minCpuPlatform_;
+      if (taintsBuilder_ == null) {
+        if (((bitField0_ & 0x00002000) != 0)) {
+          taints_ = java.util.Collections.unmodifiableList(taints_);
+          bitField0_ = (bitField0_ & ~0x00002000);
+        }
+        result.taints_ = taints_;
+      } else {
+        result.taints_ = taintsBuilder_.build();
+      }
+      if (shieldedInstanceConfigBuilder_ == null) {
+        result.shieldedInstanceConfig_ = shieldedInstanceConfig_;
+      } else {
+        result.shieldedInstanceConfig_ = shieldedInstanceConfigBuilder_.build();
+      }
       result.bitField0_ = to_bitField0_;
       onBuilt();
       return result;
@@ -1634,6 +1865,36 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
       if (!other.getMinCpuPlatform().isEmpty()) {
         minCpuPlatform_ = other.minCpuPlatform_;
         onChanged();
+      }
+      if (taintsBuilder_ == null) {
+        if (!other.taints_.isEmpty()) {
+          if (taints_.isEmpty()) {
+            taints_ = other.taints_;
+            bitField0_ = (bitField0_ & ~0x00002000);
+          } else {
+            ensureTaintsIsMutable();
+            taints_.addAll(other.taints_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.taints_.isEmpty()) {
+          if (taintsBuilder_.isEmpty()) {
+            taintsBuilder_.dispose();
+            taintsBuilder_ = null;
+            taints_ = other.taints_;
+            bitField0_ = (bitField0_ & ~0x00002000);
+            taintsBuilder_ =
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
+                    ? getTaintsFieldBuilder()
+                    : null;
+          } else {
+            taintsBuilder_.addAllMessages(other.taints_);
+          }
+        }
+      }
+      if (other.hasShieldedInstanceConfig()) {
+        mergeShieldedInstanceConfig(other.getShieldedInstanceConfig());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -2201,6 +2462,7 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
      *  "cluster-name"
      *  "cluster-uid"
      *  "configure-sh"
+     *  "containerd-configure-sh"
      *  "enable-os-login"
      *  "gci-update-strategy"
      *  "gci-ensure-gke-docker"
@@ -2208,6 +2470,13 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
      *  "kube-env"
      *  "startup-script"
      *  "user-data"
+     *  "disable-address-manager"
+     *  "windows-startup-script-ps1"
+     *  "common-psm1"
+     *  "k8s-node-setup-psm1"
+     *  "install-ssh-psm1"
+     *  "user-profile-psm1"
+     *  "serial-port-logging-enable"
      * Values are free-form strings, and only have meaning as interpreted by
      * the image running in the instance. The only restriction placed on them is
      * that each value's size must be less than or equal to 32 KB.
@@ -2240,6 +2509,7 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
      *  "cluster-name"
      *  "cluster-uid"
      *  "configure-sh"
+     *  "containerd-configure-sh"
      *  "enable-os-login"
      *  "gci-update-strategy"
      *  "gci-ensure-gke-docker"
@@ -2247,6 +2517,13 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
      *  "kube-env"
      *  "startup-script"
      *  "user-data"
+     *  "disable-address-manager"
+     *  "windows-startup-script-ps1"
+     *  "common-psm1"
+     *  "k8s-node-setup-psm1"
+     *  "install-ssh-psm1"
+     *  "user-profile-psm1"
+     *  "serial-port-logging-enable"
      * Values are free-form strings, and only have meaning as interpreted by
      * the image running in the instance. The only restriction placed on them is
      * that each value's size must be less than or equal to 32 KB.
@@ -2271,6 +2548,7 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
      *  "cluster-name"
      *  "cluster-uid"
      *  "configure-sh"
+     *  "containerd-configure-sh"
      *  "enable-os-login"
      *  "gci-update-strategy"
      *  "gci-ensure-gke-docker"
@@ -2278,6 +2556,13 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
      *  "kube-env"
      *  "startup-script"
      *  "user-data"
+     *  "disable-address-manager"
+     *  "windows-startup-script-ps1"
+     *  "common-psm1"
+     *  "k8s-node-setup-psm1"
+     *  "install-ssh-psm1"
+     *  "user-profile-psm1"
+     *  "serial-port-logging-enable"
      * Values are free-form strings, and only have meaning as interpreted by
      * the image running in the instance. The only restriction placed on them is
      * that each value's size must be less than or equal to 32 KB.
@@ -2307,6 +2592,7 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
      *  "cluster-name"
      *  "cluster-uid"
      *  "configure-sh"
+     *  "containerd-configure-sh"
      *  "enable-os-login"
      *  "gci-update-strategy"
      *  "gci-ensure-gke-docker"
@@ -2314,6 +2600,13 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
      *  "kube-env"
      *  "startup-script"
      *  "user-data"
+     *  "disable-address-manager"
+     *  "windows-startup-script-ps1"
+     *  "common-psm1"
+     *  "k8s-node-setup-psm1"
+     *  "install-ssh-psm1"
+     *  "user-profile-psm1"
+     *  "serial-port-logging-enable"
      * Values are free-form strings, and only have meaning as interpreted by
      * the image running in the instance. The only restriction placed on them is
      * that each value's size must be less than or equal to 32 KB.
@@ -2350,6 +2643,7 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
      *  "cluster-name"
      *  "cluster-uid"
      *  "configure-sh"
+     *  "containerd-configure-sh"
      *  "enable-os-login"
      *  "gci-update-strategy"
      *  "gci-ensure-gke-docker"
@@ -2357,6 +2651,13 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
      *  "kube-env"
      *  "startup-script"
      *  "user-data"
+     *  "disable-address-manager"
+     *  "windows-startup-script-ps1"
+     *  "common-psm1"
+     *  "k8s-node-setup-psm1"
+     *  "install-ssh-psm1"
+     *  "user-profile-psm1"
+     *  "serial-port-logging-enable"
      * Values are free-form strings, and only have meaning as interpreted by
      * the image running in the instance. The only restriction placed on them is
      * that each value's size must be less than or equal to 32 KB.
@@ -2390,6 +2691,7 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
      *  "cluster-name"
      *  "cluster-uid"
      *  "configure-sh"
+     *  "containerd-configure-sh"
      *  "enable-os-login"
      *  "gci-update-strategy"
      *  "gci-ensure-gke-docker"
@@ -2397,6 +2699,13 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
      *  "kube-env"
      *  "startup-script"
      *  "user-data"
+     *  "disable-address-manager"
+     *  "windows-startup-script-ps1"
+     *  "common-psm1"
+     *  "k8s-node-setup-psm1"
+     *  "install-ssh-psm1"
+     *  "user-profile-psm1"
+     *  "serial-port-logging-enable"
      * Values are free-form strings, and only have meaning as interpreted by
      * the image running in the instance. The only restriction placed on them is
      * that each value's size must be less than or equal to 32 KB.
@@ -2428,6 +2737,7 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
      *  "cluster-name"
      *  "cluster-uid"
      *  "configure-sh"
+     *  "containerd-configure-sh"
      *  "enable-os-login"
      *  "gci-update-strategy"
      *  "gci-ensure-gke-docker"
@@ -2435,6 +2745,13 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
      *  "kube-env"
      *  "startup-script"
      *  "user-data"
+     *  "disable-address-manager"
+     *  "windows-startup-script-ps1"
+     *  "common-psm1"
+     *  "k8s-node-setup-psm1"
+     *  "install-ssh-psm1"
+     *  "user-profile-psm1"
+     *  "serial-port-logging-enable"
      * Values are free-form strings, and only have meaning as interpreted by
      * the image running in the instance. The only restriction placed on them is
      * that each value's size must be less than or equal to 32 KB.
@@ -2754,9 +3071,9 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The number of local SSD disks to be attached to the node.
-     * The limit for this value is dependant upon the maximum number of
+     * The limit for this value is dependent upon the maximum number of
      * disks available on a machine per zone. See:
-     * https://cloud.google.com/compute/docs/disks/local-ssd#local_ssd_limits
+     * https://cloud.google.com/compute/docs/disks/local-ssd
      * for more information.
      * </pre>
      *
@@ -2770,9 +3087,9 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The number of local SSD disks to be attached to the node.
-     * The limit for this value is dependant upon the maximum number of
+     * The limit for this value is dependent upon the maximum number of
      * disks available on a machine per zone. See:
-     * https://cloud.google.com/compute/docs/disks/local-ssd#local_ssd_limits
+     * https://cloud.google.com/compute/docs/disks/local-ssd
      * for more information.
      * </pre>
      *
@@ -2789,9 +3106,9 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <pre>
      * The number of local SSD disks to be attached to the node.
-     * The limit for this value is dependant upon the maximum number of
+     * The limit for this value is dependent upon the maximum number of
      * disks available on a machine per zone. See:
-     * https://cloud.google.com/compute/docs/disks/local-ssd#local_ssd_limits
+     * https://cloud.google.com/compute/docs/disks/local-ssd
      * for more information.
      * </pre>
      *
@@ -3632,6 +3949,573 @@ public final class NodeConfig extends com.google.protobuf.GeneratedMessageV3
       minCpuPlatform_ = value;
       onChanged();
       return this;
+    }
+
+    private java.util.List<com.google.container.v1.NodeTaint> taints_ =
+        java.util.Collections.emptyList();
+
+    private void ensureTaintsIsMutable() {
+      if (!((bitField0_ & 0x00002000) != 0)) {
+        taints_ = new java.util.ArrayList<com.google.container.v1.NodeTaint>(taints_);
+        bitField0_ |= 0x00002000;
+      }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.container.v1.NodeTaint,
+            com.google.container.v1.NodeTaint.Builder,
+            com.google.container.v1.NodeTaintOrBuilder>
+        taintsBuilder_;
+
+    /**
+     *
+     *
+     * <pre>
+     * List of kubernetes taints to be applied to each node.
+     * For more information, including usage and the valid values, see:
+     * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+     */
+    public java.util.List<com.google.container.v1.NodeTaint> getTaintsList() {
+      if (taintsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(taints_);
+      } else {
+        return taintsBuilder_.getMessageList();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * List of kubernetes taints to be applied to each node.
+     * For more information, including usage and the valid values, see:
+     * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+     */
+    public int getTaintsCount() {
+      if (taintsBuilder_ == null) {
+        return taints_.size();
+      } else {
+        return taintsBuilder_.getCount();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * List of kubernetes taints to be applied to each node.
+     * For more information, including usage and the valid values, see:
+     * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+     */
+    public com.google.container.v1.NodeTaint getTaints(int index) {
+      if (taintsBuilder_ == null) {
+        return taints_.get(index);
+      } else {
+        return taintsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * List of kubernetes taints to be applied to each node.
+     * For more information, including usage and the valid values, see:
+     * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+     */
+    public Builder setTaints(int index, com.google.container.v1.NodeTaint value) {
+      if (taintsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTaintsIsMutable();
+        taints_.set(index, value);
+        onChanged();
+      } else {
+        taintsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * List of kubernetes taints to be applied to each node.
+     * For more information, including usage and the valid values, see:
+     * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+     */
+    public Builder setTaints(int index, com.google.container.v1.NodeTaint.Builder builderForValue) {
+      if (taintsBuilder_ == null) {
+        ensureTaintsIsMutable();
+        taints_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        taintsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * List of kubernetes taints to be applied to each node.
+     * For more information, including usage and the valid values, see:
+     * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+     */
+    public Builder addTaints(com.google.container.v1.NodeTaint value) {
+      if (taintsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTaintsIsMutable();
+        taints_.add(value);
+        onChanged();
+      } else {
+        taintsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * List of kubernetes taints to be applied to each node.
+     * For more information, including usage and the valid values, see:
+     * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+     */
+    public Builder addTaints(int index, com.google.container.v1.NodeTaint value) {
+      if (taintsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTaintsIsMutable();
+        taints_.add(index, value);
+        onChanged();
+      } else {
+        taintsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * List of kubernetes taints to be applied to each node.
+     * For more information, including usage and the valid values, see:
+     * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+     */
+    public Builder addTaints(com.google.container.v1.NodeTaint.Builder builderForValue) {
+      if (taintsBuilder_ == null) {
+        ensureTaintsIsMutable();
+        taints_.add(builderForValue.build());
+        onChanged();
+      } else {
+        taintsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * List of kubernetes taints to be applied to each node.
+     * For more information, including usage and the valid values, see:
+     * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+     */
+    public Builder addTaints(int index, com.google.container.v1.NodeTaint.Builder builderForValue) {
+      if (taintsBuilder_ == null) {
+        ensureTaintsIsMutable();
+        taints_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        taintsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * List of kubernetes taints to be applied to each node.
+     * For more information, including usage and the valid values, see:
+     * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+     */
+    public Builder addAllTaints(
+        java.lang.Iterable<? extends com.google.container.v1.NodeTaint> values) {
+      if (taintsBuilder_ == null) {
+        ensureTaintsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, taints_);
+        onChanged();
+      } else {
+        taintsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * List of kubernetes taints to be applied to each node.
+     * For more information, including usage and the valid values, see:
+     * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+     */
+    public Builder clearTaints() {
+      if (taintsBuilder_ == null) {
+        taints_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00002000);
+        onChanged();
+      } else {
+        taintsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * List of kubernetes taints to be applied to each node.
+     * For more information, including usage and the valid values, see:
+     * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+     */
+    public Builder removeTaints(int index) {
+      if (taintsBuilder_ == null) {
+        ensureTaintsIsMutable();
+        taints_.remove(index);
+        onChanged();
+      } else {
+        taintsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * List of kubernetes taints to be applied to each node.
+     * For more information, including usage and the valid values, see:
+     * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+     */
+    public com.google.container.v1.NodeTaint.Builder getTaintsBuilder(int index) {
+      return getTaintsFieldBuilder().getBuilder(index);
+    }
+    /**
+     *
+     *
+     * <pre>
+     * List of kubernetes taints to be applied to each node.
+     * For more information, including usage and the valid values, see:
+     * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+     */
+    public com.google.container.v1.NodeTaintOrBuilder getTaintsOrBuilder(int index) {
+      if (taintsBuilder_ == null) {
+        return taints_.get(index);
+      } else {
+        return taintsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * List of kubernetes taints to be applied to each node.
+     * For more information, including usage and the valid values, see:
+     * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+     */
+    public java.util.List<? extends com.google.container.v1.NodeTaintOrBuilder>
+        getTaintsOrBuilderList() {
+      if (taintsBuilder_ != null) {
+        return taintsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(taints_);
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * List of kubernetes taints to be applied to each node.
+     * For more information, including usage and the valid values, see:
+     * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+     */
+    public com.google.container.v1.NodeTaint.Builder addTaintsBuilder() {
+      return getTaintsFieldBuilder()
+          .addBuilder(com.google.container.v1.NodeTaint.getDefaultInstance());
+    }
+    /**
+     *
+     *
+     * <pre>
+     * List of kubernetes taints to be applied to each node.
+     * For more information, including usage and the valid values, see:
+     * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+     */
+    public com.google.container.v1.NodeTaint.Builder addTaintsBuilder(int index) {
+      return getTaintsFieldBuilder()
+          .addBuilder(index, com.google.container.v1.NodeTaint.getDefaultInstance());
+    }
+    /**
+     *
+     *
+     * <pre>
+     * List of kubernetes taints to be applied to each node.
+     * For more information, including usage and the valid values, see:
+     * https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+     * </pre>
+     *
+     * <code>repeated .google.container.v1.NodeTaint taints = 15;</code>
+     */
+    public java.util.List<com.google.container.v1.NodeTaint.Builder> getTaintsBuilderList() {
+      return getTaintsFieldBuilder().getBuilderList();
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.container.v1.NodeTaint,
+            com.google.container.v1.NodeTaint.Builder,
+            com.google.container.v1.NodeTaintOrBuilder>
+        getTaintsFieldBuilder() {
+      if (taintsBuilder_ == null) {
+        taintsBuilder_ =
+            new com.google.protobuf.RepeatedFieldBuilderV3<
+                com.google.container.v1.NodeTaint,
+                com.google.container.v1.NodeTaint.Builder,
+                com.google.container.v1.NodeTaintOrBuilder>(
+                taints_, ((bitField0_ & 0x00002000) != 0), getParentForChildren(), isClean());
+        taints_ = null;
+      }
+      return taintsBuilder_;
+    }
+
+    private com.google.container.v1.ShieldedInstanceConfig shieldedInstanceConfig_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.container.v1.ShieldedInstanceConfig,
+            com.google.container.v1.ShieldedInstanceConfig.Builder,
+            com.google.container.v1.ShieldedInstanceConfigOrBuilder>
+        shieldedInstanceConfigBuilder_;
+    /**
+     *
+     *
+     * <pre>
+     * Shielded Instance options.
+     * </pre>
+     *
+     * <code>.google.container.v1.ShieldedInstanceConfig shielded_instance_config = 20;</code>
+     */
+    public boolean hasShieldedInstanceConfig() {
+      return shieldedInstanceConfigBuilder_ != null || shieldedInstanceConfig_ != null;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Shielded Instance options.
+     * </pre>
+     *
+     * <code>.google.container.v1.ShieldedInstanceConfig shielded_instance_config = 20;</code>
+     */
+    public com.google.container.v1.ShieldedInstanceConfig getShieldedInstanceConfig() {
+      if (shieldedInstanceConfigBuilder_ == null) {
+        return shieldedInstanceConfig_ == null
+            ? com.google.container.v1.ShieldedInstanceConfig.getDefaultInstance()
+            : shieldedInstanceConfig_;
+      } else {
+        return shieldedInstanceConfigBuilder_.getMessage();
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Shielded Instance options.
+     * </pre>
+     *
+     * <code>.google.container.v1.ShieldedInstanceConfig shielded_instance_config = 20;</code>
+     */
+    public Builder setShieldedInstanceConfig(com.google.container.v1.ShieldedInstanceConfig value) {
+      if (shieldedInstanceConfigBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        shieldedInstanceConfig_ = value;
+        onChanged();
+      } else {
+        shieldedInstanceConfigBuilder_.setMessage(value);
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Shielded Instance options.
+     * </pre>
+     *
+     * <code>.google.container.v1.ShieldedInstanceConfig shielded_instance_config = 20;</code>
+     */
+    public Builder setShieldedInstanceConfig(
+        com.google.container.v1.ShieldedInstanceConfig.Builder builderForValue) {
+      if (shieldedInstanceConfigBuilder_ == null) {
+        shieldedInstanceConfig_ = builderForValue.build();
+        onChanged();
+      } else {
+        shieldedInstanceConfigBuilder_.setMessage(builderForValue.build());
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Shielded Instance options.
+     * </pre>
+     *
+     * <code>.google.container.v1.ShieldedInstanceConfig shielded_instance_config = 20;</code>
+     */
+    public Builder mergeShieldedInstanceConfig(
+        com.google.container.v1.ShieldedInstanceConfig value) {
+      if (shieldedInstanceConfigBuilder_ == null) {
+        if (shieldedInstanceConfig_ != null) {
+          shieldedInstanceConfig_ =
+              com.google.container.v1.ShieldedInstanceConfig.newBuilder(shieldedInstanceConfig_)
+                  .mergeFrom(value)
+                  .buildPartial();
+        } else {
+          shieldedInstanceConfig_ = value;
+        }
+        onChanged();
+      } else {
+        shieldedInstanceConfigBuilder_.mergeFrom(value);
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Shielded Instance options.
+     * </pre>
+     *
+     * <code>.google.container.v1.ShieldedInstanceConfig shielded_instance_config = 20;</code>
+     */
+    public Builder clearShieldedInstanceConfig() {
+      if (shieldedInstanceConfigBuilder_ == null) {
+        shieldedInstanceConfig_ = null;
+        onChanged();
+      } else {
+        shieldedInstanceConfig_ = null;
+        shieldedInstanceConfigBuilder_ = null;
+      }
+
+      return this;
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Shielded Instance options.
+     * </pre>
+     *
+     * <code>.google.container.v1.ShieldedInstanceConfig shielded_instance_config = 20;</code>
+     */
+    public com.google.container.v1.ShieldedInstanceConfig.Builder
+        getShieldedInstanceConfigBuilder() {
+
+      onChanged();
+      return getShieldedInstanceConfigFieldBuilder().getBuilder();
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Shielded Instance options.
+     * </pre>
+     *
+     * <code>.google.container.v1.ShieldedInstanceConfig shielded_instance_config = 20;</code>
+     */
+    public com.google.container.v1.ShieldedInstanceConfigOrBuilder
+        getShieldedInstanceConfigOrBuilder() {
+      if (shieldedInstanceConfigBuilder_ != null) {
+        return shieldedInstanceConfigBuilder_.getMessageOrBuilder();
+      } else {
+        return shieldedInstanceConfig_ == null
+            ? com.google.container.v1.ShieldedInstanceConfig.getDefaultInstance()
+            : shieldedInstanceConfig_;
+      }
+    }
+    /**
+     *
+     *
+     * <pre>
+     * Shielded Instance options.
+     * </pre>
+     *
+     * <code>.google.container.v1.ShieldedInstanceConfig shielded_instance_config = 20;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+            com.google.container.v1.ShieldedInstanceConfig,
+            com.google.container.v1.ShieldedInstanceConfig.Builder,
+            com.google.container.v1.ShieldedInstanceConfigOrBuilder>
+        getShieldedInstanceConfigFieldBuilder() {
+      if (shieldedInstanceConfigBuilder_ == null) {
+        shieldedInstanceConfigBuilder_ =
+            new com.google.protobuf.SingleFieldBuilderV3<
+                com.google.container.v1.ShieldedInstanceConfig,
+                com.google.container.v1.ShieldedInstanceConfig.Builder,
+                com.google.container.v1.ShieldedInstanceConfigOrBuilder>(
+                getShieldedInstanceConfig(), getParentForChildren(), isClean());
+        shieldedInstanceConfig_ = null;
+      }
+      return shieldedInstanceConfigBuilder_;
     }
 
     @java.lang.Override

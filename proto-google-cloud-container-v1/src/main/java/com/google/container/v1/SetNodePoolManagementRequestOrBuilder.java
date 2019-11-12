@@ -27,12 +27,13 @@ public interface SetNodePoolManagementRequestOrBuilder
    *
    *
    * <pre>
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840).
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string project_id = 1 [deprecated = true];</code>
+   * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   java.lang.String getProjectId();
@@ -40,12 +41,13 @@ public interface SetNodePoolManagementRequestOrBuilder
    *
    *
    * <pre>
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840).
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string project_id = 1 [deprecated = true];</code>
+   * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   com.google.protobuf.ByteString getProjectIdBytes();
@@ -54,13 +56,13 @@ public interface SetNodePoolManagementRequestOrBuilder
    *
    *
    * <pre>
-   * Deprecated. The name of the Google Compute Engine
+   * Required. Deprecated. The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster
    * resides.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string zone = 2 [deprecated = true];</code>
+   * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Deprecated
   java.lang.String getZone();
@@ -68,13 +70,13 @@ public interface SetNodePoolManagementRequestOrBuilder
    *
    *
    * <pre>
-   * Deprecated. The name of the Google Compute Engine
+   * Required. Deprecated. The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster
    * resides.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string zone = 2 [deprecated = true];</code>
+   * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Deprecated
   com.google.protobuf.ByteString getZoneBytes();
@@ -83,11 +85,12 @@ public interface SetNodePoolManagementRequestOrBuilder
    *
    *
    * <pre>
-   * Deprecated. The name of the cluster to update.
+   * Required. Deprecated. The name of the cluster to update.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string cluster_id = 3 [deprecated = true];</code>
+   * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   java.lang.String getClusterId();
@@ -95,11 +98,12 @@ public interface SetNodePoolManagementRequestOrBuilder
    *
    *
    * <pre>
-   * Deprecated. The name of the cluster to update.
+   * Required. Deprecated. The name of the cluster to update.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string cluster_id = 3 [deprecated = true];</code>
+   * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   com.google.protobuf.ByteString getClusterIdBytes();
@@ -108,11 +112,12 @@ public interface SetNodePoolManagementRequestOrBuilder
    *
    *
    * <pre>
-   * Deprecated. The name of the node pool to update.
+   * Required. Deprecated. The name of the node pool to update.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string node_pool_id = 4 [deprecated = true];</code>
+   * <code>string node_pool_id = 4 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   java.lang.String getNodePoolId();
@@ -120,11 +125,12 @@ public interface SetNodePoolManagementRequestOrBuilder
    *
    *
    * <pre>
-   * Deprecated. The name of the node pool to update.
+   * Required. Deprecated. The name of the node pool to update.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string node_pool_id = 4 [deprecated = true];</code>
+   * <code>string node_pool_id = 4 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   com.google.protobuf.ByteString getNodePoolIdBytes();
@@ -133,30 +139,36 @@ public interface SetNodePoolManagementRequestOrBuilder
    *
    *
    * <pre>
-   * NodeManagement configuration for the node pool.
+   * Required. NodeManagement configuration for the node pool.
    * </pre>
    *
-   * <code>.google.container.v1.NodeManagement management = 5;</code>
+   * <code>
+   * .google.container.v1.NodeManagement management = 5 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   boolean hasManagement();
   /**
    *
    *
    * <pre>
-   * NodeManagement configuration for the node pool.
+   * Required. NodeManagement configuration for the node pool.
    * </pre>
    *
-   * <code>.google.container.v1.NodeManagement management = 5;</code>
+   * <code>
+   * .google.container.v1.NodeManagement management = 5 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   com.google.container.v1.NodeManagement getManagement();
   /**
    *
    *
    * <pre>
-   * NodeManagement configuration for the node pool.
+   * Required. NodeManagement configuration for the node pool.
    * </pre>
    *
-   * <code>.google.container.v1.NodeManagement management = 5;</code>
+   * <code>
+   * .google.container.v1.NodeManagement management = 5 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   com.google.container.v1.NodeManagementOrBuilder getManagementOrBuilder();
 

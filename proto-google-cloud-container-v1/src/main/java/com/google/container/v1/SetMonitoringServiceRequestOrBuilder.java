@@ -27,12 +27,13 @@ public interface SetMonitoringServiceRequestOrBuilder
    *
    *
    * <pre>
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840).
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string project_id = 1 [deprecated = true];</code>
+   * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   java.lang.String getProjectId();
@@ -40,12 +41,13 @@ public interface SetMonitoringServiceRequestOrBuilder
    *
    *
    * <pre>
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840).
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string project_id = 1 [deprecated = true];</code>
+   * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   com.google.protobuf.ByteString getProjectIdBytes();
@@ -54,13 +56,13 @@ public interface SetMonitoringServiceRequestOrBuilder
    *
    *
    * <pre>
-   * Deprecated. The name of the Google Compute Engine
+   * Required. Deprecated. The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster
    * resides.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string zone = 2 [deprecated = true];</code>
+   * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Deprecated
   java.lang.String getZone();
@@ -68,13 +70,13 @@ public interface SetMonitoringServiceRequestOrBuilder
    *
    *
    * <pre>
-   * Deprecated. The name of the Google Compute Engine
+   * Required. Deprecated. The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster
    * resides.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string zone = 2 [deprecated = true];</code>
+   * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Deprecated
   com.google.protobuf.ByteString getZoneBytes();
@@ -83,11 +85,12 @@ public interface SetMonitoringServiceRequestOrBuilder
    *
    *
    * <pre>
-   * Deprecated. The name of the cluster to upgrade.
+   * Required. Deprecated. The name of the cluster to upgrade.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string cluster_id = 3 [deprecated = true];</code>
+   * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   java.lang.String getClusterId();
@@ -95,11 +98,12 @@ public interface SetMonitoringServiceRequestOrBuilder
    *
    *
    * <pre>
-   * Deprecated. The name of the cluster to upgrade.
+   * Required. Deprecated. The name of the cluster to upgrade.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string cluster_id = 3 [deprecated = true];</code>
+   * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   com.google.protobuf.ByteString getClusterIdBytes();
@@ -108,26 +112,30 @@ public interface SetMonitoringServiceRequestOrBuilder
    *
    *
    * <pre>
-   * The monitoring service the cluster should use to write metrics.
+   * Required. The monitoring service the cluster should use to write metrics.
    * Currently available options:
+   * * "monitoring.googleapis.com/kubernetes" - the Google Cloud Monitoring
+   * service with Kubernetes-native resource model
    * * "monitoring.googleapis.com" - the Google Cloud Monitoring service
    * * "none" - no metrics will be exported from the cluster
    * </pre>
    *
-   * <code>string monitoring_service = 4;</code>
+   * <code>string monitoring_service = 4 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   java.lang.String getMonitoringService();
   /**
    *
    *
    * <pre>
-   * The monitoring service the cluster should use to write metrics.
+   * Required. The monitoring service the cluster should use to write metrics.
    * Currently available options:
+   * * "monitoring.googleapis.com/kubernetes" - the Google Cloud Monitoring
+   * service with Kubernetes-native resource model
    * * "monitoring.googleapis.com" - the Google Cloud Monitoring service
    * * "none" - no metrics will be exported from the cluster
    * </pre>
    *
-   * <code>string monitoring_service = 4;</code>
+   * <code>string monitoring_service = 4 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.protobuf.ByteString getMonitoringServiceBytes();
 

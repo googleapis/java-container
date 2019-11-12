@@ -39,7 +39,7 @@ public interface AcceleratorConfigOrBuilder
    *
    * <pre>
    * The accelerator type resource name. List of supported accelerators
-   * [here](/compute/docs/gpus/#Introduction)
+   * [here](/compute/docs/gpus)
    * </pre>
    *
    * <code>string accelerator_type = 2;</code>
@@ -50,7 +50,7 @@ public interface AcceleratorConfigOrBuilder
    *
    * <pre>
    * The accelerator type resource name. List of supported accelerators
-   * [here](/compute/docs/gpus/#Introduction)
+   * [here](/compute/docs/gpus)
    * </pre>
    *
    * <code>string accelerator_type = 2;</code>

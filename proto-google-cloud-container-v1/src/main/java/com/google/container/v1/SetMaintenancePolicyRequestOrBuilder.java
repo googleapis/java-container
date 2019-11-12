@@ -27,22 +27,22 @@ public interface SetMaintenancePolicyRequestOrBuilder
    *
    *
    * <pre>
-   * The Google Developers Console [project ID or project
+   * Required. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840).
    * </pre>
    *
-   * <code>string project_id = 1;</code>
+   * <code>string project_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   java.lang.String getProjectId();
   /**
    *
    *
    * <pre>
-   * The Google Developers Console [project ID or project
+   * Required. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840).
    * </pre>
    *
-   * <code>string project_id = 1;</code>
+   * <code>string project_id = 1 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.protobuf.ByteString getProjectIdBytes();
 
@@ -50,24 +50,24 @@ public interface SetMaintenancePolicyRequestOrBuilder
    *
    *
    * <pre>
-   * The name of the Google Compute Engine
+   * Required. The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster
    * resides.
    * </pre>
    *
-   * <code>string zone = 2;</code>
+   * <code>string zone = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   java.lang.String getZone();
   /**
    *
    *
    * <pre>
-   * The name of the Google Compute Engine
+   * Required. The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster
    * resides.
    * </pre>
    *
-   * <code>string zone = 2;</code>
+   * <code>string zone = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.protobuf.ByteString getZoneBytes();
 
@@ -75,20 +75,20 @@ public interface SetMaintenancePolicyRequestOrBuilder
    *
    *
    * <pre>
-   * The name of the cluster to update.
+   * Required. The name of the cluster to update.
    * </pre>
    *
-   * <code>string cluster_id = 3;</code>
+   * <code>string cluster_id = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   java.lang.String getClusterId();
   /**
    *
    *
    * <pre>
-   * The name of the cluster to update.
+   * Required. The name of the cluster to update.
    * </pre>
    *
-   * <code>string cluster_id = 3;</code>
+   * <code>string cluster_id = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.protobuf.ByteString getClusterIdBytes();
 
@@ -96,33 +96,39 @@ public interface SetMaintenancePolicyRequestOrBuilder
    *
    *
    * <pre>
-   * The maintenance policy to be set for the cluster. An empty field
+   * Required. The maintenance policy to be set for the cluster. An empty field
    * clears the existing maintenance policy.
    * </pre>
    *
-   * <code>.google.container.v1.MaintenancePolicy maintenance_policy = 4;</code>
+   * <code>
+   * .google.container.v1.MaintenancePolicy maintenance_policy = 4 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   boolean hasMaintenancePolicy();
   /**
    *
    *
    * <pre>
-   * The maintenance policy to be set for the cluster. An empty field
+   * Required. The maintenance policy to be set for the cluster. An empty field
    * clears the existing maintenance policy.
    * </pre>
    *
-   * <code>.google.container.v1.MaintenancePolicy maintenance_policy = 4;</code>
+   * <code>
+   * .google.container.v1.MaintenancePolicy maintenance_policy = 4 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   com.google.container.v1.MaintenancePolicy getMaintenancePolicy();
   /**
    *
    *
    * <pre>
-   * The maintenance policy to be set for the cluster. An empty field
+   * Required. The maintenance policy to be set for the cluster. An empty field
    * clears the existing maintenance policy.
    * </pre>
    *
-   * <code>.google.container.v1.MaintenancePolicy maintenance_policy = 4;</code>
+   * <code>
+   * .google.container.v1.MaintenancePolicy maintenance_policy = 4 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   com.google.container.v1.MaintenancePolicyOrBuilder getMaintenancePolicyOrBuilder();
 

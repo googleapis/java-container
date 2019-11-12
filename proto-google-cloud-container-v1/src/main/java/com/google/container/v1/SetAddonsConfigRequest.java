@@ -152,12 +152,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840).
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string project_id = 1 [deprecated = true];</code>
+   * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public java.lang.String getProjectId() {
@@ -175,12 +176,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840).
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string project_id = 1 [deprecated = true];</code>
+   * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public com.google.protobuf.ByteString getProjectIdBytes() {
@@ -201,13 +203,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Deprecated. The name of the Google Compute Engine
+   * Required. Deprecated. The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster
    * resides.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string zone = 2 [deprecated = true];</code>
+   * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Deprecated
   public java.lang.String getZone() {
@@ -225,13 +227,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Deprecated. The name of the Google Compute Engine
+   * Required. Deprecated. The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster
    * resides.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string zone = 2 [deprecated = true];</code>
+   * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Deprecated
   public com.google.protobuf.ByteString getZoneBytes() {
@@ -252,11 +254,12 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Deprecated. The name of the cluster to upgrade.
+   * Required. Deprecated. The name of the cluster to upgrade.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string cluster_id = 3 [deprecated = true];</code>
+   * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public java.lang.String getClusterId() {
@@ -274,11 +277,12 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * Deprecated. The name of the cluster to upgrade.
+   * Required. Deprecated. The name of the cluster to upgrade.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string cluster_id = 3 [deprecated = true];</code>
+   * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public com.google.protobuf.ByteString getClusterIdBytes() {
@@ -299,11 +303,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * The desired configurations for the various addons available to run in the
+   * Required. The desired configurations for the various addons available to run in the
    * cluster.
    * </pre>
    *
-   * <code>.google.container.v1.AddonsConfig addons_config = 4;</code>
+   * <code>
+   * .google.container.v1.AddonsConfig addons_config = 4 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   public boolean hasAddonsConfig() {
     return addonsConfig_ != null;
@@ -312,11 +318,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * The desired configurations for the various addons available to run in the
+   * Required. The desired configurations for the various addons available to run in the
    * cluster.
    * </pre>
    *
-   * <code>.google.container.v1.AddonsConfig addons_config = 4;</code>
+   * <code>
+   * .google.container.v1.AddonsConfig addons_config = 4 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   public com.google.container.v1.AddonsConfig getAddonsConfig() {
     return addonsConfig_ == null
@@ -327,11 +335,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
    *
    *
    * <pre>
-   * The desired configurations for the various addons available to run in the
+   * Required. The desired configurations for the various addons available to run in the
    * cluster.
    * </pre>
    *
-   * <code>.google.container.v1.AddonsConfig addons_config = 4;</code>
+   * <code>
+   * .google.container.v1.AddonsConfig addons_config = 4 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   public com.google.container.v1.AddonsConfigOrBuilder getAddonsConfigOrBuilder() {
     return getAddonsConfig();
@@ -779,12 +789,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public java.lang.String getProjectId() {
@@ -802,12 +813,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public com.google.protobuf.ByteString getProjectIdBytes() {
@@ -825,12 +837,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setProjectId(java.lang.String value) {
@@ -846,12 +859,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder clearProjectId() {
@@ -864,12 +878,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setProjectIdBytes(com.google.protobuf.ByteString value) {
@@ -888,13 +903,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public java.lang.String getZone() {
@@ -912,13 +927,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public com.google.protobuf.ByteString getZoneBytes() {
@@ -936,13 +951,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public Builder setZone(java.lang.String value) {
@@ -958,13 +973,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public Builder clearZone() {
@@ -977,13 +992,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public Builder setZoneBytes(com.google.protobuf.ByteString value) {
@@ -1002,11 +1017,12 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to upgrade.
+     * Required. Deprecated. The name of the cluster to upgrade.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public java.lang.String getClusterId() {
@@ -1024,11 +1040,12 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to upgrade.
+     * Required. Deprecated. The name of the cluster to upgrade.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public com.google.protobuf.ByteString getClusterIdBytes() {
@@ -1046,11 +1063,12 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to upgrade.
+     * Required. Deprecated. The name of the cluster to upgrade.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setClusterId(java.lang.String value) {
@@ -1066,11 +1084,12 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to upgrade.
+     * Required. Deprecated. The name of the cluster to upgrade.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder clearClusterId() {
@@ -1083,11 +1102,12 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to upgrade.
+     * Required. Deprecated. The name of the cluster to upgrade.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setClusterIdBytes(com.google.protobuf.ByteString value) {
@@ -1111,11 +1131,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * The desired configurations for the various addons available to run in the
+     * Required. The desired configurations for the various addons available to run in the
      * cluster.
      * </pre>
      *
-     * <code>.google.container.v1.AddonsConfig addons_config = 4;</code>
+     * <code>
+     * .google.container.v1.AddonsConfig addons_config = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public boolean hasAddonsConfig() {
       return addonsConfigBuilder_ != null || addonsConfig_ != null;
@@ -1124,11 +1146,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * The desired configurations for the various addons available to run in the
+     * Required. The desired configurations for the various addons available to run in the
      * cluster.
      * </pre>
      *
-     * <code>.google.container.v1.AddonsConfig addons_config = 4;</code>
+     * <code>
+     * .google.container.v1.AddonsConfig addons_config = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public com.google.container.v1.AddonsConfig getAddonsConfig() {
       if (addonsConfigBuilder_ == null) {
@@ -1143,11 +1167,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * The desired configurations for the various addons available to run in the
+     * Required. The desired configurations for the various addons available to run in the
      * cluster.
      * </pre>
      *
-     * <code>.google.container.v1.AddonsConfig addons_config = 4;</code>
+     * <code>
+     * .google.container.v1.AddonsConfig addons_config = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public Builder setAddonsConfig(com.google.container.v1.AddonsConfig value) {
       if (addonsConfigBuilder_ == null) {
@@ -1166,11 +1192,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * The desired configurations for the various addons available to run in the
+     * Required. The desired configurations for the various addons available to run in the
      * cluster.
      * </pre>
      *
-     * <code>.google.container.v1.AddonsConfig addons_config = 4;</code>
+     * <code>
+     * .google.container.v1.AddonsConfig addons_config = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public Builder setAddonsConfig(com.google.container.v1.AddonsConfig.Builder builderForValue) {
       if (addonsConfigBuilder_ == null) {
@@ -1186,11 +1214,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * The desired configurations for the various addons available to run in the
+     * Required. The desired configurations for the various addons available to run in the
      * cluster.
      * </pre>
      *
-     * <code>.google.container.v1.AddonsConfig addons_config = 4;</code>
+     * <code>
+     * .google.container.v1.AddonsConfig addons_config = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public Builder mergeAddonsConfig(com.google.container.v1.AddonsConfig value) {
       if (addonsConfigBuilder_ == null) {
@@ -1213,11 +1243,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * The desired configurations for the various addons available to run in the
+     * Required. The desired configurations for the various addons available to run in the
      * cluster.
      * </pre>
      *
-     * <code>.google.container.v1.AddonsConfig addons_config = 4;</code>
+     * <code>
+     * .google.container.v1.AddonsConfig addons_config = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public Builder clearAddonsConfig() {
       if (addonsConfigBuilder_ == null) {
@@ -1234,11 +1266,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * The desired configurations for the various addons available to run in the
+     * Required. The desired configurations for the various addons available to run in the
      * cluster.
      * </pre>
      *
-     * <code>.google.container.v1.AddonsConfig addons_config = 4;</code>
+     * <code>
+     * .google.container.v1.AddonsConfig addons_config = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public com.google.container.v1.AddonsConfig.Builder getAddonsConfigBuilder() {
 
@@ -1249,11 +1283,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * The desired configurations for the various addons available to run in the
+     * Required. The desired configurations for the various addons available to run in the
      * cluster.
      * </pre>
      *
-     * <code>.google.container.v1.AddonsConfig addons_config = 4;</code>
+     * <code>
+     * .google.container.v1.AddonsConfig addons_config = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public com.google.container.v1.AddonsConfigOrBuilder getAddonsConfigOrBuilder() {
       if (addonsConfigBuilder_ != null) {
@@ -1268,11 +1304,13 @@ public final class SetAddonsConfigRequest extends com.google.protobuf.GeneratedM
      *
      *
      * <pre>
-     * The desired configurations for the various addons available to run in the
+     * Required. The desired configurations for the various addons available to run in the
      * cluster.
      * </pre>
      *
-     * <code>.google.container.v1.AddonsConfig addons_config = 4;</code>
+     * <code>
+     * .google.container.v1.AddonsConfig addons_config = 4 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
             com.google.container.v1.AddonsConfig,

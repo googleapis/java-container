@@ -288,4 +288,101 @@ public interface NodePoolOrBuilder
    * <code>.google.container.v1.NodeManagement management = 5;</code>
    */
   com.google.container.v1.NodeManagementOrBuilder getManagementOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
+   * The constraint on the maximum number of pods that can be run
+   * simultaneously on a node in the node pool.
+   * </pre>
+   *
+   * <code>.google.container.v1.MaxPodsConstraint max_pods_constraint = 6;</code>
+   */
+  boolean hasMaxPodsConstraint();
+  /**
+   *
+   *
+   * <pre>
+   * The constraint on the maximum number of pods that can be run
+   * simultaneously on a node in the node pool.
+   * </pre>
+   *
+   * <code>.google.container.v1.MaxPodsConstraint max_pods_constraint = 6;</code>
+   */
+  com.google.container.v1.MaxPodsConstraint getMaxPodsConstraint();
+  /**
+   *
+   *
+   * <pre>
+   * The constraint on the maximum number of pods that can be run
+   * simultaneously on a node in the node pool.
+   * </pre>
+   *
+   * <code>.google.container.v1.MaxPodsConstraint max_pods_constraint = 6;</code>
+   */
+  com.google.container.v1.MaxPodsConstraintOrBuilder getMaxPodsConstraintOrBuilder();
+
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current node pool state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition conditions = 105;</code>
+   */
+  java.util.List<com.google.container.v1.StatusCondition> getConditionsList();
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current node pool state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition conditions = 105;</code>
+   */
+  com.google.container.v1.StatusCondition getConditions(int index);
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current node pool state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition conditions = 105;</code>
+   */
+  int getConditionsCount();
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current node pool state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition conditions = 105;</code>
+   */
+  java.util.List<? extends com.google.container.v1.StatusConditionOrBuilder>
+      getConditionsOrBuilderList();
+  /**
+   *
+   *
+   * <pre>
+   * Which conditions caused the current node pool state.
+   * </pre>
+   *
+   * <code>repeated .google.container.v1.StatusCondition conditions = 105;</code>
+   */
+  com.google.container.v1.StatusConditionOrBuilder getConditionsOrBuilder(int index);
+
+  /**
+   *
+   *
+   * <pre>
+   * [Output only] The pod CIDR block size per node in this node pool.
+   * </pre>
+   *
+   * <code>int32 pod_ipv4_cidr_size = 7;</code>
+   */
+  int getPodIpv4CidrSize();
 }

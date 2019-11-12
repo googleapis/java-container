@@ -144,12 +144,13 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840).
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string project_id = 1 [deprecated = true];</code>
+   * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public java.lang.String getProjectId() {
@@ -167,12 +168,13 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * Deprecated. The Google Developers Console [project ID or project
+   * Required. Deprecated. The Google Developers Console [project ID or project
    * number](https://support.google.com/cloud/answer/6158840).
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string project_id = 1 [deprecated = true];</code>
+   * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public com.google.protobuf.ByteString getProjectIdBytes() {
@@ -193,13 +195,13 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * Deprecated. The name of the Google Compute Engine
+   * Required. Deprecated. The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster
    * resides.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string zone = 2 [deprecated = true];</code>
+   * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Deprecated
   public java.lang.String getZone() {
@@ -217,13 +219,13 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * Deprecated. The name of the Google Compute Engine
+   * Required. Deprecated. The name of the Google Compute Engine
    * [zone](/compute/docs/zones#available) in which the cluster
    * resides.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string zone = 2 [deprecated = true];</code>
+   * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Deprecated
   public com.google.protobuf.ByteString getZoneBytes() {
@@ -244,11 +246,12 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * Deprecated. The name of the cluster to upgrade.
+   * Required. Deprecated. The name of the cluster to upgrade.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string cluster_id = 3 [deprecated = true];</code>
+   * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public java.lang.String getClusterId() {
@@ -266,11 +269,12 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * Deprecated. The name of the cluster to upgrade.
+   * Required. Deprecated. The name of the cluster to upgrade.
    * This field has been deprecated and replaced by the name field.
    * </pre>
    *
-   * <code>string cluster_id = 3 [deprecated = true];</code>
+   * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   @java.lang.Deprecated
   public com.google.protobuf.ByteString getClusterIdBytes() {
@@ -291,7 +295,7 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * The Kubernetes version to change the master to.
+   * Required. The Kubernetes version to change the master to.
    * Users may specify either explicit versions offered by Kubernetes Engine or
    * version aliases, which have the following behavior:
    * - "latest": picks the highest valid Kubernetes version
@@ -301,7 +305,7 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
    * - "-": picks the default Kubernetes version
    * </pre>
    *
-   * <code>string master_version = 4;</code>
+   * <code>string master_version = 4 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   public java.lang.String getMasterVersion() {
     java.lang.Object ref = masterVersion_;
@@ -318,7 +322,7 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * The Kubernetes version to change the master to.
+   * Required. The Kubernetes version to change the master to.
    * Users may specify either explicit versions offered by Kubernetes Engine or
    * version aliases, which have the following behavior:
    * - "latest": picks the highest valid Kubernetes version
@@ -328,7 +332,7 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
    * - "-": picks the default Kubernetes version
    * </pre>
    *
-   * <code>string master_version = 4;</code>
+   * <code>string master_version = 4 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   public com.google.protobuf.ByteString getMasterVersionBytes() {
     java.lang.Object ref = masterVersion_;
@@ -772,12 +776,13 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public java.lang.String getProjectId() {
@@ -795,12 +800,13 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public com.google.protobuf.ByteString getProjectIdBytes() {
@@ -818,12 +824,13 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setProjectId(java.lang.String value) {
@@ -839,12 +846,13 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder clearProjectId() {
@@ -857,12 +865,13 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Deprecated. The Google Developers Console [project ID or project
+     * Required. Deprecated. The Google Developers Console [project ID or project
      * number](https://support.google.com/cloud/answer/6158840).
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string project_id = 1 [deprecated = true];</code>
+     * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setProjectIdBytes(com.google.protobuf.ByteString value) {
@@ -881,13 +890,13 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public java.lang.String getZone() {
@@ -905,13 +914,13 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public com.google.protobuf.ByteString getZoneBytes() {
@@ -929,13 +938,13 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public Builder setZone(java.lang.String value) {
@@ -951,13 +960,13 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public Builder clearZone() {
@@ -970,13 +979,13 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Deprecated. The name of the Google Compute Engine
+     * Required. Deprecated. The name of the Google Compute Engine
      * [zone](/compute/docs/zones#available) in which the cluster
      * resides.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string zone = 2 [deprecated = true];</code>
+     * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      */
     @java.lang.Deprecated
     public Builder setZoneBytes(com.google.protobuf.ByteString value) {
@@ -995,11 +1004,12 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to upgrade.
+     * Required. Deprecated. The name of the cluster to upgrade.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public java.lang.String getClusterId() {
@@ -1017,11 +1027,12 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to upgrade.
+     * Required. Deprecated. The name of the cluster to upgrade.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public com.google.protobuf.ByteString getClusterIdBytes() {
@@ -1039,11 +1050,12 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to upgrade.
+     * Required. Deprecated. The name of the cluster to upgrade.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setClusterId(java.lang.String value) {
@@ -1059,11 +1071,12 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to upgrade.
+     * Required. Deprecated. The name of the cluster to upgrade.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder clearClusterId() {
@@ -1076,11 +1089,12 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * Deprecated. The name of the cluster to upgrade.
+     * Required. Deprecated. The name of the cluster to upgrade.
      * This field has been deprecated and replaced by the name field.
      * </pre>
      *
-     * <code>string cluster_id = 3 [deprecated = true];</code>
+     * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     @java.lang.Deprecated
     public Builder setClusterIdBytes(com.google.protobuf.ByteString value) {
@@ -1099,7 +1113,7 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * The Kubernetes version to change the master to.
+     * Required. The Kubernetes version to change the master to.
      * Users may specify either explicit versions offered by Kubernetes Engine or
      * version aliases, which have the following behavior:
      * - "latest": picks the highest valid Kubernetes version
@@ -1109,7 +1123,7 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      * - "-": picks the default Kubernetes version
      * </pre>
      *
-     * <code>string master_version = 4;</code>
+     * <code>string master_version = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public java.lang.String getMasterVersion() {
       java.lang.Object ref = masterVersion_;
@@ -1126,7 +1140,7 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * The Kubernetes version to change the master to.
+     * Required. The Kubernetes version to change the master to.
      * Users may specify either explicit versions offered by Kubernetes Engine or
      * version aliases, which have the following behavior:
      * - "latest": picks the highest valid Kubernetes version
@@ -1136,7 +1150,7 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      * - "-": picks the default Kubernetes version
      * </pre>
      *
-     * <code>string master_version = 4;</code>
+     * <code>string master_version = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.protobuf.ByteString getMasterVersionBytes() {
       java.lang.Object ref = masterVersion_;
@@ -1153,7 +1167,7 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * The Kubernetes version to change the master to.
+     * Required. The Kubernetes version to change the master to.
      * Users may specify either explicit versions offered by Kubernetes Engine or
      * version aliases, which have the following behavior:
      * - "latest": picks the highest valid Kubernetes version
@@ -1163,7 +1177,7 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      * - "-": picks the default Kubernetes version
      * </pre>
      *
-     * <code>string master_version = 4;</code>
+     * <code>string master_version = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setMasterVersion(java.lang.String value) {
       if (value == null) {
@@ -1178,7 +1192,7 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * The Kubernetes version to change the master to.
+     * Required. The Kubernetes version to change the master to.
      * Users may specify either explicit versions offered by Kubernetes Engine or
      * version aliases, which have the following behavior:
      * - "latest": picks the highest valid Kubernetes version
@@ -1188,7 +1202,7 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      * - "-": picks the default Kubernetes version
      * </pre>
      *
-     * <code>string master_version = 4;</code>
+     * <code>string master_version = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearMasterVersion() {
 
@@ -1200,7 +1214,7 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * The Kubernetes version to change the master to.
+     * Required. The Kubernetes version to change the master to.
      * Users may specify either explicit versions offered by Kubernetes Engine or
      * version aliases, which have the following behavior:
      * - "latest": picks the highest valid Kubernetes version
@@ -1210,7 +1224,7 @@ public final class UpdateMasterRequest extends com.google.protobuf.GeneratedMess
      * - "-": picks the default Kubernetes version
      * </pre>
      *
-     * <code>string master_version = 4;</code>
+     * <code>string master_version = 4 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setMasterVersionBytes(com.google.protobuf.ByteString value) {
       if (value == null) {

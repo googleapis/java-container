@@ -57,4 +57,15 @@ public interface NodePoolAutoscalingOrBuilder
    * <code>int32 max_node_count = 3;</code>
    */
   int getMaxNodeCount();
+
+  /**
+   *
+   *
+   * <pre>
+   * Can this node pool be deleted automatically.
+   * </pre>
+   *
+   * <code>bool autoprovisioned = 4;</code>
+   */
+  boolean getAutoprovisioned();
 }
