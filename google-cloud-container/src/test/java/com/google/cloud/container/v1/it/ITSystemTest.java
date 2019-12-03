@@ -143,10 +143,10 @@ public class ITSystemTest {
   public void listOperationsTest() {
     ListOperationsResponse listOperations = client.listOperations(PROJECT_ID, ZONE);
     List<Operation> operations = listOperations.getOperationsList();
-    for (Operation operation1 : operations) {
-      if (operation1.getName().equals(operation.getName())) {
-        assertEquals(operation.getName(), operation1.getName());
-        assertEquals(ZONE, operation1.getZone());
+    for (Operation actualOperation : operations) {
+      if (actualOperation.getName().equals(operation.getName())) {
+        assertEquals(operation.getName(), actualOperation.getName());
+        assertEquals(ZONE, actualOperation.getZone());
       }
     }
   }
@@ -176,7 +176,7 @@ public class ITSystemTest {
     ListNodePoolsResponse response = client.listNodePools(PROJECT_ID, ZONE, CLUSTER_NAME);
     List<NodePool> nodePools = response.getNodePoolsList();
     for (NodePool nodePool : nodePools) {
-      if (nodePool.getName().equals(NODE_POOL_NAME)) {
+      if (NODE_POOL_NAME.equals(nodePool.getName())) {
         assertEquals(NODE_POOL_NAME, nodePool.getName());
         assertEquals(INITIAL_NODE_COUNT, nodePool.getInitialNodeCount());
         assertEquals(NODE_POOL_SEL_LINK, nodePool.getSelfLink());
