@@ -16,6 +16,7 @@
 package com.google.cloud.container.v1.it;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 import com.google.cloud.ServiceOptions;
 import com.google.cloud.container.v1.ClusterManagerClient;
@@ -154,13 +155,8 @@ public class ITSystemTest {
   @Test
   public void getServerConfigTest() {
     ServerConfig config = client.getServerConfig(PROJECT_ID, ZONE);
+    assertNotNull(config);
     assertEquals("COS", config.getDefaultImageType());
-    assertEquals(
-        "1.14.7-gke.10",
-        config.getValidNodeVersions(ServerConfig.VALID_MASTER_VERSIONS_FIELD_NUMBER));
-    assertEquals(
-        "1.12.10-gke.20",
-        config.getValidMasterVersions(ServerConfig.VALID_MASTER_VERSIONS_FIELD_NUMBER));
   }
 
   @Test
