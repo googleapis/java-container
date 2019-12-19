@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.118.1](https://www.github.com/googleapis/java-container/compare/v0.118.0...v0.118.1) (2019-12-19)
+
+
+### Dependencies
+
+* update dependency io.grpc:grpc-bom to v1.26.0 ([734a0c8](https://www.github.com/googleapis/java-container/commit/734a0c875fd4c85adde8b3363e112c8b3a98c30d))
+
 ## [0.118.0](https://www.github.com/googleapis/java-container/compare/0.117.0...v0.118.0) (2019-12-05)
 
 
