@@ -1,5 +1,22 @@
 # Changelog
 
+### [0.119.2](https://www.github.com/googleapis/java-container/compare/v0.119.1...v0.119.2) (2020-02-12)
+
+
+### Bug Fixes
+
+* **regen:** make deprecated fields optional ([#64](https://www.github.com/googleapis/java-container/issues/64)) ([92d3d87](https://www.github.com/googleapis/java-container/commit/92d3d87fcb308c409175650726c32fd962863266))
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-core to v1.92.5 ([24627f1](https://www.github.com/googleapis/java-container/commit/24627f181cf3d38857fb47b05a8898b5b29b7e5c))
+
+
+### Documentation
+
+* **regen:** update sample code to set total timeout, add API client header test ([584d428](https://www.github.com/googleapis/java-container/commit/584d428034a5dc509e04806a0e0353c7ac717e05))
+
 ### [0.119.1](https://www.github.com/googleapis/java-container/compare/v0.119.0...v0.119.1) (2020-02-04)
 
 
