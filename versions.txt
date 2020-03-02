@@ -3,4 +3,4 @@
 
 proto-google-cloud-container-v1:0.85.0:0.85.0
 grpc-google-cloud-container-v1:0.85.0:0.85.0
-google-cloud-container:0.120.0-beta:0.120.0-beta
+google-cloud-container:1.0.0:1.0.0
