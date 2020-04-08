@@ -1,6 +1,13 @@
 {
-  "updateTime": "2020-04-06T23:01:47.093110Z",
+  "updateTime": "2020-04-08T23:04:02.315089Z",
   "sources": [
+    {
+      "git": {
+        "name": ".",
+        "remote": "https://github.com/googleapis/java-container.git",
+        "sha": "0de71bcbe8487f2c837bbbd4a459edac51452732"
+      }
+    },
     {
       "git": {
         "name": "googleapis",
