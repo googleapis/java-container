@@ -1,19 +1,5 @@
 # Changelog
 
-### [1.0.3](https://www.github.com/googleapis/java-container/compare/v1.0.2...v1.0.3) (2020-04-13)
-
-
-### Documentation
-
-* display resource name patterns in code font. ([#125](https://www.github.com/googleapis/java-container/issues/125)) ([acc4ab7](https://www.github.com/googleapis/java-container/commit/acc4ab75166c7738d557fe1977a4fc185660b814))
-
-### [1.0.2](https://www.github.com/googleapis/java-container/compare/v1.0.1...v1.0.2) (2020-04-09)
-
-
-### Documentation
-
-* **v1:** fix relative URLs in documentation ([#119](https://www.github.com/googleapis/java-container/issues/119)) ([4951555](https://www.github.com/googleapis/java-container/commit/49515554a9a4eba977301cc8a37bac102cae156e)), closes [#101](https://www.github.com/googleapis/java-container/issues/101) [#101](https://www.github.com/googleapis/java-container/issues/101) [#99](https://www.github.com/googleapis/java-container/issues/99) [#106](https://www.github.com/googleapis/java-container/issues/106) [#80](https://www.github.com/googleapis/java-container/issues/80) [#113](https://www.github.com/googleapis/java-container/issues/113) [#95](https://www.github.com/googleapis/java-container/issues/95) [#111](https://www.github.com/googleapis/java-container/issues/111) [#475](https://www.github.com/googleapis/java-container/issues/475) [#475](https://www.github.com/googleapis/java-container/issues/475) [#465](https://www.github.com/googleapis/java-container/issues/465) [#465](https://www.github.com/googleapis/java-container/issues/465) [#476](https://www.github.com/googleapis/java-container/issues/476) [#476](https://www.github.com/googleapis/java-container/issues/476)
-
 ### [1.0.1](https://www.github.com/googleapis/java-container/compare/v1.0.0...v1.0.1) (2020-04-07)
 
 
