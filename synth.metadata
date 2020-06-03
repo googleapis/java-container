@@ -4,15 +4,15 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-container.git",
-        "sha": "4422a17b4d72f70a2eca61aa6789b0855e5f2c31"
+        "sha": "b98a6e5cf003f7b86c602449353f572b8cabcfeb"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "5a90d467aa65e7f038f87585e8fbb45d74475e7c",
-        "internalRef": "312088359"
+        "sha": "c4e37010d74071851ff24121f522e802231ac86e",
+        "internalRef": "313460921"
       }
     },
     {
