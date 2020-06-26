@@ -1,5 +1,33 @@
 # Changelog
 
+### [1.0.5](https://www.github.com/googleapis/java-container/compare/v1.0.4...v1.0.5) (2020-06-26)
+
+
+### Bug Fixes
+
+* migrate to grpc_service_config ([#202](https://www.github.com/googleapis/java-container/issues/202)) ([e909f20](https://www.github.com/googleapis/java-container/commit/e909f20144e88b90127a391b510d86139c6ac9fe))
+* restore retry config for deleteCluster, deleteNode ([#166](https://www.github.com/googleapis/java-container/issues/166)) ([697949e](https://www.github.com/googleapis/java-container/commit/697949ef41ccc010f3fe221902699bbcf5ef0763))
+
+
+### Dependencies
+
+* update core dependencies ([#189](https://www.github.com/googleapis/java-container/issues/189)) ([2a706c3](https://www.github.com/googleapis/java-container/commit/2a706c35dcd2162467b7204c86f86332009beffc))
+* update dependency com.google.api:api-common to v1.9.1 ([#171](https://www.github.com/googleapis/java-container/issues/171)) ([b98a6e5](https://www.github.com/googleapis/java-container/commit/b98a6e5cf003f7b86c602449353f572b8cabcfeb))
+* update dependency com.google.api:api-common to v1.9.2 ([#178](https://www.github.com/googleapis/java-container/issues/178)) ([bb9954f](https://www.github.com/googleapis/java-container/commit/bb9954ff7982df60c6ebc5f672ce935888e80dc8))
+* update dependency com.google.api.grpc:proto-google-common-protos to v1.18.0 ([#160](https://www.github.com/googleapis/java-container/issues/160)) ([cb5982a](https://www.github.com/googleapis/java-container/commit/cb5982ae91ac5a2a342a1df414a3a4683b7621cf))
+* update dependency com.google.cloud:google-cloud-core to v1.93.5 ([#172](https://www.github.com/googleapis/java-container/issues/172)) ([c3635c7](https://www.github.com/googleapis/java-container/commit/c3635c7dbade7823c03aa3747a4a927a3f7312f4))
+* update dependency com.google.protobuf:protobuf-bom to v3.12.0 ([#164](https://www.github.com/googleapis/java-container/issues/164)) ([0cdb923](https://www.github.com/googleapis/java-container/commit/0cdb92371a1842495a1fd181e72fc6f9f95c4e05))
+* update dependency com.google.protobuf:protobuf-bom to v3.12.2 ([#169](https://www.github.com/googleapis/java-container/issues/169)) ([b4fe079](https://www.github.com/googleapis/java-container/commit/b4fe07927691da958c033238848d6e4ddb96e6c6))
+* update dependency io.grpc:grpc-bom to v1.29.0 ([#152](https://www.github.com/googleapis/java-container/issues/152)) ([856f1cc](https://www.github.com/googleapis/java-container/commit/856f1cccdc00c003e4731f1d10d6cd85c1593506))
+* update dependency io.grpc:grpc-bom to v1.30.0 ([#184](https://www.github.com/googleapis/java-container/issues/184)) ([e105f60](https://www.github.com/googleapis/java-container/commit/e105f60fbde9ad45e9d03011a232e0978fe0fe09))
+* update dependency org.threeten:threetenbp to v1.4.4 ([#154](https://www.github.com/googleapis/java-container/issues/154)) ([a483161](https://www.github.com/googleapis/java-container/commit/a48316167d0cdebd6716484dcf026d4af6e6baec))
+
+
+### Documentation
+
+* fix a broken link in the docs. ([#179](https://www.github.com/googleapis/java-container/issues/179)) ([1ea5933](https://www.github.com/googleapis/java-container/commit/1ea59336a0790d464626bf99ea2f9c6c393182d2))
+* Fixed broken links in the reference documentation ([#183](https://www.github.com/googleapis/java-container/issues/183)) ([ccfdc18](https://www.github.com/googleapis/java-container/commit/ccfdc1883955bb4b24697ccbb8a3dd42783c475f))
+
 ### [1.0.4](https://www.github.com/googleapis/java-container/compare/v1.0.3...v1.0.4) (2020-04-20)
 
 
