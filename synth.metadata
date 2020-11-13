@@ -4,22 +4,22 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-container.git",
-        "sha": "2d9e67d0f934549e9aa6e11a195335c5958882ee"
+        "sha": "e6e61ada17d6efd52f4e14f50b4005f8b43e7d93"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "cd24bd2d870ee5b9e046a2bfa0d0d0afda29be60",
-        "internalRef": "317953021"
+        "sha": "20031e727d2b105b20c48492ab47fc4ff174a789",
+        "internalRef": "342071297"
       }
     },
     {
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "7db8a6c5ffb12a6e4c2f799c18f00f7f3d60e279"
+        "sha": "7d652819519dfa24da9e14548232e4aaba71a11c"
       }
     }
   ],
