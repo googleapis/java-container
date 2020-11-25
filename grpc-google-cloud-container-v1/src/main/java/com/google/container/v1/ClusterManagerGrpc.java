@@ -22,13 +22,7 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/**
- *
- *
- * <pre>
- * Google Kubernetes Engine Cluster Manager v1
- * </pre>
- */
+/** */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/container/v1/cluster_service.proto")
@@ -1462,23 +1456,10 @@ public final class ClusterManagerGrpc {
     return ClusterManagerFutureStub.newStub(factory, channel);
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Google Kubernetes Engine Cluster Manager v1
-   * </pre>
-   */
+  /** */
   public abstract static class ClusterManagerImplBase implements io.grpc.BindableService {
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists all clusters owned by a project in either the specified zone or all
-     * zones.
-     * </pre>
-     */
+    /** */
     public void listClusters(
         com.google.container.v1.ListClustersRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.ListClustersResponse>
@@ -1486,130 +1467,63 @@ public final class ClusterManagerGrpc {
       asyncUnimplementedUnaryCall(getListClustersMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the details of a specific cluster.
-     * </pre>
-     */
+    /** */
     public void getCluster(
         com.google.container.v1.GetClusterRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Cluster> responseObserver) {
       asyncUnimplementedUnaryCall(getGetClusterMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a cluster, consisting of the specified number and type of Google
-     * Compute Engine instances.
-     * By default, the cluster is created in the project's
-     * [default
-     * network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
-     * One firewall is added for the cluster. After cluster creation,
-     * the Kubelet creates routes for each node to allow the containers
-     * on that node to communicate with all other instances in the
-     * cluster.
-     * Finally, an entry is added to the project's global metadata indicating
-     * which CIDR range the cluster is using.
-     * </pre>
-     */
+    /** */
     public void createCluster(
         com.google.container.v1.CreateClusterRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateClusterMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the settings of a specific cluster.
-     * </pre>
-     */
+    /** */
     public void updateCluster(
         com.google.container.v1.UpdateClusterRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getUpdateClusterMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the version and/or image type for the specified node pool.
-     * </pre>
-     */
+    /** */
     public void updateNodePool(
         com.google.container.v1.UpdateNodePoolRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getUpdateNodePoolMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the autoscaling settings for the specified node pool.
-     * </pre>
-     */
+    /** */
     public void setNodePoolAutoscaling(
         com.google.container.v1.SetNodePoolAutoscalingRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getSetNodePoolAutoscalingMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the logging service for a specific cluster.
-     * </pre>
-     */
+    /** */
     public void setLoggingService(
         com.google.container.v1.SetLoggingServiceRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getSetLoggingServiceMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the monitoring service for a specific cluster.
-     * </pre>
-     */
+    /** */
     public void setMonitoringService(
         com.google.container.v1.SetMonitoringServiceRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getSetMonitoringServiceMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the addons for a specific cluster.
-     * </pre>
-     */
+    /** */
     public void setAddonsConfig(
         com.google.container.v1.SetAddonsConfigRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getSetAddonsConfigMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the locations for a specific cluster.
-     * Deprecated. Use
-     * [projects.locations.clusters.update](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/update)
-     * instead.
-     * </pre>
-     */
+    /** */
     @java.lang.Deprecated
     public void setLocations(
         com.google.container.v1.SetLocationsRequest request,
@@ -1617,60 +1531,28 @@ public final class ClusterManagerGrpc {
       asyncUnimplementedUnaryCall(getSetLocationsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the master for a specific cluster.
-     * </pre>
-     */
+    /** */
     public void updateMaster(
         com.google.container.v1.UpdateMasterRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getUpdateMasterMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets master auth materials. Currently supports changing the admin password
-     * or a specific cluster, either via password generation or explicitly setting
-     * the password.
-     * </pre>
-     */
+    /** */
     public void setMasterAuth(
         com.google.container.v1.SetMasterAuthRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getSetMasterAuthMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes the cluster, including the Kubernetes endpoint and all worker
-     * nodes.
-     * Firewalls and routes that were configured during cluster creation
-     * are also deleted.
-     * Other Google Compute Engine resources that might be in use by the cluster,
-     * such as load balancer resources, are not deleted if they weren't present
-     * when the cluster was initially created.
-     * </pre>
-     */
+    /** */
     public void deleteCluster(
         com.google.container.v1.DeleteClusterRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteClusterMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists all operations in a project in a specific zone or all zones.
-     * </pre>
-     */
+    /** */
     public void listOperations(
         com.google.container.v1.ListOperationsRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.ListOperationsResponse>
@@ -1678,55 +1560,28 @@ public final class ClusterManagerGrpc {
       asyncUnimplementedUnaryCall(getListOperationsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the specified operation.
-     * </pre>
-     */
+    /** */
     public void getOperation(
         com.google.container.v1.GetOperationRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getGetOperationMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Cancels the specified operation.
-     * </pre>
-     */
+    /** */
     public void cancelOperation(
         com.google.container.v1.CancelOperationRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       asyncUnimplementedUnaryCall(getCancelOperationMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns configuration info about the Google Kubernetes Engine service.
-     * </pre>
-     */
+    /** */
     public void getServerConfig(
         com.google.container.v1.GetServerConfigRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.ServerConfig> responseObserver) {
       asyncUnimplementedUnaryCall(getGetServerConfigMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the public component of the cluster signing keys in
-     * JSON Web Key format.
-     * This API is not yet intended for general use, and is not available for all
-     * clusters.
-     * </pre>
-     */
+    /** */
     public void getJSONWebKeys(
         com.google.container.v1.GetJSONWebKeysRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.GetJSONWebKeysResponse>
@@ -1734,13 +1589,7 @@ public final class ClusterManagerGrpc {
       asyncUnimplementedUnaryCall(getGetJSONWebKeysMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the node pools for a cluster.
-     * </pre>
-     */
+    /** */
     public void listNodePools(
         com.google.container.v1.ListNodePoolsRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.ListNodePoolsResponse>
@@ -1748,170 +1597,91 @@ public final class ClusterManagerGrpc {
       asyncUnimplementedUnaryCall(getListNodePoolsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Retrieves the requested node pool.
-     * </pre>
-     */
+    /** */
     public void getNodePool(
         com.google.container.v1.GetNodePoolRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.NodePool> responseObserver) {
       asyncUnimplementedUnaryCall(getGetNodePoolMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a node pool for a cluster.
-     * </pre>
-     */
+    /** */
     public void createNodePool(
         com.google.container.v1.CreateNodePoolRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getCreateNodePoolMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a node pool from a cluster.
-     * </pre>
-     */
+    /** */
     public void deleteNodePool(
         com.google.container.v1.DeleteNodePoolRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getDeleteNodePoolMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Rolls back a previously Aborted or Failed NodePool upgrade.
-     * This makes no changes if the last upgrade successfully completed.
-     * </pre>
-     */
+    /** */
     public void rollbackNodePoolUpgrade(
         com.google.container.v1.RollbackNodePoolUpgradeRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getRollbackNodePoolUpgradeMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the NodeManagement options for a node pool.
-     * </pre>
-     */
+    /** */
     public void setNodePoolManagement(
         com.google.container.v1.SetNodePoolManagementRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getSetNodePoolManagementMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets labels on a cluster.
-     * </pre>
-     */
+    /** */
     public void setLabels(
         com.google.container.v1.SetLabelsRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getSetLabelsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Enables or disables the ABAC authorization mechanism on a cluster.
-     * </pre>
-     */
+    /** */
     public void setLegacyAbac(
         com.google.container.v1.SetLegacyAbacRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getSetLegacyAbacMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Starts master IP rotation.
-     * </pre>
-     */
+    /** */
     public void startIPRotation(
         com.google.container.v1.StartIPRotationRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getStartIPRotationMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Completes master IP rotation.
-     * </pre>
-     */
+    /** */
     public void completeIPRotation(
         com.google.container.v1.CompleteIPRotationRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getCompleteIPRotationMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the size for a specific node pool.
-     * </pre>
-     */
+    /** */
     public void setNodePoolSize(
         com.google.container.v1.SetNodePoolSizeRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getSetNodePoolSizeMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Enables or disables Network Policy for a cluster.
-     * </pre>
-     */
+    /** */
     public void setNetworkPolicy(
         com.google.container.v1.SetNetworkPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getSetNetworkPolicyMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the maintenance policy for a cluster.
-     * </pre>
-     */
+    /** */
     public void setMaintenancePolicy(
         com.google.container.v1.SetMaintenancePolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
       asyncUnimplementedUnaryCall(getSetMaintenancePolicyMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists subnetworks that are usable for creating clusters in a project.
-     * </pre>
-     */
+    /** */
     public void listUsableSubnetworks(
         com.google.container.v1.ListUsableSubnetworksRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.ListUsableSubnetworksResponse>
@@ -2123,13 +1893,7 @@ public final class ClusterManagerGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Google Kubernetes Engine Cluster Manager v1
-   * </pre>
-   */
+  /** */
   public static final class ClusterManagerStub
       extends io.grpc.stub.AbstractAsyncStub<ClusterManagerStub> {
     private ClusterManagerStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -2141,14 +1905,7 @@ public final class ClusterManagerGrpc {
       return new ClusterManagerStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists all clusters owned by a project in either the specified zone or all
-     * zones.
-     * </pre>
-     */
+    /** */
     public void listClusters(
         com.google.container.v1.ListClustersRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.ListClustersResponse>
@@ -2159,13 +1916,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the details of a specific cluster.
-     * </pre>
-     */
+    /** */
     public void getCluster(
         com.google.container.v1.GetClusterRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Cluster> responseObserver) {
@@ -2173,23 +1924,7 @@ public final class ClusterManagerGrpc {
           getChannel().newCall(getGetClusterMethod(), getCallOptions()), request, responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a cluster, consisting of the specified number and type of Google
-     * Compute Engine instances.
-     * By default, the cluster is created in the project's
-     * [default
-     * network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
-     * One firewall is added for the cluster. After cluster creation,
-     * the Kubelet creates routes for each node to allow the containers
-     * on that node to communicate with all other instances in the
-     * cluster.
-     * Finally, an entry is added to the project's global metadata indicating
-     * which CIDR range the cluster is using.
-     * </pre>
-     */
+    /** */
     public void createCluster(
         com.google.container.v1.CreateClusterRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
@@ -2199,13 +1934,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the settings of a specific cluster.
-     * </pre>
-     */
+    /** */
     public void updateCluster(
         com.google.container.v1.UpdateClusterRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
@@ -2215,13 +1944,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the version and/or image type for the specified node pool.
-     * </pre>
-     */
+    /** */
     public void updateNodePool(
         com.google.container.v1.UpdateNodePoolRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
@@ -2231,13 +1954,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the autoscaling settings for the specified node pool.
-     * </pre>
-     */
+    /** */
     public void setNodePoolAutoscaling(
         com.google.container.v1.SetNodePoolAutoscalingRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
@@ -2247,13 +1964,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the logging service for a specific cluster.
-     * </pre>
-     */
+    /** */
     public void setLoggingService(
         com.google.container.v1.SetLoggingServiceRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
@@ -2263,13 +1974,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the monitoring service for a specific cluster.
-     * </pre>
-     */
+    /** */
     public void setMonitoringService(
         com.google.container.v1.SetMonitoringServiceRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
@@ -2279,13 +1984,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the addons for a specific cluster.
-     * </pre>
-     */
+    /** */
     public void setAddonsConfig(
         com.google.container.v1.SetAddonsConfigRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
@@ -2295,16 +1994,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the locations for a specific cluster.
-     * Deprecated. Use
-     * [projects.locations.clusters.update](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/update)
-     * instead.
-     * </pre>
-     */
+    /** */
     @java.lang.Deprecated
     public void setLocations(
         com.google.container.v1.SetLocationsRequest request,
@@ -2315,13 +2005,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the master for a specific cluster.
-     * </pre>
-     */
+    /** */
     public void updateMaster(
         com.google.container.v1.UpdateMasterRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
@@ -2331,15 +2015,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets master auth materials. Currently supports changing the admin password
-     * or a specific cluster, either via password generation or explicitly setting
-     * the password.
-     * </pre>
-     */
+    /** */
     public void setMasterAuth(
         com.google.container.v1.SetMasterAuthRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
@@ -2349,19 +2025,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes the cluster, including the Kubernetes endpoint and all worker
-     * nodes.
-     * Firewalls and routes that were configured during cluster creation
-     * are also deleted.
-     * Other Google Compute Engine resources that might be in use by the cluster,
-     * such as load balancer resources, are not deleted if they weren't present
-     * when the cluster was initially created.
-     * </pre>
-     */
+    /** */
     public void deleteCluster(
         com.google.container.v1.DeleteClusterRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
@@ -2371,13 +2035,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists all operations in a project in a specific zone or all zones.
-     * </pre>
-     */
+    /** */
     public void listOperations(
         com.google.container.v1.ListOperationsRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.ListOperationsResponse>
@@ -2388,13 +2046,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the specified operation.
-     * </pre>
-     */
+    /** */
     public void getOperation(
         com.google.container.v1.GetOperationRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
@@ -2404,13 +2056,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Cancels the specified operation.
-     * </pre>
-     */
+    /** */
     public void cancelOperation(
         com.google.container.v1.CancelOperationRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
@@ -2420,13 +2066,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns configuration info about the Google Kubernetes Engine service.
-     * </pre>
-     */
+    /** */
     public void getServerConfig(
         com.google.container.v1.GetServerConfigRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.ServerConfig> responseObserver) {
@@ -2436,16 +2076,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the public component of the cluster signing keys in
-     * JSON Web Key format.
-     * This API is not yet intended for general use, and is not available for all
-     * clusters.
-     * </pre>
-     */
+    /** */
     public void getJSONWebKeys(
         com.google.container.v1.GetJSONWebKeysRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.GetJSONWebKeysResponse>
@@ -2456,13 +2087,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the node pools for a cluster.
-     * </pre>
-     */
+    /** */
     public void listNodePools(
         com.google.container.v1.ListNodePoolsRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.ListNodePoolsResponse>
@@ -2473,13 +2098,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Retrieves the requested node pool.
-     * </pre>
-     */
+    /** */
     public void getNodePool(
         com.google.container.v1.GetNodePoolRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.NodePool> responseObserver) {
@@ -2489,13 +2108,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a node pool for a cluster.
-     * </pre>
-     */
+    /** */
     public void createNodePool(
         com.google.container.v1.CreateNodePoolRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
@@ -2505,13 +2118,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a node pool from a cluster.
-     * </pre>
-     */
+    /** */
     public void deleteNodePool(
         com.google.container.v1.DeleteNodePoolRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
@@ -2521,14 +2128,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Rolls back a previously Aborted or Failed NodePool upgrade.
-     * This makes no changes if the last upgrade successfully completed.
-     * </pre>
-     */
+    /** */
     public void rollbackNodePoolUpgrade(
         com.google.container.v1.RollbackNodePoolUpgradeRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
@@ -2538,13 +2138,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the NodeManagement options for a node pool.
-     * </pre>
-     */
+    /** */
     public void setNodePoolManagement(
         com.google.container.v1.SetNodePoolManagementRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
@@ -2554,13 +2148,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets labels on a cluster.
-     * </pre>
-     */
+    /** */
     public void setLabels(
         com.google.container.v1.SetLabelsRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
@@ -2568,13 +2156,7 @@ public final class ClusterManagerGrpc {
           getChannel().newCall(getSetLabelsMethod(), getCallOptions()), request, responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Enables or disables the ABAC authorization mechanism on a cluster.
-     * </pre>
-     */
+    /** */
     public void setLegacyAbac(
         com.google.container.v1.SetLegacyAbacRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
@@ -2584,13 +2166,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Starts master IP rotation.
-     * </pre>
-     */
+    /** */
     public void startIPRotation(
         com.google.container.v1.StartIPRotationRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
@@ -2600,13 +2176,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Completes master IP rotation.
-     * </pre>
-     */
+    /** */
     public void completeIPRotation(
         com.google.container.v1.CompleteIPRotationRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
@@ -2616,13 +2186,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the size for a specific node pool.
-     * </pre>
-     */
+    /** */
     public void setNodePoolSize(
         com.google.container.v1.SetNodePoolSizeRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
@@ -2632,13 +2196,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Enables or disables Network Policy for a cluster.
-     * </pre>
-     */
+    /** */
     public void setNetworkPolicy(
         com.google.container.v1.SetNetworkPolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
@@ -2648,13 +2206,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the maintenance policy for a cluster.
-     * </pre>
-     */
+    /** */
     public void setMaintenancePolicy(
         com.google.container.v1.SetMaintenancePolicyRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.Operation> responseObserver) {
@@ -2664,13 +2216,7 @@ public final class ClusterManagerGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists subnetworks that are usable for creating clusters in a project.
-     * </pre>
-     */
+    /** */
     public void listUsableSubnetworks(
         com.google.container.v1.ListUsableSubnetworksRequest request,
         io.grpc.stub.StreamObserver<com.google.container.v1.ListUsableSubnetworksResponse>
@@ -2682,13 +2228,7 @@ public final class ClusterManagerGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Google Kubernetes Engine Cluster Manager v1
-   * </pre>
-   */
+  /** */
   public static final class ClusterManagerBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<ClusterManagerBlockingStub> {
     private ClusterManagerBlockingStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -2701,420 +2241,202 @@ public final class ClusterManagerGrpc {
       return new ClusterManagerBlockingStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists all clusters owned by a project in either the specified zone or all
-     * zones.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.ListClustersResponse listClusters(
         com.google.container.v1.ListClustersRequest request) {
       return blockingUnaryCall(getChannel(), getListClustersMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the details of a specific cluster.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.Cluster getCluster(
         com.google.container.v1.GetClusterRequest request) {
       return blockingUnaryCall(getChannel(), getGetClusterMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a cluster, consisting of the specified number and type of Google
-     * Compute Engine instances.
-     * By default, the cluster is created in the project's
-     * [default
-     * network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
-     * One firewall is added for the cluster. After cluster creation,
-     * the Kubelet creates routes for each node to allow the containers
-     * on that node to communicate with all other instances in the
-     * cluster.
-     * Finally, an entry is added to the project's global metadata indicating
-     * which CIDR range the cluster is using.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.Operation createCluster(
         com.google.container.v1.CreateClusterRequest request) {
       return blockingUnaryCall(getChannel(), getCreateClusterMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the settings of a specific cluster.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.Operation updateCluster(
         com.google.container.v1.UpdateClusterRequest request) {
       return blockingUnaryCall(getChannel(), getUpdateClusterMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the version and/or image type for the specified node pool.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.Operation updateNodePool(
         com.google.container.v1.UpdateNodePoolRequest request) {
       return blockingUnaryCall(getChannel(), getUpdateNodePoolMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the autoscaling settings for the specified node pool.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.Operation setNodePoolAutoscaling(
         com.google.container.v1.SetNodePoolAutoscalingRequest request) {
       return blockingUnaryCall(
           getChannel(), getSetNodePoolAutoscalingMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the logging service for a specific cluster.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.Operation setLoggingService(
         com.google.container.v1.SetLoggingServiceRequest request) {
       return blockingUnaryCall(
           getChannel(), getSetLoggingServiceMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the monitoring service for a specific cluster.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.Operation setMonitoringService(
         com.google.container.v1.SetMonitoringServiceRequest request) {
       return blockingUnaryCall(
           getChannel(), getSetMonitoringServiceMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the addons for a specific cluster.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.Operation setAddonsConfig(
         com.google.container.v1.SetAddonsConfigRequest request) {
       return blockingUnaryCall(getChannel(), getSetAddonsConfigMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the locations for a specific cluster.
-     * Deprecated. Use
-     * [projects.locations.clusters.update](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/update)
-     * instead.
-     * </pre>
-     */
+    /** */
     @java.lang.Deprecated
     public com.google.container.v1.Operation setLocations(
         com.google.container.v1.SetLocationsRequest request) {
       return blockingUnaryCall(getChannel(), getSetLocationsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the master for a specific cluster.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.Operation updateMaster(
         com.google.container.v1.UpdateMasterRequest request) {
       return blockingUnaryCall(getChannel(), getUpdateMasterMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets master auth materials. Currently supports changing the admin password
-     * or a specific cluster, either via password generation or explicitly setting
-     * the password.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.Operation setMasterAuth(
         com.google.container.v1.SetMasterAuthRequest request) {
       return blockingUnaryCall(getChannel(), getSetMasterAuthMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes the cluster, including the Kubernetes endpoint and all worker
-     * nodes.
-     * Firewalls and routes that were configured during cluster creation
-     * are also deleted.
-     * Other Google Compute Engine resources that might be in use by the cluster,
-     * such as load balancer resources, are not deleted if they weren't present
-     * when the cluster was initially created.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.Operation deleteCluster(
         com.google.container.v1.DeleteClusterRequest request) {
       return blockingUnaryCall(getChannel(), getDeleteClusterMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists all operations in a project in a specific zone or all zones.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.ListOperationsResponse listOperations(
         com.google.container.v1.ListOperationsRequest request) {
       return blockingUnaryCall(getChannel(), getListOperationsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the specified operation.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.Operation getOperation(
         com.google.container.v1.GetOperationRequest request) {
       return blockingUnaryCall(getChannel(), getGetOperationMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Cancels the specified operation.
-     * </pre>
-     */
+    /** */
     public com.google.protobuf.Empty cancelOperation(
         com.google.container.v1.CancelOperationRequest request) {
       return blockingUnaryCall(getChannel(), getCancelOperationMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns configuration info about the Google Kubernetes Engine service.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.ServerConfig getServerConfig(
         com.google.container.v1.GetServerConfigRequest request) {
       return blockingUnaryCall(getChannel(), getGetServerConfigMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the public component of the cluster signing keys in
-     * JSON Web Key format.
-     * This API is not yet intended for general use, and is not available for all
-     * clusters.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.GetJSONWebKeysResponse getJSONWebKeys(
         com.google.container.v1.GetJSONWebKeysRequest request) {
       return blockingUnaryCall(getChannel(), getGetJSONWebKeysMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the node pools for a cluster.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.ListNodePoolsResponse listNodePools(
         com.google.container.v1.ListNodePoolsRequest request) {
       return blockingUnaryCall(getChannel(), getListNodePoolsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Retrieves the requested node pool.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.NodePool getNodePool(
         com.google.container.v1.GetNodePoolRequest request) {
       return blockingUnaryCall(getChannel(), getGetNodePoolMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a node pool for a cluster.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.Operation createNodePool(
         com.google.container.v1.CreateNodePoolRequest request) {
       return blockingUnaryCall(getChannel(), getCreateNodePoolMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a node pool from a cluster.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.Operation deleteNodePool(
         com.google.container.v1.DeleteNodePoolRequest request) {
       return blockingUnaryCall(getChannel(), getDeleteNodePoolMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Rolls back a previously Aborted or Failed NodePool upgrade.
-     * This makes no changes if the last upgrade successfully completed.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.Operation rollbackNodePoolUpgrade(
         com.google.container.v1.RollbackNodePoolUpgradeRequest request) {
       return blockingUnaryCall(
           getChannel(), getRollbackNodePoolUpgradeMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the NodeManagement options for a node pool.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.Operation setNodePoolManagement(
         com.google.container.v1.SetNodePoolManagementRequest request) {
       return blockingUnaryCall(
           getChannel(), getSetNodePoolManagementMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets labels on a cluster.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.Operation setLabels(
         com.google.container.v1.SetLabelsRequest request) {
       return blockingUnaryCall(getChannel(), getSetLabelsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Enables or disables the ABAC authorization mechanism on a cluster.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.Operation setLegacyAbac(
         com.google.container.v1.SetLegacyAbacRequest request) {
       return blockingUnaryCall(getChannel(), getSetLegacyAbacMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Starts master IP rotation.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.Operation startIPRotation(
         com.google.container.v1.StartIPRotationRequest request) {
       return blockingUnaryCall(getChannel(), getStartIPRotationMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Completes master IP rotation.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.Operation completeIPRotation(
         com.google.container.v1.CompleteIPRotationRequest request) {
       return blockingUnaryCall(
           getChannel(), getCompleteIPRotationMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the size for a specific node pool.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.Operation setNodePoolSize(
         com.google.container.v1.SetNodePoolSizeRequest request) {
       return blockingUnaryCall(getChannel(), getSetNodePoolSizeMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Enables or disables Network Policy for a cluster.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.Operation setNetworkPolicy(
         com.google.container.v1.SetNetworkPolicyRequest request) {
       return blockingUnaryCall(
           getChannel(), getSetNetworkPolicyMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the maintenance policy for a cluster.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.Operation setMaintenancePolicy(
         com.google.container.v1.SetMaintenancePolicyRequest request) {
       return blockingUnaryCall(
           getChannel(), getSetMaintenancePolicyMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists subnetworks that are usable for creating clusters in a project.
-     * </pre>
-     */
+    /** */
     public com.google.container.v1.ListUsableSubnetworksResponse listUsableSubnetworks(
         com.google.container.v1.ListUsableSubnetworksRequest request) {
       return blockingUnaryCall(
@@ -3122,13 +2444,7 @@ public final class ClusterManagerGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Google Kubernetes Engine Cluster Manager v1
-   * </pre>
-   */
+  /** */
   public static final class ClusterManagerFutureStub
       extends io.grpc.stub.AbstractFutureStub<ClusterManagerFutureStub> {
     private ClusterManagerFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -3141,14 +2457,7 @@ public final class ClusterManagerGrpc {
       return new ClusterManagerFutureStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists all clusters owned by a project in either the specified zone or all
-     * zones.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.container.v1.ListClustersResponse>
         listClusters(com.google.container.v1.ListClustersRequest request) {
@@ -3156,130 +2465,63 @@ public final class ClusterManagerGrpc {
           getChannel().newCall(getListClustersMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the details of a specific cluster.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Cluster>
         getCluster(com.google.container.v1.GetClusterRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetClusterMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a cluster, consisting of the specified number and type of Google
-     * Compute Engine instances.
-     * By default, the cluster is created in the project's
-     * [default
-     * network](https://cloud.google.com/compute/docs/networks-and-firewalls#networks).
-     * One firewall is added for the cluster. After cluster creation,
-     * the Kubelet creates routes for each node to allow the containers
-     * on that node to communicate with all other instances in the
-     * cluster.
-     * Finally, an entry is added to the project's global metadata indicating
-     * which CIDR range the cluster is using.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Operation>
         createCluster(com.google.container.v1.CreateClusterRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getCreateClusterMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the settings of a specific cluster.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Operation>
         updateCluster(com.google.container.v1.UpdateClusterRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getUpdateClusterMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the version and/or image type for the specified node pool.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Operation>
         updateNodePool(com.google.container.v1.UpdateNodePoolRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getUpdateNodePoolMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the autoscaling settings for the specified node pool.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Operation>
         setNodePoolAutoscaling(com.google.container.v1.SetNodePoolAutoscalingRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSetNodePoolAutoscalingMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the logging service for a specific cluster.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Operation>
         setLoggingService(com.google.container.v1.SetLoggingServiceRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSetLoggingServiceMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the monitoring service for a specific cluster.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Operation>
         setMonitoringService(com.google.container.v1.SetMonitoringServiceRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSetMonitoringServiceMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the addons for a specific cluster.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Operation>
         setAddonsConfig(com.google.container.v1.SetAddonsConfigRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSetAddonsConfigMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the locations for a specific cluster.
-     * Deprecated. Use
-     * [projects.locations.clusters.update](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters/update)
-     * instead.
-     * </pre>
-     */
+    /** */
     @java.lang.Deprecated
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Operation>
         setLocations(com.google.container.v1.SetLocationsRequest request) {
@@ -3287,60 +2529,28 @@ public final class ClusterManagerGrpc {
           getChannel().newCall(getSetLocationsMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Updates the master for a specific cluster.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Operation>
         updateMaster(com.google.container.v1.UpdateMasterRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getUpdateMasterMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets master auth materials. Currently supports changing the admin password
-     * or a specific cluster, either via password generation or explicitly setting
-     * the password.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Operation>
         setMasterAuth(com.google.container.v1.SetMasterAuthRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSetMasterAuthMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes the cluster, including the Kubernetes endpoint and all worker
-     * nodes.
-     * Firewalls and routes that were configured during cluster creation
-     * are also deleted.
-     * Other Google Compute Engine resources that might be in use by the cluster,
-     * such as load balancer resources, are not deleted if they weren't present
-     * when the cluster was initially created.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Operation>
         deleteCluster(com.google.container.v1.DeleteClusterRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getDeleteClusterMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists all operations in a project in a specific zone or all zones.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.container.v1.ListOperationsResponse>
         listOperations(com.google.container.v1.ListOperationsRequest request) {
@@ -3348,55 +2558,28 @@ public final class ClusterManagerGrpc {
           getChannel().newCall(getListOperationsMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the specified operation.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Operation>
         getOperation(com.google.container.v1.GetOperationRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetOperationMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Cancels the specified operation.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty>
         cancelOperation(com.google.container.v1.CancelOperationRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getCancelOperationMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Returns configuration info about the Google Kubernetes Engine service.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.ServerConfig>
         getServerConfig(com.google.container.v1.GetServerConfigRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetServerConfigMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Gets the public component of the cluster signing keys in
-     * JSON Web Key format.
-     * This API is not yet intended for general use, and is not available for all
-     * clusters.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.container.v1.GetJSONWebKeysResponse>
         getJSONWebKeys(com.google.container.v1.GetJSONWebKeysRequest request) {
@@ -3404,13 +2587,7 @@ public final class ClusterManagerGrpc {
           getChannel().newCall(getGetJSONWebKeysMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the node pools for a cluster.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.container.v1.ListNodePoolsResponse>
         listNodePools(com.google.container.v1.ListNodePoolsRequest request) {
@@ -3418,169 +2595,90 @@ public final class ClusterManagerGrpc {
           getChannel().newCall(getListNodePoolsMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Retrieves the requested node pool.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.NodePool>
         getNodePool(com.google.container.v1.GetNodePoolRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetNodePoolMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Creates a node pool for a cluster.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Operation>
         createNodePool(com.google.container.v1.CreateNodePoolRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getCreateNodePoolMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes a node pool from a cluster.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Operation>
         deleteNodePool(com.google.container.v1.DeleteNodePoolRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getDeleteNodePoolMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Rolls back a previously Aborted or Failed NodePool upgrade.
-     * This makes no changes if the last upgrade successfully completed.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Operation>
         rollbackNodePoolUpgrade(com.google.container.v1.RollbackNodePoolUpgradeRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getRollbackNodePoolUpgradeMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the NodeManagement options for a node pool.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Operation>
         setNodePoolManagement(com.google.container.v1.SetNodePoolManagementRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSetNodePoolManagementMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets labels on a cluster.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Operation>
         setLabels(com.google.container.v1.SetLabelsRequest request) {
       return futureUnaryCall(getChannel().newCall(getSetLabelsMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Enables or disables the ABAC authorization mechanism on a cluster.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Operation>
         setLegacyAbac(com.google.container.v1.SetLegacyAbacRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSetLegacyAbacMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Starts master IP rotation.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Operation>
         startIPRotation(com.google.container.v1.StartIPRotationRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getStartIPRotationMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Completes master IP rotation.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Operation>
         completeIPRotation(com.google.container.v1.CompleteIPRotationRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getCompleteIPRotationMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the size for a specific node pool.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Operation>
         setNodePoolSize(com.google.container.v1.SetNodePoolSizeRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSetNodePoolSizeMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Enables or disables Network Policy for a cluster.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Operation>
         setNetworkPolicy(com.google.container.v1.SetNetworkPolicyRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSetNetworkPolicyMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Sets the maintenance policy for a cluster.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<com.google.container.v1.Operation>
         setMaintenancePolicy(com.google.container.v1.SetMaintenancePolicyRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSetMaintenancePolicyMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists subnetworks that are usable for creating clusters in a project.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.container.v1.ListUsableSubnetworksResponse>
         listUsableSubnetworks(com.google.container.v1.ListUsableSubnetworksRequest request) {
