@@ -459,11 +459,21 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
         ClusterManagerStubSettings.newBuilder().build(), clientContext, callableFactory);
   }
 
+  /**
+   * Constructs an instance of GrpcClusterManagerStub, using the given settings. This is protected
+   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcClusterManagerStub(ClusterManagerStubSettings settings, ClientContext clientContext)
       throws IOException {
     this(settings, clientContext, new GrpcClusterManagerCallableFactory());
   }
 
+  /**
+   * Constructs an instance of GrpcClusterManagerStub, using the given settings. This is protected
+   * so that it is easy to make a subclass, but otherwise, the static factory methods should be
+   * preferred.
+   */
   protected GrpcClusterManagerStub(
       ClusterManagerStubSettings settings,
       ClientContext clientContext,
@@ -481,6 +491,8 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   public Map<String, String> extract(ListClustersRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
                     params.put("parent", String.valueOf(request.getParent()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -493,7 +505,10 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   @Override
                   public Map<String, String> extract(GetClusterRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("cluster_id", String.valueOf(request.getClusterId()));
                     params.put("name", String.valueOf(request.getName()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -507,6 +522,8 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   public Map<String, String> extract(CreateClusterRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
                     params.put("parent", String.valueOf(request.getParent()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -519,7 +536,10 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   @Override
                   public Map<String, String> extract(UpdateClusterRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("cluster_id", String.valueOf(request.getClusterId()));
                     params.put("name", String.valueOf(request.getName()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -532,7 +552,11 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   @Override
                   public Map<String, String> extract(UpdateNodePoolRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("cluster_id", String.valueOf(request.getClusterId()));
                     params.put("name", String.valueOf(request.getName()));
+                    params.put("node_pool_id", String.valueOf(request.getNodePoolId()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -546,7 +570,11 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                       @Override
                       public Map<String, String> extract(SetNodePoolAutoscalingRequest request) {
                         ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                        params.put("cluster_id", String.valueOf(request.getClusterId()));
                         params.put("name", String.valueOf(request.getName()));
+                        params.put("node_pool_id", String.valueOf(request.getNodePoolId()));
+                        params.put("project_id", String.valueOf(request.getProjectId()));
+                        params.put("zone", String.valueOf(request.getZone()));
                         return params.build();
                       }
                     })
@@ -559,7 +587,10 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   @Override
                   public Map<String, String> extract(SetLoggingServiceRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("cluster_id", String.valueOf(request.getClusterId()));
                     params.put("name", String.valueOf(request.getName()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -572,7 +603,10 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   @Override
                   public Map<String, String> extract(SetMonitoringServiceRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("cluster_id", String.valueOf(request.getClusterId()));
                     params.put("name", String.valueOf(request.getName()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -585,7 +619,10 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   @Override
                   public Map<String, String> extract(SetAddonsConfigRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("cluster_id", String.valueOf(request.getClusterId()));
                     params.put("name", String.valueOf(request.getName()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -598,7 +635,10 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   @Override
                   public Map<String, String> extract(SetLocationsRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("cluster_id", String.valueOf(request.getClusterId()));
                     params.put("name", String.valueOf(request.getName()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -611,7 +651,10 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   @Override
                   public Map<String, String> extract(UpdateMasterRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("cluster_id", String.valueOf(request.getClusterId()));
                     params.put("name", String.valueOf(request.getName()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -624,7 +667,10 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   @Override
                   public Map<String, String> extract(SetMasterAuthRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("cluster_id", String.valueOf(request.getClusterId()));
                     params.put("name", String.valueOf(request.getName()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -637,7 +683,10 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   @Override
                   public Map<String, String> extract(DeleteClusterRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("cluster_id", String.valueOf(request.getClusterId()));
                     params.put("name", String.valueOf(request.getName()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -652,6 +701,8 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                       public Map<String, String> extract(ListOperationsRequest request) {
                         ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
                         params.put("parent", String.valueOf(request.getParent()));
+                        params.put("project_id", String.valueOf(request.getProjectId()));
+                        params.put("zone", String.valueOf(request.getZone()));
                         return params.build();
                       }
                     })
@@ -665,6 +716,9 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   public Map<String, String> extract(GetOperationRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
                     params.put("name", String.valueOf(request.getName()));
+                    params.put("operation_id", String.valueOf(request.getOperationId()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -678,6 +732,9 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   public Map<String, String> extract(CancelOperationRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
                     params.put("name", String.valueOf(request.getName()));
+                    params.put("operation_id", String.valueOf(request.getOperationId()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -691,6 +748,8 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   public Map<String, String> extract(GetServerConfigRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
                     params.put("name", String.valueOf(request.getName()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -717,7 +776,10 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   @Override
                   public Map<String, String> extract(ListNodePoolsRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("cluster_id", String.valueOf(request.getClusterId()));
                     params.put("parent", String.valueOf(request.getParent()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -730,7 +792,11 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   @Override
                   public Map<String, String> extract(GetNodePoolRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("cluster_id", String.valueOf(request.getClusterId()));
                     params.put("name", String.valueOf(request.getName()));
+                    params.put("node_pool_id", String.valueOf(request.getNodePoolId()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -743,7 +809,10 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   @Override
                   public Map<String, String> extract(CreateNodePoolRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("cluster_id", String.valueOf(request.getClusterId()));
                     params.put("parent", String.valueOf(request.getParent()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -756,7 +825,11 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   @Override
                   public Map<String, String> extract(DeleteNodePoolRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("cluster_id", String.valueOf(request.getClusterId()));
                     params.put("name", String.valueOf(request.getName()));
+                    params.put("node_pool_id", String.valueOf(request.getNodePoolId()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -770,7 +843,11 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                       @Override
                       public Map<String, String> extract(RollbackNodePoolUpgradeRequest request) {
                         ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                        params.put("cluster_id", String.valueOf(request.getClusterId()));
                         params.put("name", String.valueOf(request.getName()));
+                        params.put("node_pool_id", String.valueOf(request.getNodePoolId()));
+                        params.put("project_id", String.valueOf(request.getProjectId()));
+                        params.put("zone", String.valueOf(request.getZone()));
                         return params.build();
                       }
                     })
@@ -784,7 +861,11 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                       @Override
                       public Map<String, String> extract(SetNodePoolManagementRequest request) {
                         ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                        params.put("cluster_id", String.valueOf(request.getClusterId()));
                         params.put("name", String.valueOf(request.getName()));
+                        params.put("node_pool_id", String.valueOf(request.getNodePoolId()));
+                        params.put("project_id", String.valueOf(request.getProjectId()));
+                        params.put("zone", String.valueOf(request.getZone()));
                         return params.build();
                       }
                     })
@@ -797,7 +878,10 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   @Override
                   public Map<String, String> extract(SetLabelsRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("cluster_id", String.valueOf(request.getClusterId()));
                     params.put("name", String.valueOf(request.getName()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -810,7 +894,10 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   @Override
                   public Map<String, String> extract(SetLegacyAbacRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("cluster_id", String.valueOf(request.getClusterId()));
                     params.put("name", String.valueOf(request.getName()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -823,7 +910,10 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   @Override
                   public Map<String, String> extract(StartIPRotationRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("cluster_id", String.valueOf(request.getClusterId()));
                     params.put("name", String.valueOf(request.getName()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -836,7 +926,10 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   @Override
                   public Map<String, String> extract(CompleteIPRotationRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("cluster_id", String.valueOf(request.getClusterId()));
                     params.put("name", String.valueOf(request.getName()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -849,7 +942,11 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   @Override
                   public Map<String, String> extract(SetNodePoolSizeRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("cluster_id", String.valueOf(request.getClusterId()));
                     params.put("name", String.valueOf(request.getName()));
+                    params.put("node_pool_id", String.valueOf(request.getNodePoolId()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -862,7 +959,10 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   @Override
                   public Map<String, String> extract(SetNetworkPolicyRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("cluster_id", String.valueOf(request.getClusterId()));
                     params.put("name", String.valueOf(request.getName()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
@@ -875,7 +975,10 @@ public class GrpcClusterManagerStub extends ClusterManagerStub {
                   @Override
                   public Map<String, String> extract(SetMaintenancePolicyRequest request) {
                     ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                    params.put("cluster_id", String.valueOf(request.getClusterId()));
                     params.put("name", String.valueOf(request.getName()));
+                    params.put("project_id", String.valueOf(request.getProjectId()));
+                    params.put("zone", String.valueOf(request.getZone()));
                     return params.build();
                   }
                 })
