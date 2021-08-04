@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.6.0](https://www.github.com/googleapis/java-container/compare/v1.5.0...v1.6.0) (2021-08-04)
+
+
+### Features
+
+* configure initial sp version ([#529](https://www.github.com/googleapis/java-container/issues/529)) ([3f9039c](https://www.github.com/googleapis/java-container/commit/3f9039c4bde4402f9b83f4ef2af997044cba43ef))
+
 ## [1.5.0](https://www.github.com/googleapis/java-container/compare/v1.4.0...v1.5.0) (2021-07-05)
 
 
