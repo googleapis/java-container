@@ -50,8 +50,7 @@
         "^junit:junit",
         "^com.google.truth:truth",
         "^org.mockito:mockito-core",
-        "^org.objenesis:objenesis",
-        "^com.google.cloud:google-cloud-conformance-tests"
+        "^org.objenesis:objenesis"
       ],
       "semanticCommitType": "test",
       "semanticCommitScope": "deps"
