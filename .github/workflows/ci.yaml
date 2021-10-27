@@ -1,8 +1,8 @@
 on:
   push:
     branches:
-    - 2.2.x
-  pull_request: null
+    - main
+  pull_request:
 name: ci
 jobs:
   units:
