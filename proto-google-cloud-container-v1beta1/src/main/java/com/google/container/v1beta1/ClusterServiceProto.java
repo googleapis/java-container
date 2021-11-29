@@ -626,8 +626,7 @@ public final class ClusterServiceProto {
     java.lang.String[] descriptorData = {
       "\n"
           + ".google/container/v1beta1/cluster_servi"
-          + "ce.proto\022\030google.container.v1beta1\032\034goog"
-          + "le/api/annotations.proto\032\027google/api/client.proto\032\037google/api/field_behavior.proto\032\031google/api/resource.proto\032\033google/protobuf/empty.proto\032\037google/protobuf/timestamp.proto\032\036google/protobuf/wrappers.proto\032\025google/rpc/code.proto\032\027google/rpc/status.proto\032\026google/type/date.proto\"\212\001\n"
+          + "ce.proto\022\030google.container.v1beta1\032\034google/api/annotations.proto\032\027google/api/client.proto\032\037google/api/field_behavior.proto\032\031google/api/resource.proto\032\033google/protobuf/empty.proto\032\037google/protobuf/timestamp.proto\032\036google/protobuf/wrappers.proto\032\025google/rpc/code.proto\032\027google/rpc/status.proto\032\026google/type/date.proto\"\212\001\n"
           + "\017LinuxNodeConfig\022G\n"
           + "\007sysctls\030\001"
           + " \003(\01326.google.container.v1beta1.LinuxNodeConfig.SysctlsEntry\032.\n"
