@@ -63,7 +63,7 @@ public class ITSystemTest {
     client = ClusterManagerClient.create();
     Util.cleanUpExistingInstanceCluster(PROJECT_ID, ZONE, client);
 
-    /** create node pool**/
+    /** create node pool* */
     NodePool nodePool =
         NodePool.newBuilder()
             .setInitialNodeCount(INITIAL_NODE_COUNT)
