@@ -42,7 +42,7 @@ public class ITSystemTest {
 
   private static final Logger LOG = Logger.getLogger(ITSystemTest.class.getName());
   private static final String PROJECT_ID = ServiceOptions.getDefaultProjectId();
-  private static final String ZONE = "us-central1-a";
+  private static final String ZONE = "us-east1-b";
   private static final String CLUSTER_NAME =
       "test-cluster-" + UUID.randomUUID().toString().substring(0, 8);
   private static final String NODE_POOL_NAME =
@@ -52,7 +52,7 @@ public class ITSystemTest {
   private static final String SELF_LINK =
       "https://container.googleapis.com/v1/projects/"
           + PROJECT_ID
-          + "/zones/us-central1-a/clusters/"
+          + "/zones/us-east1-b/clusters/"
           + CLUSTER_NAME;
   private static final String NODE_POOL_SEL_LINK = SELF_LINK + "/nodePools/" + NODE_POOL_NAME;
   private static final String NETWORK = "default";
@@ -76,7 +76,7 @@ public class ITSystemTest {
     Cluster cluster =
         Cluster.newBuilder()
             .setName(CLUSTER_NAME)
-            .setLocation("us-central1")
+            .setLocation("us-east1")
             .setDescription(DETAIL)
             .setSelfLink(SELF_LINK)
             .addNodePools(nodePool)
