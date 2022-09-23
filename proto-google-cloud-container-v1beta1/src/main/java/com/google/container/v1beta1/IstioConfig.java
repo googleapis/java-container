@@ -262,6 +262,7 @@ public final class IstioConfig extends com.google.protobuf.GeneratedMessageV3
    *
    * <code>bool disabled = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The disabled.
    */
   @java.lang.Override
@@ -281,6 +282,7 @@ public final class IstioConfig extends com.google.protobuf.GeneratedMessageV3
    *
    * <code>.google.container.v1beta1.IstioConfig.IstioAuthMode auth = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The enum numeric value on the wire for auth.
    */
   @java.lang.Override
@@ -297,6 +299,7 @@ public final class IstioConfig extends com.google.protobuf.GeneratedMessageV3
    *
    * <code>.google.container.v1beta1.IstioConfig.IstioAuthMode auth = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The auth.
    */
   @java.lang.Override
@@ -649,6 +652,7 @@ public final class IstioConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>bool disabled = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The disabled.
      */
     @java.lang.Override
@@ -665,6 +669,7 @@ public final class IstioConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>bool disabled = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The disabled to set.
      * @return This builder for chaining.
      */
@@ -684,6 +689,7 @@ public final class IstioConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>bool disabled = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -705,6 +711,7 @@ public final class IstioConfig extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.container.v1beta1.IstioConfig.IstioAuthMode auth = 2 [deprecated = true];
      * </code>
      *
+     * @deprecated
      * @return The enum numeric value on the wire for auth.
      */
     @java.lang.Override
@@ -722,6 +729,7 @@ public final class IstioConfig extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.container.v1beta1.IstioConfig.IstioAuthMode auth = 2 [deprecated = true];
      * </code>
      *
+     * @deprecated
      * @param value The enum numeric value on the wire for auth to set.
      * @return This builder for chaining.
      */
@@ -742,6 +750,7 @@ public final class IstioConfig extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.container.v1beta1.IstioConfig.IstioAuthMode auth = 2 [deprecated = true];
      * </code>
      *
+     * @deprecated
      * @return The auth.
      */
     @java.lang.Override
@@ -764,6 +773,7 @@ public final class IstioConfig extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.container.v1beta1.IstioConfig.IstioAuthMode auth = 2 [deprecated = true];
      * </code>
      *
+     * @deprecated
      * @param value The auth to set.
      * @return This builder for chaining.
      */
@@ -787,6 +797,7 @@ public final class IstioConfig extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.container.v1beta1.IstioConfig.IstioAuthMode auth = 2 [deprecated = true];
      * </code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated

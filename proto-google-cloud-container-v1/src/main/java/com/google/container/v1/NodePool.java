@@ -1729,6 +1729,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
    *
    * <code>string status_message = 104 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The statusMessage.
    */
   @java.lang.Override
@@ -1755,6 +1756,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
    *
    * <code>string status_message = 104 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for statusMessage.
    */
   @java.lang.Override
@@ -4034,6 +4036,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string status_message = 104 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The statusMessage.
      */
     @java.lang.Deprecated
@@ -4059,6 +4062,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string status_message = 104 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The bytes for statusMessage.
      */
     @java.lang.Deprecated
@@ -4084,6 +4088,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string status_message = 104 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The statusMessage to set.
      * @return This builder for chaining.
      */
@@ -4108,6 +4113,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string status_message = 104 [deprecated = true];</code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -4128,6 +4134,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string status_message = 104 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The bytes for statusMessage to set.
      * @return This builder for chaining.
      */

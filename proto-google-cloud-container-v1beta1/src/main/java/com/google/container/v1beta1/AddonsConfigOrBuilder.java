@@ -118,6 +118,7 @@ public interface AddonsConfigOrBuilder
    * .google.container.v1beta1.KubernetesDashboard kubernetes_dashboard = 3 [deprecated = true];
    * </code>
    *
+   * @deprecated
    * @return Whether the kubernetesDashboard field is set.
    */
   @java.lang.Deprecated
@@ -137,6 +138,7 @@ public interface AddonsConfigOrBuilder
    * .google.container.v1beta1.KubernetesDashboard kubernetes_dashboard = 3 [deprecated = true];
    * </code>
    *
+   * @deprecated
    * @return The kubernetesDashboard.
    */
   @java.lang.Deprecated
@@ -210,6 +212,7 @@ public interface AddonsConfigOrBuilder
    *
    * <code>.google.container.v1beta1.IstioConfig istio_config = 5 [deprecated = true];</code>
    *
+   * @deprecated
    * @return Whether the istioConfig field is set.
    */
   @java.lang.Deprecated
@@ -224,6 +227,7 @@ public interface AddonsConfigOrBuilder
    *
    * <code>.google.container.v1beta1.IstioConfig istio_config = 5 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The istioConfig.
    */
   @java.lang.Deprecated
@@ -408,6 +412,7 @@ public interface AddonsConfigOrBuilder
    *
    * <code>.google.container.v1beta1.KalmConfig kalm_config = 12 [deprecated = true];</code>
    *
+   * @deprecated
    * @return Whether the kalmConfig field is set.
    */
   @java.lang.Deprecated
@@ -422,6 +427,7 @@ public interface AddonsConfigOrBuilder
    *
    * <code>.google.container.v1beta1.KalmConfig kalm_config = 12 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The kalmConfig.
    */
   @java.lang.Deprecated

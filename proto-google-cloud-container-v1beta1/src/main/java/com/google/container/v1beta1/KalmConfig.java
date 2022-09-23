@@ -118,6 +118,7 @@ public final class KalmConfig extends com.google.protobuf.GeneratedMessageV3
    *
    * <code>bool enabled = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The enabled.
    */
   @java.lang.Override
@@ -450,6 +451,7 @@ public final class KalmConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>bool enabled = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The enabled.
      */
     @java.lang.Override
@@ -466,6 +468,7 @@ public final class KalmConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>bool enabled = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The enabled to set.
      * @return This builder for chaining.
      */
@@ -485,6 +488,7 @@ public final class KalmConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>bool enabled = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated

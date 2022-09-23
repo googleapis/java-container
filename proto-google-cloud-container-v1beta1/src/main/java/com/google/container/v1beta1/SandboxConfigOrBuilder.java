@@ -32,6 +32,7 @@ public interface SandboxConfigOrBuilder
    *
    * <code>string sandbox_type = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The sandboxType.
    */
   @java.lang.Deprecated
@@ -45,6 +46,7 @@ public interface SandboxConfigOrBuilder
    *
    * <code>string sandbox_type = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for sandboxType.
    */
   @java.lang.Deprecated

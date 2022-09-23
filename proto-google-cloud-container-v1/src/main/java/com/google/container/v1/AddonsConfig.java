@@ -371,6 +371,7 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
    * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3 [deprecated = true];
    * </code>
    *
+   * @deprecated
    * @return Whether the kubernetesDashboard field is set.
    */
   @java.lang.Override
@@ -392,6 +393,7 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
    * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3 [deprecated = true];
    * </code>
    *
+   * @deprecated
    * @return The kubernetesDashboard.
    */
   @java.lang.Override
@@ -1718,6 +1720,7 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3 [deprecated = true];
      * </code>
      *
+     * @deprecated
      * @return Whether the kubernetesDashboard field is set.
      */
     @java.lang.Deprecated
@@ -1738,6 +1741,7 @@ public final class AddonsConfig extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3 [deprecated = true];
      * </code>
      *
+     * @deprecated
      * @return The kubernetesDashboard.
      */
     @java.lang.Deprecated

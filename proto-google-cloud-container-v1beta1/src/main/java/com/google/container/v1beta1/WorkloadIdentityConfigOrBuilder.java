@@ -32,6 +32,7 @@ public interface WorkloadIdentityConfigOrBuilder
    *
    * <code>string identity_namespace = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The identityNamespace.
    */
   @java.lang.Deprecated
@@ -45,6 +46,7 @@ public interface WorkloadIdentityConfigOrBuilder
    *
    * <code>string identity_namespace = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for identityNamespace.
    */
   @java.lang.Deprecated

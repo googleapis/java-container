@@ -363,7 +363,7 @@ public final class MaintenanceWindow extends com.google.protobuf.GeneratedMessag
   @java.lang.Override
   public boolean containsMaintenanceExclusions(java.lang.String key) {
     if (key == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException("map key");
     }
     return internalGetMaintenanceExclusions().getMap().containsKey(key);
   }
@@ -403,7 +403,7 @@ public final class MaintenanceWindow extends com.google.protobuf.GeneratedMessag
   public com.google.container.v1.TimeWindow getMaintenanceExclusionsOrDefault(
       java.lang.String key, com.google.container.v1.TimeWindow defaultValue) {
     if (key == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException("map key");
     }
     java.util.Map<java.lang.String, com.google.container.v1.TimeWindow> map =
         internalGetMaintenanceExclusions().getMap();
@@ -422,7 +422,7 @@ public final class MaintenanceWindow extends com.google.protobuf.GeneratedMessag
   @java.lang.Override
   public com.google.container.v1.TimeWindow getMaintenanceExclusionsOrThrow(java.lang.String key) {
     if (key == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException("map key");
     }
     java.util.Map<java.lang.String, com.google.container.v1.TimeWindow> map =
         internalGetMaintenanceExclusions().getMap();
@@ -1349,7 +1349,7 @@ public final class MaintenanceWindow extends com.google.protobuf.GeneratedMessag
     @java.lang.Override
     public boolean containsMaintenanceExclusions(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       return internalGetMaintenanceExclusions().getMap().containsKey(key);
     }
@@ -1389,7 +1389,7 @@ public final class MaintenanceWindow extends com.google.protobuf.GeneratedMessag
     public com.google.container.v1.TimeWindow getMaintenanceExclusionsOrDefault(
         java.lang.String key, com.google.container.v1.TimeWindow defaultValue) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, com.google.container.v1.TimeWindow> map =
           internalGetMaintenanceExclusions().getMap();
@@ -1409,7 +1409,7 @@ public final class MaintenanceWindow extends com.google.protobuf.GeneratedMessag
     public com.google.container.v1.TimeWindow getMaintenanceExclusionsOrThrow(
         java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, com.google.container.v1.TimeWindow> map =
           internalGetMaintenanceExclusions().getMap();
@@ -1435,7 +1435,7 @@ public final class MaintenanceWindow extends com.google.protobuf.GeneratedMessag
      */
     public Builder removeMaintenanceExclusions(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       internalGetMutableMaintenanceExclusions().getMutableMap().remove(key);
       return this;
@@ -1459,11 +1459,12 @@ public final class MaintenanceWindow extends com.google.protobuf.GeneratedMessag
     public Builder putMaintenanceExclusions(
         java.lang.String key, com.google.container.v1.TimeWindow value) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       if (value == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map value");
       }
+
       internalGetMutableMaintenanceExclusions().getMutableMap().put(key, value);
       return this;
     }

@@ -154,6 +154,7 @@ public final class StartIPRotationRequest extends com.google.protobuf.GeneratedM
    *
    * <code>string project_id = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The projectId.
    */
   @java.lang.Override
@@ -180,6 +181,7 @@ public final class StartIPRotationRequest extends com.google.protobuf.GeneratedM
    *
    * <code>string project_id = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for projectId.
    */
   @java.lang.Override
@@ -210,6 +212,7 @@ public final class StartIPRotationRequest extends com.google.protobuf.GeneratedM
    *
    * <code>string zone = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The zone.
    */
   @java.lang.Override
@@ -237,6 +240,7 @@ public final class StartIPRotationRequest extends com.google.protobuf.GeneratedM
    *
    * <code>string zone = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for zone.
    */
   @java.lang.Override
@@ -265,6 +269,7 @@ public final class StartIPRotationRequest extends com.google.protobuf.GeneratedM
    *
    * <code>string cluster_id = 3 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The clusterId.
    */
   @java.lang.Override
@@ -290,6 +295,7 @@ public final class StartIPRotationRequest extends com.google.protobuf.GeneratedM
    *
    * <code>string cluster_id = 3 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for clusterId.
    */
   @java.lang.Override
@@ -767,6 +773,7 @@ public final class StartIPRotationRequest extends com.google.protobuf.GeneratedM
      *
      * <code>string project_id = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The projectId.
      */
     @java.lang.Deprecated
@@ -792,6 +799,7 @@ public final class StartIPRotationRequest extends com.google.protobuf.GeneratedM
      *
      * <code>string project_id = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The bytes for projectId.
      */
     @java.lang.Deprecated
@@ -817,6 +825,7 @@ public final class StartIPRotationRequest extends com.google.protobuf.GeneratedM
      *
      * <code>string project_id = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The projectId to set.
      * @return This builder for chaining.
      */
@@ -841,6 +850,7 @@ public final class StartIPRotationRequest extends com.google.protobuf.GeneratedM
      *
      * <code>string project_id = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -861,6 +871,7 @@ public final class StartIPRotationRequest extends com.google.protobuf.GeneratedM
      *
      * <code>string project_id = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The bytes for projectId to set.
      * @return This builder for chaining.
      */
@@ -889,6 +900,7 @@ public final class StartIPRotationRequest extends com.google.protobuf.GeneratedM
      *
      * <code>string zone = 2 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The zone.
      */
     @java.lang.Deprecated
@@ -915,6 +927,7 @@ public final class StartIPRotationRequest extends com.google.protobuf.GeneratedM
      *
      * <code>string zone = 2 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The bytes for zone.
      */
     @java.lang.Deprecated
@@ -941,6 +954,7 @@ public final class StartIPRotationRequest extends com.google.protobuf.GeneratedM
      *
      * <code>string zone = 2 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The zone to set.
      * @return This builder for chaining.
      */
@@ -966,6 +980,7 @@ public final class StartIPRotationRequest extends com.google.protobuf.GeneratedM
      *
      * <code>string zone = 2 [deprecated = true];</code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -987,6 +1002,7 @@ public final class StartIPRotationRequest extends com.google.protobuf.GeneratedM
      *
      * <code>string zone = 2 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The bytes for zone to set.
      * @return This builder for chaining.
      */
@@ -1013,6 +1029,7 @@ public final class StartIPRotationRequest extends com.google.protobuf.GeneratedM
      *
      * <code>string cluster_id = 3 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The clusterId.
      */
     @java.lang.Deprecated
@@ -1037,6 +1054,7 @@ public final class StartIPRotationRequest extends com.google.protobuf.GeneratedM
      *
      * <code>string cluster_id = 3 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The bytes for clusterId.
      */
     @java.lang.Deprecated
@@ -1061,6 +1079,7 @@ public final class StartIPRotationRequest extends com.google.protobuf.GeneratedM
      *
      * <code>string cluster_id = 3 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The clusterId to set.
      * @return This builder for chaining.
      */
@@ -1084,6 +1103,7 @@ public final class StartIPRotationRequest extends com.google.protobuf.GeneratedM
      *
      * <code>string cluster_id = 3 [deprecated = true];</code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -1103,6 +1123,7 @@ public final class StartIPRotationRequest extends com.google.protobuf.GeneratedM
      *
      * <code>string cluster_id = 3 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The bytes for clusterId to set.
      * @return This builder for chaining.
      */

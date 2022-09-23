@@ -139,6 +139,7 @@ public final class WorkloadIdentityConfig extends com.google.protobuf.GeneratedM
    *
    * <code>string identity_namespace = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The identityNamespace.
    */
   @java.lang.Override
@@ -163,6 +164,7 @@ public final class WorkloadIdentityConfig extends com.google.protobuf.GeneratedM
    *
    * <code>string identity_namespace = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for identityNamespace.
    */
   @java.lang.Override
@@ -638,6 +640,7 @@ public final class WorkloadIdentityConfig extends com.google.protobuf.GeneratedM
      *
      * <code>string identity_namespace = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The identityNamespace.
      */
     @java.lang.Deprecated
@@ -661,6 +664,7 @@ public final class WorkloadIdentityConfig extends com.google.protobuf.GeneratedM
      *
      * <code>string identity_namespace = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The bytes for identityNamespace.
      */
     @java.lang.Deprecated
@@ -684,6 +688,7 @@ public final class WorkloadIdentityConfig extends com.google.protobuf.GeneratedM
      *
      * <code>string identity_namespace = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The identityNamespace to set.
      * @return This builder for chaining.
      */
@@ -706,6 +711,7 @@ public final class WorkloadIdentityConfig extends com.google.protobuf.GeneratedM
      *
      * <code>string identity_namespace = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -724,6 +730,7 @@ public final class WorkloadIdentityConfig extends com.google.protobuf.GeneratedM
      *
      * <code>string identity_namespace = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The bytes for identityNamespace to set.
      * @return This builder for chaining.
      */

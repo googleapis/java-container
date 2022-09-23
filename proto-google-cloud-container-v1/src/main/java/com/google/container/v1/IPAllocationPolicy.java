@@ -302,6 +302,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
    *
    * <code>string cluster_ipv4_cidr = 4 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The clusterIpv4Cidr.
    */
   @java.lang.Override
@@ -326,6 +327,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
    *
    * <code>string cluster_ipv4_cidr = 4 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for clusterIpv4Cidr.
    */
   @java.lang.Override
@@ -353,6 +355,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
    *
    * <code>string node_ipv4_cidr = 5 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The nodeIpv4Cidr.
    */
   @java.lang.Override
@@ -377,6 +380,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
    *
    * <code>string node_ipv4_cidr = 5 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for nodeIpv4Cidr.
    */
   @java.lang.Override
@@ -404,6 +408,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
    *
    * <code>string services_ipv4_cidr = 6 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The servicesIpv4Cidr.
    */
   @java.lang.Override
@@ -428,6 +433,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
    *
    * <code>string services_ipv4_cidr = 6 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for servicesIpv4Cidr.
    */
   @java.lang.Override
@@ -1607,6 +1613,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string cluster_ipv4_cidr = 4 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The clusterIpv4Cidr.
      */
     @java.lang.Deprecated
@@ -1630,6 +1637,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string cluster_ipv4_cidr = 4 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The bytes for clusterIpv4Cidr.
      */
     @java.lang.Deprecated
@@ -1653,6 +1661,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string cluster_ipv4_cidr = 4 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The clusterIpv4Cidr to set.
      * @return This builder for chaining.
      */
@@ -1675,6 +1684,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string cluster_ipv4_cidr = 4 [deprecated = true];</code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -1693,6 +1703,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string cluster_ipv4_cidr = 4 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The bytes for clusterIpv4Cidr to set.
      * @return This builder for chaining.
      */
@@ -1718,6 +1729,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string node_ipv4_cidr = 5 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The nodeIpv4Cidr.
      */
     @java.lang.Deprecated
@@ -1741,6 +1753,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string node_ipv4_cidr = 5 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The bytes for nodeIpv4Cidr.
      */
     @java.lang.Deprecated
@@ -1764,6 +1777,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string node_ipv4_cidr = 5 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The nodeIpv4Cidr to set.
      * @return This builder for chaining.
      */
@@ -1786,6 +1800,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string node_ipv4_cidr = 5 [deprecated = true];</code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -1804,6 +1819,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string node_ipv4_cidr = 5 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The bytes for nodeIpv4Cidr to set.
      * @return This builder for chaining.
      */
@@ -1829,6 +1845,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string services_ipv4_cidr = 6 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The servicesIpv4Cidr.
      */
     @java.lang.Deprecated
@@ -1852,6 +1869,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string services_ipv4_cidr = 6 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The bytes for servicesIpv4Cidr.
      */
     @java.lang.Deprecated
@@ -1875,6 +1893,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string services_ipv4_cidr = 6 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The servicesIpv4Cidr to set.
      * @return This builder for chaining.
      */
@@ -1897,6 +1916,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string services_ipv4_cidr = 6 [deprecated = true];</code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -1915,6 +1935,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string services_ipv4_cidr = 6 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The bytes for servicesIpv4Cidr to set.
      * @return This builder for chaining.
      */

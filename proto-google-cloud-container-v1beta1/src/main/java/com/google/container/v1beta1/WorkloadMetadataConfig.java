@@ -504,6 +504,7 @@ public final class WorkloadMetadataConfig extends com.google.protobuf.GeneratedM
    * .google.container.v1beta1.WorkloadMetadataConfig.NodeMetadata node_metadata = 1 [deprecated = true];
    * </code>
    *
+   * @deprecated
    * @return The enum numeric value on the wire for nodeMetadata.
    */
   @java.lang.Override
@@ -523,6 +524,7 @@ public final class WorkloadMetadataConfig extends com.google.protobuf.GeneratedM
    * .google.container.v1beta1.WorkloadMetadataConfig.NodeMetadata node_metadata = 1 [deprecated = true];
    * </code>
    *
+   * @deprecated
    * @return The nodeMetadata.
    */
   @java.lang.Override
@@ -928,6 +930,7 @@ public final class WorkloadMetadataConfig extends com.google.protobuf.GeneratedM
      * .google.container.v1beta1.WorkloadMetadataConfig.NodeMetadata node_metadata = 1 [deprecated = true];
      * </code>
      *
+     * @deprecated
      * @return The enum numeric value on the wire for nodeMetadata.
      */
     @java.lang.Override
@@ -947,6 +950,7 @@ public final class WorkloadMetadataConfig extends com.google.protobuf.GeneratedM
      * .google.container.v1beta1.WorkloadMetadataConfig.NodeMetadata node_metadata = 1 [deprecated = true];
      * </code>
      *
+     * @deprecated
      * @param value The enum numeric value on the wire for nodeMetadata to set.
      * @return This builder for chaining.
      */
@@ -969,6 +973,7 @@ public final class WorkloadMetadataConfig extends com.google.protobuf.GeneratedM
      * .google.container.v1beta1.WorkloadMetadataConfig.NodeMetadata node_metadata = 1 [deprecated = true];
      * </code>
      *
+     * @deprecated
      * @return The nodeMetadata.
      */
     @java.lang.Override
@@ -993,6 +998,7 @@ public final class WorkloadMetadataConfig extends com.google.protobuf.GeneratedM
      * .google.container.v1beta1.WorkloadMetadataConfig.NodeMetadata node_metadata = 1 [deprecated = true];
      * </code>
      *
+     * @deprecated
      * @param value The nodeMetadata to set.
      * @return This builder for chaining.
      */
@@ -1019,6 +1025,7 @@ public final class WorkloadMetadataConfig extends com.google.protobuf.GeneratedM
      * .google.container.v1beta1.WorkloadMetadataConfig.NodeMetadata node_metadata = 1 [deprecated = true];
      * </code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated

@@ -391,6 +391,7 @@ public final class StatusCondition extends com.google.protobuf.GeneratedMessageV
    *
    * <code>.google.container.v1.StatusCondition.Code code = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The enum numeric value on the wire for code.
    */
   @java.lang.Override
@@ -408,6 +409,7 @@ public final class StatusCondition extends com.google.protobuf.GeneratedMessageV
    *
    * <code>.google.container.v1.StatusCondition.Code code = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The code.
    */
   @java.lang.Override
@@ -860,6 +862,7 @@ public final class StatusCondition extends com.google.protobuf.GeneratedMessageV
      *
      * <code>.google.container.v1.StatusCondition.Code code = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The enum numeric value on the wire for code.
      */
     @java.lang.Override
@@ -877,6 +880,7 @@ public final class StatusCondition extends com.google.protobuf.GeneratedMessageV
      *
      * <code>.google.container.v1.StatusCondition.Code code = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The enum numeric value on the wire for code to set.
      * @return This builder for chaining.
      */
@@ -897,6 +901,7 @@ public final class StatusCondition extends com.google.protobuf.GeneratedMessageV
      *
      * <code>.google.container.v1.StatusCondition.Code code = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The code.
      */
     @java.lang.Override
@@ -917,6 +922,7 @@ public final class StatusCondition extends com.google.protobuf.GeneratedMessageV
      *
      * <code>.google.container.v1.StatusCondition.Code code = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The code to set.
      * @return This builder for chaining.
      */
@@ -940,6 +946,7 @@ public final class StatusCondition extends com.google.protobuf.GeneratedMessageV
      *
      * <code>.google.container.v1.StatusCondition.Code code = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated

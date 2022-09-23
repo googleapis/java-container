@@ -332,14 +332,14 @@ public final class OperationProgress extends com.google.protobuf.GeneratedMessag
               }
             case 16:
               {
-                valueCase_ = 2;
                 value_ = input.readInt64();
+                valueCase_ = 2;
                 break;
               }
             case 25:
               {
-                valueCase_ = 3;
                 value_ = input.readDouble();
+                valueCase_ = 3;
                 break;
               }
             case 34:

@@ -265,6 +265,7 @@ public final class SandboxConfig extends com.google.protobuf.GeneratedMessageV3
    *
    * <code>string sandbox_type = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The sandboxType.
    */
   @java.lang.Override
@@ -289,6 +290,7 @@ public final class SandboxConfig extends com.google.protobuf.GeneratedMessageV3
    *
    * <code>string sandbox_type = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for sandboxType.
    */
   @java.lang.Override
@@ -682,6 +684,7 @@ public final class SandboxConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string sandbox_type = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The sandboxType.
      */
     @java.lang.Deprecated
@@ -705,6 +708,7 @@ public final class SandboxConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string sandbox_type = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The bytes for sandboxType.
      */
     @java.lang.Deprecated
@@ -728,6 +732,7 @@ public final class SandboxConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string sandbox_type = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The sandboxType to set.
      * @return This builder for chaining.
      */
@@ -750,6 +755,7 @@ public final class SandboxConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string sandbox_type = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -768,6 +774,7 @@ public final class SandboxConfig extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string sandbox_type = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The bytes for sandboxType to set.
      * @return This builder for chaining.
      */

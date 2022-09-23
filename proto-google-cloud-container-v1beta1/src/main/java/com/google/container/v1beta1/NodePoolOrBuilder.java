@@ -361,6 +361,7 @@ public interface NodePoolOrBuilder
    *
    * <code>string status_message = 104 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The statusMessage.
    */
   @java.lang.Deprecated
@@ -376,6 +377,7 @@ public interface NodePoolOrBuilder
    *
    * <code>string status_message = 104 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for statusMessage.
    */
   @java.lang.Deprecated

@@ -178,6 +178,7 @@ public final class MasterAuth extends com.google.protobuf.GeneratedMessageV3
    *
    * <code>string username = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The username.
    */
   @java.lang.Override
@@ -208,6 +209,7 @@ public final class MasterAuth extends com.google.protobuf.GeneratedMessageV3
    *
    * <code>string username = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for username.
    */
   @java.lang.Override
@@ -242,6 +244,7 @@ public final class MasterAuth extends com.google.protobuf.GeneratedMessageV3
    *
    * <code>string password = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The password.
    */
   @java.lang.Override
@@ -273,6 +276,7 @@ public final class MasterAuth extends com.google.protobuf.GeneratedMessageV3
    *
    * <code>string password = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for password.
    */
   @java.lang.Override
@@ -921,6 +925,7 @@ public final class MasterAuth extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string username = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The username.
      */
     @java.lang.Deprecated
@@ -950,6 +955,7 @@ public final class MasterAuth extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string username = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The bytes for username.
      */
     @java.lang.Deprecated
@@ -979,6 +985,7 @@ public final class MasterAuth extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string username = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The username to set.
      * @return This builder for chaining.
      */
@@ -1007,6 +1014,7 @@ public final class MasterAuth extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string username = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -1031,6 +1039,7 @@ public final class MasterAuth extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string username = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The bytes for username to set.
      * @return This builder for chaining.
      */
@@ -1063,6 +1072,7 @@ public final class MasterAuth extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string password = 2 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The password.
      */
     @java.lang.Deprecated
@@ -1093,6 +1103,7 @@ public final class MasterAuth extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string password = 2 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The bytes for password.
      */
     @java.lang.Deprecated
@@ -1123,6 +1134,7 @@ public final class MasterAuth extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string password = 2 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The password to set.
      * @return This builder for chaining.
      */
@@ -1152,6 +1164,7 @@ public final class MasterAuth extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string password = 2 [deprecated = true];</code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -1177,6 +1190,7 @@ public final class MasterAuth extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string password = 2 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The bytes for password to set.
      * @return This builder for chaining.
      */

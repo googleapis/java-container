@@ -38,6 +38,7 @@ public interface MasterAuthOrBuilder
    *
    * <code>string username = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The username.
    */
   @java.lang.Deprecated
@@ -57,6 +58,7 @@ public interface MasterAuthOrBuilder
    *
    * <code>string username = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for username.
    */
   @java.lang.Deprecated
@@ -78,6 +80,7 @@ public interface MasterAuthOrBuilder
    *
    * <code>string password = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The password.
    */
   @java.lang.Deprecated
@@ -98,6 +101,7 @@ public interface MasterAuthOrBuilder
    *
    * <code>string password = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for password.
    */
   @java.lang.Deprecated
