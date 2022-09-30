@@ -41,7 +41,7 @@ If you are using Maven without BOM, add this to your dependencies:
 <dependency>
   <groupId>com.google.cloud</groupId>
   <artifactId>google-cloud-container</artifactId>
-  <version>2.5.1</version>
+  <version>2.5.2</version>
 </dependency>
 
 ```
@@ -49,20 +49,20 @@ If you are using Maven without BOM, add this to your dependencies:
 If you are using Gradle 5.x or later, add this to your dependencies:
 
 ```Groovy
-implementation platform('com.google.cloud:libraries-bom:26.1.1')
+implementation platform('com.google.cloud:libraries-bom:26.1.2')
 
 implementation 'com.google.cloud:google-cloud-container'
 ```
 If you are using Gradle without BOM, add this to your dependencies:
 
 ```Groovy
-implementation 'com.google.cloud:google-cloud-container:2.5.1'
+implementation 'com.google.cloud:google-cloud-container:2.5.2'
 ```
 
 If you are using SBT, add this to your dependencies:
 
 ```Scala
-libraryDependencies += "com.google.cloud" % "google-cloud-container" % "2.5.1"
+libraryDependencies += "com.google.cloud" % "google-cloud-container" % "2.5.2"
 ```
 
 ## Authentication
