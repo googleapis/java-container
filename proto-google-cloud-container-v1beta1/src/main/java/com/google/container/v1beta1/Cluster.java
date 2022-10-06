@@ -78,911 +78,6 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
     return this.unknownFields;
   }
 
-  private Cluster(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-          case 18:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              description_ = s;
-              break;
-            }
-          case 24:
-            {
-              initialNodeCount_ = input.readInt32();
-              break;
-            }
-          case 34:
-            {
-              com.google.container.v1beta1.NodeConfig.Builder subBuilder = null;
-              if (nodeConfig_ != null) {
-                subBuilder = nodeConfig_.toBuilder();
-              }
-              nodeConfig_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.NodeConfig.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(nodeConfig_);
-                nodeConfig_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 42:
-            {
-              com.google.container.v1beta1.MasterAuth.Builder subBuilder = null;
-              if (masterAuth_ != null) {
-                subBuilder = masterAuth_.toBuilder();
-              }
-              masterAuth_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.MasterAuth.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(masterAuth_);
-                masterAuth_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 50:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              loggingService_ = s;
-              break;
-            }
-          case 58:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              monitoringService_ = s;
-              break;
-            }
-          case 66:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              network_ = s;
-              break;
-            }
-          case 74:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              clusterIpv4Cidr_ = s;
-              break;
-            }
-          case 82:
-            {
-              com.google.container.v1beta1.AddonsConfig.Builder subBuilder = null;
-              if (addonsConfig_ != null) {
-                subBuilder = addonsConfig_.toBuilder();
-              }
-              addonsConfig_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.AddonsConfig.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(addonsConfig_);
-                addonsConfig_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 90:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              subnetwork_ = s;
-              break;
-            }
-          case 98:
-            {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                nodePools_ = new java.util.ArrayList<com.google.container.v1beta1.NodePool>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              nodePools_.add(
-                  input.readMessage(
-                      com.google.container.v1beta1.NodePool.parser(), extensionRegistry));
-              break;
-            }
-          case 106:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                locations_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              locations_.add(s);
-              break;
-            }
-          case 112:
-            {
-              enableKubernetesAlpha_ = input.readBool();
-              break;
-            }
-          case 122:
-            {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                resourceLabels_ =
-                    com.google.protobuf.MapField.newMapField(
-                        ResourceLabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000004;
-              }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String> resourceLabels__ =
-                  input.readMessage(
-                      ResourceLabelsDefaultEntryHolder.defaultEntry.getParserForType(),
-                      extensionRegistry);
-              resourceLabels_
-                  .getMutableMap()
-                  .put(resourceLabels__.getKey(), resourceLabels__.getValue());
-              break;
-            }
-          case 130:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              labelFingerprint_ = s;
-              break;
-            }
-          case 146:
-            {
-              com.google.container.v1beta1.LegacyAbac.Builder subBuilder = null;
-              if (legacyAbac_ != null) {
-                subBuilder = legacyAbac_.toBuilder();
-              }
-              legacyAbac_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.LegacyAbac.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(legacyAbac_);
-                legacyAbac_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 154:
-            {
-              com.google.container.v1beta1.NetworkPolicy.Builder subBuilder = null;
-              if (networkPolicy_ != null) {
-                subBuilder = networkPolicy_.toBuilder();
-              }
-              networkPolicy_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.NetworkPolicy.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(networkPolicy_);
-                networkPolicy_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 162:
-            {
-              com.google.container.v1beta1.IPAllocationPolicy.Builder subBuilder = null;
-              if (ipAllocationPolicy_ != null) {
-                subBuilder = ipAllocationPolicy_.toBuilder();
-              }
-              ipAllocationPolicy_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.IPAllocationPolicy.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(ipAllocationPolicy_);
-                ipAllocationPolicy_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 178:
-            {
-              com.google.container.v1beta1.MasterAuthorizedNetworksConfig.Builder subBuilder = null;
-              if (masterAuthorizedNetworksConfig_ != null) {
-                subBuilder = masterAuthorizedNetworksConfig_.toBuilder();
-              }
-              masterAuthorizedNetworksConfig_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.MasterAuthorizedNetworksConfig.parser(),
-                      extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(masterAuthorizedNetworksConfig_);
-                masterAuthorizedNetworksConfig_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 186:
-            {
-              com.google.container.v1beta1.MaintenancePolicy.Builder subBuilder = null;
-              if (maintenancePolicy_ != null) {
-                subBuilder = maintenancePolicy_.toBuilder();
-              }
-              maintenancePolicy_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.MaintenancePolicy.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(maintenancePolicy_);
-                maintenancePolicy_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 194:
-            {
-              com.google.container.v1beta1.BinaryAuthorization.Builder subBuilder = null;
-              if (binaryAuthorization_ != null) {
-                subBuilder = binaryAuthorization_.toBuilder();
-              }
-              binaryAuthorization_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.BinaryAuthorization.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(binaryAuthorization_);
-                binaryAuthorization_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 202:
-            {
-              com.google.container.v1beta1.PodSecurityPolicyConfig.Builder subBuilder = null;
-              if (podSecurityPolicyConfig_ != null) {
-                subBuilder = podSecurityPolicyConfig_.toBuilder();
-              }
-              podSecurityPolicyConfig_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.PodSecurityPolicyConfig.parser(),
-                      extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(podSecurityPolicyConfig_);
-                podSecurityPolicyConfig_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 210:
-            {
-              com.google.container.v1beta1.ClusterAutoscaling.Builder subBuilder = null;
-              if (autoscaling_ != null) {
-                subBuilder = autoscaling_.toBuilder();
-              }
-              autoscaling_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.ClusterAutoscaling.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(autoscaling_);
-                autoscaling_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 218:
-            {
-              com.google.container.v1beta1.NetworkConfig.Builder subBuilder = null;
-              if (networkConfig_ != null) {
-                subBuilder = networkConfig_.toBuilder();
-              }
-              networkConfig_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.NetworkConfig.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(networkConfig_);
-                networkConfig_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 224:
-            {
-              privateCluster_ = input.readBool();
-              break;
-            }
-          case 234:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              masterIpv4CidrBlock_ = s;
-              break;
-            }
-          case 242:
-            {
-              com.google.container.v1beta1.MaxPodsConstraint.Builder subBuilder = null;
-              if (defaultMaxPodsConstraint_ != null) {
-                subBuilder = defaultMaxPodsConstraint_.toBuilder();
-              }
-              defaultMaxPodsConstraint_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.MaxPodsConstraint.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(defaultMaxPodsConstraint_);
-                defaultMaxPodsConstraint_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 266:
-            {
-              com.google.container.v1beta1.ResourceUsageExportConfig.Builder subBuilder = null;
-              if (resourceUsageExportConfig_ != null) {
-                subBuilder = resourceUsageExportConfig_.toBuilder();
-              }
-              resourceUsageExportConfig_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.ResourceUsageExportConfig.parser(),
-                      extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(resourceUsageExportConfig_);
-                resourceUsageExportConfig_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 274:
-            {
-              com.google.container.v1beta1.AuthenticatorGroupsConfig.Builder subBuilder = null;
-              if (authenticatorGroupsConfig_ != null) {
-                subBuilder = authenticatorGroupsConfig_.toBuilder();
-              }
-              authenticatorGroupsConfig_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.AuthenticatorGroupsConfig.parser(),
-                      extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(authenticatorGroupsConfig_);
-                authenticatorGroupsConfig_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 298:
-            {
-              com.google.container.v1beta1.PrivateClusterConfig.Builder subBuilder = null;
-              if (privateClusterConfig_ != null) {
-                subBuilder = privateClusterConfig_.toBuilder();
-              }
-              privateClusterConfig_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.PrivateClusterConfig.parser(),
-                      extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(privateClusterConfig_);
-                privateClusterConfig_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 306:
-            {
-              com.google.container.v1beta1.DatabaseEncryption.Builder subBuilder = null;
-              if (databaseEncryption_ != null) {
-                subBuilder = databaseEncryption_.toBuilder();
-              }
-              databaseEncryption_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.DatabaseEncryption.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(databaseEncryption_);
-                databaseEncryption_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 314:
-            {
-              com.google.container.v1beta1.VerticalPodAutoscaling.Builder subBuilder = null;
-              if (verticalPodAutoscaling_ != null) {
-                subBuilder = verticalPodAutoscaling_.toBuilder();
-              }
-              verticalPodAutoscaling_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.VerticalPodAutoscaling.parser(),
-                      extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(verticalPodAutoscaling_);
-                verticalPodAutoscaling_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 322:
-            {
-              com.google.container.v1beta1.ShieldedNodes.Builder subBuilder = null;
-              if (shieldedNodes_ != null) {
-                subBuilder = shieldedNodes_.toBuilder();
-              }
-              shieldedNodes_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.ShieldedNodes.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(shieldedNodes_);
-                shieldedNodes_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 330:
-            {
-              com.google.container.v1beta1.ReleaseChannel.Builder subBuilder = null;
-              if (releaseChannel_ != null) {
-                subBuilder = releaseChannel_.toBuilder();
-              }
-              releaseChannel_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.ReleaseChannel.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(releaseChannel_);
-                releaseChannel_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 346:
-            {
-              com.google.container.v1beta1.WorkloadIdentityConfig.Builder subBuilder = null;
-              if (workloadIdentityConfig_ != null) {
-                subBuilder = workloadIdentityConfig_.toBuilder();
-              }
-              workloadIdentityConfig_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.WorkloadIdentityConfig.parser(),
-                      extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(workloadIdentityConfig_);
-                workloadIdentityConfig_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 362:
-            {
-              com.google.container.v1beta1.CostManagementConfig.Builder subBuilder = null;
-              if (costManagementConfig_ != null) {
-                subBuilder = costManagementConfig_.toBuilder();
-              }
-              costManagementConfig_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.CostManagementConfig.parser(),
-                      extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(costManagementConfig_);
-                costManagementConfig_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 370:
-            {
-              com.google.container.v1beta1.ClusterTelemetry.Builder subBuilder = null;
-              if (clusterTelemetry_ != null) {
-                subBuilder = clusterTelemetry_.toBuilder();
-              }
-              clusterTelemetry_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.ClusterTelemetry.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(clusterTelemetry_);
-                clusterTelemetry_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 378:
-            {
-              com.google.container.v1beta1.TpuConfig.Builder subBuilder = null;
-              if (tpuConfig_ != null) {
-                subBuilder = tpuConfig_.toBuilder();
-              }
-              tpuConfig_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.TpuConfig.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(tpuConfig_);
-                tpuConfig_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 394:
-            {
-              com.google.container.v1beta1.NotificationConfig.Builder subBuilder = null;
-              if (notificationConfig_ != null) {
-                subBuilder = notificationConfig_.toBuilder();
-              }
-              notificationConfig_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.NotificationConfig.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(notificationConfig_);
-                notificationConfig_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 402:
-            {
-              com.google.container.v1beta1.ConfidentialNodes.Builder subBuilder = null;
-              if (confidentialNodes_ != null) {
-                subBuilder = confidentialNodes_.toBuilder();
-              }
-              confidentialNodes_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.ConfidentialNodes.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(confidentialNodes_);
-                confidentialNodes_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 418:
-            {
-              com.google.container.v1beta1.WorkloadCertificates.Builder subBuilder = null;
-              if (workloadCertificates_ != null) {
-                subBuilder = workloadCertificates_.toBuilder();
-              }
-              workloadCertificates_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.WorkloadCertificates.parser(),
-                      extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(workloadCertificates_);
-                workloadCertificates_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 426:
-            {
-              com.google.container.v1beta1.WorkloadALTSConfig.Builder subBuilder = null;
-              if (workloadAltsConfig_ != null) {
-                subBuilder = workloadAltsConfig_.toBuilder();
-              }
-              workloadAltsConfig_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.WorkloadALTSConfig.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(workloadAltsConfig_);
-                workloadAltsConfig_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 434:
-            {
-              com.google.container.v1beta1.IdentityServiceConfig.Builder subBuilder = null;
-              if (identityServiceConfig_ != null) {
-                subBuilder = identityServiceConfig_.toBuilder();
-              }
-              identityServiceConfig_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.IdentityServiceConfig.parser(),
-                      extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(identityServiceConfig_);
-                identityServiceConfig_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 538:
-            {
-              com.google.container.v1beta1.MeshCertificates.Builder subBuilder = null;
-              if (meshCertificates_ != null) {
-                subBuilder = meshCertificates_.toBuilder();
-              }
-              meshCertificates_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.MeshCertificates.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(meshCertificates_);
-                meshCertificates_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 802:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              selfLink_ = s;
-              break;
-            }
-          case 810:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              zone_ = s;
-              break;
-            }
-          case 818:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              endpoint_ = s;
-              break;
-            }
-          case 826:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              initialClusterVersion_ = s;
-              break;
-            }
-          case 834:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              currentMasterVersion_ = s;
-              break;
-            }
-          case 842:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              currentNodeVersion_ = s;
-              break;
-            }
-          case 850:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              createTime_ = s;
-              break;
-            }
-          case 856:
-            {
-              int rawValue = input.readEnum();
-
-              status_ = rawValue;
-              break;
-            }
-          case 866:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              statusMessage_ = s;
-              break;
-            }
-          case 872:
-            {
-              nodeIpv4CidrSize_ = input.readInt32();
-              break;
-            }
-          case 882:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              servicesIpv4Cidr_ = s;
-              break;
-            }
-          case 890:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
-                instanceGroupUrls_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000008;
-              }
-              instanceGroupUrls_.add(s);
-              break;
-            }
-          case 896:
-            {
-              currentNodeCount_ = input.readInt32();
-              break;
-            }
-          case 906:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              expireTime_ = s;
-              break;
-            }
-          case 914:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              location_ = s;
-              break;
-            }
-          case 920:
-            {
-              enableTpu_ = input.readBool();
-              break;
-            }
-          case 930:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              tpuIpv4CidrBlock_ = s;
-              break;
-            }
-          case 946:
-            {
-              if (!((mutable_bitField0_ & 0x00000010) != 0)) {
-                conditions_ =
-                    new java.util.ArrayList<com.google.container.v1beta1.StatusCondition>();
-                mutable_bitField0_ |= 0x00000010;
-              }
-              conditions_.add(
-                  input.readMessage(
-                      com.google.container.v1beta1.StatusCondition.parser(), extensionRegistry));
-              break;
-            }
-          case 994:
-            {
-              com.google.container.v1beta1.Master.Builder subBuilder = null;
-              if (master_ != null) {
-                subBuilder = master_.toBuilder();
-              }
-              master_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.Master.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(master_);
-                master_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 1026:
-            {
-              com.google.container.v1beta1.Autopilot.Builder subBuilder = null;
-              if (autopilot_ != null) {
-                subBuilder = autopilot_.toBuilder();
-              }
-              autopilot_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.Autopilot.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(autopilot_);
-                autopilot_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 1034:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              id_ = s;
-              break;
-            }
-          case 1050:
-            {
-              com.google.container.v1beta1.NodePoolDefaults.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000001) != 0)) {
-                subBuilder = nodePoolDefaults_.toBuilder();
-              }
-              nodePoolDefaults_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.NodePoolDefaults.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(nodePoolDefaults_);
-                nodePoolDefaults_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000001;
-              break;
-            }
-          case 1058:
-            {
-              com.google.container.v1beta1.LoggingConfig.Builder subBuilder = null;
-              if (loggingConfig_ != null) {
-                subBuilder = loggingConfig_.toBuilder();
-              }
-              loggingConfig_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.LoggingConfig.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(loggingConfig_);
-                loggingConfig_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 1066:
-            {
-              com.google.container.v1beta1.MonitoringConfig.Builder subBuilder = null;
-              if (monitoringConfig_ != null) {
-                subBuilder = monitoringConfig_.toBuilder();
-              }
-              monitoringConfig_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.MonitoringConfig.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(monitoringConfig_);
-                monitoringConfig_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 1090:
-            {
-              com.google.container.v1beta1.NodePoolAutoConfig.Builder subBuilder = null;
-              if (nodePoolAutoConfig_ != null) {
-                subBuilder = nodePoolAutoConfig_.toBuilder();
-              }
-              nodePoolAutoConfig_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.NodePoolAutoConfig.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(nodePoolAutoConfig_);
-                nodePoolAutoConfig_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 1098:
-            {
-              com.google.container.v1beta1.ProtectConfig.Builder subBuilder = null;
-              if (((bitField0_ & 0x00000002) != 0)) {
-                subBuilder = protectConfig_.toBuilder();
-              }
-              protectConfig_ =
-                  input.readMessage(
-                      com.google.container.v1beta1.ProtectConfig.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(protectConfig_);
-                protectConfig_ = subBuilder.buildPartial();
-              }
-              bitField0_ |= 0x00000002;
-              break;
-            }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (com.google.protobuf.UninitializedMessageException e) {
-      throw e.asInvalidProtocolBufferException().setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        nodePools_ = java.util.Collections.unmodifiableList(nodePools_);
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        locations_ = locations_.getUnmodifiableView();
-      }
-      if (((mutable_bitField0_ & 0x00000008) != 0)) {
-        instanceGroupUrls_ = instanceGroupUrls_.getUnmodifiableView();
-      }
-      if (((mutable_bitField0_ & 0x00000010) != 0)) {
-        conditions_ = java.util.Collections.unmodifiableList(conditions_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.container.v1beta1.ClusterServiceProto
         .internal_static_google_container_v1beta1_Cluster_descriptor;
@@ -1393,7 +488,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    * <code>int32 initial_node_count = 3 [deprecated = true];</code>
    *
    * @deprecated google.container.v1beta1.Cluster.initial_node_count is deprecated. See
-   *     google/container/v1beta1/cluster_service.proto;l=1551
+   *     google/container/v1beta1/cluster_service.proto;l=1555
    * @return The initialNodeCount.
    */
   @java.lang.Override
@@ -1423,7 +518,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    * <code>.google.container.v1beta1.NodeConfig node_config = 4 [deprecated = true];</code>
    *
    * @deprecated google.container.v1beta1.Cluster.node_config is deprecated. See
-   *     google/container/v1beta1/cluster_service.proto;l=1564
+   *     google/container/v1beta1/cluster_service.proto;l=1568
    * @return Whether the nodeConfig field is set.
    */
   @java.lang.Override
@@ -1450,7 +545,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    * <code>.google.container.v1beta1.NodeConfig node_config = 4 [deprecated = true];</code>
    *
    * @deprecated google.container.v1beta1.Cluster.node_config is deprecated. See
-   *     google/container/v1beta1/cluster_service.proto;l=1564
+   *     google/container/v1beta1/cluster_service.proto;l=1568
    * @return The nodeConfig.
    */
   @java.lang.Override
@@ -2697,7 +1792,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    * <code>bool private_cluster = 28 [deprecated = true];</code>
    *
    * @deprecated google.container.v1beta1.Cluster.private_cluster is deprecated. See
-   *     google/container/v1beta1/cluster_service.proto;l=1686
+   *     google/container/v1beta1/cluster_service.proto;l=1690
    * @return The privateCluster.
    */
   @java.lang.Override
@@ -2722,7 +1817,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    * <code>string master_ipv4_cidr_block = 29 [deprecated = true];</code>
    *
    * @deprecated google.container.v1beta1.Cluster.master_ipv4_cidr_block is deprecated. See
-   *     google/container/v1beta1/cluster_service.proto;l=1693
+   *     google/container/v1beta1/cluster_service.proto;l=1697
    * @return The masterIpv4CidrBlock.
    */
   @java.lang.Override
@@ -2752,7 +1847,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    * <code>string master_ipv4_cidr_block = 29 [deprecated = true];</code>
    *
    * @deprecated google.container.v1beta1.Cluster.master_ipv4_cidr_block is deprecated. See
-   *     google/container/v1beta1/cluster_service.proto;l=1693
+   *     google/container/v1beta1/cluster_service.proto;l=1697
    * @return The bytes for masterIpv4CidrBlock.
    */
   @java.lang.Override
@@ -3684,7 +2779,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    * <code>string zone = 101 [deprecated = true];</code>
    *
    * @deprecated google.container.v1beta1.Cluster.zone is deprecated. See
-   *     google/container/v1beta1/cluster_service.proto;l=1759
+   *     google/container/v1beta1/cluster_service.proto;l=1763
    * @return The zone.
    */
   @java.lang.Override
@@ -3712,7 +2807,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    * <code>string zone = 101 [deprecated = true];</code>
    *
    * @deprecated google.container.v1beta1.Cluster.zone is deprecated. See
-   *     google/container/v1beta1/cluster_service.proto;l=1759
+   *     google/container/v1beta1/cluster_service.proto;l=1763
    * @return The bytes for zone.
    */
   @java.lang.Override
@@ -3920,7 +3015,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    * <code>string current_node_version = 105 [deprecated = true];</code>
    *
    * @deprecated google.container.v1beta1.Cluster.current_node_version is deprecated. See
-   *     google/container/v1beta1/cluster_service.proto;l=1792
+   *     google/container/v1beta1/cluster_service.proto;l=1796
    * @return The currentNodeVersion.
    */
   @java.lang.Override
@@ -3950,7 +3045,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    * <code>string current_node_version = 105 [deprecated = true];</code>
    *
    * @deprecated google.container.v1beta1.Cluster.current_node_version is deprecated. See
-   *     google/container/v1beta1/cluster_service.proto;l=1792
+   *     google/container/v1beta1/cluster_service.proto;l=1796
    * @return The bytes for currentNodeVersion.
    */
   @java.lang.Override
@@ -4068,7 +3163,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    * <code>string status_message = 108 [deprecated = true];</code>
    *
    * @deprecated google.container.v1beta1.Cluster.status_message is deprecated. See
-   *     google/container/v1beta1/cluster_service.proto;l=1804
+   *     google/container/v1beta1/cluster_service.proto;l=1808
    * @return The statusMessage.
    */
   @java.lang.Override
@@ -4096,7 +3191,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    * <code>string status_message = 108 [deprecated = true];</code>
    *
    * @deprecated google.container.v1beta1.Cluster.status_message is deprecated. See
-   *     google/container/v1beta1/cluster_service.proto;l=1804
+   *     google/container/v1beta1/cluster_service.proto;l=1808
    * @return The bytes for statusMessage.
    */
   @java.lang.Override
@@ -4203,7 +3298,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    * <code>repeated string instance_group_urls = 111 [deprecated = true];</code>
    *
    * @deprecated google.container.v1beta1.Cluster.instance_group_urls is deprecated. See
-   *     google/container/v1beta1/cluster_service.proto;l=1820
+   *     google/container/v1beta1/cluster_service.proto;l=1824
    * @return A list containing the instanceGroupUrls.
    */
   @java.lang.Deprecated
@@ -4220,7 +3315,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    * <code>repeated string instance_group_urls = 111 [deprecated = true];</code>
    *
    * @deprecated google.container.v1beta1.Cluster.instance_group_urls is deprecated. See
-   *     google/container/v1beta1/cluster_service.proto;l=1820
+   *     google/container/v1beta1/cluster_service.proto;l=1824
    * @return The count of instanceGroupUrls.
    */
   @java.lang.Deprecated
@@ -4237,7 +3332,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    * <code>repeated string instance_group_urls = 111 [deprecated = true];</code>
    *
    * @deprecated google.container.v1beta1.Cluster.instance_group_urls is deprecated. See
-   *     google/container/v1beta1/cluster_service.proto;l=1820
+   *     google/container/v1beta1/cluster_service.proto;l=1824
    * @param index The index of the element to return.
    * @return The instanceGroupUrls at the given index.
    */
@@ -4255,7 +3350,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    * <code>repeated string instance_group_urls = 111 [deprecated = true];</code>
    *
    * @deprecated google.container.v1beta1.Cluster.instance_group_urls is deprecated. See
-   *     google/container/v1beta1/cluster_service.proto;l=1820
+   *     google/container/v1beta1/cluster_service.proto;l=1824
    * @param index The index of the value to return.
    * @return The bytes of the instanceGroupUrls at the given index.
    */
@@ -4277,7 +3372,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
    * <code>int32 current_node_count = 112 [deprecated = true];</code>
    *
    * @deprecated google.container.v1beta1.Cluster.current_node_count is deprecated. See
-   *     google/container/v1beta1/cluster_service.proto;l=1824
+   *     google/container/v1beta1/cluster_service.proto;l=1828
    * @return The currentNodeCount.
    */
   @java.lang.Override
@@ -5202,7 +4297,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(137, getProtectConfig());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -5459,7 +4554,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
     if (((bitField0_ & 0x00000002) != 0)) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(137, getProtectConfig());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -5660,7 +4755,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
     if (hasProtectConfig()) {
       if (!getProtectConfig().equals(other.getProtectConfig())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -5897,7 +4992,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
       hash = (37 * hash) + PROTECT_CONFIG_FIELD_NUMBER;
       hash = (53 * hash) + getProtectConfig().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -6102,10 +5197,11 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
 
       if (nodePoolsBuilder_ == null) {
         nodePools_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
       } else {
+        nodePools_ = null;
         nodePoolsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000001);
       locations_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000002);
       enableKubernetesAlpha_ = false;
@@ -6315,10 +5411,11 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
       }
       if (conditionsBuilder_ == null) {
         conditions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
       } else {
+        conditions_ = null;
         conditionsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000010);
       if (masterBuilder_ == null) {
         master_ = null;
       } else {
@@ -6986,7 +6083,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
       if (other.hasProtectConfig()) {
         mergeProtectConfig(other.getProtectConfig());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -7001,17 +6098,502 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.container.v1beta1.Cluster parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10:
+              {
+                name_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+            case 18:
+              {
+                description_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+            case 24:
+              {
+                initialNodeCount_ = input.readInt32();
+
+                break;
+              } // case 24
+            case 34:
+              {
+                input.readMessage(getNodeConfigFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 34
+            case 42:
+              {
+                input.readMessage(getMasterAuthFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 42
+            case 50:
+              {
+                loggingService_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 50
+            case 58:
+              {
+                monitoringService_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 58
+            case 66:
+              {
+                network_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 66
+            case 74:
+              {
+                clusterIpv4Cidr_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 74
+            case 82:
+              {
+                input.readMessage(getAddonsConfigFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 82
+            case 90:
+              {
+                subnetwork_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 90
+            case 98:
+              {
+                com.google.container.v1beta1.NodePool m =
+                    input.readMessage(
+                        com.google.container.v1beta1.NodePool.parser(), extensionRegistry);
+                if (nodePoolsBuilder_ == null) {
+                  ensureNodePoolsIsMutable();
+                  nodePools_.add(m);
+                } else {
+                  nodePoolsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 98
+            case 106:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureLocationsIsMutable();
+                locations_.add(s);
+                break;
+              } // case 106
+            case 112:
+              {
+                enableKubernetesAlpha_ = input.readBool();
+
+                break;
+              } // case 112
+            case 122:
+              {
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String> resourceLabels__ =
+                    input.readMessage(
+                        ResourceLabelsDefaultEntryHolder.defaultEntry.getParserForType(),
+                        extensionRegistry);
+                internalGetMutableResourceLabels()
+                    .getMutableMap()
+                    .put(resourceLabels__.getKey(), resourceLabels__.getValue());
+                break;
+              } // case 122
+            case 130:
+              {
+                labelFingerprint_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 130
+            case 146:
+              {
+                input.readMessage(getLegacyAbacFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 146
+            case 154:
+              {
+                input.readMessage(getNetworkPolicyFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 154
+            case 162:
+              {
+                input.readMessage(
+                    getIpAllocationPolicyFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 162
+            case 178:
+              {
+                input.readMessage(
+                    getMasterAuthorizedNetworksConfigFieldBuilder().getBuilder(),
+                    extensionRegistry);
+
+                break;
+              } // case 178
+            case 186:
+              {
+                input.readMessage(
+                    getMaintenancePolicyFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 186
+            case 194:
+              {
+                input.readMessage(
+                    getBinaryAuthorizationFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 194
+            case 202:
+              {
+                input.readMessage(
+                    getPodSecurityPolicyConfigFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 202
+            case 210:
+              {
+                input.readMessage(getAutoscalingFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 210
+            case 218:
+              {
+                input.readMessage(getNetworkConfigFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 218
+            case 224:
+              {
+                privateCluster_ = input.readBool();
+
+                break;
+              } // case 224
+            case 234:
+              {
+                masterIpv4CidrBlock_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 234
+            case 242:
+              {
+                input.readMessage(
+                    getDefaultMaxPodsConstraintFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 242
+            case 266:
+              {
+                input.readMessage(
+                    getResourceUsageExportConfigFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 266
+            case 274:
+              {
+                input.readMessage(
+                    getAuthenticatorGroupsConfigFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 274
+            case 298:
+              {
+                input.readMessage(
+                    getPrivateClusterConfigFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 298
+            case 306:
+              {
+                input.readMessage(
+                    getDatabaseEncryptionFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 306
+            case 314:
+              {
+                input.readMessage(
+                    getVerticalPodAutoscalingFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 314
+            case 322:
+              {
+                input.readMessage(getShieldedNodesFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 322
+            case 330:
+              {
+                input.readMessage(getReleaseChannelFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 330
+            case 346:
+              {
+                input.readMessage(
+                    getWorkloadIdentityConfigFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 346
+            case 362:
+              {
+                input.readMessage(
+                    getCostManagementConfigFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 362
+            case 370:
+              {
+                input.readMessage(
+                    getClusterTelemetryFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 370
+            case 378:
+              {
+                input.readMessage(getTpuConfigFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 378
+            case 394:
+              {
+                input.readMessage(
+                    getNotificationConfigFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 394
+            case 402:
+              {
+                input.readMessage(
+                    getConfidentialNodesFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 402
+            case 418:
+              {
+                input.readMessage(
+                    getWorkloadCertificatesFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 418
+            case 426:
+              {
+                input.readMessage(
+                    getWorkloadAltsConfigFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 426
+            case 434:
+              {
+                input.readMessage(
+                    getIdentityServiceConfigFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 434
+            case 538:
+              {
+                input.readMessage(
+                    getMeshCertificatesFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 538
+            case 802:
+              {
+                selfLink_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 802
+            case 810:
+              {
+                zone_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 810
+            case 818:
+              {
+                endpoint_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 818
+            case 826:
+              {
+                initialClusterVersion_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 826
+            case 834:
+              {
+                currentMasterVersion_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 834
+            case 842:
+              {
+                currentNodeVersion_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 842
+            case 850:
+              {
+                createTime_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 850
+            case 856:
+              {
+                status_ = input.readEnum();
+
+                break;
+              } // case 856
+            case 866:
+              {
+                statusMessage_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 866
+            case 872:
+              {
+                nodeIpv4CidrSize_ = input.readInt32();
+
+                break;
+              } // case 872
+            case 882:
+              {
+                servicesIpv4Cidr_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 882
+            case 890:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureInstanceGroupUrlsIsMutable();
+                instanceGroupUrls_.add(s);
+                break;
+              } // case 890
+            case 896:
+              {
+                currentNodeCount_ = input.readInt32();
+
+                break;
+              } // case 896
+            case 906:
+              {
+                expireTime_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 906
+            case 914:
+              {
+                location_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 914
+            case 920:
+              {
+                enableTpu_ = input.readBool();
+
+                break;
+              } // case 920
+            case 930:
+              {
+                tpuIpv4CidrBlock_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 930
+            case 946:
+              {
+                com.google.container.v1beta1.StatusCondition m =
+                    input.readMessage(
+                        com.google.container.v1beta1.StatusCondition.parser(), extensionRegistry);
+                if (conditionsBuilder_ == null) {
+                  ensureConditionsIsMutable();
+                  conditions_.add(m);
+                } else {
+                  conditionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 946
+            case 994:
+              {
+                input.readMessage(getMasterFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 994
+            case 1026:
+              {
+                input.readMessage(getAutopilotFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 1026
+            case 1034:
+              {
+                id_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 1034
+            case 1050:
+              {
+                input.readMessage(
+                    getNodePoolDefaultsFieldBuilder().getBuilder(), extensionRegistry);
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 1050
+            case 1058:
+              {
+                input.readMessage(getLoggingConfigFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 1058
+            case 1066:
+              {
+                input.readMessage(
+                    getMonitoringConfigFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 1066
+            case 1090:
+              {
+                input.readMessage(
+                    getNodePoolAutoConfigFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 1090
+            case 1098:
+              {
+                input.readMessage(getProtectConfigFieldBuilder().getBuilder(), extensionRegistry);
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 1098
+            default:
+              {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.container.v1beta1.Cluster) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
 
@@ -7273,7 +6855,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>int32 initial_node_count = 3 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.initial_node_count is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1551
+     *     google/container/v1beta1/cluster_service.proto;l=1555
      * @return The initialNodeCount.
      */
     @java.lang.Override
@@ -7299,7 +6881,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>int32 initial_node_count = 3 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.initial_node_count is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1551
+     *     google/container/v1beta1/cluster_service.proto;l=1555
      * @param value The initialNodeCount to set.
      * @return This builder for chaining.
      */
@@ -7328,7 +6910,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>int32 initial_node_count = 3 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.initial_node_count is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1551
+     *     google/container/v1beta1/cluster_service.proto;l=1555
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -7364,7 +6946,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.container.v1beta1.NodeConfig node_config = 4 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.node_config is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1564
+     *     google/container/v1beta1/cluster_service.proto;l=1568
      * @return Whether the nodeConfig field is set.
      */
     @java.lang.Deprecated
@@ -7390,7 +6972,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>.google.container.v1beta1.NodeConfig node_config = 4 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.node_config is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1564
+     *     google/container/v1beta1/cluster_service.proto;l=1568
      * @return The nodeConfig.
      */
     @java.lang.Deprecated
@@ -11381,7 +10963,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>bool private_cluster = 28 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.private_cluster is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1686
+     *     google/container/v1beta1/cluster_service.proto;l=1690
      * @return The privateCluster.
      */
     @java.lang.Override
@@ -11403,7 +10985,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>bool private_cluster = 28 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.private_cluster is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1686
+     *     google/container/v1beta1/cluster_service.proto;l=1690
      * @param value The privateCluster to set.
      * @return This builder for chaining.
      */
@@ -11428,7 +11010,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>bool private_cluster = 28 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.private_cluster is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1686
+     *     google/container/v1beta1/cluster_service.proto;l=1690
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -11454,7 +11036,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>string master_ipv4_cidr_block = 29 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.master_ipv4_cidr_block is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1693
+     *     google/container/v1beta1/cluster_service.proto;l=1697
      * @return The masterIpv4CidrBlock.
      */
     @java.lang.Deprecated
@@ -11483,7 +11065,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>string master_ipv4_cidr_block = 29 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.master_ipv4_cidr_block is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1693
+     *     google/container/v1beta1/cluster_service.proto;l=1697
      * @return The bytes for masterIpv4CidrBlock.
      */
     @java.lang.Deprecated
@@ -11512,7 +11094,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>string master_ipv4_cidr_block = 29 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.master_ipv4_cidr_block is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1693
+     *     google/container/v1beta1/cluster_service.proto;l=1697
      * @param value The masterIpv4CidrBlock to set.
      * @return This builder for chaining.
      */
@@ -11540,7 +11122,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>string master_ipv4_cidr_block = 29 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.master_ipv4_cidr_block is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1693
+     *     google/container/v1beta1/cluster_service.proto;l=1697
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -11564,7 +11146,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>string master_ipv4_cidr_block = 29 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.master_ipv4_cidr_block is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1693
+     *     google/container/v1beta1/cluster_service.proto;l=1697
      * @param value The bytes for masterIpv4CidrBlock to set.
      * @return This builder for chaining.
      */
@@ -14983,7 +14565,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>string zone = 101 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.zone is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1759
+     *     google/container/v1beta1/cluster_service.proto;l=1763
      * @return The zone.
      */
     @java.lang.Deprecated
@@ -15010,7 +14592,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>string zone = 101 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.zone is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1759
+     *     google/container/v1beta1/cluster_service.proto;l=1763
      * @return The bytes for zone.
      */
     @java.lang.Deprecated
@@ -15037,7 +14619,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>string zone = 101 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.zone is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1759
+     *     google/container/v1beta1/cluster_service.proto;l=1763
      * @param value The zone to set.
      * @return This builder for chaining.
      */
@@ -15063,7 +14645,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>string zone = 101 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.zone is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1759
+     *     google/container/v1beta1/cluster_service.proto;l=1763
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -15085,7 +14667,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>string zone = 101 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.zone is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1759
+     *     google/container/v1beta1/cluster_service.proto;l=1763
      * @param value The bytes for zone to set.
      * @return This builder for chaining.
      */
@@ -15504,7 +15086,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>string current_node_version = 105 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.current_node_version is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1792
+     *     google/container/v1beta1/cluster_service.proto;l=1796
      * @return The currentNodeVersion.
      */
     @java.lang.Deprecated
@@ -15533,7 +15115,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>string current_node_version = 105 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.current_node_version is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1792
+     *     google/container/v1beta1/cluster_service.proto;l=1796
      * @return The bytes for currentNodeVersion.
      */
     @java.lang.Deprecated
@@ -15562,7 +15144,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>string current_node_version = 105 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.current_node_version is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1792
+     *     google/container/v1beta1/cluster_service.proto;l=1796
      * @param value The currentNodeVersion to set.
      * @return This builder for chaining.
      */
@@ -15590,7 +15172,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>string current_node_version = 105 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.current_node_version is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1792
+     *     google/container/v1beta1/cluster_service.proto;l=1796
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -15614,7 +15196,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>string current_node_version = 105 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.current_node_version is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1792
+     *     google/container/v1beta1/cluster_service.proto;l=1796
      * @param value The bytes for currentNodeVersion to set.
      * @return This builder for chaining.
      */
@@ -15845,7 +15427,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>string status_message = 108 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.status_message is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1804
+     *     google/container/v1beta1/cluster_service.proto;l=1808
      * @return The statusMessage.
      */
     @java.lang.Deprecated
@@ -15872,7 +15454,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>string status_message = 108 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.status_message is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1804
+     *     google/container/v1beta1/cluster_service.proto;l=1808
      * @return The bytes for statusMessage.
      */
     @java.lang.Deprecated
@@ -15899,7 +15481,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>string status_message = 108 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.status_message is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1804
+     *     google/container/v1beta1/cluster_service.proto;l=1808
      * @param value The statusMessage to set.
      * @return This builder for chaining.
      */
@@ -15925,7 +15507,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>string status_message = 108 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.status_message is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1804
+     *     google/container/v1beta1/cluster_service.proto;l=1808
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -15947,7 +15529,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>string status_message = 108 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.status_message is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1804
+     *     google/container/v1beta1/cluster_service.proto;l=1808
      * @param value The bytes for statusMessage to set.
      * @return This builder for chaining.
      */
@@ -16169,7 +15751,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>repeated string instance_group_urls = 111 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.instance_group_urls is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1820
+     *     google/container/v1beta1/cluster_service.proto;l=1824
      * @return A list containing the instanceGroupUrls.
      */
     @java.lang.Deprecated
@@ -16186,7 +15768,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>repeated string instance_group_urls = 111 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.instance_group_urls is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1820
+     *     google/container/v1beta1/cluster_service.proto;l=1824
      * @return The count of instanceGroupUrls.
      */
     @java.lang.Deprecated
@@ -16203,7 +15785,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>repeated string instance_group_urls = 111 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.instance_group_urls is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1820
+     *     google/container/v1beta1/cluster_service.proto;l=1824
      * @param index The index of the element to return.
      * @return The instanceGroupUrls at the given index.
      */
@@ -16221,7 +15803,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>repeated string instance_group_urls = 111 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.instance_group_urls is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1820
+     *     google/container/v1beta1/cluster_service.proto;l=1824
      * @param index The index of the value to return.
      * @return The bytes of the instanceGroupUrls at the given index.
      */
@@ -16239,7 +15821,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>repeated string instance_group_urls = 111 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.instance_group_urls is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1820
+     *     google/container/v1beta1/cluster_service.proto;l=1824
      * @param index The index to set the value at.
      * @param value The instanceGroupUrls to set.
      * @return This builder for chaining.
@@ -16264,7 +15846,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>repeated string instance_group_urls = 111 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.instance_group_urls is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1820
+     *     google/container/v1beta1/cluster_service.proto;l=1824
      * @param value The instanceGroupUrls to add.
      * @return This builder for chaining.
      */
@@ -16288,7 +15870,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>repeated string instance_group_urls = 111 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.instance_group_urls is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1820
+     *     google/container/v1beta1/cluster_service.proto;l=1824
      * @param values The instanceGroupUrls to add.
      * @return This builder for chaining.
      */
@@ -16309,7 +15891,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>repeated string instance_group_urls = 111 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.instance_group_urls is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1820
+     *     google/container/v1beta1/cluster_service.proto;l=1824
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -16329,7 +15911,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>repeated string instance_group_urls = 111 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.instance_group_urls is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1820
+     *     google/container/v1beta1/cluster_service.proto;l=1824
      * @param value The bytes of the instanceGroupUrls to add.
      * @return This builder for chaining.
      */
@@ -16357,7 +15939,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>int32 current_node_count = 112 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.current_node_count is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1824
+     *     google/container/v1beta1/cluster_service.proto;l=1828
      * @return The currentNodeCount.
      */
     @java.lang.Override
@@ -16376,7 +15958,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>int32 current_node_count = 112 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.current_node_count is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1824
+     *     google/container/v1beta1/cluster_service.proto;l=1828
      * @param value The currentNodeCount to set.
      * @return This builder for chaining.
      */
@@ -16398,7 +15980,7 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
      * <code>int32 current_node_count = 112 [deprecated = true];</code>
      *
      * @deprecated google.container.v1beta1.Cluster.current_node_count is deprecated. See
-     *     google/container/v1beta1/cluster_service.proto;l=1824
+     *     google/container/v1beta1/cluster_service.proto;l=1828
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -18811,7 +18393,18 @@ public final class Cluster extends com.google.protobuf.GeneratedMessageV3
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new Cluster(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 
