@@ -34,6 +34,7 @@ public interface ListClustersRequestOrBuilder
    *
    * <code>string project_id = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The projectId.
    */
   @java.lang.Deprecated
@@ -49,6 +50,7 @@ public interface ListClustersRequestOrBuilder
    *
    * <code>string project_id = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for projectId.
    */
   @java.lang.Deprecated
@@ -66,6 +68,7 @@ public interface ListClustersRequestOrBuilder
    *
    * <code>string zone = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The zone.
    */
   @java.lang.Deprecated
@@ -82,6 +85,7 @@ public interface ListClustersRequestOrBuilder
    *
    * <code>string zone = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for zone.
    */
   @java.lang.Deprecated

@@ -91,6 +91,7 @@ public interface IPAllocationPolicyOrBuilder
    *
    * <code>string cluster_ipv4_cidr = 4 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The clusterIpv4Cidr.
    */
   @java.lang.Deprecated
@@ -104,6 +105,7 @@ public interface IPAllocationPolicyOrBuilder
    *
    * <code>string cluster_ipv4_cidr = 4 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for clusterIpv4Cidr.
    */
   @java.lang.Deprecated
@@ -118,6 +120,7 @@ public interface IPAllocationPolicyOrBuilder
    *
    * <code>string node_ipv4_cidr = 5 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The nodeIpv4Cidr.
    */
   @java.lang.Deprecated
@@ -131,6 +134,7 @@ public interface IPAllocationPolicyOrBuilder
    *
    * <code>string node_ipv4_cidr = 5 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for nodeIpv4Cidr.
    */
   @java.lang.Deprecated
@@ -145,6 +149,7 @@ public interface IPAllocationPolicyOrBuilder
    *
    * <code>string services_ipv4_cidr = 6 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The servicesIpv4Cidr.
    */
   @java.lang.Deprecated
@@ -158,6 +163,7 @@ public interface IPAllocationPolicyOrBuilder
    *
    * <code>string services_ipv4_cidr = 6 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for servicesIpv4Cidr.
    */
   @java.lang.Deprecated

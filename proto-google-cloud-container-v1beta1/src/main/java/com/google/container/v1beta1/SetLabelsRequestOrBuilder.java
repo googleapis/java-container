@@ -35,6 +35,7 @@ public interface SetLabelsRequestOrBuilder
    * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
    * </code>
    *
+   * @deprecated
    * @return The projectId.
    */
   @java.lang.Deprecated
@@ -51,6 +52,7 @@ public interface SetLabelsRequestOrBuilder
    * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
    * </code>
    *
+   * @deprecated
    * @return The bytes for projectId.
    */
   @java.lang.Deprecated
@@ -68,6 +70,7 @@ public interface SetLabelsRequestOrBuilder
    *
    * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    *
+   * @deprecated
    * @return The zone.
    */
   @java.lang.Deprecated
@@ -84,6 +87,7 @@ public interface SetLabelsRequestOrBuilder
    *
    * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    *
+   * @deprecated
    * @return The bytes for zone.
    */
   @java.lang.Deprecated
@@ -100,6 +104,7 @@ public interface SetLabelsRequestOrBuilder
    * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
    * </code>
    *
+   * @deprecated
    * @return The clusterId.
    */
   @java.lang.Deprecated
@@ -115,6 +120,7 @@ public interface SetLabelsRequestOrBuilder
    * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
    * </code>
    *
+   * @deprecated
    * @return The bytes for clusterId.
    */
   @java.lang.Deprecated

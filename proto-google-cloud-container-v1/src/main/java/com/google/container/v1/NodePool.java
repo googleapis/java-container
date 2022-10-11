@@ -64,224 +64,6 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
     return this.unknownFields;
   }
 
-  private NodePool(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-          case 18:
-            {
-              com.google.container.v1.NodeConfig.Builder subBuilder = null;
-              if (config_ != null) {
-                subBuilder = config_.toBuilder();
-              }
-              config_ =
-                  input.readMessage(com.google.container.v1.NodeConfig.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(config_);
-                config_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 24:
-            {
-              initialNodeCount_ = input.readInt32();
-              break;
-            }
-          case 34:
-            {
-              com.google.container.v1.NodePoolAutoscaling.Builder subBuilder = null;
-              if (autoscaling_ != null) {
-                subBuilder = autoscaling_.toBuilder();
-              }
-              autoscaling_ =
-                  input.readMessage(
-                      com.google.container.v1.NodePoolAutoscaling.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(autoscaling_);
-                autoscaling_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 42:
-            {
-              com.google.container.v1.NodeManagement.Builder subBuilder = null;
-              if (management_ != null) {
-                subBuilder = management_.toBuilder();
-              }
-              management_ =
-                  input.readMessage(
-                      com.google.container.v1.NodeManagement.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(management_);
-                management_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 50:
-            {
-              com.google.container.v1.MaxPodsConstraint.Builder subBuilder = null;
-              if (maxPodsConstraint_ != null) {
-                subBuilder = maxPodsConstraint_.toBuilder();
-              }
-              maxPodsConstraint_ =
-                  input.readMessage(
-                      com.google.container.v1.MaxPodsConstraint.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(maxPodsConstraint_);
-                maxPodsConstraint_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 56:
-            {
-              podIpv4CidrSize_ = input.readInt32();
-              break;
-            }
-          case 106:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                locations_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              locations_.add(s);
-              break;
-            }
-          case 114:
-            {
-              com.google.container.v1.NodeNetworkConfig.Builder subBuilder = null;
-              if (networkConfig_ != null) {
-                subBuilder = networkConfig_.toBuilder();
-              }
-              networkConfig_ =
-                  input.readMessage(
-                      com.google.container.v1.NodeNetworkConfig.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(networkConfig_);
-                networkConfig_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          case 802:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              selfLink_ = s;
-              break;
-            }
-          case 810:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              version_ = s;
-              break;
-            }
-          case 818:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                instanceGroupUrls_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000002;
-              }
-              instanceGroupUrls_.add(s);
-              break;
-            }
-          case 824:
-            {
-              int rawValue = input.readEnum();
-
-              status_ = rawValue;
-              break;
-            }
-          case 834:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              statusMessage_ = s;
-              break;
-            }
-          case 842:
-            {
-              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
-                conditions_ = new java.util.ArrayList<com.google.container.v1.StatusCondition>();
-                mutable_bitField0_ |= 0x00000004;
-              }
-              conditions_.add(
-                  input.readMessage(
-                      com.google.container.v1.StatusCondition.parser(), extensionRegistry));
-              break;
-            }
-          case 858:
-            {
-              com.google.container.v1.NodePool.UpgradeSettings.Builder subBuilder = null;
-              if (upgradeSettings_ != null) {
-                subBuilder = upgradeSettings_.toBuilder();
-              }
-              upgradeSettings_ =
-                  input.readMessage(
-                      com.google.container.v1.NodePool.UpgradeSettings.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(upgradeSettings_);
-                upgradeSettings_ = subBuilder.buildPartial();
-              }
-
-              break;
-            }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-    } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        locations_ = locations_.getUnmodifiableView();
-      }
-      if (((mutable_bitField0_ & 0x00000002) != 0)) {
-        instanceGroupUrls_ = instanceGroupUrls_.getUnmodifiableView();
-      }
-      if (((mutable_bitField0_ & 0x00000004) != 0)) {
-        conditions_ = java.util.Collections.unmodifiableList(conditions_);
-      }
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.container.v1.ClusterServiceProto
         .internal_static_google_container_v1_NodePool_descriptor;
@@ -638,53 +420,6 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
       return this.unknownFields;
     }
 
-    private UpgradeSettings(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 8:
-              {
-                maxSurge_ = input.readInt32();
-                break;
-              }
-            case 16:
-              {
-                maxUnavailable_ = input.readInt32();
-                break;
-              }
-            default:
-              {
-                if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                  done = true;
-                }
-                break;
-              }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-
     public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
       return com.google.container.v1.ClusterServiceProto
           .internal_static_google_container_v1_NodePool_UpgradeSettings_descriptor;
@@ -759,7 +494,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
       if (maxUnavailable_ != 0) {
         output.writeInt32(2, maxUnavailable_);
       }
-      unknownFields.writeTo(output);
+      getUnknownFields().writeTo(output);
     }
 
     @java.lang.Override
@@ -774,7 +509,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
       if (maxUnavailable_ != 0) {
         size += com.google.protobuf.CodedOutputStream.computeInt32Size(2, maxUnavailable_);
       }
-      size += unknownFields.getSerializedSize();
+      size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
     }
@@ -792,7 +527,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
 
       if (getMaxSurge() != other.getMaxSurge()) return false;
       if (getMaxUnavailable() != other.getMaxUnavailable()) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
 
@@ -807,7 +542,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
       hash = (53 * hash) + getMaxSurge();
       hash = (37 * hash) + MAX_UNAVAILABLE_FIELD_NUMBER;
       hash = (53 * hash) + getMaxUnavailable();
-      hash = (29 * hash) + unknownFields.hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
     }
@@ -955,17 +690,10 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
       }
 
       // Construct using com.google.container.v1.NodePool.UpgradeSettings.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
+      private Builder() {}
 
       private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
         super(parent);
-        maybeForceBuilderInitialization();
-      }
-
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
       }
 
       @java.lang.Override
@@ -1062,7 +790,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
         if (other.getMaxUnavailable() != 0) {
           setMaxUnavailable(other.getMaxUnavailable());
         }
-        this.mergeUnknownFields(other.unknownFields);
+        this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
       }
@@ -1077,18 +805,43 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.container.v1.NodePool.UpgradeSettings parsedMessage = null;
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
         try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8:
+                {
+                  maxSurge_ = input.readInt32();
+
+                  break;
+                } // case 8
+              case 16:
+                {
+                  maxUnavailable_ = input.readInt32();
+
+                  break;
+                } // case 16
+              default:
+                {
+                  if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                    done = true; // was an endgroup tag
+                  }
+                  break;
+                } // default:
+            } // switch (tag)
+          } // while (!done)
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage =
-              (com.google.container.v1.NodePool.UpgradeSettings) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
+          onChanged();
+        } // finally
         return this;
       }
 
@@ -1238,7 +991,19 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new UpgradeSettings(input, extensionRegistry);
+            Builder builder = newBuilder();
+            try {
+              builder.mergeFrom(input, extensionRegistry);
+            } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+              throw e.setUnfinishedMessage(builder.buildPartial());
+            } catch (com.google.protobuf.UninitializedMessageException e) {
+              throw e.asInvalidProtocolBufferException()
+                  .setUnfinishedMessage(builder.buildPartial());
+            } catch (java.io.IOException e) {
+              throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                  .setUnfinishedMessage(builder.buildPartial());
+            }
+            return builder.buildPartial();
           }
         };
 
@@ -1729,6 +1494,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
    *
    * <code>string status_message = 104 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The statusMessage.
    */
   @java.lang.Override
@@ -1755,6 +1521,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
    *
    * <code>string status_message = 104 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for statusMessage.
    */
   @java.lang.Override
@@ -2118,7 +1885,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
     if (upgradeSettings_ != null) {
       output.writeMessage(107, getUpgradeSettings());
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -2185,7 +1952,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
     if (upgradeSettings_ != null) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(107, getUpgradeSettings());
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -2234,7 +2001,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
     if (hasUpgradeSettings()) {
       if (!getUpgradeSettings().equals(other.getUpgradeSettings())) return false;
     }
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -2295,7 +2062,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
       hash = (37 * hash) + UPGRADE_SETTINGS_FIELD_NUMBER;
       hash = (53 * hash) + getUpgradeSettings().hashCode();
     }
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -2428,19 +2195,10 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
     }
 
     // Construct using com.google.container.v1.NodePool.newBuilder()
-    private Builder() {
-      maybeForceBuilderInitialization();
-    }
+    private Builder() {}
 
     private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
-        getConditionsFieldBuilder();
-      }
     }
 
     @java.lang.Override
@@ -2494,10 +2252,11 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
       }
       if (conditionsBuilder_ == null) {
         conditions_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
+        conditions_ = null;
         conditionsBuilder_.clear();
       }
+      bitField0_ = (bitField0_ & ~0x00000004);
       podIpv4CidrSize_ = 0;
 
       if (upgradeSettingsBuilder_ == null) {
@@ -2728,7 +2487,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
       if (other.hasUpgradeSettings()) {
         mergeUpgradeSettings(other.getUpgradeSettings());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -2743,17 +2502,137 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.container.v1.NodePool parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10:
+              {
+                name_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+            case 18:
+              {
+                input.readMessage(getConfigFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 18
+            case 24:
+              {
+                initialNodeCount_ = input.readInt32();
+
+                break;
+              } // case 24
+            case 34:
+              {
+                input.readMessage(getAutoscalingFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 34
+            case 42:
+              {
+                input.readMessage(getManagementFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 42
+            case 50:
+              {
+                input.readMessage(
+                    getMaxPodsConstraintFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 50
+            case 56:
+              {
+                podIpv4CidrSize_ = input.readInt32();
+
+                break;
+              } // case 56
+            case 106:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureLocationsIsMutable();
+                locations_.add(s);
+                break;
+              } // case 106
+            case 114:
+              {
+                input.readMessage(getNetworkConfigFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 114
+            case 802:
+              {
+                selfLink_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 802
+            case 810:
+              {
+                version_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 810
+            case 818:
+              {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureInstanceGroupUrlsIsMutable();
+                instanceGroupUrls_.add(s);
+                break;
+              } // case 818
+            case 824:
+              {
+                status_ = input.readEnum();
+
+                break;
+              } // case 824
+            case 834:
+              {
+                statusMessage_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 834
+            case 842:
+              {
+                com.google.container.v1.StatusCondition m =
+                    input.readMessage(
+                        com.google.container.v1.StatusCondition.parser(), extensionRegistry);
+                if (conditionsBuilder_ == null) {
+                  ensureConditionsIsMutable();
+                  conditions_.add(m);
+                } else {
+                  conditionsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 842
+            case 858:
+              {
+                input.readMessage(getUpgradeSettingsFieldBuilder().getBuilder(), extensionRegistry);
+
+                break;
+              } // case 858
+            default:
+              {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.container.v1.NodePool) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
 
@@ -4034,6 +3913,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string status_message = 104 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The statusMessage.
      */
     @java.lang.Deprecated
@@ -4059,6 +3939,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string status_message = 104 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The bytes for statusMessage.
      */
     @java.lang.Deprecated
@@ -4084,6 +3965,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string status_message = 104 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The statusMessage to set.
      * @return This builder for chaining.
      */
@@ -4108,6 +3990,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string status_message = 104 [deprecated = true];</code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -4128,6 +4011,7 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
      *
      * <code>string status_message = 104 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The bytes for statusMessage to set.
      * @return This builder for chaining.
      */
@@ -5337,7 +5221,18 @@ public final class NodePool extends com.google.protobuf.GeneratedMessageV3
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new NodePool(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 

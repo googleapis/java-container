@@ -59,6 +59,7 @@ public interface OperationOrBuilder
    *
    * <code>string zone = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The zone.
    */
   @java.lang.Deprecated
@@ -74,6 +75,7 @@ public interface OperationOrBuilder
    *
    * <code>string zone = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for zone.
    */
   @java.lang.Deprecated
@@ -166,6 +168,7 @@ public interface OperationOrBuilder
    * string status_message = 5 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];
    * </code>
    *
+   * @deprecated
    * @return The statusMessage.
    */
   @java.lang.Deprecated
@@ -182,6 +185,7 @@ public interface OperationOrBuilder
    * string status_message = 5 [deprecated = true, (.google.api.field_behavior) = OUTPUT_ONLY];
    * </code>
    *
+   * @deprecated
    * @return The bytes for statusMessage.
    */
   @java.lang.Deprecated

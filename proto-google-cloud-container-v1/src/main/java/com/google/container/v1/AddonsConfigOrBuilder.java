@@ -116,6 +116,7 @@ public interface AddonsConfigOrBuilder
    * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3 [deprecated = true];
    * </code>
    *
+   * @deprecated
    * @return Whether the kubernetesDashboard field is set.
    */
   @java.lang.Deprecated
@@ -134,6 +135,7 @@ public interface AddonsConfigOrBuilder
    * <code>.google.container.v1.KubernetesDashboard kubernetes_dashboard = 3 [deprecated = true];
    * </code>
    *
+   * @deprecated
    * @return The kubernetesDashboard.
    */
   @java.lang.Deprecated

@@ -61,128 +61,6 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
     return this.unknownFields;
   }
 
-  private IPAllocationPolicy(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8:
-            {
-              useIpAliases_ = input.readBool();
-              break;
-            }
-          case 16:
-            {
-              createSubnetwork_ = input.readBool();
-              break;
-            }
-          case 26:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              subnetworkName_ = s;
-              break;
-            }
-          case 34:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              clusterIpv4Cidr_ = s;
-              break;
-            }
-          case 42:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              nodeIpv4Cidr_ = s;
-              break;
-            }
-          case 50:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              servicesIpv4Cidr_ = s;
-              break;
-            }
-          case 58:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              clusterSecondaryRangeName_ = s;
-              break;
-            }
-          case 66:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              servicesSecondaryRangeName_ = s;
-              break;
-            }
-          case 74:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              clusterIpv4CidrBlock_ = s;
-              break;
-            }
-          case 82:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              nodeIpv4CidrBlock_ = s;
-              break;
-            }
-          case 90:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              servicesIpv4CidrBlock_ = s;
-              break;
-            }
-          case 106:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              tpuIpv4CidrBlock_ = s;
-              break;
-            }
-          case 120:
-            {
-              useRoutes_ = input.readBool();
-              break;
-            }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.container.v1.ClusterServiceProto
         .internal_static_google_container_v1_IPAllocationPolicy_descriptor;
@@ -302,6 +180,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
    *
    * <code>string cluster_ipv4_cidr = 4 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The clusterIpv4Cidr.
    */
   @java.lang.Override
@@ -326,6 +205,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
    *
    * <code>string cluster_ipv4_cidr = 4 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for clusterIpv4Cidr.
    */
   @java.lang.Override
@@ -353,6 +233,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
    *
    * <code>string node_ipv4_cidr = 5 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The nodeIpv4Cidr.
    */
   @java.lang.Override
@@ -377,6 +258,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
    *
    * <code>string node_ipv4_cidr = 5 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for nodeIpv4Cidr.
    */
   @java.lang.Override
@@ -404,6 +286,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
    *
    * <code>string services_ipv4_cidr = 6 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The servicesIpv4Cidr.
    */
   @java.lang.Override
@@ -428,6 +311,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
    *
    * <code>string services_ipv4_cidr = 6 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for servicesIpv4Cidr.
    */
   @java.lang.Override
@@ -910,7 +794,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
     if (useRoutes_ != false) {
       output.writeBool(15, useRoutes_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -960,7 +844,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
     if (useRoutes_ != false) {
       size += com.google.protobuf.CodedOutputStream.computeBoolSize(15, useRoutes_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -990,7 +874,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
     if (!getServicesIpv4CidrBlock().equals(other.getServicesIpv4CidrBlock())) return false;
     if (!getTpuIpv4CidrBlock().equals(other.getTpuIpv4CidrBlock())) return false;
     if (getUseRoutes() != other.getUseRoutes()) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -1027,7 +911,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
     hash = (53 * hash) + getTpuIpv4CidrBlock().hashCode();
     hash = (37 * hash) + USE_ROUTES_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(getUseRoutes());
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -1156,17 +1040,10 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
     }
 
     // Construct using com.google.container.v1.IPAllocationPolicy.newBuilder()
-    private Builder() {
-      maybeForceBuilderInitialization();
-    }
+    private Builder() {}
 
     private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
     }
 
     @java.lang.Override
@@ -1336,7 +1213,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
       if (other.getUseRoutes() != false) {
         setUseRoutes(other.getUseRoutes());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -1351,17 +1228,109 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.container.v1.IPAllocationPolicy parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8:
+              {
+                useIpAliases_ = input.readBool();
+
+                break;
+              } // case 8
+            case 16:
+              {
+                createSubnetwork_ = input.readBool();
+
+                break;
+              } // case 16
+            case 26:
+              {
+                subnetworkName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+            case 34:
+              {
+                clusterIpv4Cidr_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 34
+            case 42:
+              {
+                nodeIpv4Cidr_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 42
+            case 50:
+              {
+                servicesIpv4Cidr_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 50
+            case 58:
+              {
+                clusterSecondaryRangeName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 58
+            case 66:
+              {
+                servicesSecondaryRangeName_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 66
+            case 74:
+              {
+                clusterIpv4CidrBlock_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 74
+            case 82:
+              {
+                nodeIpv4CidrBlock_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 82
+            case 90:
+              {
+                servicesIpv4CidrBlock_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 90
+            case 106:
+              {
+                tpuIpv4CidrBlock_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 106
+            case 120:
+              {
+                useRoutes_ = input.readBool();
+
+                break;
+              } // case 120
+            default:
+              {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.container.v1.IPAllocationPolicy) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
 
@@ -1607,6 +1576,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string cluster_ipv4_cidr = 4 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The clusterIpv4Cidr.
      */
     @java.lang.Deprecated
@@ -1630,6 +1600,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string cluster_ipv4_cidr = 4 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The bytes for clusterIpv4Cidr.
      */
     @java.lang.Deprecated
@@ -1653,6 +1624,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string cluster_ipv4_cidr = 4 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The clusterIpv4Cidr to set.
      * @return This builder for chaining.
      */
@@ -1675,6 +1647,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string cluster_ipv4_cidr = 4 [deprecated = true];</code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -1693,6 +1666,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string cluster_ipv4_cidr = 4 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The bytes for clusterIpv4Cidr to set.
      * @return This builder for chaining.
      */
@@ -1718,6 +1692,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string node_ipv4_cidr = 5 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The nodeIpv4Cidr.
      */
     @java.lang.Deprecated
@@ -1741,6 +1716,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string node_ipv4_cidr = 5 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The bytes for nodeIpv4Cidr.
      */
     @java.lang.Deprecated
@@ -1764,6 +1740,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string node_ipv4_cidr = 5 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The nodeIpv4Cidr to set.
      * @return This builder for chaining.
      */
@@ -1786,6 +1763,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string node_ipv4_cidr = 5 [deprecated = true];</code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -1804,6 +1782,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string node_ipv4_cidr = 5 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The bytes for nodeIpv4Cidr to set.
      * @return This builder for chaining.
      */
@@ -1829,6 +1808,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string services_ipv4_cidr = 6 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The servicesIpv4Cidr.
      */
     @java.lang.Deprecated
@@ -1852,6 +1832,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string services_ipv4_cidr = 6 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The bytes for servicesIpv4Cidr.
      */
     @java.lang.Deprecated
@@ -1875,6 +1856,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string services_ipv4_cidr = 6 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The servicesIpv4Cidr to set.
      * @return This builder for chaining.
      */
@@ -1897,6 +1879,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string services_ipv4_cidr = 6 [deprecated = true];</code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -1915,6 +1898,7 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
      *
      * <code>string services_ipv4_cidr = 6 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The bytes for servicesIpv4Cidr to set.
      * @return This builder for chaining.
      */
@@ -2904,7 +2888,18 @@ public final class IPAllocationPolicy extends com.google.protobuf.GeneratedMessa
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new IPAllocationPolicy(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 

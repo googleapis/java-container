@@ -58,96 +58,6 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
     return this.unknownFields;
   }
 
-  private SetLabelsRequest(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    int mutable_bitField0_ = 0;
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 10:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              projectId_ = s;
-              break;
-            }
-          case 18:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              zone_ = s;
-              break;
-            }
-          case 26:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              clusterId_ = s;
-              break;
-            }
-          case 34:
-            {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                resourceLabels_ =
-                    com.google.protobuf.MapField.newMapField(
-                        ResourceLabelsDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000001;
-              }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String> resourceLabels__ =
-                  input.readMessage(
-                      ResourceLabelsDefaultEntryHolder.defaultEntry.getParserForType(),
-                      extensionRegistry);
-              resourceLabels_
-                  .getMutableMap()
-                  .put(resourceLabels__.getKey(), resourceLabels__.getValue());
-              break;
-            }
-          case 42:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              labelFingerprint_ = s;
-              break;
-            }
-          case 58:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              name_ = s;
-              break;
-            }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.container.v1beta1.ClusterServiceProto
         .internal_static_google_container_v1beta1_SetLabelsRequest_descriptor;
@@ -188,6 +98,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
    * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
    * </code>
    *
+   * @deprecated
    * @return The projectId.
    */
   @java.lang.Override
@@ -215,6 +126,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
    * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
    * </code>
    *
+   * @deprecated
    * @return The bytes for projectId.
    */
   @java.lang.Override
@@ -245,6 +157,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
    *
    * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    *
+   * @deprecated
    * @return The zone.
    */
   @java.lang.Override
@@ -272,6 +185,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
    *
    * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    *
+   * @deprecated
    * @return The bytes for zone.
    */
   @java.lang.Override
@@ -301,6 +215,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
    * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
    * </code>
    *
+   * @deprecated
    * @return The clusterId.
    */
   @java.lang.Override
@@ -327,6 +242,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
    * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
    * </code>
    *
+   * @deprecated
    * @return The bytes for clusterId.
    */
   @java.lang.Override
@@ -383,7 +299,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public boolean containsResourceLabels(java.lang.String key) {
     if (key == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException("map key");
     }
     return internalGetResourceLabels().getMap().containsKey(key);
   }
@@ -421,7 +337,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
   public java.lang.String getResourceLabelsOrDefault(
       java.lang.String key, java.lang.String defaultValue) {
     if (key == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException("map key");
     }
     java.util.Map<java.lang.String, java.lang.String> map = internalGetResourceLabels().getMap();
     return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -439,7 +355,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
   @java.lang.Override
   public java.lang.String getResourceLabelsOrThrow(java.lang.String key) {
     if (key == null) {
-      throw new java.lang.NullPointerException();
+      throw new NullPointerException("map key");
     }
     java.util.Map<java.lang.String, java.lang.String> map = internalGetResourceLabels().getMap();
     if (!map.containsKey(key)) {
@@ -589,7 +505,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 7, name_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -623,7 +539,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, name_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -645,7 +561,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
     if (!internalGetResourceLabels().equals(other.internalGetResourceLabels())) return false;
     if (!getLabelFingerprint().equals(other.getLabelFingerprint())) return false;
     if (!getName().equals(other.getName())) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -670,7 +586,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
     hash = (53 * hash) + getLabelFingerprint().hashCode();
     hash = (37 * hash) + NAME_FIELD_NUMBER;
     hash = (53 * hash) + getName().hashCode();
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -821,17 +737,10 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
     }
 
     // Construct using com.google.container.v1beta1.SetLabelsRequest.newBuilder()
-    private Builder() {
-      maybeForceBuilderInitialization();
-    }
+    private Builder() {}
 
     private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
     }
 
     @java.lang.Override
@@ -953,7 +862,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
         name_ = other.name_;
         onChanged();
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -968,17 +877,72 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.container.v1beta1.SetLabelsRequest parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10:
+              {
+                projectId_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 10
+            case 18:
+              {
+                zone_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+            case 26:
+              {
+                clusterId_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 26
+            case 34:
+              {
+                com.google.protobuf.MapEntry<java.lang.String, java.lang.String> resourceLabels__ =
+                    input.readMessage(
+                        ResourceLabelsDefaultEntryHolder.defaultEntry.getParserForType(),
+                        extensionRegistry);
+                internalGetMutableResourceLabels()
+                    .getMutableMap()
+                    .put(resourceLabels__.getKey(), resourceLabels__.getValue());
+                break;
+              } // case 34
+            case 42:
+              {
+                labelFingerprint_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 42
+            case 58:
+              {
+                name_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 58
+            default:
+              {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.container.v1beta1.SetLabelsRequest) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
 
@@ -997,6 +961,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
      * </code>
      *
+     * @deprecated
      * @return The projectId.
      */
     @java.lang.Deprecated
@@ -1023,6 +988,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
      * </code>
      *
+     * @deprecated
      * @return The bytes for projectId.
      */
     @java.lang.Deprecated
@@ -1049,6 +1015,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
      * </code>
      *
+     * @deprecated
      * @param value The projectId to set.
      * @return This builder for chaining.
      */
@@ -1074,6 +1041,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
      * </code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -1095,6 +1063,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
      * </code>
      *
+     * @deprecated
      * @param value The bytes for projectId to set.
      * @return This builder for chaining.
      */
@@ -1123,6 +1092,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      *
+     * @deprecated
      * @return The zone.
      */
     @java.lang.Deprecated
@@ -1149,6 +1119,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      *
+     * @deprecated
      * @return The bytes for zone.
      */
     @java.lang.Deprecated
@@ -1175,6 +1146,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      *
+     * @deprecated
      * @param value The zone to set.
      * @return This builder for chaining.
      */
@@ -1200,6 +1172,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -1221,6 +1194,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      *
      * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
      *
+     * @deprecated
      * @param value The bytes for zone to set.
      * @return This builder for chaining.
      */
@@ -1248,6 +1222,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
      * </code>
      *
+     * @deprecated
      * @return The clusterId.
      */
     @java.lang.Deprecated
@@ -1273,6 +1248,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
      * </code>
      *
+     * @deprecated
      * @return The bytes for clusterId.
      */
     @java.lang.Deprecated
@@ -1298,6 +1274,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
      * </code>
      *
+     * @deprecated
      * @param value The clusterId to set.
      * @return This builder for chaining.
      */
@@ -1322,6 +1299,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
      * </code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -1342,6 +1320,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
      * </code>
      *
+     * @deprecated
      * @param value The bytes for clusterId to set.
      * @return This builder for chaining.
      */
@@ -1399,7 +1378,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public boolean containsResourceLabels(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       return internalGetResourceLabels().getMap().containsKey(key);
     }
@@ -1439,7 +1418,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
     public java.lang.String getResourceLabelsOrDefault(
         java.lang.String key, java.lang.String defaultValue) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, java.lang.String> map = internalGetResourceLabels().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
@@ -1458,7 +1437,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
     @java.lang.Override
     public java.lang.String getResourceLabelsOrThrow(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, java.lang.String> map = internalGetResourceLabels().getMap();
       if (!map.containsKey(key)) {
@@ -1484,7 +1463,7 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      */
     public Builder removeResourceLabels(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       internalGetMutableResourceLabels().getMutableMap().remove(key);
       return this;
@@ -1507,11 +1486,12 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
      */
     public Builder putResourceLabels(java.lang.String key, java.lang.String value) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       if (value == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map value");
       }
+
       internalGetMutableResourceLabels().getMutableMap().put(key, value);
       return this;
     }
@@ -1805,7 +1785,18 @@ public final class SetLabelsRequest extends com.google.protobuf.GeneratedMessage
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new SetLabelsRequest(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 

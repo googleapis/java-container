@@ -32,6 +32,7 @@ public interface IstioConfigOrBuilder
    *
    * <code>bool disabled = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The disabled.
    */
   @java.lang.Deprecated
@@ -46,6 +47,7 @@ public interface IstioConfigOrBuilder
    *
    * <code>.google.container.v1beta1.IstioConfig.IstioAuthMode auth = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The enum numeric value on the wire for auth.
    */
   @java.lang.Deprecated
@@ -59,6 +61,7 @@ public interface IstioConfigOrBuilder
    *
    * <code>.google.container.v1beta1.IstioConfig.IstioAuthMode auth = 2 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The auth.
    */
   @java.lang.Deprecated
