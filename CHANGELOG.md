@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.3.8](https://github.com/googleapis/java-container/compare/v2.3.7...v2.3.8) (2022-10-12)
+
+
+### Dependencies
+
+* Regenerating with new Protobuf (2.3.x) ([#827](https://github.com/googleapis/java-container/issues/827)) ([27c9f9e](https://github.com/googleapis/java-container/commit/27c9f9e3f69842079093ab8fa7958afb59df43e7))
+
 ### [2.3.7](https://github.com/googleapis/java-container/compare/v2.3.6...v2.3.7) (2022-04-15)
 
 
