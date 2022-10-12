@@ -35,6 +35,7 @@ public interface SetNodePoolAutoscalingRequestOrBuilder
    * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
    * </code>
    *
+   * @deprecated
    * @return The projectId.
    */
   @java.lang.Deprecated
@@ -51,6 +52,7 @@ public interface SetNodePoolAutoscalingRequestOrBuilder
    * <code>string project_id = 1 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
    * </code>
    *
+   * @deprecated
    * @return The bytes for projectId.
    */
   @java.lang.Deprecated
@@ -68,6 +70,7 @@ public interface SetNodePoolAutoscalingRequestOrBuilder
    *
    * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    *
+   * @deprecated
    * @return The zone.
    */
   @java.lang.Deprecated
@@ -84,6 +87,7 @@ public interface SetNodePoolAutoscalingRequestOrBuilder
    *
    * <code>string zone = 2 [deprecated = true, (.google.api.field_behavior) = REQUIRED];</code>
    *
+   * @deprecated
    * @return The bytes for zone.
    */
   @java.lang.Deprecated
@@ -100,6 +104,7 @@ public interface SetNodePoolAutoscalingRequestOrBuilder
    * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
    * </code>
    *
+   * @deprecated
    * @return The clusterId.
    */
   @java.lang.Deprecated
@@ -115,6 +120,7 @@ public interface SetNodePoolAutoscalingRequestOrBuilder
    * <code>string cluster_id = 3 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
    * </code>
    *
+   * @deprecated
    * @return The bytes for clusterId.
    */
   @java.lang.Deprecated
@@ -131,6 +137,7 @@ public interface SetNodePoolAutoscalingRequestOrBuilder
    * <code>string node_pool_id = 4 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
    * </code>
    *
+   * @deprecated
    * @return The nodePoolId.
    */
   @java.lang.Deprecated
@@ -146,6 +153,7 @@ public interface SetNodePoolAutoscalingRequestOrBuilder
    * <code>string node_pool_id = 4 [deprecated = true, (.google.api.field_behavior) = REQUIRED];
    * </code>
    *
+   * @deprecated
    * @return The bytes for nodePoolId.
    */
   @java.lang.Deprecated

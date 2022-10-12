@@ -32,6 +32,7 @@ public interface KalmConfigOrBuilder
    *
    * <code>bool enabled = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The enabled.
    */
   @java.lang.Deprecated

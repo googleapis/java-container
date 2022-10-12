@@ -33,6 +33,7 @@ public interface StatusConditionOrBuilder
    *
    * <code>.google.container.v1beta1.StatusCondition.Code code = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The enum numeric value on the wire for code.
    */
   @java.lang.Deprecated
@@ -47,6 +48,7 @@ public interface StatusConditionOrBuilder
    *
    * <code>.google.container.v1beta1.StatusCondition.Code code = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The code.
    */
   @java.lang.Deprecated

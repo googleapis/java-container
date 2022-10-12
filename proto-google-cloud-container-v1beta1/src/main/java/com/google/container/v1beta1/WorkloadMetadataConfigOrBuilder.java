@@ -35,6 +35,7 @@ public interface WorkloadMetadataConfigOrBuilder
    * .google.container.v1beta1.WorkloadMetadataConfig.NodeMetadata node_metadata = 1 [deprecated = true];
    * </code>
    *
+   * @deprecated
    * @return The enum numeric value on the wire for nodeMetadata.
    */
   @java.lang.Deprecated
@@ -51,6 +52,7 @@ public interface WorkloadMetadataConfigOrBuilder
    * .google.container.v1beta1.WorkloadMetadataConfig.NodeMetadata node_metadata = 1 [deprecated = true];
    * </code>
    *
+   * @deprecated
    * @return The nodeMetadata.
    */
   @java.lang.Deprecated

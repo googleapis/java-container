@@ -55,64 +55,6 @@ public final class StatusCondition extends com.google.protobuf.GeneratedMessageV
     return this.unknownFields;
   }
 
-  private StatusCondition(
-      com.google.protobuf.CodedInputStream input,
-      com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-      throws com.google.protobuf.InvalidProtocolBufferException {
-    this();
-    if (extensionRegistry == null) {
-      throw new java.lang.NullPointerException();
-    }
-    com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-        com.google.protobuf.UnknownFieldSet.newBuilder();
-    try {
-      boolean done = false;
-      while (!done) {
-        int tag = input.readTag();
-        switch (tag) {
-          case 0:
-            done = true;
-            break;
-          case 8:
-            {
-              int rawValue = input.readEnum();
-
-              code_ = rawValue;
-              break;
-            }
-          case 18:
-            {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              message_ = s;
-              break;
-            }
-          case 24:
-            {
-              int rawValue = input.readEnum();
-
-              canonicalCode_ = rawValue;
-              break;
-            }
-          default:
-            {
-              if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-        }
-      }
-    } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-      throw e.setUnfinishedMessage(this);
-    } catch (java.io.IOException e) {
-      throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
-    } finally {
-      this.unknownFields = unknownFields.build();
-      makeExtensionsImmutable();
-    }
-  }
-
   public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
     return com.google.container.v1.ClusterServiceProto
         .internal_static_google_container_v1_StatusCondition_descriptor;
@@ -391,6 +333,7 @@ public final class StatusCondition extends com.google.protobuf.GeneratedMessageV
    *
    * <code>.google.container.v1.StatusCondition.Code code = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The enum numeric value on the wire for code.
    */
   @java.lang.Override
@@ -408,6 +351,7 @@ public final class StatusCondition extends com.google.protobuf.GeneratedMessageV
    *
    * <code>.google.container.v1.StatusCondition.Code code = 1 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The code.
    */
   @java.lang.Override
@@ -526,7 +470,7 @@ public final class StatusCondition extends com.google.protobuf.GeneratedMessageV
     if (canonicalCode_ != com.google.rpc.Code.OK.getNumber()) {
       output.writeEnum(3, canonicalCode_);
     }
-    unknownFields.writeTo(output);
+    getUnknownFields().writeTo(output);
   }
 
   @java.lang.Override
@@ -544,7 +488,7 @@ public final class StatusCondition extends com.google.protobuf.GeneratedMessageV
     if (canonicalCode_ != com.google.rpc.Code.OK.getNumber()) {
       size += com.google.protobuf.CodedOutputStream.computeEnumSize(3, canonicalCode_);
     }
-    size += unknownFields.getSerializedSize();
+    size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
   }
@@ -562,7 +506,7 @@ public final class StatusCondition extends com.google.protobuf.GeneratedMessageV
     if (code_ != other.code_) return false;
     if (!getMessage().equals(other.getMessage())) return false;
     if (canonicalCode_ != other.canonicalCode_) return false;
-    if (!unknownFields.equals(other.unknownFields)) return false;
+    if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
 
@@ -579,7 +523,7 @@ public final class StatusCondition extends com.google.protobuf.GeneratedMessageV
     hash = (53 * hash) + getMessage().hashCode();
     hash = (37 * hash) + CANONICAL_CODE_FIELD_NUMBER;
     hash = (53 * hash) + canonicalCode_;
-    hash = (29 * hash) + unknownFields.hashCode();
+    hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
@@ -709,17 +653,10 @@ public final class StatusCondition extends com.google.protobuf.GeneratedMessageV
     }
 
     // Construct using com.google.container.v1.StatusCondition.newBuilder()
-    private Builder() {
-      maybeForceBuilderInitialization();
-    }
+    private Builder() {}
 
     private Builder(com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
     }
 
     @java.lang.Override
@@ -820,7 +757,7 @@ public final class StatusCondition extends com.google.protobuf.GeneratedMessageV
       if (other.canonicalCode_ != 0) {
         setCanonicalCodeValue(other.getCanonicalCodeValue());
       }
-      this.mergeUnknownFields(other.unknownFields);
+      this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
     }
@@ -835,17 +772,49 @@ public final class StatusCondition extends com.google.protobuf.GeneratedMessageV
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      com.google.container.v1.StatusCondition parsedMessage = null;
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
       try {
-        parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8:
+              {
+                code_ = input.readEnum();
+
+                break;
+              } // case 8
+            case 18:
+              {
+                message_ = input.readStringRequireUtf8();
+
+                break;
+              } // case 18
+            case 24:
+              {
+                canonicalCode_ = input.readEnum();
+
+                break;
+              } // case 24
+            default:
+              {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+          } // switch (tag)
+        } // while (!done)
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (com.google.container.v1.StatusCondition) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
-        if (parsedMessage != null) {
-          mergeFrom(parsedMessage);
-        }
-      }
+        onChanged();
+      } // finally
       return this;
     }
 
@@ -860,6 +829,7 @@ public final class StatusCondition extends com.google.protobuf.GeneratedMessageV
      *
      * <code>.google.container.v1.StatusCondition.Code code = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The enum numeric value on the wire for code.
      */
     @java.lang.Override
@@ -877,6 +847,7 @@ public final class StatusCondition extends com.google.protobuf.GeneratedMessageV
      *
      * <code>.google.container.v1.StatusCondition.Code code = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The enum numeric value on the wire for code to set.
      * @return This builder for chaining.
      */
@@ -897,6 +868,7 @@ public final class StatusCondition extends com.google.protobuf.GeneratedMessageV
      *
      * <code>.google.container.v1.StatusCondition.Code code = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return The code.
      */
     @java.lang.Override
@@ -917,6 +889,7 @@ public final class StatusCondition extends com.google.protobuf.GeneratedMessageV
      *
      * <code>.google.container.v1.StatusCondition.Code code = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @param value The code to set.
      * @return This builder for chaining.
      */
@@ -940,6 +913,7 @@ public final class StatusCondition extends com.google.protobuf.GeneratedMessageV
      *
      * <code>.google.container.v1.StatusCondition.Code code = 1 [deprecated = true];</code>
      *
+     * @deprecated
      * @return This builder for chaining.
      */
     @java.lang.Deprecated
@@ -1178,7 +1152,18 @@ public final class StatusCondition extends com.google.protobuf.GeneratedMessageV
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new StatusCondition(input, extensionRegistry);
+          Builder builder = newBuilder();
+          try {
+            builder.mergeFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            throw e.setUnfinishedMessage(builder.buildPartial());
+          } catch (com.google.protobuf.UninitializedMessageException e) {
+            throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+          } catch (java.io.IOException e) {
+            throw new com.google.protobuf.InvalidProtocolBufferException(e)
+                .setUnfinishedMessage(builder.buildPartial());
+          }
+          return builder.buildPartial();
         }
       };
 

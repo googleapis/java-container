@@ -100,6 +100,7 @@ public interface ClusterOrBuilder
    *
    * <code>int32 initial_node_count = 3 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The initialNodeCount.
    */
   @java.lang.Deprecated
@@ -123,6 +124,7 @@ public interface ClusterOrBuilder
    *
    * <code>.google.container.v1.NodeConfig node_config = 4 [deprecated = true];</code>
    *
+   * @deprecated
    * @return Whether the nodeConfig field is set.
    */
   @java.lang.Deprecated
@@ -145,6 +147,7 @@ public interface ClusterOrBuilder
    *
    * <code>.google.container.v1.NodeConfig node_config = 4 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The nodeConfig.
    */
   @java.lang.Deprecated
@@ -1431,6 +1434,7 @@ public interface ClusterOrBuilder
    *
    * <code>string zone = 101 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The zone.
    */
   @java.lang.Deprecated
@@ -1446,6 +1450,7 @@ public interface ClusterOrBuilder
    *
    * <code>string zone = 101 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for zone.
    */
   @java.lang.Deprecated
@@ -1567,6 +1572,7 @@ public interface ClusterOrBuilder
    *
    * <code>string current_node_version = 105 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The currentNodeVersion.
    */
   @java.lang.Deprecated
@@ -1584,6 +1590,7 @@ public interface ClusterOrBuilder
    *
    * <code>string current_node_version = 105 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for currentNodeVersion.
    */
   @java.lang.Deprecated
@@ -1652,6 +1659,7 @@ public interface ClusterOrBuilder
    *
    * <code>string status_message = 108 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The statusMessage.
    */
   @java.lang.Deprecated
@@ -1667,6 +1675,7 @@ public interface ClusterOrBuilder
    *
    * <code>string status_message = 108 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The bytes for statusMessage.
    */
   @java.lang.Deprecated
@@ -1730,6 +1739,7 @@ public interface ClusterOrBuilder
    *
    * <code>repeated string instance_group_urls = 111 [deprecated = true];</code>
    *
+   * @deprecated
    * @return A list containing the instanceGroupUrls.
    */
   @java.lang.Deprecated
@@ -1743,6 +1753,7 @@ public interface ClusterOrBuilder
    *
    * <code>repeated string instance_group_urls = 111 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The count of instanceGroupUrls.
    */
   @java.lang.Deprecated
@@ -1756,6 +1767,7 @@ public interface ClusterOrBuilder
    *
    * <code>repeated string instance_group_urls = 111 [deprecated = true];</code>
    *
+   * @deprecated
    * @param index The index of the element to return.
    * @return The instanceGroupUrls at the given index.
    */
@@ -1770,6 +1782,7 @@ public interface ClusterOrBuilder
    *
    * <code>repeated string instance_group_urls = 111 [deprecated = true];</code>
    *
+   * @deprecated
    * @param index The index of the value to return.
    * @return The bytes of the instanceGroupUrls at the given index.
    */
@@ -1786,6 +1799,7 @@ public interface ClusterOrBuilder
    *
    * <code>int32 current_node_count = 112 [deprecated = true];</code>
    *
+   * @deprecated
    * @return The currentNodeCount.
    */
   @java.lang.Deprecated
