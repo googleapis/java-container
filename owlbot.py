@@ -26,5 +26,6 @@ java.common_templates(excludes=[
     '.kokoro/presubmit/graalvm-native-17.cfg',
     '.kokoro/presubmit/integration.cfg',
     '.kokoro/nightly/integration.cfg',
-    '.kokoro/nightly/java11-integration.cfg'
+    '.kokoro/nightly/java11-integration.cfg',
+    '.kokoro/nightly/samples.cfg'
 ])
