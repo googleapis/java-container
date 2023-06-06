@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.7.0](https://github.com/googleapis/java-container/compare/v2.6.0...v2.7.0) (2023-06-06)
+
+
+### Features
+
+* Launch GKE Cost Allocations configuration to the v1 GKE API ([#825](https://github.com/googleapis/java-container/issues/825)) ([841936b](https://github.com/googleapis/java-container/commit/841936b448b9f66c3a97bf5c1fdcb858eaaa9638))
+
 ## [2.6.0](https://github.com/googleapis/java-container/compare/v2.5.2...v2.6.0) (2022-10-04)
 
 
